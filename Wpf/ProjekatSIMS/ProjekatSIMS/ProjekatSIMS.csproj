@@ -69,6 +69,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Package1\GuestNalog.cs" />
+    <Compile Include="Package1\Korisnik.cs" />
+    <Compile Include="Package1\Lekar.cs" />
+    <Compile Include="Package1\Pacijent.cs" />
+    <Compile Include="Package1\Pol.cs" />
+    <Compile Include="Package1\Prostorije.cs" />
+    <Compile Include="Package1\RegistrovanKorisnik.cs" />
+    <Compile Include="Package1\Sekretar.cs" />
+    <Compile Include="Package1\Specijalizacija.cs" />
+    <Compile Include="Package1\Termin.cs" />
+    <Compile Include="Package1\TipZaposlenog.cs" />
+    <Compile Include="Package1\Upravnik.cs" />
+    <Compile Include="Package1\ZakazivanjeTermina.cs" />
+    <Compile Include="Package1\Zaposleni.cs" />
+    <Compile Include="Package1\ZdravstveniKarton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
