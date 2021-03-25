@@ -4,7 +4,7 @@ namespace Package1
 {
    public class ZakazivanjeTermina
    {
-      public bool ZakazivanjeTermina()
+      public bool ZakazivanjeT()
       {
          // TODO: implement
          return false;

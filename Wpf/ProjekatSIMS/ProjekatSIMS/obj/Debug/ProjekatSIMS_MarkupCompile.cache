@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Tatjana\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\
 ProjekatSIMS
 none
 false
 DEBUG;TRACE
-C:\Users\Tatjana\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\App.xaml
-11151548125
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\App.xaml
+5-1841540075
 
-6-1049819441
+241749667420
 131569487696
-MainWindow.xaml;
+LekarPocetnaStranica.xaml;MainWindow.xaml;PacijentPocetnaStranica.xaml;SekretarPocetnaStrana.xaml;UpravnikPocetnaStranica.xaml;
 
-True
+False
 

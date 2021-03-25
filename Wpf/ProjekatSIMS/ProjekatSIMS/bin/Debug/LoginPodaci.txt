@@ -1,0 +1,4 @@
+user1 pass1 sekretar
+user2 pass2 upravnik
+user3 pass3 lekar
+user4 pass4 pacijent
