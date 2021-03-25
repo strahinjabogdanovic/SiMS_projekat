@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="UpravnikPocetnaStranica" Height="300" Width="300">
+        Title="UpravnikPocetnaStranica" Height="400" Width="500">
     <Grid>
-        
+        <DataGrid x:Name="dataGridProstorije" ItemsSource="{Binding Path=Prostorije}" AutoGenerateColumns="True" 
+                  SelectionMode="Single" IsReadOnly="True" HorizontalAlignment="Left" 
+                  Height="156" Margin="86,70,0,0" VerticalAlignment="Top" Width="322"/>
     </Grid>
 </Window>
