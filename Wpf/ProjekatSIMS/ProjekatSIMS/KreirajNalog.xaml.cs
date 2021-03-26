@@ -61,8 +61,12 @@ namespace ProjekatSIMS
 
 
             Korisnici.Add(new Korisnik { ime = textBox.Text, prezime = textBox1.Text, jmbg = long.Parse(textBox2.Text), pol = p , datumRodjenja = textBox3.Text, email = textBox5.Text, brojTelefona = textBox6.Text, adresa = textBox7.Text , idKorisnika = ++ids});
+      
 
-            
+
+
+
+
             Close();
             SekretarPocetnaStrana s = new SekretarPocetnaStrana();
             s.ShowDialog();

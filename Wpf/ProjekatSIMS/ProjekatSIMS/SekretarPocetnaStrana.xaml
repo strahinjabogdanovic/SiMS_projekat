@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="SekretarPocetnaStrana" Height="720" Width="1200">
+        Title="SekretarPocetnaStrana" Height="720" Width="1200"
+        >
     <Grid>
-        <DataGrid x:Name="dataGridNalozi" ItemsSource="{Binding Path = Korisnici}" IsReadOnly="True" 
+        <DataGrid x:Name="dataGridNalozi" ItemsSource="{Binding Path = Korisnici, UpdateSourceTrigger=PropertyChanged}"
                   SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
                   Height="500" Margin="10,47,0,0" VerticalAlignment="Top" Width="900">
             <DataGrid.Columns>
