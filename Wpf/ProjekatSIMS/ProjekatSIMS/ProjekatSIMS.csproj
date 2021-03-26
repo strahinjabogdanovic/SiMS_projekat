@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="KreirajNalog.xaml.cs">
+      <DependentUpon>KreirajNalog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LekarPocetnaStranica.xaml.cs">
       <DependentUpon>LekarPocetnaStranica.xaml</DependentUpon>
     </Compile>
@@ -67,6 +70,10 @@
     <Compile Include="UpravnikPocetnaStranica.xaml.cs">
       <DependentUpon>UpravnikPocetnaStranica.xaml</DependentUpon>
     </Compile>
+    <Page Include="KreirajNalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LekarPocetnaStranica.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

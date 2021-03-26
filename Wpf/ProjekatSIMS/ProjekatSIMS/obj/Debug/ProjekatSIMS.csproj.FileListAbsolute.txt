@@ -20,3 +20,5 @@ C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIM
 C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\LekarPocetnaStranica.baml
 C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PacijentPocetnaStranica.baml
 C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\UpravnikPocetnaStranica.baml
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\KreirajNalog.g.cs
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\KreirajNalog.baml

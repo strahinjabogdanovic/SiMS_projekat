@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="SekretarPocetnaStrana" Height="300" Width="300">
+        Title="SekretarPocetnaStrana" Height="720" Width="1200">
     <Grid>
-        
+        <DataGrid x:Name="dataGridNalozi" ItemsSource="{Binding Path = Korisnici}" IsReadOnly="True" 
+                  SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
+                  Height="500" Margin="10,47,0,0" VerticalAlignment="Top" Width="900">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Ime" Binding="{Binding Path = ime}"/>
+                <DataGridTextColumn Header="Prezime" Binding="{Binding Path = prezime}" />
+                <DataGridTextColumn Header="JMBG" Binding="{Binding Path = jmbg}" />
+                <DataGridTextColumn Header="Datum rodjenja" Binding="{Binding Path = datumRodjenja}" />
+                <DataGridTextColumn Header="Broj telefona" Binding="{Binding Path = brojTelefona}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button" Content="Kreiraj nalog" HorizontalAlignment="Left" Margin="100,612,0,0" VerticalAlignment="Top" Width="134" Height="40"  FontSize="18" Click="KreirajNalog_Click"/>
+        <Button x:Name="button1" Content="Obrisi nalog" HorizontalAlignment="Left" Margin="285,612,0,0" VerticalAlignment="Top" Width="134" Height="40" FontSize="18" Click="ObrisiNalog_Click" />
+        <Button x:Name="button2" Content="Izmeni nalog" HorizontalAlignment="Left" Margin="464,612,0,0" VerticalAlignment="Top" Width="134" Height="40" FontSize="18" Click="IzmeniNalog_Click"/>
+        <Button x:Name="button3" Content="Prikazi sve informacije" HorizontalAlignment="Left" Margin="648,612,0,0" VerticalAlignment="Top" Width="206" Height="40" FontSize="18" Click="PrikaziSveInfo_Click"/>
     </Grid>
 </Window>
