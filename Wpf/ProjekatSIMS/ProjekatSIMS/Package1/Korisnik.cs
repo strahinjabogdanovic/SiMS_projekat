@@ -33,14 +33,7 @@ namespace Package1
       private string Email;
       private string BrojTelefona;
       private string Adresa;
-      private int IdKorisnika;
-
-
-        public void dodaj() {
-            new Korisnik { ime = "Petar", prezime = "Petrovic", jmbg = 0038467348372, pol = Pol.Muski, datumRodjenja = "02.01.1987.", email = "petar@gmail.com", brojTelefona = "0635627384", adresa = "hfudssdgb", idKorisnika = 1 };
-            new Korisnik { ime = "Ana", prezime = "Petrov", jmbg = 56345356375, pol = Pol.Zenski, datumRodjenja = "02.01.1987.", email = "ana@gmail.com", brojTelefona = "0635627384", adresa = "hfudssdgb", idKorisnika = 2 };
-        }
-
+      private int IdKorisnika;      
 
         public string ime
         {
