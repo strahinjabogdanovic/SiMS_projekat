@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,10 +61,34 @@ namespace ProjekatSIMS
             //DateTime oDate = Convert.ToDateTime(iDate);
 
 
-            Korisnici.Add(new Korisnik { ime = textBox.Text, prezime = textBox1.Text, jmbg = long.Parse(textBox2.Text), pol = p , datumRodjenja = textBox3.Text, email = textBox5.Text, brojTelefona = textBox6.Text, adresa = textBox7.Text , idKorisnika = ++ids});
-      
+            //Korisnici.Add(new Korisnik { ime = textBox.Text, prezime = textBox1.Text, jmbg = long.Parse(textBox2.Text), pol = p , datumRodjenja = textBox3.Text, email = textBox5.Text, brojTelefona = textBox6.Text, adresa = textBox7.Text , idKorisnika = ++ids});
 
 
+            string tempFile = System.IO.Path.GetTempFileName();
+
+            using (var sr = new StreamReader("podaci.txt"))
+            using (var sw = new StreamWriter(tempFile))
+            {
+                string line;
+                int id = 0;
+                while ((line = sr.ReadLine()) != null)
+                {
+
+                    //var lastLine = File.ReadLines("podaci.txt").Last();
+                    String[] termin = line.Split(' ');
+                    var korisnik = new Korisnik();
+                    id = int.Parse(termin[8]);
+                    id++;
+
+                    sw.WriteLine(line);
+
+                }
+                sw.WriteLine(textBox.Text + " " + textBox1.Text + " " + long.Parse(textBox2.Text) + " " + comboBox.SelectedValue.ToString() + " " + textBox3.Text + " " + textBox5.Text + " " + textBox6.Text + " " + textBox7.Text + " " + id);
+
+                
+            }
+            File.Delete("podaci.txt");
+            File.Move(tempFile, "podaci.txt");
 
 
 
