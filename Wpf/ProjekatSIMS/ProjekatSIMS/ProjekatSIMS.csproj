@@ -70,6 +70,12 @@
     <Compile Include="UpravnikPocetnaStranica.xaml.cs">
       <DependentUpon>UpravnikPocetnaStranica.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PrikazKorisnika.xaml.cs">
+      <DependentUpon>PrikazKorisnika.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window2.xaml.cs">
+      <DependentUpon>Window2.xaml</DependentUpon>
+    </Compile>
     <Page Include="KreirajNalog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -99,6 +105,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UpravnikPocetnaStranica.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PrikazKorisnika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

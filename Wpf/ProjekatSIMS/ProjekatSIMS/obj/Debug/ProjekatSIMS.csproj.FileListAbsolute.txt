@@ -47,3 +47,7 @@ C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj
 C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\ProjekatSIMS.csproj.CoreCompileInputs.cache
 C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\ProjekatSIMS.exe
 C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\ProjekatSIMS.pdb
+C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PrikazKorisnika.g.cs
+C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Window2.g.cs
+C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PrikazKorisnika.baml
+C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Window2.baml

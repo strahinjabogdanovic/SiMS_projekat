@@ -187,7 +187,7 @@ namespace ProjekatSIMS
             using (var sw = new StreamWriter(tempFile))
             {
 
-                String pol="";
+                String pol = "";
                 String mail = "";
                 String adresa = "";
                 int idx = 0;
@@ -202,12 +202,12 @@ namespace ProjekatSIMS
                         //var lastLine = File.ReadLines("podaci.txt").Last();
                         String[] termin = line.Split(' ');
                         var korisnik = new Korisnik();
-                         pol = termin[3];
-                         mail = termin[5];
-                         adresa = termin[7];
-                         idx = int.Parse(termin[8]);
+                        pol = termin[3];
+                        mail = termin[5];
+                        adresa = termin[7];
+                        idx = int.Parse(termin[8]);
 
-                        
+
 
                         DataGridRow row = (DataGridRow)dataGridNalozi.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
 
@@ -221,23 +221,29 @@ namespace ProjekatSIMS
                     }
                     else
                     {
-                       sw.WriteLine(line);
+                        sw.WriteLine(line);
                     }
                     id++;
                 }
-             }
+            }
             File.Delete("podaci.txt");
-            File.Move(tempFile, "podaci.txt");  
+            File.Move(tempFile, "podaci.txt");
 
         }
 
         private void PrikaziSveInfo_Click(object sender, RoutedEventArgs e)
         {
-            
 
-            
+            int currentRowIndex = dataGridNalozi.Items.IndexOf(dataGridNalozi.SelectedItem);
 
+            using (var sw = new StreamWriter("redovi.txt"))
+            {
+                sw.WriteLine(currentRowIndex);
+            }
+            Window2 w2 = new Window2();
+            w2.ShowDialog();
 
+          
 
 
         }
