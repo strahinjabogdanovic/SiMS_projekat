@@ -40,28 +40,25 @@ namespace ProjekatSIMS
         {
         
        Korisnici = new ObservableCollection<Korisnik>();
+            string slj = "";
 
             string gender = comboBox.SelectedValue.ToString();
-            
+
             if (gender != null)
             {
-                
-                if (gender == "Muski")
+
+                if (gender.Contains("Muski"))
                 {
                     p = Pol.Muski;
+                    slj = "Muski";
 
                 }
-                else if (gender == "Zenski")
+                else if (gender.Contains("Zenski"))
                 {
                     p = Pol.Zenski;
+                    slj = "Zenski";
                 }
             }
-
-            //string iDate = textBox4.Text;
-            //DateTime oDate = Convert.ToDateTime(iDate);
-
-
-            //Korisnici.Add(new Korisnik { ime = textBox.Text, prezime = textBox1.Text, jmbg = long.Parse(textBox2.Text), pol = p , datumRodjenja = textBox3.Text, email = textBox5.Text, brojTelefona = textBox6.Text, adresa = textBox7.Text , idKorisnika = ++ids});
 
 
             string tempFile = System.IO.Path.GetTempFileName();
@@ -83,7 +80,7 @@ namespace ProjekatSIMS
                     sw.WriteLine(line);
 
                 }
-                sw.WriteLine(textBox.Text + " " + textBox1.Text + " " + long.Parse(textBox2.Text) + " " + comboBox.SelectedValue.ToString() + " " + textBox3.Text + " " + textBox5.Text + " " + textBox6.Text + " " + textBox7.Text + " " + id);
+                sw.WriteLine(textBox.Text + " " + textBox1.Text + " " + textBox2.Text + " " + slj + " " + textBox3.Text + " " + textBox5.Text + " " + textBox6.Text + " " + textBox7.Text + " " + id);
 
                 
             }
