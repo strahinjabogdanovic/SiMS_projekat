@@ -247,5 +247,12 @@ namespace ProjekatSIMS
 
 
         }
+
+        private void GuestNalog_Click(object sender, RoutedEventArgs e)
+        {
+            GuestNalozi gn = new GuestNalozi();
+            gn.ShowDialog();
+            
+        }
     }
 }

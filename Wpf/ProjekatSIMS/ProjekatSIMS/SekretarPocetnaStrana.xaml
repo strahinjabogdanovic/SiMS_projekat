@@ -23,5 +23,7 @@
         <Button x:Name="button1" Content="Obrisi nalog" HorizontalAlignment="Left" Margin="285,612,0,0" VerticalAlignment="Top" Width="134" Height="40" FontSize="18" Click="ObrisiNalog_Click" />
         <Button x:Name="button2" Content="Izmeni nalog" HorizontalAlignment="Left" Margin="464,612,0,0" VerticalAlignment="Top" Width="134" Height="40" FontSize="18" Click="IzmeniNalog_Click"/>
         <Button x:Name="button3" Content="Prikazi sve informacije" HorizontalAlignment="Left" Margin="648,612,0,0" VerticalAlignment="Top" Width="206" Height="40" FontSize="18" Click="PrikaziSveInfo_Click"/>
+        <Button x:Name="button4" Content="Guest nalozi" HorizontalAlignment="Left" Margin="908,612,0,0" VerticalAlignment="Top" Width="206" Height="40" FontSize="18" Click="GuestNalog_Click" />
+
     </Grid>
 </Window>

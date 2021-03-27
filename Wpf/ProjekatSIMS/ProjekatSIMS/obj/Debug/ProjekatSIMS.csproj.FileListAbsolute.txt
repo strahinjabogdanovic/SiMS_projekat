@@ -57,3 +57,7 @@ C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIM
 C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\KreirajProstoriju.baml
 C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\SveInfoUpravnik.g.cs
 C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\SveInfoUpravnik.baml
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\GuestNalozi.g.cs
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\GuestNalozi.baml
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\KreirajGuestNalog.g.cs
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\KreirajGuestNalog.baml

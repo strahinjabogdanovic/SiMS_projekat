@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\App.xaml
-91159120346
+11-659634583
 
-32-181306528
+34469289537
 131569487696
-KreirajNalog.xaml;KreirajProstoriju.xaml;LekarPocetnaStranica.xaml;MainWindow.xaml;PacijentPocetnaStranica.xaml;SekretarPocetnaStrana.xaml;SveInfoUpravnik.xaml;UpravnikPocetnaStranica.xaml;Window2.xaml;
+GuestNalozi.xaml;KreirajGuestNalog.xaml;KreirajNalog.xaml;KreirajProstoriju.xaml;LekarPocetnaStranica.xaml;MainWindow.xaml;PacijentPocetnaStranica.xaml;SekretarPocetnaStrana.xaml;SveInfoUpravnik.xaml;UpravnikPocetnaStranica.xaml;Window2.xaml;
 
-True
+False
 

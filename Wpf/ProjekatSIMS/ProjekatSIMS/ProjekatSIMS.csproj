@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GuestNalozi.xaml.cs">
+      <DependentUpon>GuestNalozi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KreirajGuestNalog.xaml.cs">
+      <DependentUpon>KreirajGuestNalog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="KreirajNalog.xaml.cs">
       <DependentUpon>KreirajNalog.xaml</DependentUpon>
     </Compile>
@@ -79,6 +85,14 @@
     <Compile Include="Window2.xaml.cs">
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
+    <Page Include="GuestNalozi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KreirajGuestNalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="KreirajNalog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
