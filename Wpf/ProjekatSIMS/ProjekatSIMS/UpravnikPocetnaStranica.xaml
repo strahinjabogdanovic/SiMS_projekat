@@ -5,10 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="UpravnikPocetnaStranica" Height="400" Width="500">
+        Title="UpravnikPocetnaStranica" Height="500" Width="900">
     <Grid>
-        <DataGrid x:Name="dataGridProstorije" ItemsSource="{Binding Path=Prostorije}" AutoGenerateColumns="True" 
-                  SelectionMode="Single" IsReadOnly="True" HorizontalAlignment="Left" 
-                  Height="156" Margin="86,70,0,0" VerticalAlignment="Top" Width="322"/>
+        <DataGrid x:Name="dataGridProstorije" ItemsSource="{Binding Path = Prostorije}"
+                  SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
+                  Height="300" Margin="10,47,0,0" VerticalAlignment="Top" Width="522">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Ime" Binding="{Binding Path = ime}"/>
+                <DataGridTextColumn Header="Oznaka" Binding="{Binding Path = oznaka}" />
+                <DataGridTextColumn Header="Namena" Binding="{Binding Path = namena}" />
+                <DataGridTextColumn Header="Oprema" Binding="{Binding Path = oprema}" />
+                <DataGridTextColumn Header="Pocetak koriscenja prostorije" Binding="{Binding Path = vremePocetkaKoriscenja}" />
+                <DataGridTextColumn Header="Kraj koriscenja prostorije" Binding="{Binding Path = vremeKrajaKoriscenja}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button" Content="Kreiraj" HorizontalAlignment="Left" Margin="38,398,0,0" VerticalAlignment="Top" Width="127" Height="40"  FontSize="18" Click="KreirajProstoriju_Click" />
+        <Button x:Name="button1" Content="Obrisi" HorizontalAlignment="Left" Margin="193,398,0,0" VerticalAlignment="Top" Width="134" Height="40" FontSize="18" Click="ObrisiProstoriju_Click"  />
+        <Button x:Name="button2" Content="Izmeni" HorizontalAlignment="Left" Margin="355,398,0,0" VerticalAlignment="Top" Width="134" Height="40" FontSize="18" Click="IzmeniProstoriju_Click" />
+        <Button x:Name="button3" Content="Prikazi sve informacije" HorizontalAlignment="Left" Margin="517,398,0,0" VerticalAlignment="Top" Width="206" Height="40" FontSize="18" RenderTransformOrigin="0.021,-4.428" Click="PrikaziSveInfo_Click"/>
     </Grid>
 </Window>

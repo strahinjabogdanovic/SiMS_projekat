@@ -58,6 +58,9 @@
     <Compile Include="KreirajNalog.xaml.cs">
       <DependentUpon>KreirajNalog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="KreirajProstoriju.xaml.cs">
+      <DependentUpon>KreirajProstoriju.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LekarPocetnaStranica.xaml.cs">
       <DependentUpon>LekarPocetnaStranica.xaml</DependentUpon>
     </Compile>
@@ -67,16 +70,20 @@
     <Compile Include="SekretarPocetnaStrana.xaml.cs">
       <DependentUpon>SekretarPocetnaStrana.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SveInfoUpravnik.xaml.cs">
+      <DependentUpon>SveInfoUpravnik.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UpravnikPocetnaStranica.xaml.cs">
       <DependentUpon>UpravnikPocetnaStranica.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PrikazKorisnika.xaml.cs">
-      <DependentUpon>PrikazKorisnika.xaml</DependentUpon>
     </Compile>
     <Compile Include="Window2.xaml.cs">
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
     <Page Include="KreirajNalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KreirajProstoriju.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -104,11 +111,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UpravnikPocetnaStranica.xaml">
+    <Page Include="SveInfoUpravnik.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PrikazKorisnika.xaml">
+    <Page Include="UpravnikPocetnaStranica.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

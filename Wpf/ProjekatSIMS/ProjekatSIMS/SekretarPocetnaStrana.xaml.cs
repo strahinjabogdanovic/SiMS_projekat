@@ -38,7 +38,7 @@ namespace ProjekatSIMS
 
         public SekretarPocetnaStrana()
         {
-            filePath = @"C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\bin\Debug\podaci.txt";
+            filePath = "podaci.txt";
             Korisnici = new ObservableCollection<Korisnik>();
             List<String> lines = new List<string>();
             lines = File.ReadAllLines(filePath).ToList();
@@ -174,7 +174,7 @@ namespace ProjekatSIMS
             File.Move(tempFile, "podaci.txt");
 
 
-
+            //dataGridNalozi.Items.Refresh();
         }
 
         private void IzmeniNalog_Click(object sender, RoutedEventArgs e)

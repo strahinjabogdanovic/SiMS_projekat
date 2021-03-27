@@ -49,10 +49,10 @@ namespace Package1
       private string Oznaka;
       private string Namena;
       private string Oprema;
-      private DateTime VremePocetkaKoriscenja;
-      private DateTime VremeKrajaKoriscenja;
+      private string VremePocetkaKoriscenja;
+      private string VremeKrajaKoriscenja;
 
-      public string Ime1
+      public string ime
         {
             get
             {
@@ -63,12 +63,12 @@ namespace Package1
                 if (value != Ime)
                 {
                     Ime = value;
-                    OnPropertyChanged("Ime");
+                    OnPropertyChanged("ime");
                 }
             }
         }
 
-        public string Oznaka1
+        public string oznaka
         {
             get
             {
@@ -78,8 +78,73 @@ namespace Package1
             {
                 if (value != Oznaka)
                 {
-                    Ime = value;
-                    OnPropertyChanged("Oznaka");
+                    Oznaka = value;
+                    OnPropertyChanged("oznaka");
+                }
+            }
+        }
+
+        public string namena
+        {
+            get
+            {
+                return Namena;
+            }
+            set
+            {
+                if (value != Namena)
+                {
+                    Namena = value;
+                    OnPropertyChanged("namena");
+                }
+            }
+        }
+
+        public string oprema
+        {
+            get
+            {
+                return Oprema;
+            }
+            set
+            {
+                if (value != Oprema)
+                {
+                    Oprema = value;
+                    OnPropertyChanged("oprema");
+                }
+            }
+        }
+
+        public string vremePocetkaKoriscenja
+        {
+            get
+            {
+                return VremePocetkaKoriscenja;
+            }
+            set
+            {
+                if (value != VremePocetkaKoriscenja)
+                {
+                    VremePocetkaKoriscenja = value;
+                    OnPropertyChanged("vremePocetkaKoriscenja");
+                }
+            }
+        }
+
+
+        public string vremeKrajaKoriscenja
+        {
+            get
+            {
+                return VremeKrajaKoriscenja;
+            }
+            set
+            {
+                if (value != VremeKrajaKoriscenja)
+                {
+                    VremeKrajaKoriscenja = value;
+                    OnPropertyChanged("vremeKrajaKoriscenja");
                 }
             }
         }

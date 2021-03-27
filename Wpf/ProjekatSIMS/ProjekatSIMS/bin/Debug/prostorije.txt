@@ -1,0 +1,6 @@
+Sala 10/A1/operacije/rukavice,makaze,sto,krevet
+Sala 11/A2/operacije/rukavice,makaze,sto,krevet
+Sala 12/A3/operacije/rukavice,makaze,sto,krevet
+Sala 13/A4/operacije/rukavice,makaze,sto,krevet
+Sala 14/A5/operacije/rukavice,makaze,sto,krevet
+Sala 15/A6/pregled/rukavice,makaze,sto,krevet
