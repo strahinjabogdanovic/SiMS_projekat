@@ -67,12 +67,16 @@
     <Compile Include="KreirajProstoriju.xaml.cs">
       <DependentUpon>KreirajProstoriju.xaml</DependentUpon>
     </Compile>
+    <Compile Include="KreirajTerminPacijenta.xaml.cs">
+      <DependentUpon>KreirajTerminPacijenta.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LekarPocetnaStranica.xaml.cs">
       <DependentUpon>LekarPocetnaStranica.xaml</DependentUpon>
     </Compile>
     <Compile Include="PacijentPocetnaStranica.xaml.cs">
       <DependentUpon>PacijentPocetnaStranica.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Package1\TerminiPacijenata.cs" />
     <Compile Include="SekretarPocetnaStrana.xaml.cs">
       <DependentUpon>SekretarPocetnaStrana.xaml</DependentUpon>
     </Compile>
@@ -98,6 +102,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="KreirajProstoriju.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KreirajTerminPacijenta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

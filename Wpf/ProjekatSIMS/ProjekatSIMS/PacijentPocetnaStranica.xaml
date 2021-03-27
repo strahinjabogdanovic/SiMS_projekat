@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="PacijentPocetnaStranica" Height="300" Width="300">
+        Title="PacijentPocetnaStranica" Height="500" Width="700">
     <Grid>
-        
+        <DataGrid x:Name="dataGridPacijenti" ItemsSource="{Binding Path = TerminiP, UpdateSourceTrigger=PropertyChanged}"
+                  SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
+                  Height="250" Margin="10,47,0,0" VerticalAlignment="Top" Width="500">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Datum" Binding="{Binding Path = datum}"/>
+                <DataGridTextColumn Header="Vreme" Binding="{Binding Path = vreme}" />
+                <DataGridTextColumn Header="Lekar" Binding="{Binding Path = lekar}" />
+                <DataGridTextColumn Header="Soba" Binding="{Binding Path = soba}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button" Content="Kreiraj termin" HorizontalAlignment="Left" Margin="93,380,0,0" VerticalAlignment="Top" Width="130" Height="42" FontSize="18" Click="KreirajTermin_Click"/>
+        <Button x:Name="button1" Content="Obrisi termin" HorizontalAlignment="Left" Margin="320,380,0,0" VerticalAlignment="Top" Width="138" Height="42" FontSize="18" Click="ObrisiTermin_Click"/>
     </Grid>
 </Window>

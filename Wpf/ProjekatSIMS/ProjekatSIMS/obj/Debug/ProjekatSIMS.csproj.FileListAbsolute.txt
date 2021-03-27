@@ -61,3 +61,5 @@ C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIM
 C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\GuestNalozi.baml
 C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\KreirajGuestNalog.g.cs
 C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\KreirajGuestNalog.baml
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\KreirajTerminPacijenta.g.cs
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\KreirajTerminPacijenta.baml
