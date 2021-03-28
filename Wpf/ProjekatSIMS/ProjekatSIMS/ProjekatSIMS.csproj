@@ -67,6 +67,9 @@
     <Compile Include="KreirajProstoriju.xaml.cs">
       <DependentUpon>KreirajProstoriju.xaml</DependentUpon>
     </Compile>
+    <Compile Include="KreirajTerminLekar.xaml.cs">
+      <DependentUpon>KreirajTerminLekar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="KreirajTerminPacijenta.xaml.cs">
       <DependentUpon>KreirajTerminPacijenta.xaml</DependentUpon>
     </Compile>
@@ -102,6 +105,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="KreirajProstoriju.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KreirajTerminLekar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

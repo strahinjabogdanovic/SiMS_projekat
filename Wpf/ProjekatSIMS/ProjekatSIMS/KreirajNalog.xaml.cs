@@ -87,11 +87,10 @@ namespace ProjekatSIMS
             File.Delete("podaci.txt");
             File.Move(tempFile, "podaci.txt");
 
-
-
             Close();
             SekretarPocetnaStrana s = new SekretarPocetnaStrana();
             s.ShowDialog();
+
 
         }
 

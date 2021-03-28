@@ -2,7 +2,7 @@ using System;
 
 namespace Package1
 {
-    enum Termin
+    public enum Termin
     {
         Pregled,
         Operacija

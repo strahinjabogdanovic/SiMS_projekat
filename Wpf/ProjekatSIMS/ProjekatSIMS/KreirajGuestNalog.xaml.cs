@@ -45,7 +45,7 @@ namespace ProjekatSIMS
 
             string tempFile = System.IO.Path.GetTempFileName();
 
-            using (var sr = new StreamReader("guestnalozi.txt"))
+            using (var sr = new StreamReader("naloziGuest.txt"))
             using (var sw = new StreamWriter(tempFile))
             {
                 string line;
@@ -65,8 +65,8 @@ namespace ProjekatSIMS
 
 
             }
-            File.Delete("guestnalozi.txt");
-            File.Move(tempFile, "guestnalozi.txt");
+            File.Delete("naloziGuest.txt");
+            File.Move(tempFile, "naloziGuest.txt");
 
 
 

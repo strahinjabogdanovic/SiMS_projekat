@@ -54,25 +54,34 @@ namespace ProjekatSIMS
                 if (rola.Contains(string4) && Array.IndexOf(users.ToArray(), textBox.Text) ==
                 Array.IndexOf(rola.ToArray(), string4))
                 {
+                    this.Hide();
                     LekarPocetnaStranica ps4 = new LekarPocetnaStranica();
                     ps4.ShowDialog();
+                    this.Show();
+
                 }
                 else if (rola.Contains(string3) && Array.IndexOf(users.ToArray(), textBox.Text) ==
                 Array.IndexOf(rola.ToArray(), string3))
                 {
+                    this.Hide();
                     UpravnikPocetnaStranica ps3 = new UpravnikPocetnaStranica();
                     ps3.ShowDialog();
+                    this.Show();
                 }
                 else if (rola.Contains(string2) && Array.IndexOf(users.ToArray(), textBox.Text) ==
                 Array.IndexOf(rola.ToArray(), string2))
                 {
+                    this.Hide();
                     SekretarPocetnaStrana ps2 = new SekretarPocetnaStrana();
                     ps2.ShowDialog();
+                    this.Show();
                 }
                 else
                 {
+                    this.Hide();
                     PacijentPocetnaStranica ps = new PacijentPocetnaStranica();
                     ps.ShowDialog();
+                    this.Show();
                 }
             }
             else

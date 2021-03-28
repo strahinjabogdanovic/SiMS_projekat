@@ -17,7 +17,8 @@
                 <DataGridTextColumn Header="Soba" Binding="{Binding Path = soba}" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="button" Content="Kreiraj termin" HorizontalAlignment="Left" Margin="93,380,0,0" VerticalAlignment="Top" Width="130" Height="42" FontSize="18" Click="KreirajTermin_Click"/>
-        <Button x:Name="button1" Content="Obrisi termin" HorizontalAlignment="Left" Margin="320,380,0,0" VerticalAlignment="Top" Width="138" Height="42" FontSize="18" Click="ObrisiTermin_Click"/>
+        <Button x:Name="button" Content="Kreiraj termin" HorizontalAlignment="Left" Margin="30,380,0,0" VerticalAlignment="Top" Width="130" Height="42" FontSize="18" Click="KreirajTermin_Click"/>
+        <Button x:Name="button1" Content="Obrisi termin" HorizontalAlignment="Left" Margin="190,380,0,0" VerticalAlignment="Top" Width="138" Height="42" FontSize="18" Click="ObrisiTermin_Click"/>
+        <Button x:Name="button2" Content="Izmeni" HorizontalAlignment="Left" Margin="362,380,0,0" VerticalAlignment="Top" Width="124" Height="42" FontSize="16" Click="Izmeni_Click"/>
     </Grid>
 </Window>

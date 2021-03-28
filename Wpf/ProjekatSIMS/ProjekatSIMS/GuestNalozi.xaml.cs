@@ -31,7 +31,8 @@ namespace ProjekatSIMS
 
         public GuestNalozi()
         {
-            filePath = "guestnalozi.txt";
+            
+            filePath = "naloziGuest.txt";
             Guest = new ObservableCollection<GuestNalog>();
             List<String> lines = new List<string>();
             lines = File.ReadAllLines(filePath).ToList();
@@ -45,16 +46,22 @@ namespace ProjekatSIMS
                 guest.prezime = termin[1].ToString();
                 guest.jmbg = long.Parse(termin[2].ToString());
 
+ 
+               
+
                 Guest.Add(guest);
 
 
             }
 
+            
 
+            
             InitializeComponent();
+
             this.DataContext = this;
 
-            StreamReader sr = new StreamReader("guestnalozi.txt");
+            StreamReader sr = new StreamReader("naloziGuest.txt");
             string line = "";
 
             while ((line = sr.ReadLine()) != null)
@@ -63,6 +70,7 @@ namespace ProjekatSIMS
 
             }
             sr.Close();
+
         }
 
         private void KreirajGuestNalog_Click(object sender, RoutedEventArgs e)
@@ -88,7 +96,7 @@ namespace ProjekatSIMS
 
             string tempFile = System.IO.Path.GetTempFileName();
 
-            using (var sr = new StreamReader("guestnalozi.txt"))
+            using (var sr = new StreamReader("naloziGuest.txt"))
             using (var sw = new StreamWriter(tempFile))
             {
                 string line;
@@ -107,8 +115,8 @@ namespace ProjekatSIMS
                 }
             }
 
-            File.Delete("guestnalozi.txt");
-            File.Move(tempFile, "guestnalozi.txt");
+            File.Delete("naloziGuest.txt");
+            File.Move(tempFile, "naloziGuest.txt");
         }
     }
 }

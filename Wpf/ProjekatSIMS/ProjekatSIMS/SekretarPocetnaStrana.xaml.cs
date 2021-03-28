@@ -73,7 +73,7 @@ namespace ProjekatSIMS
 
             }
 
-
+            
             InitializeComponent();
             this.DataContext = this;
 
@@ -88,26 +88,13 @@ namespace ProjekatSIMS
             sr.Close();
 
 
-            //dataGridNalozi.ItemsSource = Korisnici;
-
-            /*Korisnici = new ObservableCollection<Korisnik>();
-            Korisnici.Add(new Korisnik { ime = "Petar", prezime = "Petrovic" , jmbg = 0038467348372 , pol = Pol.Muski, datumRodjenja = "02.01.1987.", email = "petar@gmail.com", brojTelefona = "0635627384", adresa = "hfudssdgb", idKorisnika = 1});
-            Korisnici.Add(new Korisnik { ime = "Ana", prezime = "Petrov", jmbg = 56345356375, pol = Pol.Zenski, datumRodjenja = "02.01.1987.", email = "ana@gmail.com", brojTelefona = "0635627384", adresa = "hfudssdgb", idKorisnika = 2 });
-            Korisnici.Add(new Korisnik { ime = "Mitar", prezime = "Petrovic", jmbg = 0038467348372, pol = Pol.Muski, datumRodjenja = "02.01.1987.", email = "petar@gmail.com", brojTelefona = "0635627384", adresa = "hfudssdgb", idKorisnika = 3 });
-            Korisnici.Add(new Korisnik { ime = "Marko", prezime = "Petrovic", jmbg = 0038467348372, pol = Pol.Muski, datumRodjenja = "02.01.1987.", email = "petar@gmail.com", brojTelefona = "0635627384", adresa = "hfudssdgb", idKorisnika = 4 });
-            Korisnici.Add(new Korisnik { ime = "Jefinima", prezime = "Petrovic", jmbg = 0038467348372, pol = Pol.Muski, datumRodjenja = "02.01.1987.", email = "petar@gmail.com", brojTelefona = "0635627384", adresa = "hfudssdgb", idKorisnika = 5 });
-            Korisnici.Add(new Korisnik { ime = "Dostr", prezime = "Petrovic", jmbg = 0038467348372, pol = Pol.Muski, datumRodjenja = "02.01.1987.", email = "petar@gmail.com", brojTelefona = "0635627384", adresa = "hfudssdgb", idKorisnika = 6 });
-            Korisnici.Add(new Korisnik { ime = "Boris", prezime = "Petrovic", jmbg = 0038467348372, pol = Pol.Muski, datumRodjenja = "02.01.1987.", email = "petar@gmail.com", brojTelefona = "0635627384", adresa = "hfudssdgb", idKorisnika = 7 });
-            Korisnici.Add(new Korisnik { ime = "Treoja", prezime = "Petrovic", jmbg = 0038467348372, pol = Pol.Muski, datumRodjenja = "02.01.1987.", email = "petar@gmail.com", brojTelefona = "0635627384", adresa = "hfudssdgb", idKorisnika = 8 });
-            Korisnici.Add(new Korisnik { ime = "Prsuta", prezime = "Petrovic", jmbg = 0038467348372, pol = Pol.Muski, datumRodjenja = "02.01.1987.", email = "petar@gmail.com", brojTelefona = "0635627384", adresa = "hfudssdgb", idKorisnika = 9 });
-               */
         }
 
         private void KreirajNalog_Click(object sender, RoutedEventArgs e)
         {
             KreirajNalog kn = new KreirajNalog();
             kn.ShowDialog();
-            //dataGridNalozi.Items.Refresh();
+            
         }
 
         private void ObrisiNalog_Click(object sender, RoutedEventArgs e)
@@ -139,32 +126,9 @@ namespace ProjekatSIMS
                     var priv = new Korisnik();
 
                     String[] termin = line.Split(' ');
-                    //var priv = new Korisnik();
-                    //korisnik.ime = termin[0].ToString();
-                    //korisnik.prezime = termin[1].ToString();
                     priv.jmbg = long.Parse(termin[2].ToString());
 
 
-                    /*if (termin[3].ToString() != null)
-                    {
-
-                        if (termin[3].ToString() == "Muski")
-                        {
-                            korisnik.pol = Pol.Muski;
-
-                        }
-                        else if (termin[3].ToString() == "Zenski")
-                        {
-                            korisnik.pol = Pol.Zenski;
-                        }
-                    }
-                    korisnik.datumRodjenja = termin[4].ToString();
-                    korisnik.email = termin[5].ToString();
-                    korisnik.brojTelefona = termin[6].ToString();
-                    korisnik.adresa = termin[7].ToString();
-                    Korisnici.Add(korisnik);*/
-
-                    //Console.WriteLine(priv.jmbg);
                     if (priv.jmbg != k.jmbg)
                         sw.WriteLine(line);
                 }
