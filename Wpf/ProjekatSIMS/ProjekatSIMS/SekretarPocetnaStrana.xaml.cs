@@ -25,7 +25,7 @@ namespace ProjekatSIMS
         Korisnik krs;
         private readonly string filePath;
 
-        public ObservableCollection<Korisnik> Korisnici
+        public ObservableCollection<Pacijent> Korisnici
         {
             get;
             set;
@@ -39,7 +39,7 @@ namespace ProjekatSIMS
         public SekretarPocetnaStrana()
         {
             filePath = "podaci.txt";
-            Korisnici = new ObservableCollection<Korisnik>();
+            Korisnici = new ObservableCollection<Pacijent>();
             List<String> lines = new List<string>();
             lines = File.ReadAllLines(filePath).ToList();
 
@@ -47,7 +47,7 @@ namespace ProjekatSIMS
             foreach (string linee in lines)
             {
                 String[] termin = linee.Split(' ');
-                var korisnik = new Korisnik();
+                var korisnik = new Pacijent();
                 korisnik.ime = termin[0].ToString();
                 korisnik.prezime = termin[1].ToString();
                 korisnik.jmbg = long.Parse(termin[2].ToString());
@@ -100,7 +100,7 @@ namespace ProjekatSIMS
         private void ObrisiNalog_Click(object sender, RoutedEventArgs e)
         {
             int currentRowIndex = dataGridNalozi.Items.IndexOf(dataGridNalozi.SelectedItem);
-            Korisnik k = Korisnici.ElementAt(currentRowIndex);
+            Pacijent k = Korisnici.ElementAt(currentRowIndex);
             if (Korisnici.Count > 0)
             {
                 Korisnici.RemoveAt(currentRowIndex);
@@ -121,9 +121,9 @@ namespace ProjekatSIMS
 
                 while ((line = sr.ReadLine()) != null)
                 {
-                    Korisnici = new ObservableCollection<Korisnik>();
+                    Korisnici = new ObservableCollection<Pacijent>();
 
-                    var priv = new Korisnik();
+                    var priv = new Pacijent();
 
                     String[] termin = line.Split(' ');
                     priv.jmbg = long.Parse(termin[2].ToString());
@@ -165,7 +165,7 @@ namespace ProjekatSIMS
                     {
                         //var lastLine = File.ReadLines("podaci.txt").Last();
                         String[] termin = line.Split(' ');
-                        var korisnik = new Korisnik();
+                        var korisnik = new Pacijent();
                         pol = termin[3];
                         mail = termin[5];
                         adresa = termin[7];

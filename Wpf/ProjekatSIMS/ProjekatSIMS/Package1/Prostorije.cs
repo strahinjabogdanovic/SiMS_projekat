@@ -14,7 +14,7 @@ namespace Package1
             }
         }
 
-
+      /*
         public bool DodavanjeProstorije()
       {
          // TODO: implement
@@ -44,6 +44,7 @@ namespace Package1
          // TODO: implement
          return false;
       }
+      */
    
       private string Ime;
       private string Oznaka;

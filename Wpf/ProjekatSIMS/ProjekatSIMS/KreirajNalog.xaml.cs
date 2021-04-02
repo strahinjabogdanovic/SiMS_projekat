@@ -22,7 +22,7 @@ namespace ProjekatSIMS
     /// </summary>
     public partial class KreirajNalog : Window
     {
-        public ObservableCollection<Korisnik> Korisnici
+        public ObservableCollection<Pacijent> Korisnici
         {
             get;
             set;
@@ -39,7 +39,7 @@ namespace ProjekatSIMS
         private void PotvrdiNalog_Click(object sender, RoutedEventArgs e)
         {
         
-       Korisnici = new ObservableCollection<Korisnik>();
+       Korisnici = new ObservableCollection<Pacijent>();
             string slj = "";
 
             string gender = comboBox.SelectedValue.ToString();
@@ -73,7 +73,7 @@ namespace ProjekatSIMS
 
                     //var lastLine = File.ReadLines("podaci.txt").Last();
                     String[] termin = line.Split(' ');
-                    var korisnik = new Korisnik();
+                    var korisnik = new Pacijent();
                     id = int.Parse(termin[8]);
                     id++;
 

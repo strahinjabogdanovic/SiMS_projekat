@@ -79,6 +79,10 @@
     <Compile Include="PacijentPocetnaStranica.xaml.cs">
       <DependentUpon>PacijentPocetnaStranica.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Package1\GuestFileStorage.cs" />
+    <Compile Include="Package1\PacijentFileStorage.cs" />
+    <Compile Include="Package1\ProstorijeFileStorage.cs" />
+    <Compile Include="Package1\TerminiFileStorage.cs" />
     <Compile Include="Package1\TerminiPacijenata.cs" />
     <Compile Include="SekretarPocetnaStrana.xaml.cs">
       <DependentUpon>SekretarPocetnaStrana.xaml</DependentUpon>

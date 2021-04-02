@@ -3,17 +3,18 @@ using System.ComponentModel;
 
 namespace Package1
 {
-   public class GuestNalog : INotifyPropertyChanged
+   public class GuestNalog : Korisnik //, INotifyPropertyChanged 
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string name)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(name));
-            }
-        }
+       // public event PropertyChangedEventHandler PropertyChanged;
+        //protected virtual void OnPropertyChanged(string name)
+       // {
+       //     if (PropertyChanged != null)
+       //     {
+       //         PropertyChanged(this, new PropertyChangedEventArgs(name));
+       //     }
+       // }
 
+            /*
 
         private string Ime;
         private string Prezime;
@@ -66,5 +67,7 @@ namespace Package1
                 }
             }
         }
+        */
     }
+    
 }

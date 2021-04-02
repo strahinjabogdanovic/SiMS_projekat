@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Package1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -18,11 +19,17 @@ namespace ProjekatSIMS.Package1
             }
         }
 
+        public Pacijent pacijent;
+        public Lekar lekari;
+        public System.Collections.ArrayList prostorije;
+
         private string Datum;
         private string Vreme;
         private string Lekar;
         private string Soba;
         private int Id;
+        private Termin VrstaTermina;
+
 
         public string datum
         {
@@ -100,6 +107,22 @@ namespace ProjekatSIMS.Package1
                 {
                     Id = value;
                     OnPropertyChanged("id");
+                }
+            }
+        }
+
+        public Termin vrstaTermina
+        {
+            get
+            {
+                return VrstaTermina;
+            }
+            set
+            {
+                if (value != VrstaTermina)
+                {
+                    VrstaTermina = value;
+                    OnPropertyChanged("vrstaTermina");
                 }
             }
         }
