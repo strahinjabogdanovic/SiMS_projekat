@@ -40,35 +40,16 @@ namespace ProjekatSIMS
 
         private void Potvrdi_Click(object sender, RoutedEventArgs e)
         {
-            Prostorije = new ObservableCollection<Prostorije>();
-
-            string tempFile = System.IO.Path.GetTempFileName();
-
-            using (var sr = new StreamReader("prostorije.txt"))
-            using (var sw = new StreamWriter(tempFile))
-            {
-                string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-
-                    String[] termin = line.Split('/');
-                    var prostorije = new Prostorije();
-
-                    sw.WriteLine(line);
-
-                }
-                sw.WriteLine(textBox.Text + "/" + textBox1.Text + "/" + textBox2.Text + "/" + textBox3.Text);
-
-
-            }
-            File.Delete("prostorije.txt");
-            File.Move(tempFile, "prostorije.txt");
-
-
-
             Close();
-            UpravnikPocetnaStranica s = new UpravnikPocetnaStranica();
-            s.ShowDialog();
+            ProstorijeFileStorage p = new ProstorijeFileStorage();
+
+            string tb = textBox.Text;
+            string tb1 = textBox1.Text;
+            string tb2 = textBox2.Text;
+            string tb3 = textBox3.Text;
+
+            p.Kreiraj(tb, tb1, tb2, tb3);
+
         }
     }
 }
