@@ -1,4 +1,5 @@
 ﻿using Package1;
+using ProjekatSIMS.Package1;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -22,11 +23,12 @@ namespace ProjekatSIMS
     /// </summary>
     public partial class KreirajTerminLekar : Window
     {
-        public ObservableCollection<ZakazivanjeTermina> ZakazTermina
+        public ObservableCollection<TerminiPacijenata> ZakazTermina
         {
             get;
             set;
         }
+
 
         public KreirajTerminLekar()
         {
@@ -40,72 +42,84 @@ namespace ProjekatSIMS
 
         private void Potvrdi_Click(object sender, RoutedEventArgs e)
         {
-            ZakazTermina = new ObservableCollection<ZakazivanjeTermina>();
-            string slj = "";
-            string kfr = "";
+            Close();
+            TerminiFileStorage tfs = new TerminiFileStorage();
 
             string vrstaTermina = comboBox.SelectedValue.ToString();
             string lekar = comboBox1.SelectedValue.ToString();
+            string tb = textBox.Text;
+            string tb1 = textBox1.Text;
+            string tb2 = textBox2.Text;
 
-            if (lekar != null)
-            {
+            tfs.Kreiraj(vrstaTermina,lekar,tb,tb1,tb2);
+            
+            //ZakazTermina = new ObservableCollection<TerminiPacijenata>();
+            //string slj = "";
+            //string kfr = "";
 
-                if (lekar.Contains("Jova Jovic"))
-                {
-                    slj = "Jova Jovic";
+           // string vrstaTermina = comboBox.SelectedValue.ToString();
+            //string lekar = comboBox1.SelectedValue.ToString();
 
-                }
-                else if (lekar.Contains("Jovan Jovanovic"))
-                {
-                    slj = "Jovan Jovanovic";
-                }
-            }
+            //if (lekar != null)
+            //{
 
-            if (vrstaTermina != null)
-            {
+            //    if (lekar.Contains("Jova Jovic"))
+             //   {
+             //       slj = "Jova Jovic";
 
-                if (vrstaTermina.Contains("Pregled"))
-                {
-                    kfr = "Pregled";
+            //    }
+            //    else if (lekar.Contains("Jovan Jovanovic"))
+            //    {
+            //        slj = "Jovan Jovanovic";
+            //    }
+           // }
 
-                }
-                else if (vrstaTermina.Contains("Operacija"))
-                {
-                    kfr = "Operacija";
-                }
-            }
+           // if (vrstaTermina != null)
+           // {
+
+            //    if (vrstaTermina.Contains("Pregled"))
+           //     {
+           //         kfr = "Pregled";
+
+           //     }
+           //     else if (vrstaTermina.Contains("Operacija"))
+            //    {
+            //        kfr = "Operacija";
+           //     }
+           // }
 
 
-            string tempFile = System.IO.Path.GetTempFileName();
+           // string tempFile = System.IO.Path.GetTempFileName();
 
-            using (var sr = new StreamReader("lekar.txt"))
-            using (var sw = new StreamWriter(tempFile))
-            {
-                string line;
-                int id = 0;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    String[] termin = line.Split('/');
-                    var lekari = new ZakazivanjeTermina();
-                    id = int.Parse(termin[5]);
-                    id++;
+          //  using (var sr = new StreamReader("lekar.txt"))
+           // using (var sw = new StreamWriter(tempFile))
+           // {
+           //     string line;
+           //     int id = 0;
+           //     while ((line = sr.ReadLine()) != null)
+            //    {
+          //          String[] termin = line.Split('/');
+           //         var lekari = new TerminiPacijenata();
+          // //         id = int.Parse(termin[5]);
+           //         id++;
 
-                    sw.WriteLine(line);
+           //         sw.WriteLine(line);
 
-                }
+           //     }
                 
-                sw.WriteLine(kfr + "/" + textBox.Text + "/" + textBox1.Text + "/" + textBox2.Text + "/" + slj + "/" + id);
+               // sw.WriteLine(kfr + "/" + textBox.Text + "/" + textBox1.Text + "/" + textBox2.Text + "/" + slj + "/" + id);
 
 
-            }
-            File.Delete("lekar.txt");
-            File.Move(tempFile, "lekar.txt");
+          //  }
+          //  File.Delete("lekar.txt");
+          //  File.Move(tempFile, "lekar.txt");
 
 
 
-            Close();
-            LekarPocetnaStranica s = new LekarPocetnaStranica();
-            s.ShowDialog();
+          //  Close();
+         //   LekarPocetnaStranica s = new LekarPocetnaStranica();
+         //   s.ShowDialog();
+            
         }
     }
 }

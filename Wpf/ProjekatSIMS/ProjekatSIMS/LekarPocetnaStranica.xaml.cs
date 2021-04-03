@@ -1,4 +1,5 @@
 ﻿using Package1;
+using ProjekatSIMS.Package1;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -24,7 +25,7 @@ namespace ProjekatSIMS
     {
         private readonly string filePath;
 
-        public ObservableCollection<ZakazivanjeTermina> ZakazTermina
+        public ObservableCollection<TerminiPacijenata> ZakazTermina
         {
             get;
             set;
@@ -33,7 +34,7 @@ namespace ProjekatSIMS
         public LekarPocetnaStranica()
         {
             filePath = "lekar.txt";
-            ZakazTermina = new ObservableCollection<ZakazivanjeTermina>();
+            ZakazTermina = new ObservableCollection<TerminiPacijenata>();
             List<String> lines = new List<string>();
             lines = File.ReadAllLines(filePath).ToList();
 
@@ -41,7 +42,7 @@ namespace ProjekatSIMS
             foreach (string linee in lines)
             {
                 String[] termin = linee.Split('/');
-                var lekar = new ZakazivanjeTermina();
+                var lekar = new TerminiPacijenata();
                 if (termin[0].ToString() != null)
                 {
 
@@ -89,8 +90,22 @@ namespace ProjekatSIMS
 
         private void Obrisi_Click(object sender, RoutedEventArgs e)
         {
+            TerminiFileStorage tf = new TerminiFileStorage();
             int currentRowIndex = dataGridLekar.Items.IndexOf(dataGridLekar.SelectedItem);
-            ZakazivanjeTermina k = ZakazTermina.ElementAt(currentRowIndex);
+            TerminiPacijenata k = ZakazTermina.ElementAt(currentRowIndex);
+            if (ZakazTermina.Count > 0)
+            {
+                ZakazTermina.RemoveAt(currentRowIndex);
+            }
+            else
+            {
+                MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            tf.Obrisi(k);
+            /*
+            int currentRowIndex = dataGridLekar.Items.IndexOf(dataGridLekar.SelectedItem);
+            TerminiPacijenata k = ZakazTermina.ElementAt(currentRowIndex);
             if (ZakazTermina.Count > 0)
             {
                 ZakazTermina.RemoveAt(currentRowIndex);
@@ -111,9 +126,9 @@ namespace ProjekatSIMS
 
                 while ((line = sr.ReadLine()) != null)
                 {
-                    ZakazTermina = new ObservableCollection<ZakazivanjeTermina>();
+                    ZakazTermina = new ObservableCollection<TerminiPacijenata>();
 
-                    var priv = new ZakazivanjeTermina();
+                    var priv = new TerminiPacijenata();
 
                     String[] termin = line.Split('/');
 
@@ -127,12 +142,16 @@ namespace ProjekatSIMS
 
             File.Delete("lekar.txt");
             File.Move(tempFile, "lekar.txt");
+            */
         }
 
         private void Izmeni_Click(object sender, RoutedEventArgs e)
         {
-            int currentRowIndex = dataGridLekar.Items.IndexOf(dataGridLekar.SelectedItem);
+            TerminiFileStorage t = new TerminiFileStorage();
+            t.Update(dataGridLekar);
+            //int currentRowIndex = dataGridLekar.Items.IndexOf(dataGridLekar.SelectedItem);
 
+            /*
             string tempFile = System.IO.Path.GetTempFileName();
 
             using (var sr = new StreamReader("lekar.txt"))
@@ -148,7 +167,7 @@ namespace ProjekatSIMS
                     {
         
                         String[] termin = line.Split('/');
-                        var lekar = new ZakazivanjeTermina();
+                        var lekar = new TerminiPacijenata();
 
 
                         DataGridRow row = (DataGridRow)dataGridLekar.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
@@ -170,6 +189,7 @@ namespace ProjekatSIMS
             }
             File.Delete("lekar.txt");
             File.Move(tempFile, "lekar.txt");
+            */
         }
     }
 }

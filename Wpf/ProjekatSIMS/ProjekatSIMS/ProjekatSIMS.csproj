@@ -80,6 +80,7 @@
       <DependentUpon>PacijentPocetnaStranica.xaml</DependentUpon>
     </Compile>
     <Compile Include="Package1\GuestFileStorage.cs" />
+    <Compile Include="Package1\NaloziPacijenataFileStorage.cs" />
     <Compile Include="Package1\PacijentFileStorage.cs" />
     <Compile Include="Package1\ProstorijeFileStorage.cs" />
     <Compile Include="Package1\TerminiFileStorage.cs" />
