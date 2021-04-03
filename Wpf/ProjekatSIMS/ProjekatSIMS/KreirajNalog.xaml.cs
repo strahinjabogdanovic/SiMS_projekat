@@ -36,60 +36,22 @@ namespace ProjekatSIMS
 
         Pol p;
         int ids = 0;
+
         private void PotvrdiNalog_Click(object sender, RoutedEventArgs e)
         {
-        
-       Korisnici = new ObservableCollection<Pacijent>();
-            string slj = "";
+            Close();
+            NaloziPacijenataFileStorage np = new NaloziPacijenataFileStorage();
 
             string gender = comboBox.SelectedValue.ToString();
+            string tb = textBox.Text;
+            string tb1 = textBox1.Text;
+            string tb2 = textBox2.Text;
+            string tb3 = textBox3.Text;
+            string tb5 = textBox5.Text;
+            string tb6 = textBox6.Text;
+            string tb7 = textBox7.Text;
 
-            if (gender != null)
-            {
-
-                if (gender.Contains("Muski"))
-                {
-                    p = Pol.Muski;
-                    slj = "Muski";
-
-                }
-                else if (gender.Contains("Zenski"))
-                {
-                    p = Pol.Zenski;
-                    slj = "Zenski";
-                }
-            }
-
-
-            string tempFile = System.IO.Path.GetTempFileName();
-
-            using (var sr = new StreamReader("podaci.txt"))
-            using (var sw = new StreamWriter(tempFile))
-            {
-                string line;
-                int id = 0;
-                while ((line = sr.ReadLine()) != null)
-                {
-
-                    //var lastLine = File.ReadLines("podaci.txt").Last();
-                    String[] termin = line.Split(' ');
-                    var korisnik = new Pacijent();
-                    id = int.Parse(termin[8]);
-                    id++;
-
-                    sw.WriteLine(line);
-
-                }
-                sw.WriteLine(textBox.Text + " " + textBox1.Text + " " + textBox2.Text + " " + slj + " " + textBox3.Text + " " + textBox5.Text + " " + textBox6.Text + " " + textBox7.Text + " " + id);
-
-                
-            }
-            File.Delete("podaci.txt");
-            File.Move(tempFile, "podaci.txt");
-
-            Close();
-            SekretarPocetnaStrana s = new SekretarPocetnaStrana();
-            s.ShowDialog();
+            np.Kreiraj(gender, tb, tb1, tb2, tb3, tb5, tb6, tb7);
 
 
         }

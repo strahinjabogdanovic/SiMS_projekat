@@ -40,7 +40,7 @@ namespace ProjekatSIMS
 
             foreach (string linee in lines)
             {
-                String[] termin = linee.Split(' ');
+                String[] termin = linee.Split('/');
                 var guest = new GuestNalog();
                 guest.ime = termin[0].ToString();
                 guest.prezime = termin[1].ToString();
@@ -66,7 +66,7 @@ namespace ProjekatSIMS
 
             while ((line = sr.ReadLine()) != null)
             {
-                string[] components = line.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                string[] components = line.Split("/".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
             }
             sr.Close();
@@ -81,6 +81,7 @@ namespace ProjekatSIMS
 
         private void ObrisiGuestNalog_Click(object sender, RoutedEventArgs e)
         {
+            GuestFileStorage g = new GuestFileStorage();
             int currentRowIndex = dataGridGuestNalozi.Items.IndexOf(dataGridGuestNalozi.SelectedItem);
             GuestNalog k = Guest.ElementAt(currentRowIndex);
             if (Guest.Count > 0)
@@ -92,31 +93,8 @@ namespace ProjekatSIMS
                 MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
+            g.Obrisi(k);
 
-
-            string tempFile = System.IO.Path.GetTempFileName();
-
-            using (var sr = new StreamReader("naloziGuest.txt"))
-            using (var sw = new StreamWriter(tempFile))
-            {
-                string line;
-
-                while ((line = sr.ReadLine()) != null)
-                {
-                    Guest = new ObservableCollection<GuestNalog>();
-
-                    var priv = new GuestNalog();
-
-                    String[] termin = line.Split(' ');
-                    priv.jmbg = long.Parse(termin[2].ToString());
-
-                    if (priv.jmbg != k.jmbg)
-                        sw.WriteLine(line);
-                }
-            }
-
-            File.Delete("naloziGuest.txt");
-            File.Move(tempFile, "naloziGuest.txt");
         }
     }
 }

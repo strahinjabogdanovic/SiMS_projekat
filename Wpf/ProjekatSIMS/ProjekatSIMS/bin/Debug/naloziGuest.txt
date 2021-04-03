@@ -1,4 +1,4 @@
-Marko Markovic 3234143134342
-Ana Markov 25546354674
-Milivoje Milic 34234232435
-Masa Peric 4354535345345
+Marko/Markovic/3234143134342
+Ana/Markov/25546354674
+Milivoje/Milic/34234232435
+Petar/Petrov/2098546374234

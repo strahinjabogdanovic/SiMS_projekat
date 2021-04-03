@@ -1,4 +1,3 @@
-Petar Petrovic 0038467348372 Muski 02.01.1987 petar@gmail.com 0635627384 Gogoljeva_1 1 
-Ana Jovanovic 1111111111111 Zenski 02.01.1977 ana123@gmail.com 06356565654 Vojvodjanska_1 2 
-Milivoje Petrov 2222222222222 Muski 02.01.1989 mili@gmail.com 06354534354 Krilova_3 3 
-Milosav Pekaric 3333333333333 Muski 02.01.1989 milosav@gmail.com 45345654334 Krilova_8 4
+Petar/Petrovic/0038467348372/Muski/02.01.1987/petar@gmail.com/0635627384/Gogoljeva 1/1 
+Ana/Jovanovic/1111111111111/Zenski/02.01.1999./ana123@gmail.com/06356565654/Vojvodjanska 1/2
+Mirko/Miric/2039483273485/Muski/1.1.1999./mirko@gmail.com/0643875638/Njegoseva 4/3

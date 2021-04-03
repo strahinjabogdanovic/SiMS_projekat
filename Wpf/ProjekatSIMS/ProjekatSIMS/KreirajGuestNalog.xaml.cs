@@ -40,39 +40,12 @@ namespace ProjekatSIMS
 
         private void Potvrdi_Click(object sender, RoutedEventArgs e)
         {
-            Guest = new ObservableCollection<GuestNalog>();
+            GuestFileStorage g = new GuestFileStorage();
+            string tb = textBox.Text;
+            string tb1 = textBox1.Text;
+            string tb2 = textBox2.Text;
+            g.Kreiraj(tb, tb1, tb2);
            
-
-            string tempFile = System.IO.Path.GetTempFileName();
-
-            using (var sr = new StreamReader("naloziGuest.txt"))
-            using (var sw = new StreamWriter(tempFile))
-            {
-                string line;
-                //int id = 0;
-                while ((line = sr.ReadLine()) != null)
-                {
-
-                    String[] termin = line.Split(' ');
-                    var guest = new GuestNalog();
-                    //id = int.Parse(termin[8]);
-                    //id++;
-
-                    sw.WriteLine(line);
-
-                }
-                sw.WriteLine(textBox.Text + " " + textBox1.Text + " " + textBox2.Text);
-
-
-            }
-            File.Delete("naloziGuest.txt");
-            File.Move(tempFile, "naloziGuest.txt");
-
-
-
-            Close();
-            GuestNalozi s = new GuestNalozi();
-            s.ShowDialog();
         }
     }
 }

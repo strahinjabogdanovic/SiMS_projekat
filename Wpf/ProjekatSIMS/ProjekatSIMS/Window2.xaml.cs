@@ -45,7 +45,7 @@ namespace ProjekatSIMS
                     if (idp == currentRowIndex)
                     {
 
-                        String[] termin = line.Split(' ');
+                        String[] termin = line.Split('/');
                         String ime = termin[0];
                         String prezime = termin[1];
                         String jmbg = termin[2];
