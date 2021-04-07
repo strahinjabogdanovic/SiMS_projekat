@@ -13,30 +13,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
     /// <summary>
-    /// Interaction logic for SekretarPocetnaStrana.xaml
+    /// Interaction logic for PageSekretar.xaml
     /// </summary>
-    public partial class SekretarPocetnaStrana : Window
+    public partial class PageSekretar : Page
     {
-       // Korisnik krs;
-        //private readonly string filePath;
+        private readonly string filePath;
 
-       // public ObservableCollection<Pacijent> Korisnici
-       // {
-        //    get;
-       //     set;
-       // }
-
-
-        public SekretarPocetnaStrana()
+        public ObservableCollection<Pacijent> Korisnici
         {
-            InitializeComponent();
-            Loaded += MyWindow_Loaded;
-            /*
+            get;
+            set;
+        }
+
+        public PageSekretar()
+        {
             filePath = "podaci.txt";
             Korisnici = new ObservableCollection<Pacijent>();
             List<String> lines = new List<string>();
@@ -72,7 +68,7 @@ namespace ProjekatSIMS
 
             }
 
-            
+
             InitializeComponent();
             this.DataContext = this;
 
@@ -85,21 +81,12 @@ namespace ProjekatSIMS
 
             }
             sr.Close();
-
-            */
         }
 
-        private void MyWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-            PocetnaS.NavigationService.Navigate(new PageSekretar());
-        }
-
-        /*
         private void KreirajNalog_Click(object sender, RoutedEventArgs e)
         {
-            KreirajNalog kn = new KreirajNalog();
-            kn.ShowDialog();
-            
+            this.NavigationService.Navigate(new PageSKreirajNalog());
+
         }
 
         private void ObrisiNalog_Click(object sender, RoutedEventArgs e)
@@ -118,7 +105,7 @@ namespace ProjekatSIMS
 
             n.Obrisi(k);
 
-           
+
             //dataGridNalozi.Items.Refresh();
         }
 
@@ -126,7 +113,7 @@ namespace ProjekatSIMS
         {
             NaloziPacijenataFileStorage np = new NaloziPacijenataFileStorage();
             np.Update(dataGridNalozi);
-            
+
 
         }
 
@@ -134,15 +121,16 @@ namespace ProjekatSIMS
         {
             NaloziPacijenataFileStorage n = new NaloziPacijenataFileStorage();
             n.Prikazi(dataGridNalozi);
+            this.NavigationService.Navigate(new PageSPrikazInfo());
 
         }
 
         private void GuestNalog_Click(object sender, RoutedEventArgs e)
         {
-            GuestNalozi gn = new GuestNalozi();
-            gn.ShowDialog();
-            
+            this.NavigationService.Navigate(new PageGuestNalozi());
+            //GuestNalozi gn = new GuestNalozi();
+            //gn.ShowDialog();
+
         }
-        */
     }
 }

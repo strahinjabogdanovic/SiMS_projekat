@@ -46,8 +46,9 @@ namespace Package1
 
 
             //Close();
-            GuestNalozi s = new GuestNalozi();
-            s.ShowDialog();
+            //GuestNalozi s = new GuestNalozi();
+            //s.ShowDialog();
+            //PageGuestNalozi p = new PageGuestNalozi();
         }
       
       public void Obrisi(GuestNalog k)

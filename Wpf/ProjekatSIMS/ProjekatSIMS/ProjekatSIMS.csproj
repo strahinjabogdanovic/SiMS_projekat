@@ -85,6 +85,21 @@
     <Compile Include="Package1\ProstorijeFileStorage.cs" />
     <Compile Include="Package1\TerminiFileStorage.cs" />
     <Compile Include="Package1\TerminiPacijenata.cs" />
+    <Compile Include="PageGuestNalozi.xaml.cs">
+      <DependentUpon>PageGuestNalozi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKreirajGuestNalog.xaml.cs">
+      <DependentUpon>PageKreirajGuestNalog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSekretar.xaml.cs">
+      <DependentUpon>PageSekretar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSKreirajNalog.xaml.cs">
+      <DependentUpon>PageSKreirajNalog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSPrikazInfo.xaml.cs">
+      <DependentUpon>PageSPrikazInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SekretarPocetnaStrana.xaml.cs">
       <DependentUpon>SekretarPocetnaStrana.xaml</DependentUpon>
     </Compile>
@@ -138,6 +153,26 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="PacijentPocetnaStranica.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageGuestNalozi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKreirajGuestNalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSekretar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSKreirajNalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSPrikazInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -66,8 +66,9 @@ namespace Package1
             File.Move(tempFile, "podaci.txt");
 
             //Close();
-            SekretarPocetnaStrana s = new SekretarPocetnaStrana();
-            s.ShowDialog();
+            //SekretarPocetnaStrana s = new SekretarPocetnaStrana();
+            //s.ShowDialog();
+            //this.NavigationService.Navigate(new PageSekretar());
         }
       
       public void Obrisi(Pacijent k)
@@ -106,8 +107,9 @@ namespace Package1
             {
                 sw.WriteLine(currentRowIndex);
             }
-            Window2 w2 = new Window2();
-            w2.ShowDialog();
+            //this.NavigationService.Navigate(new PageSPrikazInfo());
+            //Window2 w2 = new Window2();
+            //w2.ShowDialog();
         }
       
       public void Update(DataGrid dataGridNalozi)

@@ -18,5 +18,6 @@
         </DataGrid>
         <Button x:Name="button" Content="Kreiraj" HorizontalAlignment="Left" Margin="74,338,0,0" VerticalAlignment="Top" Width="106" Height="40" FontSize="18" Click="KreirajGuestNalog_Click"/>
         <Button x:Name="button1" Content="Obrisi" HorizontalAlignment="Left" Margin="282,338,0,0" VerticalAlignment="Top" Width="106" Height="40" FontSize="18" Click="ObrisiGuestNalog_Click"/>
+
     </Grid>
 </Window>
