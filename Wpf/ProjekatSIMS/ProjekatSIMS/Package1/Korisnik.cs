@@ -13,17 +13,7 @@ namespace Package1
                 PropertyChanged(this, new PropertyChangedEventArgs(name));
             }
         }
-        public bool Prijava()
-      {
-         // TODO: implement
-         return false;
-      }
-      
-      public bool Odjava()
-      {
-         // TODO: implement
-         return false;
-      }
+     
    
       private string Ime;
       private string Prezime;

@@ -1,0 +1,21 @@
+﻿<Page x:Class="ProjekatSIMS.PageKreirajObavestenje"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="PageKreirajObavestenje" Width="1272" Height="649">
+
+    <Grid>
+        <Label x:Name="label" Content="Kreiranje obavestenja" HorizontalAlignment="Left" Margin="422,76,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <Label x:Name="label1" Content="Naziv obavestenja" HorizontalAlignment="Left" Margin="125,202,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="label2" Content="Sadrzaj obavestenja" HorizontalAlignment="Left" Margin="110,314,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Button x:Name="button" Content="Odustani" HorizontalAlignment="Left" Margin="450,545,0,0" VerticalAlignment="Top" Width="118" FontSize="24" Click="Odustani_Click" Height="45"/>
+        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="648,545,0,0" VerticalAlignment="Top" Width="106" FontSize="24" Click="Potvrdi_Click" Height="45"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="77" Margin="334,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="630" FontSize="20"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="177" Margin="334,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="630" FontSize="20"/>
+
+    </Grid>
+</Page>

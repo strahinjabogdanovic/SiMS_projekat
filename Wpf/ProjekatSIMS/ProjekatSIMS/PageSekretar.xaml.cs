@@ -132,5 +132,10 @@ namespace ProjekatSIMS
             //gn.ShowDialog();
 
         }
+
+        private void Obavestenja_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new PageObavestenjaSekretar());
+        }
     }
 }

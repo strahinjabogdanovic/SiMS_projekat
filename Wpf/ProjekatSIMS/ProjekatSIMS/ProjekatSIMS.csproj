@@ -81,6 +81,8 @@
     </Compile>
     <Compile Include="Package1\GuestFileStorage.cs" />
     <Compile Include="Package1\NaloziPacijenataFileStorage.cs" />
+    <Compile Include="Package1\Obavestenja.cs" />
+    <Compile Include="Package1\ObavestenjaFileStorage.cs" />
     <Compile Include="Package1\PacijentFileStorage.cs" />
     <Compile Include="Package1\ProstorijeFileStorage.cs" />
     <Compile Include="Package1\TerminiFileStorage.cs" />
@@ -90,6 +92,12 @@
     </Compile>
     <Compile Include="PageKreirajGuestNalog.xaml.cs">
       <DependentUpon>PageKreirajGuestNalog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageKreirajObavestenje.xaml.cs">
+      <DependentUpon>PageKreirajObavestenje.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageObavestenjaSekretar.xaml.cs">
+      <DependentUpon>PageObavestenjaSekretar.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageSekretar.xaml.cs">
       <DependentUpon>PageSekretar.xaml</DependentUpon>
@@ -161,6 +169,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageKreirajGuestNalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageKreirajObavestenje.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageObavestenjaSekretar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

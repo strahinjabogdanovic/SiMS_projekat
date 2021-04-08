@@ -113,3 +113,17 @@ C:\Users\Natasa\Desktop\Proj_Proba\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\o
 C:\Users\Natasa\Desktop\Proj_Proba\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageGuestNalozi.baml
 C:\Users\Natasa\Desktop\Proj_Proba\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageKreirajGuestNalog.g.cs
 C:\Users\Natasa\Desktop\Proj_Proba\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageKreirajGuestNalog.baml
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageGuestNalozi.g.cs
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageKreirajGuestNalog.g.cs
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageObavestenjaSekretar.g.cs
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageSekretar.g.cs
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageSKreirajNalog.g.cs
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageSPrikazInfo.g.cs
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageGuestNalozi.baml
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageKreirajGuestNalog.baml
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageObavestenjaSekretar.baml
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageSekretar.baml
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageSKreirajNalog.baml
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageSPrikazInfo.baml
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageKreirajObavestenje.g.cs
+C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageKreirajObavestenje.baml
