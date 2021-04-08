@@ -137,5 +137,13 @@ namespace ProjekatSIMS
         {
             this.NavigationService.Navigate(new PageObavestenjaSekretar());
         }
+
+        private void MedKarton_Click(object sender, RoutedEventArgs e)
+        {
+            NaloziPacijenataFileStorage n = new NaloziPacijenataFileStorage();
+            n.Prikazi(dataGridNalozi);
+            this.NavigationService.Navigate(new PageMedKarton());
+
+        }
     }
 }
