@@ -108,11 +108,17 @@
     <Compile Include="PageSekretar.xaml.cs">
       <DependentUpon>PageSekretar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageSekretarZakazTermina.xaml.cs">
+      <DependentUpon>PageSekretarZakazTermina.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageSKreirajNalog.xaml.cs">
       <DependentUpon>PageSKreirajNalog.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageSPrikazInfo.xaml.cs">
       <DependentUpon>PageSPrikazInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageTerminiSekretar.xaml.cs">
+      <DependentUpon>PageTerminiSekretar.xaml</DependentUpon>
     </Compile>
     <Compile Include="SekretarPocetnaStrana.xaml.cs">
       <DependentUpon>SekretarPocetnaStrana.xaml</DependentUpon>
@@ -198,11 +204,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageSekretarZakazTermina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageSKreirajNalog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageSPrikazInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageTerminiSekretar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

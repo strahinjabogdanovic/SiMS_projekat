@@ -145,5 +145,10 @@ namespace ProjekatSIMS
             this.NavigationService.Navigate(new PageMedKarton());
 
         }
+
+        private void Termini_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new PageTerminiSekretar());
+        }
     }
 }

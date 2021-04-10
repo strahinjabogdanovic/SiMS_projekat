@@ -1,0 +1,31 @@
+﻿<Page x:Class="ProjekatSIMS.PageTerminiSekretar"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="PageTerminiSekretar" Width="1272" Height="649">
+
+    <Grid>
+        <Label x:Name="label" Content="Termini" HorizontalAlignment="Left" Margin="55,84,0,0" VerticalAlignment="Top" FontSize="40"/>
+
+        <DataGrid x:Name="dataGridTerminiSekretar" ItemsSource="{Binding Path = TerminiP, UpdateSourceTrigger=PropertyChanged}"
+                  SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
+                  Height="329" Margin="55,186,0,0" VerticalAlignment="Top" Width="771" FontSize="20">
+            <DataGrid.Columns>
+            <!--    <DataGridTextColumn Header="Pacijent" Binding="{Binding Path = ime}" Width="160"/> -->
+                <DataGridTextColumn Header="Datum" Binding="{Binding Path = datum}" Width="160"/>
+                <DataGridTextColumn Header="Vreme" Binding="{Binding Path = vreme}" Width="160"/>
+                <DataGridTextColumn Header="Lekar" Binding="{Binding Path = lekar}" Width="160"/>
+                <DataGridTextColumn Header="Soba" Binding="{Binding Path = soba}" Width="*"/>
+                <!--   <DataGridTextColumn Header="Broj telefona" Binding="{Binding Path = brojTelefona}" Width="*"/> -->
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button" Content="Zakazivanje termina" HorizontalAlignment="Left" Margin="936,186,0,0" VerticalAlignment="Top" Width="251" Height="45" FontSize="24" Click="ZakazivanjeT_Click"/>
+        <Button x:Name="button1" Content="Otkazivanje termina" HorizontalAlignment="Left" Margin="936,300,0,0" VerticalAlignment="Top" Width="251" Height="45" FontSize="24" Click="OtkazivanjeT_Click"/>
+        <Button x:Name="button2" Content="Promena termina" HorizontalAlignment="Left" Margin="936,420,0,0" VerticalAlignment="Top" Width="251" Height="45" FontSize="24" Click="PromenaT_Click"/>
+        <Button x:Name="button3" Content="Nazad" HorizontalAlignment="Left" Margin="585,567,0,0" VerticalAlignment="Top" Width="130" FontSize="24" Height="45" Click="Nazad_Click"/>
+    </Grid>
+</Page>

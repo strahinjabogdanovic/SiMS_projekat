@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\
+C:\Users\Natasa\Desktop\Kop2\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\
 ProjekatSIMS
 none
 false
 DEBUG;TRACE
-C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\App.xaml
-22783212884
+C:\Users\Natasa\Desktop\Kop2\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\App.xaml
+24-1177862058
 
-53-1460982407
+55-1979942182
 131569487696
-GuestNalozi.xaml;KreirajGuestNalog.xaml;KreirajNalog.xaml;KreirajProstoriju.xaml;KreirajTerminLekar.xaml;KreirajTerminPacijenta.xaml;LekarPocetnaStranica.xaml;MainWindow.xaml;PacijentPocetnaStranica.xaml;PageAzurirajAlergene.xaml;PageGuestNalozi.xaml;PageKreirajGuestNalog.xaml;PageKreirajObavestenje.xaml;PageMedKarton.xaml;PageObavestenjaSekretar.xaml;PageSekretar.xaml;PageSKreirajNalog.xaml;PageSPrikazInfo.xaml;SekretarPocetnaStrana.xaml;SveInfoUpravnik.xaml;UpravnikPocetnaStranica.xaml;Window2.xaml;
+GuestNalozi.xaml;KreirajGuestNalog.xaml;KreirajNalog.xaml;KreirajProstoriju.xaml;KreirajTerminLekar.xaml;KreirajTerminPacijenta.xaml;LekarPocetnaStranica.xaml;MainWindow.xaml;PacijentPocetnaStranica.xaml;PageAzurirajAlergene.xaml;PageGuestNalozi.xaml;PageKreirajGuestNalog.xaml;PageKreirajObavestenje.xaml;PageMedKarton.xaml;PageObavestenjaSekretar.xaml;PageSekretar.xaml;PageSekretarZakazTermina.xaml;PageSKreirajNalog.xaml;PageSPrikazInfo.xaml;PageTerminiSekretar.xaml;SekretarPocetnaStrana.xaml;SveInfoUpravnik.xaml;UpravnikPocetnaStranica.xaml;Window2.xaml;
 
-True
+False
 

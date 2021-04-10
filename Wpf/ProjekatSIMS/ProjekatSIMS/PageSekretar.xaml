@@ -24,9 +24,10 @@
         <Button x:Name="button1" Content="Obrisi nalog" HorizontalAlignment="Left" Margin="233,553,0,0" VerticalAlignment="Top" Width="143" Height="45" FontSize="24" Click="ObrisiNalog_Click" />
         <Button x:Name="button2" Content="Izmeni nalog" HorizontalAlignment="Left" Margin="398,553,0,0" VerticalAlignment="Top" Width="156" Height="45" FontSize="24" Click="IzmeniNalog_Click"/>
         <Button x:Name="button3" Content="Prikaži sve informacije" HorizontalAlignment="Left" Margin="576,553,0,0" VerticalAlignment="Top" Width="250" Height="45" FontSize="24" Click="PrikaziSveInfo_Click"/>
-        <Button x:Name="button4" Content="Guest nalozi" HorizontalAlignment="Left" Margin="938,280,0,0" VerticalAlignment="Top" Width="250" Height="46" FontSize="24" Click="GuestNalog_Click" />
+        <Button x:Name="button4" Content="Guest nalozi" HorizontalAlignment="Left" Margin="938,309,0,0" VerticalAlignment="Top" Width="250" Height="45" FontSize="24" Click="GuestNalog_Click" />
         <Label x:Name="label" Content="Nalozi pacijenata" HorizontalAlignment="Left" Margin="55,80,0,0" VerticalAlignment="Top" FontSize="36"/>
-        <Button x:Name="button5" Content="Obavestenja" HorizontalAlignment="Left" Margin="938,365,0,0" VerticalAlignment="Top" Width="250" Height="59" Click="Obavestenja_Click" FontSize="24"/>
-        <Button x:Name="button6" Content="Medicinski karton" HorizontalAlignment="Left" Margin="938,173,0,0" VerticalAlignment="Top" Width="250" Height="68" RenderTransformOrigin="0.484,-0.265" FontSize="24" Click="MedKarton_Click"/>
+        <Button x:Name="button5" Content="Obavestenja" HorizontalAlignment="Left" Margin="938,400,0,0" VerticalAlignment="Top" Width="250" Height="59" Click="Obavestenja_Click" FontSize="24"/>
+        <Button x:Name="button6" Content="Medicinski karton" HorizontalAlignment="Left" Margin="938,129,0,0" VerticalAlignment="Top" Width="250" Height="45" RenderTransformOrigin="0.484,-0.265" FontSize="24" Click="MedKarton_Click"/>
+        <Button x:Name="button7" Content="Termini" HorizontalAlignment="Left" Margin="938,227,0,0" VerticalAlignment="Top" Width="250" Height="45" FontSize="24" Click="Termini_Click"/>
     </Grid>
 </Page>
