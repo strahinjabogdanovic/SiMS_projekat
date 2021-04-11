@@ -79,6 +79,7 @@
     <Compile Include="PacijentPocetnaStranica.xaml.cs">
       <DependentUpon>PacijentPocetnaStranica.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Package1\DummyClass.cs" />
     <Compile Include="Package1\GuestFileStorage.cs" />
     <Compile Include="Package1\NaloziPacijenataFileStorage.cs" />
     <Compile Include="Package1\Obavestenja.cs" />
@@ -120,11 +121,17 @@
     <Compile Include="PageTerminiSekretar.xaml.cs">
       <DependentUpon>PageTerminiSekretar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="pomeranjeTermina.xaml.cs">
+      <DependentUpon>pomeranjeTermina.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SekretarPocetnaStrana.xaml.cs">
       <DependentUpon>SekretarPocetnaStrana.xaml</DependentUpon>
     </Compile>
     <Compile Include="SveInfoUpravnik.xaml.cs">
       <DependentUpon>SveInfoUpravnik.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Terapija.xaml.cs">
+      <DependentUpon>Terapija.xaml</DependentUpon>
     </Compile>
     <Compile Include="UpravnikPocetnaStranica.xaml.cs">
       <DependentUpon>UpravnikPocetnaStranica.xaml</DependentUpon>
@@ -220,11 +227,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="pomeranjeTermina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SekretarPocetnaStrana.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SveInfoUpravnik.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Terapija.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

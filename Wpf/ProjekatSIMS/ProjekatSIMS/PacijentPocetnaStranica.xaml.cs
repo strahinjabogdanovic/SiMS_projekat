@@ -95,9 +95,21 @@ namespace ProjekatSIMS
 
         private void Izmeni_Click(object sender, RoutedEventArgs e)
         {
+
             PacijentFileStorage p = new PacijentFileStorage();
             p.Update(dataGridPacijenti);
+
+            pomeranjeTermina ps = new pomeranjeTermina();
+            ps.ShowDialog();
+
+          
             
+        }
+
+        private void Terapija_Click(object sender, RoutedEventArgs e)
+        {
+            Terapija t = new Terapija();
+            t.ShowDialog();
         }
     }
 }
