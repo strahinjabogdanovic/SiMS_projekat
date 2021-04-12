@@ -63,7 +63,6 @@ namespace Package1
                     var priv = new Prostorije();
 
                     String[] termin = line.Split('/');
-
                     priv.oznaka = termin[1].ToString();
 
                     if (priv.oznaka != k.oznaka)
@@ -134,6 +133,19 @@ namespace Package1
             File.Delete("prostorije.txt");
             File.Move(tempFile, "prostorije.txt");
         }
-   
-   }
+
+        public void stvari(DataGrid dataGridProstorije)
+        {
+            int currentRowIndex = dataGridProstorije.Items.IndexOf(dataGridProstorije.SelectedItem);
+
+            using (var sw = new StreamWriter("redopreme.txt"))
+            {
+                sw.WriteLine(currentRowIndex);
+            }
+            Stvari w1 = new Stvari();
+            w1.ShowDialog();
+
+        }
+
+    }
 }

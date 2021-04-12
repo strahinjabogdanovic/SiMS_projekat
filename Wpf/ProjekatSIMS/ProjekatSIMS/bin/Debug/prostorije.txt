@@ -1,6 +1,6 @@
-Sala 10/A1/operacije/rukavice,makaze,sto,krevet
-Sala 11/A4/operacije/rukavice,makaze,sto,krevet
-Sala 14/A2/pregled/makaze,sto,rukavice,krevet
-Sala 15/A3/pregled/makaze,rukavice
-Sala 16/A4/operacije/sto,makaze
-dfsdds/dfsdf/dfsd/dfsff
+Sala 10/A1/operacije/rukavice,makaze,stolica,krevet/25,3,4,5
+Sala 11/A4/operacije/rukavice,sto,krevet/25,15,26
+Sala 14/A2/pregled/makaze,sto,rukavice,krevet,testera/4,2,1,3,3
+Sala 15/A3/pregled/makaze,rukavice/1,8
+Sala 16/A5/operacije/sto,makaze/1,1
+Magacin/1/Ostava/rukavice,makaze,sto,krevet/150,50,20,50

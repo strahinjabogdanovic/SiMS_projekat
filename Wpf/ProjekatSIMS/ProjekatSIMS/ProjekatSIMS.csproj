@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DodajOpremu.xaml.cs">
+      <DependentUpon>DodajOpremu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GuestNalozi.xaml.cs">
       <DependentUpon>GuestNalozi.xaml</DependentUpon>
     </Compile>
@@ -84,6 +87,8 @@
     <Compile Include="Package1\NaloziPacijenataFileStorage.cs" />
     <Compile Include="Package1\Obavestenja.cs" />
     <Compile Include="Package1\ObavestenjaFileStorage.cs" />
+    <Compile Include="Package1\Oprema.cs" />
+    <Compile Include="Package1\OpremaFileStorage.cs" />
     <Compile Include="Package1\PacijentFileStorage.cs" />
     <Compile Include="Package1\ProstorijeFileStorage.cs" />
     <Compile Include="Package1\TerminiFileStorage.cs" />
@@ -127,6 +132,9 @@
     <Compile Include="SekretarPocetnaStrana.xaml.cs">
       <DependentUpon>SekretarPocetnaStrana.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Stvari.xaml.cs">
+      <DependentUpon>Stvari.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SveInfoUpravnik.xaml.cs">
       <DependentUpon>SveInfoUpravnik.xaml</DependentUpon>
     </Compile>
@@ -139,6 +147,10 @@
     <Compile Include="Window2.xaml.cs">
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
+    <Page Include="DodajOpremu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GuestNalozi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -232,6 +244,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SekretarPocetnaStrana.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Stvari.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

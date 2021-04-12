@@ -107,5 +107,11 @@ namespace ProjekatSIMS
             p.Prikazi(dataGridProstorije);
             
         }
+
+        private void oprema_click(object sender, RoutedEventArgs e)
+        {
+            ProstorijeFileStorage p = new ProstorijeFileStorage();
+            p.stvari(dataGridProstorije);
+        }
     }
 }
