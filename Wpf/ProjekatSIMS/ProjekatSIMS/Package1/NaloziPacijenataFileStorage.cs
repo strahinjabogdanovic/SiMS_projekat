@@ -40,6 +40,7 @@ namespace Package1
 
 
             string tempFile = System.IO.Path.GetTempFileName();
+            string tempFile1 = System.IO.Path.GetTempFileName();
 
             using (var sr = new StreamReader("podaci.txt"))
             using (var sw = new StreamWriter(tempFile))
@@ -61,6 +62,27 @@ namespace Package1
                 sw.WriteLine(tb + "/" + tb1 + "/" + tb2 + "/" + slj + "/" + tb3 + "/" + tb5 + "/" + tb6 + "/" + tb7 + "/" + id);
 
 
+                using (var srev = new StreamReader("medKarton.txt"))
+                using (var swev = new StreamWriter(tempFile1))
+                {
+                    string liness;
+                    while ((liness = srev.ReadLine()) != null)
+                    {
+
+                        String[] termin = liness.Split('/');
+                        var zdravKarton = new ZdravstveniKarton();
+
+
+                        swev.WriteLine(liness);
+
+                    }
+                    swev.WriteLine(id + "/");
+
+
+                }
+                File.Delete("medKarton.txt");
+                File.Move(tempFile1, "medKarton.txt");
+
             }
             File.Delete("podaci.txt");
             File.Move(tempFile, "podaci.txt");
@@ -73,6 +95,67 @@ namespace Package1
       
       public void Obrisi(Pacijent k)
       {
+            string tempFile = System.IO.Path.GetTempFileName();
+
+            using (var sr = new StreamReader("podaci.txt"))
+            using (var sw = new StreamWriter(tempFile))
+            {
+
+                string line;
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    Korisnici = new ObservableCollection<Pacijent>();
+
+                    var priv = new Pacijent();
+
+                    String[] termin = line.Split('/');
+                    priv.jmbg = long.Parse(termin[2].ToString());
+
+                    if (priv.jmbg != k.jmbg)
+                    {
+                        sw.WriteLine(line);
+
+                    }
+                    else
+                    {
+                        k.idKorisnika = int.Parse(termin[8].ToString());
+
+                        string tempFile1 = System.IO.Path.GetTempFileName();
+                        using (var srpp = new StreamReader("medKarton.txt"))
+                        using (var swpp = new StreamWriter(tempFile1))
+                        {
+                            string linessi;
+
+                            while ((linessi = srpp.ReadLine()) != null)
+                            {
+
+                                String[] term = linessi.Split('/');
+
+                                int p = int.Parse(term[0].ToString());
+                                Console.WriteLine(p);
+
+                                if (p != k.idKorisnika)
+                                {
+                                    swpp.WriteLine(linessi);
+                                }
+
+                            }
+
+
+                        }
+                        File.Delete("medKarton.txt");
+                        File.Move(tempFile1, "medKarton.txt");
+                    }
+
+                }
+
+            }
+
+            File.Delete("podaci.txt");
+            File.Move(tempFile, "podaci.txt");
+
+            /*
             string tempFile = System.IO.Path.GetTempFileName();
 
             using (var sr = new StreamReader("podaci.txt"))
@@ -97,6 +180,7 @@ namespace Package1
 
             File.Delete("podaci.txt");
             File.Move(tempFile, "podaci.txt");
+            */
         }
       
       public void Prikazi(DataGrid dataGridNalozi)
