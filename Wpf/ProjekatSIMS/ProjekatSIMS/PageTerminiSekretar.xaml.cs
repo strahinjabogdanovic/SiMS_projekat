@@ -31,7 +31,8 @@ namespace ProjekatSIMS
             get;
             set;
         }
-
+        int idd = 0;
+        
         public PageTerminiSekretar()
         {
             filePath = "termini.txt";
@@ -49,11 +50,13 @@ namespace ProjekatSIMS
                 pacijent.lekar = termin[2].ToString();
                 pacijent.soba = termin[3].ToString();
                 pacijent.id = int.Parse(termin[4].ToString());
+                pacijent.pacijenti = termin[5].ToString();
+
                 TerminiP.Add(pacijent);
 
+                //idd = int.Parse(termin[5].ToString());
 
             }
-
 
             InitializeComponent();
             this.DataContext = this;
@@ -99,7 +102,7 @@ namespace ProjekatSIMS
         private void PromenaT_Click(object sender, RoutedEventArgs e)
         {
             PacijentFileStorage p = new PacijentFileStorage();
-            p.Update(dataGridTerminiSekretar);
+            p.UpdateSekretar(dataGridTerminiSekretar);
         }
     }
 }

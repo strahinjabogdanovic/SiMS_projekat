@@ -29,6 +29,23 @@ namespace ProjekatSIMS.Package1
         private string Soba;
         private int Id;
         private Termin VrstaTermina;
+        private string Pacijent;
+
+        public string pacijenti
+        {
+            get
+            {
+                return Pacijent;
+            }
+            set
+            {
+                if (value != Pacijent)
+                {
+                    Pacijent = value;
+                    OnPropertyChanged("pacijenti");
+                }
+            }
+        }
 
 
         public string datum

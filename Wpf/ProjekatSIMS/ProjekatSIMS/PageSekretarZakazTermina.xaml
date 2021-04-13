@@ -10,17 +10,19 @@
 
     <Grid>
         <Label x:Name="label" Content="Zakazivanje termina" HorizontalAlignment="Left" Margin="441,84,0,0" VerticalAlignment="Top" FontSize="40"/>
-        <Label x:Name="label1" Content="Datum" HorizontalAlignment="Left" Margin="441,219,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label x:Name="label2" Content="Vreme" HorizontalAlignment="Left" Margin="441,288,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label x:Name="label3" Content="Lekar" HorizontalAlignment="Left" Margin="441,360,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="37" Margin="573,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" FontSize="20"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="37" Margin="573,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" FontSize="20"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="573,357,0,0" VerticalAlignment="Top" Width="276" Height="40">
+        <Label x:Name="label1" Content="Datum" HorizontalAlignment="Left" Margin="441,279,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="label2" Content="Vreme" HorizontalAlignment="Left" Margin="441,344,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="label3" Content="Lekar" HorizontalAlignment="Left" Margin="441,412,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="37" Margin="573,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" FontSize="20"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="37" Margin="573,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" FontSize="20"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="573,409,0,0" VerticalAlignment="Top" Width="276" Height="40">
             <ComboBoxItem>Jova Jovic</ComboBoxItem>
             <ComboBoxItem>Jovan Jovanovic</ComboBoxItem>
         </ComboBox>
         <Button x:Name="button" Content="Odustani" HorizontalAlignment="Left" Margin="474,546,0,0" VerticalAlignment="Top" Width="117" Height="45" FontSize="24" Click="Odustani_Click"/>
         <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="678,546,0,0" VerticalAlignment="Top" Width="123" Height="45" FontSize="24" Click="Potvrdi_Click"/>
+        <Label x:Name="label4" Content="Pacijent" HorizontalAlignment="Left" Margin="433,210,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="37" Margin="573,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" FontSize="20"/>
 
     </Grid>
 </Page>
