@@ -38,8 +38,9 @@ namespace ProjekatSIMS
             string lekar = comboBox.SelectedValue.ToString();
             string tb = textBox.Text;
             string tb1 = textBox1.Text;
+            string tb2 = textBox2.Text;
 
-            p.Kreiraj(lekar, tb, tb1);
+            p.KreirajSekretar(lekar, tb, tb1, tb2);
 
             this.NavigationService.Navigate(new PageTerminiSekretar());
         }
