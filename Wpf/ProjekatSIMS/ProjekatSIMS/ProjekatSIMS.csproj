@@ -129,6 +129,9 @@
     <Compile Include="pomeranjeTermina.xaml.cs">
       <DependentUpon>pomeranjeTermina.xaml</DependentUpon>
     </Compile>
+    <Compile Include="rasporedjivanje.xaml.cs">
+      <DependentUpon>rasporedjivanje.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SekretarPocetnaStrana.xaml.cs">
       <DependentUpon>SekretarPocetnaStrana.xaml</DependentUpon>
     </Compile>
@@ -240,6 +243,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="pomeranjeTermina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="rasporedjivanje.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

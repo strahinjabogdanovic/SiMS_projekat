@@ -33,7 +33,7 @@ namespace Package1
                     sw.WriteLine(line);
 
                 }
-                sw.WriteLine(tb + "/" + tb1 + "/" + tb2 + "/" + tb3);
+                sw.WriteLine(tb + "/" + tb1 + "/" + tb2 + "/" + tb3 + "/" + ",");
 
 
             }
