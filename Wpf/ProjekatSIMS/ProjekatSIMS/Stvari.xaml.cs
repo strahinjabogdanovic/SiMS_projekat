@@ -30,6 +30,7 @@ namespace ProjekatSIMS
         public Stvari()
         {
             {
+                InitializeComponent();
                 filePath = "prostorije.txt";
                 Oprema = new ObservableCollection<Oprema>();
                 List<String> lines = new List<string>();
@@ -57,8 +58,7 @@ namespace ProjekatSIMS
                         String[] termin = linee.Split('/');
 
                         String sala = termin[0];
-                        //Console.WriteLine(sala);
-                        //t12.Text = "sala";
+                        t1.Text = sala;
 
                         String opreman = termin[3];
                         String[] priv = opreman.Split(',');
@@ -79,7 +79,7 @@ namespace ProjekatSIMS
                     idp++;
                 }
 
-                InitializeComponent();
+                
 
                 this.DataContext = this;
 

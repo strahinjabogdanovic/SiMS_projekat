@@ -113,5 +113,17 @@ namespace ProjekatSIMS
             ProstorijeFileStorage p = new ProstorijeFileStorage();
             p.stvari(dataGridProstorije);
         }
+
+        private void rasporedjivanje_click(object sender, RoutedEventArgs e)
+        {
+            int currentRowIndex = dataGridProstorije.Items.IndexOf(dataGridProstorije.SelectedItem);
+
+            using (var sw = new StreamWriter("redzarasp.txt"))
+            {
+                sw.WriteLine(currentRowIndex);
+            }
+            rasporedjivanje r = new rasporedjivanje();
+            r.ShowDialog();
+        }
     }
 }
