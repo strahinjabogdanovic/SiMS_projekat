@@ -110,8 +110,10 @@ namespace ProjekatSIMS
 
         private void Terapija_Click(object sender, RoutedEventArgs e)
         {
-            Terapija t = new Terapija();
-            t.ShowDialog();
+            //Terapija t = new Terapija();
+            // t.ShowDialog();
+            ReceptiPacijent rp = new ReceptiPacijent();
+            rp.ShowDialog();
         }
     }
 }

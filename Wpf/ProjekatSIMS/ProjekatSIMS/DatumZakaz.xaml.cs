@@ -99,11 +99,9 @@ namespace ProjekatSIMS
 
 
                                 }
-                                Console.WriteLine("sdasdas");
+                         
                                 if (i == 0)
                                 {
-
-                                    Console.WriteLine("s1111111");
                                     String[] t = datt.Split('.');
                                     DateTime parsedDate332 = DateTime.Parse(t[2] + "/" + t[1] + "/" + t[0] + " " + "08:00:00");
                                     if (DateTime.Compare(parsedDate, parsedDate332) != 0)
@@ -115,7 +113,6 @@ namespace ProjekatSIMS
                                     }
                                     else
                                     {
-                                        Console.WriteLine("222222");
                                         ComboBoxItem newitem2 = new ComboBoxItem();
                                         newitem2.Content = parsedDate332.AddMinutes(30).ToString();
                                         cb1.Items.Add(newitem2);

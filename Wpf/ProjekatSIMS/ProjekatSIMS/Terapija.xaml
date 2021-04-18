@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="Terapija" Height="450" Width="800">
     <Grid>
-        <Label Content="Lek&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,44,0,0" Width="77" Height="40" FontSize="20"/>
         <TextBlock HorizontalAlignment="Left" Margin="263,44,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="40" Width="499" FontSize="20"/>
         <Label Content="Lek se uzima na svakih:" HorizontalAlignment="Left" Margin="37,139,0,0" VerticalAlignment="Top" Height="46" Width="225" FontSize="20"/>
         <TextBlock HorizontalAlignment="Left" Margin="295,139,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="334" Height="46" FontSize="20"/>
