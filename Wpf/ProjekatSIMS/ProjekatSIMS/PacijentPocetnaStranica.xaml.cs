@@ -7,7 +7,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -24,9 +23,6 @@ namespace ProjekatSIMS
     /// </summary>
     public partial class PacijentPocetnaStranica : Window
     {
-
-        public Timer timer;
-
         private readonly string filePath;
 
         public ObservableCollection<TerminiPacijenata> TerminiP
@@ -75,10 +71,8 @@ namespace ProjekatSIMS
 
         private void KreirajTermin_Click(object sender, RoutedEventArgs e)
         {
-            //KreirajTerminPacijenta k = new KreirajTerminPacijenta();
-            //k.ShowDialog();
-            BiranjePrioritetaZakazivanja p = new BiranjePrioritetaZakazivanja();
-            p.ShowDialog();
+            KreirajTerminPacijenta k = new KreirajTerminPacijenta();
+            k.ShowDialog();
         }
 
         private void ObrisiTermin_Click(object sender, RoutedEventArgs e)
@@ -114,18 +108,8 @@ namespace ProjekatSIMS
 
         private void Terapija_Click(object sender, RoutedEventArgs e)
         {
-            //Terapija t = new Terapija();
-            //t.ShowDialog();
-
-            timer = new System.Timers.Timer(20000);
-            timer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            timer.Start();
-
+            Terapija t = new Terapija();
+            t.ShowDialog();
         }
-
-        private static void OnTimedEvent(object source, ElapsedEventArgs e) {
-            MessageBox.Show("Popijte lek!!!!!!!!!!!!!!");
-        }
-
     }
 }
