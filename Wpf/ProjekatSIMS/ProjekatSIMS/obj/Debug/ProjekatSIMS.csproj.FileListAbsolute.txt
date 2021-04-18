@@ -484,3 +484,5 @@ C:\Users\Natasa\Desktop\KopSig1\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\
 C:\Users\Natasa\Desktop\K2\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\bin\Debug\ProjekatSIMS.exe.config
 C:\Users\Natasa\Desktop\K2\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\ProjekatSIMS.exe
 C:\Users\Natasa\Desktop\K2\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\ProjekatSIMS.pdb
+C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\rasporedjivanje.g.cs
+C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\rasporedjivanje.baml
