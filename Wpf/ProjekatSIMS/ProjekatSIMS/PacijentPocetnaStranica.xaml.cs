@@ -71,8 +71,10 @@ namespace ProjekatSIMS
 
         private void KreirajTermin_Click(object sender, RoutedEventArgs e)
         {
-            KreirajTerminPacijenta k = new KreirajTerminPacijenta();
-            k.ShowDialog();
+            // KreirajTerminPacijenta k = new KreirajTerminPacijenta();
+            // k.ShowDialog();
+            BiranjePrioritetaZakazivanja bp = new BiranjePrioritetaZakazivanja();
+            bp.ShowDialog();
         }
 
         private void ObrisiTermin_Click(object sender, RoutedEventArgs e)

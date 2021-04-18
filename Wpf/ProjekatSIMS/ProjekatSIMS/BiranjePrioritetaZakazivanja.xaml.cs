@@ -32,8 +32,8 @@ namespace ProjekatSIMS
 
         private void Doctor_Checked(object sender, RoutedEventArgs e)
         {
-            PrioritetLekar pl = new PrioritetLekar();
-            pl.ShowDialog(); 
+            //PrioritetLekar pl = new PrioritetLekar();
+            //pl.ShowDialog();
         }
     }
 }

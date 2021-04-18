@@ -68,7 +68,7 @@ namespace Package1
 
                     }
                 }
-                sw.WriteLine(tb + "/" + tb1 + "/" + slj + "/" + doktor + "/" + id);
+                sw.WriteLine(tb + "/" + tb1 + "/" + slj + "/" + doktor + "/" + id + "/" + "Ana Markovic");
 
 
             }

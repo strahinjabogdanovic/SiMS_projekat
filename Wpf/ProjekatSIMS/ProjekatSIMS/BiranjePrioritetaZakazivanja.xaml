@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="BiranjePrioritetaZakazivanja" Height="450" Width="800">
     <Grid>
-       
+
         <RadioButton Content="Datum" HorizontalAlignment="Left" Margin="264,140,0,0" VerticalAlignment="Top" Height="41" Width="182" RenderTransformOrigin="20,10" Checked="Date_Checked" FontSize="30">
-        
+
         </RadioButton>
-     
+
 
         <RadioButton Content="Lekar" HorizontalAlignment="Left" Margin="264,265,0,0" VerticalAlignment="Top" Height="117" Width="313" FontSize="30" RenderTransformOrigin="10,10" Checked="Doctor_Checked"/>
         <Label Content="Selektujte prioritet" HorizontalAlignment="Left" Margin="244,28,0,0" VerticalAlignment="Top" FontSize="30" Width="257"/>
