@@ -62,6 +62,7 @@ namespace ProjekatSIMS
                 lekar.soba = termin[3].ToString();
                 lekar.lekar = termin[4].ToString();
                 lekar.id = int.Parse(termin[5].ToString());
+                lekar.jmbg = termin[6].ToString();
                 ZakazTermina.Add(lekar);
 
 
@@ -190,6 +191,12 @@ namespace ProjekatSIMS
             File.Delete("lekar.txt");
             File.Move(tempFile, "lekar.txt");
             */
+        }
+
+        private void Karton_Click(object sender, RoutedEventArgs e)
+        {
+            KartonLekar kl = new KartonLekar(dataGridLekar);
+            kl.ShowDialog();
         }
     }
 }

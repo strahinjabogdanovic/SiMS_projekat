@@ -61,6 +61,18 @@
     <Compile Include="GuestNalozi.xaml.cs">
       <DependentUpon>GuestNalozi.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IzdavanjeRecepta.xaml.cs">
+      <DependentUpon>IzdavanjeRecepta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Izvestaj.xaml.cs">
+      <DependentUpon>Izvestaj.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Izvestaji_o_pregledu_stanja.xaml.cs">
+      <DependentUpon>Izvestaji_o_pregledu_stanja.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KartonLekar.xaml.cs">
+      <DependentUpon>KartonLekar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="KreirajGuestNalog.xaml.cs">
       <DependentUpon>KreirajGuestNalog.xaml</DependentUpon>
     </Compile>
@@ -84,6 +96,7 @@
     </Compile>
     <Compile Include="Package1\DummyClass.cs" />
     <Compile Include="Package1\GuestFileStorage.cs" />
+    <Compile Include="Package1\MedIzvestaj.cs" />
     <Compile Include="Package1\NaloziPacijenataFileStorage.cs" />
     <Compile Include="Package1\Obavestenja.cs" />
     <Compile Include="Package1\ObavestenjaFileStorage.cs" />
@@ -91,6 +104,7 @@
     <Compile Include="Package1\OpremaFileStorage.cs" />
     <Compile Include="Package1\PacijentFileStorage.cs" />
     <Compile Include="Package1\ProstorijeFileStorage.cs" />
+    <Compile Include="Package1\Recepti.cs" />
     <Compile Include="Package1\TerminiFileStorage.cs" />
     <Compile Include="Package1\TerminiPacijenata.cs" />
     <Compile Include="PageAzurirajAlergene.xaml.cs">
@@ -135,6 +149,9 @@
     <Compile Include="SekretarPocetnaStrana.xaml.cs">
       <DependentUpon>SekretarPocetnaStrana.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SpisakRecepata.xaml.cs">
+      <DependentUpon>SpisakRecepata.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Stvari.xaml.cs">
       <DependentUpon>Stvari.xaml</DependentUpon>
     </Compile>
@@ -155,6 +172,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GuestNalozi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IzdavanjeRecepta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Izvestaj.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Izvestaji_o_pregledu_stanja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KartonLekar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -251,6 +284,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SekretarPocetnaStrana.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SpisakRecepata.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

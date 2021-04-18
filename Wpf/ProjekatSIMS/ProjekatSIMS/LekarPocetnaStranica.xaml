@@ -16,10 +16,13 @@
                 <DataGridTextColumn Header="Vreme" Binding="{Binding Path = vreme}" />
                 <DataGridTextColumn Header="Soba" Binding="{Binding Path = soba}" />
                 <DataGridTextColumn Header="Lekar" Binding="{Binding Path = lekar}" />
+                <DataGridTextColumn Header="Jmbg" Binding="{Binding Path = jmbg}" />
+
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="button" Content="Kreiraj" HorizontalAlignment="Left" Margin="26,327,0,0" VerticalAlignment="Top" Width="86" Height="32" FontSize="16" Click="Kreiraj_Click"/>
         <Button x:Name="button1" Content="Obrisi" HorizontalAlignment="Left" Margin="154,327,0,0" VerticalAlignment="Top" Width="85" Height="32" FontSize="16" Click="Obrisi_Click"/>
         <Button x:Name="button2" Content="Izmeni" HorizontalAlignment="Left" Margin="283,327,0,0" VerticalAlignment="Top" Width="86" Height="32" FontSize="16" Click="Izmeni_Click"/>
+        <Button x:Name="button3" Content="Karton" HorizontalAlignment="Left" Margin="555,88,0,0" VerticalAlignment="Top" Width="75" Click="Karton_Click"/>
     </Grid>
 </Window>

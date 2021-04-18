@@ -30,6 +30,24 @@ namespace ProjekatSIMS.Package1
         private int Id;
         private Termin VrstaTermina;
         private string Pacijent;
+        private string Jmbg;
+
+
+        public string jmbg
+        {
+            get
+            {
+                return Jmbg;
+            }
+            set
+            {
+                if (value != Jmbg)
+                {
+                    Jmbg = value;
+                    OnPropertyChanged("jmbg");
+                }
+            }
+        }
 
         public string pacijenti
         {

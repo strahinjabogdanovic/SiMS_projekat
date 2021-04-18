@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\
+C:\Users\Tatjana\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\
 ProjekatSIMS
 none
 false
 DEBUG;TRACE
-C:\Users\Natasa\Desktop\Projekat-Sims\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\App.xaml
-28-1164371468
+C:\Users\Tatjana\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\App.xaml
+341400801840
 
-62569508496
+67-1505026965
 131569487696
-DodajOpremu.xaml;GuestNalozi.xaml;KreirajGuestNalog.xaml;KreirajNalog.xaml;KreirajProstoriju.xaml;KreirajTerminLekar.xaml;KreirajTerminPacijenta.xaml;LekarPocetnaStranica.xaml;MainWindow.xaml;PacijentPocetnaStranica.xaml;PageAzurirajAlergene.xaml;PageGuestNalozi.xaml;PageKreirajGuestNalog.xaml;PageKreirajObavestenje.xaml;PageMedKarton.xaml;PageObavestenjaSekretar.xaml;PageSekretar.xaml;PageSekretarZakazTermina.xaml;PageSKreirajNalog.xaml;PageSPrikazInfo.xaml;PageTerminiSekretar.xaml;pomeranjeTermina.xaml;SekretarPocetnaStrana.xaml;Stvari.xaml;SveInfoUpravnik.xaml;Terapija.xaml;UpravnikPocetnaStranica.xaml;Window2.xaml;
+DodajOpremu.xaml;GuestNalozi.xaml;IzdavanjeRecepta.xaml;Izvestaj.xaml;Izvestaji_o_pregledu_stanja.xaml;KartonLekar.xaml;KreirajGuestNalog.xaml;KreirajNalog.xaml;KreirajProstoriju.xaml;KreirajTerminLekar.xaml;KreirajTerminPacijenta.xaml;LekarPocetnaStranica.xaml;MainWindow.xaml;PacijentPocetnaStranica.xaml;PageAzurirajAlergene.xaml;PageGuestNalozi.xaml;PageKreirajGuestNalog.xaml;PageKreirajObavestenje.xaml;PageMedKarton.xaml;PageObavestenjaSekretar.xaml;PageSekretar.xaml;PageSekretarZakazTermina.xaml;PageSKreirajNalog.xaml;PageSPrikazInfo.xaml;PageTerminiSekretar.xaml;pomeranjeTermina.xaml;rasporedjivanje.xaml;SekretarPocetnaStrana.xaml;SpisakRecepata.xaml;Stvari.xaml;SveInfoUpravnik.xaml;Terapija.xaml;UpravnikPocetnaStranica.xaml;Window2.xaml;
 
-False
+True
 
