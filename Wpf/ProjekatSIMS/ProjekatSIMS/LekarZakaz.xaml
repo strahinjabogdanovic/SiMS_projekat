@@ -1,0 +1,15 @@
+﻿<Window x:Class="ProjekatSIMS.LekarZakaz"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS"
+        mc:Ignorable="d"
+        Title="LekarZakaz" Height="450" Width="800">
+    <Grid>
+        <Label Content="Izaberite slobodan termin zeljenog lekara:" HorizontalAlignment="Left" Margin="208,110,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="247,200,0,0" VerticalAlignment="Top" Width="266" FontSize="20"/>
+        <Button Content="Zakazi" HorizontalAlignment="Left" Margin="343,330,0,0" VerticalAlignment="Top" Width="75" FontSize="20" Click="Zakazi_Click"/>
+
+    </Grid>
+</Window>

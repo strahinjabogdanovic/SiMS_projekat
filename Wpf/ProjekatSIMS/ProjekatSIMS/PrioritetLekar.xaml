@@ -7,11 +7,9 @@
         mc:Ignorable="d"
         Title="PrioritetLekar" Height="450" Width="800">
     <Grid>
-        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="353,84,0,0" VerticalAlignment="Top" Width="258" Height="37"/>
-        <Label Content="Izaberite lekara:" HorizontalAlignment="Left" Margin="111,84,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label Content="Izaberite termin:" HorizontalAlignment="Left" Margin="111,192,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <ComboBox x:Name="cb2" HorizontalAlignment="Left" Margin="353,192,0,0" VerticalAlignment="Top" Width="255" Height="37"/>
-        <Button Content="Zakazi" HorizontalAlignment="Left" Margin="353,331,0,0" VerticalAlignment="Top" Width="109" Click="LekarZakaz_Click" FontSize="20" Height="50"/>
+        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="339,181,0,0" VerticalAlignment="Top" Width="258" Height="37"/>
+        <Label Content="Izaberite lekara:" HorizontalAlignment="Left" Margin="108,181,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="353,331,0,0" VerticalAlignment="Top" Width="109" FontSize="20" Height="50" Click="Potvrdi_Click"/>
 
     </Grid>
 </Window>

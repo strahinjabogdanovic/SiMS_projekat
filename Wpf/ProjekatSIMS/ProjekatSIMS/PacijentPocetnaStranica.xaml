@@ -21,6 +21,5 @@
         <Button x:Name="button1" Content="Obrisi termin" HorizontalAlignment="Left" Margin="190,380,0,0" VerticalAlignment="Top" Width="138" Height="42" FontSize="18" Click="ObrisiTermin_Click"/>
         <Button x:Name="button2" Content="Pomeranje termina" HorizontalAlignment="Left" Margin="362,380,0,0" VerticalAlignment="Top" Width="124" Height="42" FontSize="16" Click="Izmeni_Click"/>
         <Button x:Name="button3" Content="Recepti" HorizontalAlignment="Left" Margin="548,379,0,0" VerticalAlignment="Top" Width="91" Height="43" RenderTransformOrigin="0.085,0.217" Click="Terapija_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="598,246,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>

@@ -205,12 +205,15 @@ namespace ProjekatSIMS
                 int idx = 0;
                 string line;
                 int id = 0;
-              
 
-              
+                int br1 = 0;
+                String doktor = "";
+                string timee = "";
+                String dato = "";
+
                 while ((line = sr.ReadLine()) != null)
                 {
-                    //id++;
+                    
                     if (id == currentRowIndex)
                     {
                         String[] termin = line.Split('/');
@@ -219,7 +222,7 @@ namespace ProjekatSIMS
 
                         string slj = "";
                         string gdatum = cb1.SelectedValue.ToString();
-
+                        doktor = termin[2];
 
                         if (gdatum != null)
                         {
@@ -239,13 +242,135 @@ namespace ProjekatSIMS
                             }
                         }
 
-                        sw.WriteLine(slj + "." + klj + "." + god + "." +  "/" + termin[1] + "/" + termin[2] + "/" + termin[3] + "/" + termin[4]);
+                        dato = slj + "." + klj + "." + god + ".";
+                        Console.WriteLine(dato);
+
+                        using (var sr3 = new System.IO.StreamReader("termini.txt"))
+                        {
+                            string linee;
+                            while ((linee = sr3.ReadLine()) != null)
+                            {
+                                DateTime ter = DateTime.Now;
+                                String[] termin3 = linee.Split('/');
+                                if (termin3[0].Equals(dato) && termin3[2].Equals(doktor))
+                                {
+
+                                    Console.WriteLine("1111111");
+                                    br1++;
+
+                                    String[] dat = termin3[0].Split('.');
+                                    String datum = dat[2] + "/" + dat[1] + "/" + dat[0];
+                                    String vreme = termin3[1] + ":00";
+                                    String d = datum + " " + vreme;
+                                    DateTime t2 = DateTime.Now;
+                                    Convert.ChangeType("2020/12/31 23:00", typeof(DateTime));
+                                    DateTime parsedDate = DateTime.Parse(d);
+                                    doktor = termin3[2];
+
+                                    using (var sr2 = new System.IO.StreamReader("termini.txt"))
+                                    {
+
+                                        String datum2 = "";
+                                        String vreme2 = "";
+                                        string linef = "";
+
+                                        DateTime parsedDate33 = DateTime.Parse("2100/2/1 00:00:00");
+                                        TimeSpan span = parsedDate33.Subtract(parsedDate);
+
+                                        int i = 0;
+                                        while ((linef = sr2.ReadLine()) != null)
+                                        {
+                                            Console.WriteLine("222222");
+                                            String[] termin2 = linef.Split('/');
+
+                                            String[] dat2 = termin2[0].Split('.');
+                                            datum2 = dat2[2] + "/" + dat2[1] + "/" + dat2[0];
+                                            vreme2 = termin2[1] + ":00";
+                                            String d2 = datum2 + " " + vreme2;
+
+
+                                            Convert.ChangeType("2020/12/31 23:00", typeof(DateTime));
+                                            DateTime parsedDate2 = DateTime.Parse(d2);
+                                            Console.WriteLine("11111");
+
+                                            if (termin3[0].Equals(termin2[0]) && termin2[2].Equals(doktor))
+                                            {
+                                                Console.WriteLine("adassafas");
+                                                if (DateTime.Compare(parsedDate, parsedDate2) < 0)
+                                                {
+                                                    Console.WriteLine("22222222222");
+                                                    if (DateTime.Compare(parsedDate.AddMinutes(30), parsedDate2) != 0)
+                                                    {
+                                                        String[] tt = parsedDate.AddMinutes(30).ToString().Split(' ');
+                                                        String[] ttt = tt[1].Split(':');
+                                                        timee = ttt[0] + ":" + ttt[1];
+                                                    }
+                                                    i++;
+                                                }
+                                                else if (DateTime.Compare(parsedDate, parsedDate2) > 0)
+                                                {
+                                                    if (DateTime.Compare(parsedDate2.AddMinutes(30), parsedDate) != 0)
+                                                    {
+                                                        String[] tt = parsedDate2.AddMinutes(30).ToString().Split(' ');
+                                                        String[] ttt = tt[1].Split(':');
+                                                        timee = ttt[0] + ":" + ttt[1];
+                                                    }
+                                                    i++;
+                                                }
+
+
+                                            }
+                                            Console.WriteLine("666666");
+
+                                            if (i == 0)
+                                            {
+                                                String[] t = dato.Split('.');
+                                                DateTime parsedDate332 = DateTime.Parse(t[2] + "/" + t[1] + "/" + t[0] + " " + "08:00:00");
+                                                if (DateTime.Compare(parsedDate, parsedDate332) != 0)
+                                                {
+                                                    String[] tt = parsedDate332.ToString().Split(' ');
+                                                    String[] ttt = tt[1].Split(':');
+                                                    timee = ttt[0] + ":" + ttt[1];
+                                                    i++;
+                                                }
+                                                else
+                                                {
+                                                    String[] tt = parsedDate332.AddMinutes(30).ToString().Split(' ');
+                                                    String[] ttt = tt[1].Split(':');
+                                                    timee = ttt[0] + ":" + ttt[1];
+                                                    i++;
+                                                }
+
+                                            }
+
+                                        }
+
+
+
+                                    }
+
+
+                                }
+                                if (br1 == 0)
+                                {
+
+                                    String[] t = dato.Split('.');
+                                    DateTime parsedDate332 = DateTime.Parse(t[2] + "/" + t[1] + "/" + t[0] + " " + "08:00:00");
+                                    String[] tt = parsedDate332.ToString().Split(' ');
+                                    String[] ttt = tt[1].Split(':');
+                                    timee = ttt[0] + ":" + ttt[1];
+
+                                }
+                                
+                            }
+                        }
+                        sw.WriteLine(slj + "." + klj + "." + god + "." + "/" + timee + "/" + doktor + "/" + termin[3] + "/" + termin[4] + "/" + "Ana Markovic");
                     }
                     else
                     {
                         sw.WriteLine(line);
                     }
-                    id++;
+                    ++id;
                 }
             }
             File.Delete("termini.txt");

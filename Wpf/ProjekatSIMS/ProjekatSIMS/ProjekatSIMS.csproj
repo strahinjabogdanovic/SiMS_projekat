@@ -97,6 +97,9 @@
     <Compile Include="LekarPocetnaStranica.xaml.cs">
       <DependentUpon>LekarPocetnaStranica.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LekarZakaz.xaml.cs">
+      <DependentUpon>LekarZakaz.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PacijentPocetnaStranica.xaml.cs">
       <DependentUpon>PacijentPocetnaStranica.xaml</DependentUpon>
     </Compile>
@@ -151,6 +154,9 @@
     </Compile>
     <Compile Include="PrioritetDatum.xaml.cs">
       <DependentUpon>PrioritetDatum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PrioritetLekar.xaml.cs">
+      <DependentUpon>PrioritetLekar.xaml</DependentUpon>
     </Compile>
     <Compile Include="rasporedjivanje.xaml.cs">
       <DependentUpon>rasporedjivanje.xaml</DependentUpon>
@@ -235,6 +241,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="LekarZakaz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -300,6 +310,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PrioritetDatum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PrioritetLekar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

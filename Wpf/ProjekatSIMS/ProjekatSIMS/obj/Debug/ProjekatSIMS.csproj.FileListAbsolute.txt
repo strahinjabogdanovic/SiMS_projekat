@@ -591,3 +591,7 @@ C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\
 C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PrioritetDatum.baml
 C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\ReceptiPacijent.g.cs
 C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\ReceptiPacijent.baml
+C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PrioritetLekar.g.cs
+C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PrioritetLekar.baml
+C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\LekarZakaz.g.cs
+C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\LekarZakaz.baml
