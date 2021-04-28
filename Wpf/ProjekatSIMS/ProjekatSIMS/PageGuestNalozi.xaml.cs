@@ -83,17 +83,21 @@ namespace ProjekatSIMS
         {
             GuestFileStorage g = new GuestFileStorage();
             int currentRowIndex = dataGridGuestNalozi.Items.IndexOf(dataGridGuestNalozi.SelectedItem);
-            GuestNalog k = Guest.ElementAt(currentRowIndex);
-            if (Guest.Count > 0)
-            {
-                Guest.RemoveAt(currentRowIndex);
-            }
-            else
-            {
-                MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
 
-            g.Obrisi(k);
+            if (currentRowIndex != -1)
+            {
+                GuestNalog k = Guest.ElementAt(currentRowIndex);
+                if (Guest.Count > 0)
+                {
+                    Guest.RemoveAt(currentRowIndex);
+                }
+                else
+                {
+                    MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+
+                g.Obrisi(k);
+            }
 
         }
 

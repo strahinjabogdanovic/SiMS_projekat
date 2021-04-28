@@ -16,6 +16,8 @@ namespace Package1
 
       private string Naziv;
       private string Sadrzaj;
+      private string Uloga;
+      private string Datum;
 
         public string naziv
         {
@@ -49,6 +51,38 @@ namespace Package1
             }
         }
 
+
+        public string uloga
+        {
+            get
+            {
+                return Uloga;
+            }
+            set
+            {
+                if (value != Uloga)
+                {
+                    Uloga = value;
+                    OnPropertyChanged("uloga");
+                }
+            }
+        }
+
+        public string datum
+        {
+            get
+            {
+                return Datum;
+            }
+            set
+            {
+                if (value != Datum)
+                {
+                    Datum = value;
+                    OnPropertyChanged("datum");
+                }
+            }
+        }
 
     }
 }

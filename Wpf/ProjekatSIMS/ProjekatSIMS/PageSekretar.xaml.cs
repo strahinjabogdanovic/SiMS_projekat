@@ -93,18 +93,21 @@ namespace ProjekatSIMS
         {
             NaloziPacijenataFileStorage n = new NaloziPacijenataFileStorage();
             int currentRowIndex = dataGridNalozi.Items.IndexOf(dataGridNalozi.SelectedItem);
-            Pacijent k = Korisnici.ElementAt(currentRowIndex);
-            if (Korisnici.Count > 0)
-            {
-                Korisnici.RemoveAt(currentRowIndex);
-            }
-            else
-            {
-                MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
 
-            n.Obrisi(k);
+            if (currentRowIndex != -1)
+            {
+                Pacijent k = Korisnici.ElementAt(currentRowIndex);
+                if (Korisnici.Count > 0)
+                {
+                    Korisnici.RemoveAt(currentRowIndex);
+                }
+                else
+                {
+                    MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
 
+                n.Obrisi(k);
+            }
 
             //dataGridNalozi.Items.Refresh();
         }

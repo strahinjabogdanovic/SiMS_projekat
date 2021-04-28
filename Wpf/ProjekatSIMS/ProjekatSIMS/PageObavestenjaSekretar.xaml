@@ -16,6 +16,14 @@
                   SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
                   Height="329" Margin="55,173,0,0" VerticalAlignment="Top" Width="1155" FontSize="20">
             <DataGrid.Columns>
+                <DataGridTextColumn Header="Obavestenje vide" Binding="{Binding Path = uloga}" Width="170">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
                 <DataGridTextColumn Header="Naziv" Binding="{Binding Path = naziv}" Width="250">
                     <DataGridTextColumn.ElementStyle>
                         <Style>
@@ -32,12 +40,13 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
+                <DataGridTextColumn Header="Datum" Binding="{Binding Path = datum}" Width="160"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="button" Content="Kreiraj" HorizontalAlignment="Left" Margin="55,549,0,0" VerticalAlignment="Top" Width="157" Height="45"  FontSize="24" Click="Kreiraj_Click" />
         <Button x:Name="button1" Content="Obrisi" HorizontalAlignment="Left" Margin="256,549,0,0" VerticalAlignment="Top" Width="157" Height="45"  FontSize="24" Click="Obrisi_Click" />
         <Button x:Name="button2" Content="Izmeni" HorizontalAlignment="Left" Margin="450,549,0,0" VerticalAlignment="Top" Width="157" Height="45"  FontSize="24" Click="Izmeni_Click" />
         <Button x:Name="button3" Content="Nazad" HorizontalAlignment="Left" Margin="654,549,0,0" VerticalAlignment="Top" Width="157" Height="45"  FontSize="24" Click="Nazad_Click" />
-    
+
     </Grid>
 </Page>

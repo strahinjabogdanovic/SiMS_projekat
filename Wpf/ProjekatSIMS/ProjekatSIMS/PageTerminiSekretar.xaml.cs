@@ -86,17 +86,21 @@ namespace ProjekatSIMS
         {
             PacijentFileStorage p = new PacijentFileStorage();
             int currentRowIndex = dataGridTerminiSekretar.Items.IndexOf(dataGridTerminiSekretar.SelectedItem);
-            TerminiPacijenata k = TerminiP.ElementAt(currentRowIndex);
-            if (TerminiP.Count > 0)
-            {
-                TerminiP.RemoveAt(currentRowIndex);
-            }
-            else
-            {
-                MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
 
-            p.Obrisi(k);
+            if (currentRowIndex != -1)
+            {
+                TerminiPacijenata k = TerminiP.ElementAt(currentRowIndex);
+                if (TerminiP.Count > 0)
+                {
+                    TerminiP.RemoveAt(currentRowIndex);
+                }
+                else
+                {
+                    MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+
+                p.Obrisi(k);
+            }
         }
 
         private void PromenaT_Click(object sender, RoutedEventArgs e)

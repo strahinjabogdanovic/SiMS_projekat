@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\
+C:\Users\Natasa\Desktop\NovoObavestenja\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\
 ProjekatSIMS
 none
 false
 DEBUG;TRACE
-C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\App.xaml
+C:\Users\Natasa\Desktop\NovoObavestenja\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\App.xaml
 401316190830
 
-73-1091174334
+76-976554281
 131569487696
 BiranjePrioritetaZakazivanja.xaml;DatumZakaz.xaml;DodajOpremu.xaml;GuestNalozi.xaml;IzdavanjeRecepta.xaml;Izvestaj.xaml;Izvestaji_o_pregledu_stanja.xaml;KartonLekar.xaml;KreirajGuestNalog.xaml;KreirajNalog.xaml;KreirajProstoriju.xaml;KreirajTerminLekar.xaml;KreirajTerminPacijenta.xaml;LekarPocetnaStranica.xaml;LekarZakaz.xaml;MainWindow.xaml;PacijentPocetnaStranica.xaml;PageAzurirajAlergene.xaml;PageGuestNalozi.xaml;PageKreirajGuestNalog.xaml;PageKreirajObavestenje.xaml;PageMedKarton.xaml;PageObavestenjaSekretar.xaml;PageSekretar.xaml;PageSekretarZakazTermina.xaml;PageSKreirajNalog.xaml;PageSPrikazInfo.xaml;PageTerminiSekretar.xaml;pomeranjeTermina.xaml;PrioritetDatum.xaml;PrioritetLekar.xaml;rasporedjivanje.xaml;ReceptiPacijent.xaml;SekretarPocetnaStrana.xaml;SpisakRecepata.xaml;Stvari.xaml;SveInfoUpravnik.xaml;Terapija.xaml;UpravnikPocetnaStranica.xaml;Window2.xaml;
 
-True
+False
 

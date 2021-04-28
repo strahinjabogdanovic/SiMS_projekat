@@ -37,8 +37,10 @@ namespace ProjekatSIMS
 
             string tb = textBox.Text;
             string tb1 = textBox1.Text;
+            string tb2 = textBox2.Text;
+            string tb3 = textBox3.Text;
 
-            n.Kreiraj(tb, tb1);
+            n.Kreiraj(tb, tb1, tb2, tb3);
 
             this.NavigationService.Navigate(new PageObavestenjaSekretar());
         }

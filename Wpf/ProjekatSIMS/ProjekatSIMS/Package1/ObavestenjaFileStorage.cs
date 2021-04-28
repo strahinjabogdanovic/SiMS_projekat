@@ -13,7 +13,7 @@ namespace Package1
             set;
         }
 
-        public void Kreiraj(string tb, string tb1)
+        public void Kreiraj(string tb, string tb1, string tb2, string tb3)
       {
             Obavesti = new ObservableCollection<Obavestenja>();
 
@@ -34,7 +34,7 @@ namespace Package1
                     sw.WriteLine(line);
 
                 }
-                sw.WriteLine(tb + "/" + tb1);
+                sw.WriteLine(tb + "/" + tb1 + "/" + tb2 + "/" + tb3);
 
 
             }
@@ -107,8 +107,10 @@ namespace Package1
 
                         TextBlock t1 = dataGridObavestenja.Columns[0].GetCellContent(row) as TextBlock;
                         TextBlock t2 = dataGridObavestenja.Columns[1].GetCellContent(row) as TextBlock;
+                        TextBlock t3 = dataGridObavestenja.Columns[2].GetCellContent(row) as TextBlock;
+                        TextBlock t4 = dataGridObavestenja.Columns[3].GetCellContent(row) as TextBlock;
 
-                        sw.WriteLine(t1.Text + "/" + t2.Text);
+                        sw.WriteLine(t2.Text + "/" + t3.Text + "/" + t4.Text + "/" + t1.Text);
                     }
                     else
                     {

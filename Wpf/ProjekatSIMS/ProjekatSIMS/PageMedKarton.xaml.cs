@@ -90,11 +90,12 @@ namespace ProjekatSIMS
                         String idK = termini[0];
                         String alerg = termini[1];
 
-                    Console.WriteLine(idK);
-                    Console.WriteLine(idd);
-                    if (int.Parse(idK) == int.Parse(idd))
+
+                    if (idd != "")
+                    {
+                        if (int.Parse(idK) == int.Parse(idd))
                         {
-                            
+
                             t.Text = ime;
                             t1.Text = prezime;
                             t2.Text = jmbg;
@@ -105,6 +106,7 @@ namespace ProjekatSIMS
                             t7.Text = adresa;
                             t8.Text = alerg;
                         }
+                    }
                     //}
                     idps++;
 

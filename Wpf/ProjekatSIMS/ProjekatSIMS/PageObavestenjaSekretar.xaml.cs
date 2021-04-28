@@ -45,6 +45,8 @@ namespace ProjekatSIMS
                 var obavestenja = new Obavestenja();
                 obavestenja.naziv = termin[0].ToString();
                 obavestenja.sadrzaj = termin[1].ToString();
+                obavestenja.datum = termin[2].ToString();
+                obavestenja.uloga = termin[3].ToString();
 
                 Obavesti.Add(obavestenja);
 
@@ -76,17 +78,21 @@ namespace ProjekatSIMS
             ObavestenjaFileStorage n = new ObavestenjaFileStorage();
             
             int currentRowIndex = dataGridObavestenja.Items.IndexOf(dataGridObavestenja.SelectedItem);
-            Obavestenja k = Obavesti.ElementAt(currentRowIndex);
-            if (Obavesti.Count > 0)
-            {
-                Obavesti.RemoveAt(currentRowIndex);
-            }
-            else
-            {
-                MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
 
-            n.Obrisi(k);
+            if (currentRowIndex != -1)
+            {
+                Obavestenja k = Obavesti.ElementAt(currentRowIndex);
+                if (Obavesti.Count > 0)
+                {
+                    Obavesti.RemoveAt(currentRowIndex);
+                }
+                else
+                {
+                    MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+
+                n.Obrisi(k);
+            }
         }
 
         private void Izmeni_Click(object sender, RoutedEventArgs e)
