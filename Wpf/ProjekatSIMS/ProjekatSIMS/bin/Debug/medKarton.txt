@@ -1,3 +1,3 @@
 1/alergen1,alergen2,alergen3
 2/alergen1,alergen2
-3/alergija1,alergija2,alergija3
+3/alergija1,alergija2,med
