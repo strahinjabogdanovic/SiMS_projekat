@@ -918,3 +918,5 @@ C:\Users\Strahx\Documents\GitHub\sims kopija\SiMS_projekat\Wpf\ProjekatSIMS\Proj
 C:\Users\Strahx\Documents\GitHub\sims kopija\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Lekovi_U.g.cs
 C:\Users\Strahx\Documents\GitHub\sims kopija\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\DodavanjeLeka.baml
 C:\Users\Strahx\Documents\GitHub\sims kopija\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Lekovi_U.baml
+C:\Users\Strahx\Documents\GitHub\sims kopija\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\FiltriranaOprema.g.cs
+C:\Users\Strahx\Documents\GitHub\sims kopija\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\FiltriranaOprema.baml

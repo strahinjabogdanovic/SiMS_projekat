@@ -67,6 +67,9 @@
     <Compile Include="DodavanjeLeka.xaml.cs">
       <DependentUpon>DodavanjeLeka.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FiltriranaOprema.xaml.cs">
+      <DependentUpon>FiltriranaOprema.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GuestNalozi.xaml.cs">
       <DependentUpon>GuestNalozi.xaml</DependentUpon>
     </Compile>
@@ -121,6 +124,7 @@
     <Compile Include="Package1\OpremaFileStorage.cs" />
     <Compile Include="Package1\PacijentFileStorage.cs" />
     <Compile Include="Package1\ProstorijeFileStorage.cs" />
+    <Compile Include="Package1\ProstorijeOprema.cs" />
     <Compile Include="Package1\Recepti.cs" />
     <Compile Include="Package1\Sastojci.cs" />
     <Compile Include="Package1\TerminiFileStorage.cs" />
@@ -222,6 +226,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DodavanjeLeka.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FiltriranaOprema.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

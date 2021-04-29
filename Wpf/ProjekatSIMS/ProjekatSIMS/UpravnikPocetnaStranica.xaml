@@ -26,5 +26,7 @@
         <Button x:Name="button4" Content="Oprema" HorizontalAlignment="Left" Margin="647,47,0,0" VerticalAlignment="Top" Width="76" Click="oprema_click"/>
         <Button x:Name="button5" Content="Rasporedjivanje" HorizontalAlignment="Left" Margin="639,124,0,0" VerticalAlignment="Top" Width="94" Click="rasporedjivanje_click"/>
         <Button x:Name="button6" Content="Lekovi" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="648,206,0,0" Click="lekovi_click"/>
+        <TextBox x:Name="tb1" HorizontalAlignment="Left" Height="23" Margin="749,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="s?" HorizontalAlignment="Left" Margin="869,0,0,0" VerticalAlignment="Top" Width="23" Height="23" Click="pretrazi"/>
     </Grid>
 </Window>

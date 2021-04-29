@@ -131,5 +131,12 @@ namespace ProjekatSIMS
             Lekovi_U lu = new Lekovi_U();
             lu.ShowDialog();
         }
+
+        private void pretrazi(object sender, RoutedEventArgs e)
+        {
+            String o = tb1.Text;
+            FiltriranaOprema fo = new FiltriranaOprema(o);
+            fo.ShowDialog();
+        }
     }
 }
