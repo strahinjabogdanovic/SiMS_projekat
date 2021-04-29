@@ -119,6 +119,9 @@
     <Compile Include="PageAzurirajAlergene.xaml.cs">
       <DependentUpon>PageAzurirajAlergene.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageDatum.xaml.cs">
+      <DependentUpon>PageDatum.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageGuestNalozi.xaml.cs">
       <DependentUpon>PageGuestNalozi.xaml</DependentUpon>
     </Compile>
@@ -128,11 +131,17 @@
     <Compile Include="PageKreirajObavestenje.xaml.cs">
       <DependentUpon>PageKreirajObavestenje.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageLekar.xaml.cs">
+      <DependentUpon>PageLekar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageMedKarton.xaml.cs">
       <DependentUpon>PageMedKarton.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageObavestenjaSekretar.xaml.cs">
       <DependentUpon>PageObavestenjaSekretar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagePrioritetZakazivanja.xaml.cs">
+      <DependentUpon>PagePrioritetZakazivanja.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageSekretar.xaml.cs">
       <DependentUpon>PageSekretar.xaml</DependentUpon>
@@ -148,6 +157,12 @@
     </Compile>
     <Compile Include="PageTerminiSekretar.xaml.cs">
       <DependentUpon>PageTerminiSekretar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageZakazivanjeDatum.xaml.cs">
+      <DependentUpon>PageZakazivanjeDatum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageZakazivanjeLekar.xaml.cs">
+      <DependentUpon>PageZakazivanjeLekar.xaml</DependentUpon>
     </Compile>
     <Compile Include="pomeranjeTermina.xaml.cs">
       <DependentUpon>pomeranjeTermina.xaml</DependentUpon>
@@ -265,6 +280,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageDatum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageGuestNalozi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -277,11 +296,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageLekar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageMedKarton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageObavestenjaSekretar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagePrioritetZakazivanja.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -302,6 +329,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageTerminiSekretar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageZakazivanjeDatum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageZakazivanjeLekar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -13,14 +13,13 @@
         <Label x:Name="label1" Content="Prezime" HorizontalAlignment="Left" Margin="491,205,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label x:Name="label2" Content="JMBG" HorizontalAlignment="Left" Margin="511,247,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label x:Name="label3" Content="Pol" HorizontalAlignment="Left" Margin="531,289,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label x:Name="label4" Content="DatumRodjenja" HorizontalAlignment="Left" Margin="425,331,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="label4" Content="Datum rodjenja" HorizontalAlignment="Left" Margin="425,331,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label x:Name="label5" Content="Email" HorizontalAlignment="Left" Margin="514,373,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label x:Name="label6" Content="Broj telefona" HorizontalAlignment="Left" Margin="449,415,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label x:Name="label7" Content="Adresa" HorizontalAlignment="Left" Margin="500,457,0,0" VerticalAlignment="Top" FontSize="20"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="30" Margin="609,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="20"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="30" Margin="609,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="20"/>
         <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="30" Margin="609,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="20"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="30" Margin="609,338,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="20"/>
         <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="30" Margin="609,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="20"/>
         <TextBox x:Name="textBox6" HorizontalAlignment="Left" Height="30" Margin="609,422,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="20"/>
         <TextBox x:Name="textBox7" HorizontalAlignment="Left" Height="30" Margin="609,464,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="20"/>
@@ -31,5 +30,20 @@
             <ComboBoxItem>Zenski</ComboBoxItem>
         </ComboBox>
         <Label x:Name="label8" Content="Kreiranje naloga pacijenata" HorizontalAlignment="Center" Margin="372,59,412,527" VerticalAlignment="Center" FontSize="40"/>
+        <DatePicker SelectedDate="{Binding myVideModelProperty}"
+                    Height="33" HorizontalAlignment="Left" Margin="609,335,0,0" Name="myDatePicker" VerticalAlignment="Top" Width="206" FontSize="20">
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type DatePickerTextBox}">
+                    <Setter Property="Control.Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <TextBox x:Name="PART_TextBox" 
+                                    Text="{Binding Path=SelectedDate, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}, StringFormat={}{0:dd.MM.yyyy}}" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
     </Grid>
 </Page>

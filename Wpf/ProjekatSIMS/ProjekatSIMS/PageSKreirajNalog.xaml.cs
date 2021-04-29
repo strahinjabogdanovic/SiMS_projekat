@@ -43,12 +43,15 @@ namespace ProjekatSIMS
             string tb = textBox.Text;
             string tb1 = textBox1.Text;
             string tb2 = textBox2.Text;
-            string tb3 = textBox3.Text;
             string tb5 = textBox5.Text;
             string tb6 = textBox6.Text;
             string tb7 = textBox7.Text;
+            string datum = myDatePicker.ToString();
+            String[] termin = datum.Split(' ');
+            String[] termin1 = termin[0].Split('/');
+            string datum1 = termin1[1] + "." + termin1[0] + "." + termin1[2] + ".";
 
-            np.Kreiraj(gender, tb, tb1, tb2, tb3, tb5, tb6, tb7);
+            np.Kreiraj(gender, tb, tb1, tb2, datum1, tb5, tb6, tb7);
 
             this.NavigationService.Navigate(new PageSekretar());
         }

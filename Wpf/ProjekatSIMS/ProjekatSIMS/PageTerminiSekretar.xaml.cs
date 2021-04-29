@@ -24,7 +24,7 @@ namespace ProjekatSIMS
     /// </summary>
     public partial class PageTerminiSekretar : Page
     {
-        private readonly string filePath;
+        private readonly string filePath;       
 
         public ObservableCollection<TerminiPacijenata> TerminiP
         {
@@ -79,7 +79,8 @@ namespace ProjekatSIMS
 
         private void ZakazivanjeT_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new PageSekretarZakazTermina());
+            //this.NavigationService.Navigate(new PageSekretarZakazTermina());
+            this.NavigationService.Navigate(new PagePrioritetZakazivanja());
         }
 
         private void OtkazivanjeT_Click(object sender, RoutedEventArgs e)
@@ -99,8 +100,11 @@ namespace ProjekatSIMS
                     MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                p.Obrisi(k);
+                p.OtkazivanjeSekretar(k);
             }
+
+            this.NavigationService.Navigate(new PageTerminiSekretar());
+
         }
 
         private void PromenaT_Click(object sender, RoutedEventArgs e)

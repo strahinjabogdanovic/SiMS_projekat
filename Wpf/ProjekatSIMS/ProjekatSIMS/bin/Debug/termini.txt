@@ -1,6 +1,10 @@
-16.12.2021./8:00/Marko Markovic/A1/1/Ana Markovic
-5.1.2021./8:00/Jova Jovic/A1/2/Ana Markovic
-7.1.2021./8:00/Jova Jovic/A1/2/Ana Markovic
-20.4.2021./9:00/Jovan Jovanovic/A2/3/Ana Markovic
-4.10.2021./8:00/Jovan Jovanovic/A2/4/Ana Markovic
-3.10.2021./8:30/Jovan Jovanovic/A2/5/Ana Markovic
+2.10.2021./8:00/Jova Jovic/A1/1/Ana Markovic
+2.10.2021./8:30/Jova Jovic/A1/2/Miki Mikic
+2.10.2021./9:00/Jova Jovic/A1/3/Ana Markovic
+3.10.2021./8:00/Jovan Jovanovic/A2/4/Kaca Maricic
+3.10.2021./8:30/Jovan Jovanovic/A2/0/ 
+3.10.2021./9:00/Jova Jovic/A2/0/ 
+3.10.2021./9:30/Jovan Jovanovic/A2/7/Nikola Nikic
+30.4.2021./9:00/Jova Jovic/A2/8/Minja Minjic
+1.5.2021./8:00/Jova Jovic/A2/9/Ana Markovic
+30.4.2021./8:30/Jovan Jovanovic/A2/10/Nikola Nikic

@@ -16,10 +16,24 @@
         <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="648,545,0,0" VerticalAlignment="Top" Width="106" FontSize="24" Click="Potvrdi_Click" Height="45"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="77" Margin="334,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="630" FontSize="20"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="127" Margin="334,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="630" FontSize="20"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="29" Margin="334,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" FontSize="20"/>
         <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="29" Margin="334,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" FontSize="20"/>
         <Label x:Name="label3" Content="Datum" HorizontalAlignment="Left" Margin="229,150,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label x:Name="label4" Content="Obavestenja vide" HorizontalAlignment="Left" Margin="140,206,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.895,2.577" FontSize="20"/>
+        <DatePicker SelectedDate="{Binding myVideModelProperty}"
+                    Height="33" HorizontalAlignment="Left" Margin="334,154,0,0" Name="myDatePicker" VerticalAlignment="Top" Width="278" FontSize="20">
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type DatePickerTextBox}">
+                    <Setter Property="Control.Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <TextBox x:Name="PART_TextBox" 
+                                    Text="{Binding Path=SelectedDate, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}, StringFormat={}{0:dd.MM.yyyy}}" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
 
     </Grid>
 </Page>
