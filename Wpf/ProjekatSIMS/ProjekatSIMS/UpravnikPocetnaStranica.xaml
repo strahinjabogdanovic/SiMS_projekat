@@ -25,5 +25,6 @@
         <Button x:Name="button3" Content="Prikazi sve informacije" HorizontalAlignment="Left" Margin="517,398,0,0" VerticalAlignment="Top" Width="206" Height="40" FontSize="18" RenderTransformOrigin="0.021,-4.428" Click="PrikaziSveInfo_Click"/>
         <Button x:Name="button4" Content="Oprema" HorizontalAlignment="Left" Margin="647,47,0,0" VerticalAlignment="Top" Width="76" Click="oprema_click"/>
         <Button x:Name="button5" Content="Rasporedjivanje" HorizontalAlignment="Left" Margin="639,124,0,0" VerticalAlignment="Top" Width="94" Click="rasporedjivanje_click"/>
+        <Button x:Name="button6" Content="Lekovi" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="648,206,0,0" Click="lekovi_click"/>
     </Grid>
 </Window>

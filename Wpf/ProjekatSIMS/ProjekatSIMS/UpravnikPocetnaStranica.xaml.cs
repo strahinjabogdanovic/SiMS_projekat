@@ -125,5 +125,11 @@ namespace ProjekatSIMS
             rasporedjivanje r = new rasporedjivanje();
             r.ShowDialog();
         }
+
+        private void lekovi_click(object sender, RoutedEventArgs e)
+        {
+            Lekovi_U lu = new Lekovi_U();
+            lu.ShowDialog();
+        }
     }
 }

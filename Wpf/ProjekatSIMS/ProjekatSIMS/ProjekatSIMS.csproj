@@ -64,6 +64,9 @@
     <Compile Include="DodajOpremu.xaml.cs">
       <DependentUpon>DodajOpremu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DodavanjeLeka.xaml.cs">
+      <DependentUpon>DodavanjeLeka.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GuestNalozi.xaml.cs">
       <DependentUpon>GuestNalozi.xaml</DependentUpon>
     </Compile>
@@ -100,11 +103,16 @@
     <Compile Include="LekarZakaz.xaml.cs">
       <DependentUpon>LekarZakaz.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Lekovi_U.xaml.cs">
+      <DependentUpon>Lekovi_U.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PacijentPocetnaStranica.xaml.cs">
       <DependentUpon>PacijentPocetnaStranica.xaml</DependentUpon>
     </Compile>
     <Compile Include="Package1\DummyClass.cs" />
     <Compile Include="Package1\GuestFileStorage.cs" />
+    <Compile Include="Package1\Lek.cs" />
+    <Compile Include="Package1\LekoviFileStorage.cs" />
     <Compile Include="Package1\MedIzvestaj.cs" />
     <Compile Include="Package1\NaloziPacijenataFileStorage.cs" />
     <Compile Include="Package1\Obavestenja.cs" />
@@ -114,6 +122,7 @@
     <Compile Include="Package1\PacijentFileStorage.cs" />
     <Compile Include="Package1\ProstorijeFileStorage.cs" />
     <Compile Include="Package1\Recepti.cs" />
+    <Compile Include="Package1\Sastojci.cs" />
     <Compile Include="Package1\TerminiFileStorage.cs" />
     <Compile Include="Package1\TerminiPacijenata.cs" />
     <Compile Include="PageAzurirajAlergene.xaml.cs">
@@ -212,6 +221,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DodavanjeLeka.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GuestNalozi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -257,6 +270,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="LekarZakaz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lekovi_U.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
