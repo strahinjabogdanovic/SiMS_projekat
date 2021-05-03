@@ -1031,3 +1031,5 @@ C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\ProjekatSI
 C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\ProjekatSIMS.pdb
 C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\ZahteviZaValidaciju.g.cs
 C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\ZahteviZaValidaciju.baml
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\ValidacijaLeka.g.cs
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\ValidacijaLeka.baml

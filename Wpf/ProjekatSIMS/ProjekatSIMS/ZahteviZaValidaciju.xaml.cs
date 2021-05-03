@@ -22,18 +22,20 @@ namespace ProjekatSIMS
     /// </summary>
     public partial class ZahteviZaValidaciju : Window
     {
+        public Lek lekKojiValidiramo;
         public ZahteviZaValidaciju()
         {
             InitializeComponent();
-            PrikaziZahteve();
+            lekKojiValidiramo=PrikaziZahteve();
         }
-        public void PrikaziZahteve() {
+        public Lek PrikaziZahteve() {
             string zahtevi;
             Lek zaValidaciju = new Lek();
             using (var sr = new StreamReader("lekovi.txt")){
                 int id = 0;
                 List<String> lines = new List<string>();
                 lines = File.ReadAllLines("lekovi.txt").ToList();
+                var lekPrazan = new Lek();
 
                 foreach (string linee in lines)
                 {
@@ -49,11 +51,18 @@ namespace ProjekatSIMS
                     {
                         zahtevi = "Zahtev za validaciju leka " + lek.nazivleka;
                         t.Text = zahtevi;
-                        break;
+                        return lek;
                     }
                     id++;
             }
+                return lekPrazan;
             }
+        }
+
+        private void Zahtev_Click(object sender, MouseButtonEventArgs e)
+        {
+            ValidacijaLeka validacija = new ValidacijaLeka(lekKojiValidiramo);
+            validacija.ShowDialog();
         }
     }
 }

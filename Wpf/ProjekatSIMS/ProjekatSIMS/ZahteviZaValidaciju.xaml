@@ -8,7 +8,7 @@
         Title="ZahteviZaValidaciju" Height="700" Width="1000">
     <Grid>
         <Label Content="Validacija leka" HorizontalAlignment="Left" Margin="75,95,0,0" VerticalAlignment="Top" Height="40" Width="154" FontSize="16"/>
-        <TextBlock x:Name="t" HorizontalAlignment="Left" Margin="75,183,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="41" Width="786"/>
+        <TextBlock x:Name="t" HorizontalAlignment="Left" Margin="75,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="786" MouseLeftButtonDown="Zahtev_Click"/>
 
     </Grid>
 </Window>
