@@ -63,6 +63,7 @@ namespace Package1
         private string NazivLeka;
         private string Sastojci;
         private string Zamena;
+        private string Validiran;
 
 
         public string nazivleka
@@ -127,6 +128,21 @@ namespace Package1
                 {
                     Zamena = value;
                     OnPropertyChanged("zamena");
+                }
+            }
+        }
+        public string validiran
+        {
+            get
+            {
+                return Validiran;
+            }
+            set
+            {
+                if (value != Validiran)
+                {
+                    Validiran = value;
+                    OnPropertyChanged("validiran");
                 }
             }
         }

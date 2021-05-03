@@ -198,5 +198,11 @@ namespace ProjekatSIMS
             KartonLekar kl = new KartonLekar(dataGridLekar);
             kl.ShowDialog();
         }
+
+        private void Validation_Click(object sender, RoutedEventArgs e)
+        {
+            ZahteviZaValidaciju z = new ZahteviZaValidaciju();
+            z.ShowDialog();
+        }
     }
 }
