@@ -133,7 +133,7 @@ namespace Package1
                                 String[] term = linessi.Split('/');
 
                                 int p = int.Parse(term[0].ToString());
-                                Console.WriteLine(p);
+                                //Console.WriteLine(p);
 
                                 if (p != k.idKorisnika)
                                 {

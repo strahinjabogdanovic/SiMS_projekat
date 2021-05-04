@@ -48,8 +48,8 @@ namespace ProjekatSIMS
             string tb7 = textBox7.Text;
             string datum = myDatePicker.ToString();
             String[] termin = datum.Split(' ');
-            String[] termin1 = termin[0].Split('/');
-            string datum1 = termin1[1] + "." + termin1[0] + "." + termin1[2] + ".";
+            String[] termin1 = termin[0].Split('-');
+            string datum1 = termin1[0] + "." + termin1[1] + "." + termin1[2] + ".";
 
             np.Kreiraj(gender, tb, tb1, tb2, datum1, tb5, tb6, tb7);
 

@@ -31,7 +31,7 @@ namespace ProjekatSIMS
             get;
             set;
         }
-        int idd = 0;
+
         
         public PageTerminiSekretar()
         {
@@ -53,8 +53,6 @@ namespace ProjekatSIMS
                 pacijent.pacijenti = termin[5].ToString();
 
                 TerminiP.Add(pacijent);
-
-                //idd = int.Parse(termin[5].ToString());
 
             }
 
@@ -79,13 +77,12 @@ namespace ProjekatSIMS
 
         private void ZakazivanjeT_Click(object sender, RoutedEventArgs e)
         {
-            //this.NavigationService.Navigate(new PageSekretarZakazTermina());
             this.NavigationService.Navigate(new PagePrioritetZakazivanja());
         }
 
         private void OtkazivanjeT_Click(object sender, RoutedEventArgs e)
         {
-            PacijentFileStorage p = new PacijentFileStorage();
+            TerminiFileStorage t = new TerminiFileStorage();
             int currentRowIndex = dataGridTerminiSekretar.Items.IndexOf(dataGridTerminiSekretar.SelectedItem);
 
             if (currentRowIndex != -1)
@@ -100,7 +97,7 @@ namespace ProjekatSIMS
                     MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                p.OtkazivanjeSekretar(k);
+                t.OtkazivanjeSekretar(k);
             }
 
             this.NavigationService.Navigate(new PageTerminiSekretar());
@@ -109,8 +106,8 @@ namespace ProjekatSIMS
 
         private void PromenaT_Click(object sender, RoutedEventArgs e)
         {
-            PacijentFileStorage p = new PacijentFileStorage();
-            p.UpdateSekretar(dataGridTerminiSekretar);
+            TerminiFileStorage t = new TerminiFileStorage();
+            t.UpdateSekretar(dataGridTerminiSekretar);
         }
     }
 }

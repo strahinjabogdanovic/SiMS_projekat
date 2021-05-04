@@ -95,8 +95,8 @@ namespace ProjekatSIMS
 
         private void Zakazi_Click(object sender, RoutedEventArgs e)
         {
-            PacijentFileStorage p = new PacijentFileStorage();
-            p.ZakazivanjeSekretar(dataGridTerminiLekar);
+            TerminiFileStorage t = new TerminiFileStorage();
+            t.ZakazivanjeSekretar(dataGridTerminiLekar);
         }
 
         private void NazadTermini_Click(object sender, RoutedEventArgs e)

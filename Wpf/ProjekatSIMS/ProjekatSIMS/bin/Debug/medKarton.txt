@@ -1,4 +1,11 @@
 1/alergen1,alergen2,alergen3
 2/alergen1,alergen2
 3/alergija1,alergija2,med
+5/
+6/alergen1
 7/
+8/
+9/
+10/
+11/
+12/

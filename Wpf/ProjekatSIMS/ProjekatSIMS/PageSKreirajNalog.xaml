@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ProjekatSIMS"
+      xml:lang="en-IN"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       Title="PageSKreirajNalog" Width="1272" Height="649" HorizontalAlignment="Center">
@@ -38,7 +39,7 @@
                         <Setter.Value>
                             <ControlTemplate>
                                 <TextBox x:Name="PART_TextBox" 
-                                    Text="{Binding Path=SelectedDate, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}, StringFormat={}{0:dd.MM.yyyy}}" />
+                                    Text="{Binding Path=SelectedDate, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}, StringFormat={}{0:dd.MM.yyyy.}}" />
                             </ControlTemplate>
                         </Setter.Value>
                     </Setter>

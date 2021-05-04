@@ -1,6 +1,11 @@
 Petar/Petrovic/0038467348372/Muski/02.01.1987./petar@gmail.com/0635627384/Gogoljeva 1/1 
-Ana/Jovanovic/1111111111111/Zenski/02.01.1999./ana123@gmail.com/06356565654/Vojvodjanska 1/2
-Mirko/Miricic/2039483273485/Muski/1.1.1999./mirko@gmail.com/0643875638/Njegoseva 4/3
-Marko/Petrovic/5698574837465/Muski/1.2.1987./marko1@gmail.com/065473843/Njegoseva 4/5
-Ana/Maricic/9483746374345/Zenski/4.4.1999./ani@gmail.com/064378234/Njegoseva 7/6
-Katarina/Milic/3847382938473/Zenski/4.2.1995./katarina@gmail.com/064738273/Njegoseva 18/7
+Ana/Jovanovic/1111111111111/Zenski/02.01.1999./ana123@gmail.com/0635656565/Vojvodjanska 1/2
+Mirko/Miricic/2039483273485/Muski/01.01.1999./mirko@gmail.com/0643875638/Njegoseva 4/3
+Marko/Petrovic/5698574837465/Muski/01.02.1987./marko1@gmail.com/065473843/Njegoseva 4/5
+Ana/Maricic/3849384738493/Zenski/09.02.1994./anam@gmail.com/064798394/Njegoseva 12/6
+Mirko/Miric/6534567456434/Muski/27.05.1997./mirko@gmail.com/064738473/Njegoseva 11/7
+Marija/Pavlov/6785345676421/Zenski/06.07.1986./marijapavlov@gmail.com/064738473/Njegoseva 7/8
+Milutin/Gordic/7543456787423/Muski/23.05.1996./mile@gmail.com/064273823/Njegoseva 22/9
+Masa/Pasic/5567438912453/Zenski/09.06.1984./masapasic@gmail.com/063283948/Njegoseva 4/10
+Nina/Radic/9873647893214/Zenski/23.06.1993./nina@gmail.com/063849584/Njegoseva 11/11
+Ana/Markovic/7643456432456/Zenski/08.02.1992./anamarkovic@gmail.com/063890333/Njegoseva 17/12
