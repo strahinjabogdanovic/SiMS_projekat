@@ -434,5 +434,173 @@ namespace Package1
 
         }
 
+        string imePacijenta;
+        public void PomeranjeTerminaSekretar(TerminiPacijenata termin)
+        {
+            string privremeniFajl = System.IO.Path.GetTempFileName();
+
+            string datum1 = "";
+            String[] datumi;
+            int mesec = 0;
+            int mesec1 = 0;
+            int god = 0;
+            int dan = 0;
+            string noviDatum = "";
+
+            using (var sr = new StreamReader("termini.txt"))
+            using (var sw = new StreamWriter(privremeniFajl))
+            {
+                string line;
+                Boolean pronasao = false;
+                int brojac = 0;
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    var privremeni = new TerminiPacijenata();
+
+                    String[] podaci = line.Split('/');
+                    privremeni.id = int.Parse(podaci[4].ToString());
+
+                    if (privremeni.id != termin.id)
+                    {
+                        sw.WriteLine(line);
+                    }
+                    else
+                    {
+                        imePacijenta = podaci[5];
+                        pronasao = true;
+                        brojac++;
+                        sw.WriteLine(podaci[0] + "/" + podaci[1] + "/" + podaci[2] + "/" + podaci[3] + "/" + podaci[4] + "/" + " ");                  
+                    }
+
+                    if (pronasao == true && brojac==1)
+                    {
+                        datumi = podaci[0].Split('.');
+                        dan = int.Parse(datumi[0]);
+
+                        mesec = int.Parse(datumi[1]);
+                        mesec1 = int.Parse(datumi[1]);
+                        god = int.Parse(datumi[2]);
+
+                        if (mesec == 1 || mesec == 3 || mesec == 5 || mesec == 7 || mesec == 8 || mesec == 10 || mesec == 12)
+                        {
+                            if (dan == 30)
+                            {
+                                datum1 = 31.ToString();
+                                if (mesec == 12)
+                                {
+                                    datumi[1] = 1.ToString();
+                                    ++god;
+                                }
+
+                            }
+                            else if (dan == 31)
+                            {
+                                datum1 = 1.ToString();
+                                if (mesec == 12) { datumi[1] = 1.ToString(); ++god; }
+                                else
+                                {
+                                    ++mesec1;
+                                }
+
+                            }
+                            else
+                            {
+                                datum1 = (++dan).ToString();
+                            }
+                        }
+                        else if (mesec == 2)
+                        {
+                            if (dan == 27)
+                            {
+                                datum1 = 28.ToString();
+
+                            }
+                            else if (dan == 28)
+                            {
+                                datum1 = 1.ToString();
+
+                                ++mesec1;
+                            }
+                            else
+                            {
+                                datum1 = (++dan).ToString();
+                            }
+                        }
+                        else if (mesec == 4 || mesec == 6 || mesec == 9 || mesec == 11)
+                        {
+
+                            if (dan == 29)
+                            {
+                                datum1 = 30.ToString();
+
+                            }
+                            else if (dan == 30)
+                            {
+                                datum1 = 1.ToString();
+
+                                ++mesec1;
+                            }
+                            else
+                            {
+                                datum1 = (++dan).ToString();
+                            }
+                        }
+
+                        brojac++;
+                        string mes = "";
+                        if (int.Parse(datum1) < 10)
+                        {
+                            datum1 = "0" + datum1;
+                        }
+                        if (mesec1 < 10)
+                        {
+                            mes = "0" + mesec1.ToString();
+                        }
+                        noviDatum = datum1 + "." + mes + "." + god + ".";
+                        //Console.WriteLine(noviDatum);
+                       
+                    }
+                    /*
+                    if (noviDatum.Equals(podaci[0]) && podaci[5]=="")
+                    {
+                        sw.WriteLine(noviDatum + "/" + podaci[1] + "/" + podaci[2] + "/" + podaci[3] + "/" + podaci[4] + "/" + imePacijenta);
+                    }  */                
+                }                                
+
+            }
+
+            File.Delete("termini.txt");
+            File.Move(privremeniFajl, "termini.txt");
+
+            using (var srr = new StreamReader("termini.txt"))
+            using (var sww = new StreamWriter(privremeniFajl))
+            {
+                
+                string lin;
+                int br = 0;
+                while ((lin = srr.ReadLine()) != null)
+                {
+                    String[] podacii = lin.Split('/');
+                    //Console.WriteLine(noviDatum);
+
+                    if (noviDatum.Equals(podacii[0]) && string.IsNullOrWhiteSpace(podacii[5]) && br ==0)
+                    {
+                        br++;
+                        sww.WriteLine(podacii[0] + "/" + podacii[1] + "/" + podacii[2] + "/" + podacii[3] + "/" + podacii[4] + "/" + imePacijenta);
+                    }
+                    else
+                    {
+                        sww.WriteLine(lin);
+                    }
+
+                }
+            }
+            File.Delete("termini.txt");
+            File.Move(privremeniFajl, "termini.txt");
+
+
+        }
+
     }
 }

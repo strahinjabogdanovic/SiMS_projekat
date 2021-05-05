@@ -138,6 +138,12 @@
     <Compile Include="PageGuestNalozi.xaml.cs">
       <DependentUpon>PageGuestNalozi.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageHitnoZakazivanje.xaml.cs">
+      <DependentUpon>PageHitnoZakazivanje.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageHitnoZakazTermin.xaml.cs">
+      <DependentUpon>PageHitnoZakazTermin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageKreirajGuestNalog.xaml.cs">
       <DependentUpon>PageKreirajGuestNalog.xaml</DependentUpon>
     </Compile>
@@ -316,6 +322,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageGuestNalozi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageHitnoZakazivanje.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageHitnoZakazTermin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

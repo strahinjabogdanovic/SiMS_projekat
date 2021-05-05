@@ -153,5 +153,10 @@ namespace ProjekatSIMS
         {
             this.NavigationService.Navigate(new PageTerminiSekretar());
         }
+
+        private void HitnoZakazivanje_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new PageHitnoZakazivanje());
+        }
     }
 }
