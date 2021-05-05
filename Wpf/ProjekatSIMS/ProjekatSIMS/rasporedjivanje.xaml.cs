@@ -23,7 +23,7 @@ namespace ProjekatSIMS
         {
             InitializeComponent();
 
-            
+
             using (var rsr = new StreamReader("redzarasp.txt"))
             {
                 String sdfg = "";
@@ -67,7 +67,7 @@ namespace ProjekatSIMS
                 string line;
                 int idp = 0;
                 while ((line = sr.ReadLine()) != null)
-                { 
+                {
                     String[] termin = line.Split('/');
                     string s1 = termin[0];
                     string s2 = termin[1];
@@ -89,8 +89,9 @@ namespace ProjekatSIMS
                         {
                             if (sstv[i].Equals(naziv))
                             {
-                                if (i == 0) { 
-                                ++br;
+                                if (i == 0)
+                                {
+                                    ++br;
                                 }
                                 int temp = int.Parse(skool[i]);
                                 temp -= intkol;
@@ -100,14 +101,14 @@ namespace ProjekatSIMS
                                     intkol = int.Parse(skool[i]);
 
                                 }
-                                
-                                else if(temp != 0)
+
+                                else if (temp != 0)
                                 {
-                                    
+
                                     if (i == 0)
                                     {
-                                        nesto += sstv[i];
-                                        knesto += temp.ToString();
+                                        nesto += sstv[i] + ",";
+                                        knesto += temp.ToString() + ",";
                                     }
                                     else
                                     {
@@ -133,14 +134,15 @@ namespace ProjekatSIMS
                                     nesto += "," + sstv[i];
                                     knesto += "," + skool[i];
                                 }
-                                
+
                             }
                         }
+                        
                         sw.WriteLine(s1 + "/" + s2 + "/" + s3 + "/" + nesto + "/" + knesto);
                     }
                     else if (cb1.SelectedValue.ToString().Contains(termin[0]))
                     {
-                        
+
                         string stvari = termin[3];
                         string[] stv = stvari.Split(',');
                         int duzina_stvari = stv.Length;
@@ -148,7 +150,7 @@ namespace ProjekatSIMS
                         string koll = termin[4];
                         string[] kool = koll.Split(',');
 
-                        //int brojac = 0;
+                        int brojac = 0;
                         string nova_kol = "";
                         for (int i = 0; i < duzina_stvari; i++)
                         {
@@ -164,7 +166,7 @@ namespace ProjekatSIMS
                                         nova_kol += "," + kool[j];
                                     }
                                 }
-                                else 
+                                else
                                 {
                                     nova_kol = kool[0];
                                     for (int j = 1; j < i; j++)
@@ -173,15 +175,17 @@ namespace ProjekatSIMS
                                     }
                                     nova_kol += "," + nova.ToString();
                                     int crio = ++i;
-                                    for(int j = crio; j < duzina_stvari; j++)
+                                    for (int j = crio; j < duzina_stvari; j++)
                                     {
                                         nova_kol += "," + kool[j];
                                     }
                                 }
+                                
                                 sw.WriteLine(s1 + "/" + s2 + "/" + s3 + "/" + stvari + "/" + nova_kol);
-                                //brojac++;
+                                //break;
+                                brojac++;
                             }
-                            else if(i==1)
+                            else if (i == (duzina_stvari-1) && brojac == 0)
                             {
                                 stvari += "," + naziv;
                                 koll += "," + kolicina;
@@ -198,6 +202,7 @@ namespace ProjekatSIMS
             }
             File.Delete("prostorije.txt");
             File.Move(tempFile, "prostorije.txt");
+            Close();
         }
     }
 }
