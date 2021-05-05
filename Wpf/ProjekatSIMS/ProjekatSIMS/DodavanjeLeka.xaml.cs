@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
-    /// <summary>
-    /// Interaction logic for DodavanjeLeka.xaml
-    /// </summary>
     public partial class DodavanjeLeka : Window
     {
         public DodavanjeLeka()

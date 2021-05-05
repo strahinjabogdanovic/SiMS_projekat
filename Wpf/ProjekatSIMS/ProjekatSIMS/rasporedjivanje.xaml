@@ -4,17 +4,34 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
+        xml:lang="en-IN"
         mc:Ignorable="d"
         Title="rasporedjivanje" Height="450" Width="800">
     <Grid>
-        <Label Content="Premesta se u:" HorizontalAlignment="Left"  Margin="50,80,0,0" VerticalAlignment="Top" Height="40"/>
-        <Label Content="Oprema za premestanje:" HorizontalAlignment="Left" Margin="50,160,0,0" VerticalAlignment="Top"/>
-        <Label Content="Kolicina opreme:" HorizontalAlignment="Left" Margin="50,240,0,0" VerticalAlignment="Top"/>
+        <Label Content="Premesta se u:" HorizontalAlignment="Left"  Margin="50,50,0,0" VerticalAlignment="Top" Height="40"/>
+        <Label Content="Oprema za premestanje:" HorizontalAlignment="Left" Margin="50,125,0,0" VerticalAlignment="Top"/>
+        <Label Content="Kolicina opreme:" HorizontalAlignment="Left" Margin="50,200,0,0" VerticalAlignment="Top"/>
         <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="130,350,0,0" VerticalAlignment="Top" Width="75" Click="potvrdi_click"/>
-        <TextBox x:Name="t1" HorizontalAlignment="Left" Height="23" Margin="200,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="t2" HorizontalAlignment="Left" Height="23" Margin="200,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="200,80,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="t1" HorizontalAlignment="Left" Height="23" Margin="200,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="t2" HorizontalAlignment="Left" Height="23" Margin="200,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="200,50,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBlock x:Name="tb1" HorizontalAlignment="Left" Margin="140,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="Premestiti kada:" HorizontalAlignment="Left" Margin="50,275,0,0" VerticalAlignment="Top"/>
+        <DatePicker SelectedDate="{Binding myVideModelProperty}"
+                    Height="23" HorizontalAlignment="Left" Margin="200,275,0,0" Name="myDatePicker" VerticalAlignment="Top" Width="125" FontSize="20">
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type DatePickerTextBox}">
+                    <Setter Property="Control.Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <TextBox x:Name="PART_TextBox" 
+                                    Text="{Binding Path=SelectedDate, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}, StringFormat={}{0:dd.MM.yyyy.}}" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
 
     </Grid>
 </Window>

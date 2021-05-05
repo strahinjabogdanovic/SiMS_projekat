@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -58,6 +59,21 @@ namespace ProjekatSIMS
             String naziv = t2.Text;
             String kolicina = t1.Text;
             int intkol = int.Parse(kolicina);
+
+            string datep = myDatePicker.ToString();
+            string[] datump = datep.Split(' ');
+            string[] datumpr = datump[0].Split('-');
+            string danp = datumpr[0];
+            int datum_premestanja = int.Parse(danp);
+
+            DateTime danas = DateTime.Now;
+            string[] datumd = danas.ToString().Split(' ');
+            string[] dand = datumd[0].Split('-');
+            string dan = dand[0];
+            int datum_danas = int.Parse(dan);
+
+            int premestanje = datum_premestanja - datum_danas;
+            Console.WriteLine(premestanje);
 
             string tempFile = System.IO.Path.GetTempFileName();
             using (var sr = new StreamReader("prostorije.txt"))
@@ -200,6 +216,17 @@ namespace ProjekatSIMS
                     idp++;
                 }
             }
+
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            MessageBox.Show("Oprema ce biti premestana za " + premestanje + " minuta");
+            while (true)
+            {
+                if (stopwatch.ElapsedMilliseconds >= premestanje* 10000)
+                {
+                    break;
+                }
+            }
+
             File.Delete("prostorije.txt");
             File.Move(tempFile, "prostorije.txt");
             Close();

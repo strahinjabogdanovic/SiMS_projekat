@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\
+C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Release\
 ProjekatSIMS
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\App.xaml
 52288343413
 
-89566881507
+88-401045554
 131569487696
 BiranjePrioritetaZakazivanja.xaml;DatumZakaz.xaml;DodajOpremu.xaml;DodavanjeLeka.xaml;FiltriranaOprema.xaml;GuestNalozi.xaml;IzdavanjeRecepta.xaml;Izvestaj.xaml;Izvestaji_o_pregledu_stanja.xaml;KartonLekar.xaml;KreirajGuestNalog.xaml;KreirajNalog.xaml;KreirajProstoriju.xaml;KreirajTerminLekar.xaml;KreirajTerminPacijenta.xaml;LekarPocetnaStranica.xaml;LekarZakaz.xaml;Lekovi_U.xaml;MainWindow.xaml;PacijentPocetnaStranica.xaml;PageAzurirajAlergene.xaml;PageDatum.xaml;PageGuestNalozi.xaml;PageHitnoZakazivanje.xaml;PageHitnoZakazTermin.xaml;PageKreirajGuestNalog.xaml;PageKreirajObavestenje.xaml;PageLekar.xaml;PageMedKarton.xaml;PageObavestenjaSekretar.xaml;PagePrioritetZakazivanja.xaml;PageSekretar.xaml;PageSekretarZakazTermina.xaml;PageSKreirajNalog.xaml;PageSPrikazInfo.xaml;PageTerminiSekretar.xaml;PageZakazivanjeDatum.xaml;PageZakazivanjeLekar.xaml;pomeranjeTermina.xaml;PrioritetDatum.xaml;PrioritetLekar.xaml;rasporedjivanje.xaml;ReceptiPacijent.xaml;SekretarPocetnaStrana.xaml;SpisakRecepata.xaml;Stvari.xaml;SveInfoUpravnik.xaml;Terapija.xaml;UpravnikPocetnaStranica.xaml;ValidacijaLeka.xaml;Window2.xaml;ZahteviZaValidaciju.xaml;
 
