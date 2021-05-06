@@ -201,6 +201,9 @@
     <Compile Include="SekretarPocetnaStrana.xaml.cs">
       <DependentUpon>SekretarPocetnaStrana.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SpisakLekova.xaml.cs">
+      <DependentUpon>SpisakLekova.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SpisakRecepata.xaml.cs">
       <DependentUpon>SpisakRecepata.xaml</DependentUpon>
     </Compile>
@@ -406,6 +409,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SekretarPocetnaStrana.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SpisakLekova.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

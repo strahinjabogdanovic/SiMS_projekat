@@ -1,6 +1,7 @@
 ﻿using Package1;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +32,42 @@ namespace ProjekatSIMS
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
+            lekic.validiran = "ne";
+        }
 
+        private void CheckBox1_Checked(object sender, RoutedEventArgs e)
+        {
+            lekic.validiran = "da";
+        }
+
+        private void Sacuvaj_Click(object sender, RoutedEventArgs e)
+        {
+            string tempFile = System.IO.Path.GetTempFileName();
+
+            using (var sr = new StreamReader("lekovi.txt"))
+            using (var sw = new StreamWriter(tempFile))
+            {
+
+                string line;
+                int id = 0;
+                while ((line = sr.ReadLine()) != null)
+                {
+                        String[] jedanLek = line.Split('/');
+                    if (jedanLek[0].Equals(lekic.sifraleka)) {
+                        lekic.sastojci = jedanLek[2];
+                        lekic.zamena = jedanLek[3];
+                        sw.WriteLine(lekic.sifraleka + "/" + lekic.nazivleka + "/" + lekic.sastojci + "/" + lekic.zamena + "/" + lekic.validiran);
+                    }
+                    else
+                    {
+                        sw.WriteLine(line);
+                    }
+                    id++;
+                }
+            }
+            File.Delete("lekovi.txt");
+            File.Move(tempFile, "lekovi.txt");
         }
     }
+
 }

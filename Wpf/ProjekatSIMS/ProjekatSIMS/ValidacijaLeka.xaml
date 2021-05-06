@@ -10,9 +10,10 @@
         <TextBlock x:Name="t" HorizontalAlignment="Left" Height="42" Margin="66,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="358"/>
         <Label Content="Naziv leka" HorizontalAlignment="Left" Margin="66,157,0,0" VerticalAlignment="Top" Height="39" Width="129"/>
         <Label Content="Sifra leka" HorizontalAlignment="Left" Margin="66,214,0,0" VerticalAlignment="Top" Height="39" Width="129"/>
-        <CheckBox Content="Lek ispunjava sve propise i garantujem njegovu bezbednost." HorizontalAlignment="Left" Margin="66,282,0,0" VerticalAlignment="Top" Height="30" Width="740" Checked="CheckBox_Checked"/>
+        <CheckBox Content="Lek ispunjava sve propise i garantujem njegovu bezbednost." HorizontalAlignment="Left" Margin="66,282,0,0" VerticalAlignment="Top" Height="30" Width="740" Checked="CheckBox1_Checked"/>
         <CheckBox Content="Lek ne ispunjava sve propise i ne garantujem njegovu bezbednost." HorizontalAlignment="Left" Margin="66,317,0,0" VerticalAlignment="Top" Height="30" Width="740" Checked="CheckBox_Checked"/>
         <TextBlock x:Name="t1" HorizontalAlignment="Left" Height="39" Margin="222,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
         <TextBlock x:Name="t2" HorizontalAlignment="Left" Height="44" Margin="222,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
+        <Button Content="Sacuvaj" HorizontalAlignment="Left" Margin="92,406,0,0" VerticalAlignment="Top" Width="135" Height="31" Click="Sacuvaj_Click"/>
     </Grid>
 </Window>

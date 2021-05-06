@@ -47,7 +47,7 @@ namespace ProjekatSIMS
                     lek.sastojci = deo[2].ToString();
                     lek.zamena = deo[3].ToString();
                     lek.validiran = deo[4].ToString();
-                    if (lek.validiran == "ne")
+                    if (lek.validiran != "da")
                     {
                         zahtevi = "Zahtev za validaciju leka " + lek.nazivleka;
                         t.Text = zahtevi;
@@ -63,6 +63,13 @@ namespace ProjekatSIMS
         {
             ValidacijaLeka validacija = new ValidacijaLeka(lekKojiValidiramo);
             validacija.ShowDialog();
+        }
+
+        private void LekoviRU_Click(object sender, RoutedEventArgs e)
+        {
+            SpisakLekova spisakLekova = new SpisakLekova();
+            spisakLekova.ShowDialog();
+
         }
     }
 }

@@ -9,6 +9,7 @@
     <Grid>
         <Label Content="Validacija leka" HorizontalAlignment="Left" Margin="75,95,0,0" VerticalAlignment="Top" Height="40" Width="154" FontSize="16"/>
         <TextBlock x:Name="t" HorizontalAlignment="Left" Margin="75,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="786" MouseLeftButtonDown="Zahtev_Click"/>
+        <Button Content="Svi lekovi" HorizontalAlignment="Left" Margin="709,95,0,0" VerticalAlignment="Top" Width="170" Height="40" Click="LekoviRU_Click"/>
 
     </Grid>
 </Window>
