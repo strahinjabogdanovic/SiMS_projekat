@@ -23,7 +23,7 @@
         <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="560,363,0,0" VerticalAlignment="Top" Width="264" Height="37" FontSize="20">
             <ComboBoxItem>Opsta praksa</ComboBoxItem>
             <ComboBoxItem>Hirurgija</ComboBoxItem>
-            <ComboBoxItem>Kardiologija</ComboBoxItem>
+            <!--<ComboBoxItem>Kardiologija</ComboBoxItem>-->
         </ComboBox>
         <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="480,492,0,0" VerticalAlignment="Top" Width="132" FontSize="24" Height="45" Click="Nazad_Click" />
         <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="708,492,0,0" VerticalAlignment="Top" Width="146" Height="45" FontSize="24" Click="Potvrdi_Click" />

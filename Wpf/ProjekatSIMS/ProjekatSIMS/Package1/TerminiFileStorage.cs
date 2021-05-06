@@ -435,6 +435,7 @@ namespace Package1
         }
 
         string imePacijenta;
+        string imeLekara;
         public void PomeranjeTerminaSekretar(TerminiPacijenata termin)
         {
             string privremeniFajl = System.IO.Path.GetTempFileName();
@@ -468,6 +469,7 @@ namespace Package1
                     else
                     {
                         imePacijenta = podaci[5];
+                        imeLekara = podaci[2];
                         pronasao = true;
                         brojac++;
                         sw.WriteLine(podaci[0] + "/" + podaci[1] + "/" + podaci[2] + "/" + podaci[3] + "/" + podaci[4] + "/" + " ");                  
@@ -584,7 +586,7 @@ namespace Package1
                     String[] podacii = lin.Split('/');
                     //Console.WriteLine(noviDatum);
 
-                    if (noviDatum.Equals(podacii[0]) && string.IsNullOrWhiteSpace(podacii[5]) && br ==0)
+                    if (noviDatum.Equals(podacii[0]) && imeLekara.Equals(podacii[2]) && string.IsNullOrWhiteSpace(podacii[5]) && br ==0)
                     {
                         br++;
                         sww.WriteLine(podacii[0] + "/" + podacii[1] + "/" + podacii[2] + "/" + podacii[3] + "/" + podacii[4] + "/" + imePacijenta);
