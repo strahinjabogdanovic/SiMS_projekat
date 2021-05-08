@@ -46,7 +46,14 @@ namespace ProjekatSIMS
                 lek.nazivleka = deoLeka[1].ToString();
                 lek.sastojci = deoLeka[2].ToString();
                 lek.zamena = deoLeka[3].ToString();
-                lek.validiran = deoLeka[4].ToString();
+                if (deoLeka[4]=="ne" || deoLeka[4]=="da")
+                {
+                    lek.validiran = deoLeka[4].ToString();
+                }
+                else
+                {
+                    lek.validiran = "ne";
+                }
                 SviLekovi.Add(lek);
 
             }

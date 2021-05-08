@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="Izvestaj" Height="768" Width="1024">
+        Title="Izvestaj" Height="700" Width="1000">
     <Grid>
         <Label Content="Ime" HorizontalAlignment="Left" Margin="546,67,0,0" VerticalAlignment="Top"/>
         <Label Content="Prezime" HorizontalAlignment="Left" Margin="546,98,0,0" VerticalAlignment="Top"/>
@@ -23,12 +23,14 @@
         <TextBlock x:Name="t2" HorizontalAlignment="Left" Height="26" Margin="631,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
         <Label Content="Terapija" HorizontalAlignment="Left" Margin="64,532,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.567,-0.07"/>
         <Label Content="Kontrola" HorizontalAlignment="Left" Margin="60,437,0,0" VerticalAlignment="Top"/>
-        <Button Content="Sačuvaj izveštaj" HorizontalAlignment="Left" Height="40" Margin="273,639,0,0" VerticalAlignment="Top" Width="152" Click="Sacuvaj_Click"/>
+        <Button Content="Sačuvaj izveštaj" HorizontalAlignment="Left" Height="40" Margin="273,614,0,0" VerticalAlignment="Top" Width="152" Click="Sacuvaj_Click"/>
         <TextBox x:Name="tBox" HorizontalAlignment="Left" Height="22" Margin="214,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211"/>
         <TextBox x:Name="tBox2" HorizontalAlignment="Left" Height="22" Margin="214,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211"/>
         <TextBox x:Name="tBox3" HorizontalAlignment="Left" Height="171" Margin="214,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="554"/>
         <TextBox x:Name="tBox4" HorizontalAlignment="Left" Height="71" Margin="214,441,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="554"/>
-        <TextBox x:Name="tBox5" HorizontalAlignment="Left" Height="71" Margin="214,544,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="554"/>
+        <TextBox x:Name="tBox5" HorizontalAlignment="Left" Height="71" Margin="214,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="554"/>
+        <Button Content="Uput" HorizontalAlignment="Left" Margin="803,614,0,0" VerticalAlignment="Top" Width="139" Height="40" Click="Button_Click"/>
+        <Button Content="Nazad" HorizontalAlignment="Left" Margin="40,24,0,0" VerticalAlignment="Top" Width="75" Click="Nazad_Click"/>
 
     </Grid>
 </Window>

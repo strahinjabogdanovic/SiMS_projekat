@@ -25,5 +25,6 @@
         <Button x:Name="button2" Content="Izmeni" HorizontalAlignment="Left" Margin="283,327,0,0" VerticalAlignment="Top" Width="86" Height="32" FontSize="16" Click="Izmeni_Click"/>
         <Button x:Name="button3" Content="Karton" HorizontalAlignment="Left" Margin="788,50,0,0" VerticalAlignment="Top" Width="96" Click="Karton_Click" Height="25" FontSize="16"/>
         <Button x:Name="button4" Content="Validacija leka" HorizontalAlignment="Left" Height="28" Margin="788,229,0,0" VerticalAlignment="Top" Width="117" Click="Validation_Click" FontSize="16"/>
+        <Button Content="Logout" HorizontalAlignment="Left" Margin="908,21,0,0" VerticalAlignment="Top" Width="47" Height="43" Click="Logout_Click"/>
     </Grid>
 </Window>

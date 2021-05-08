@@ -63,6 +63,24 @@ namespace ProjekatSIMS
                 }
 
             }
+            this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string JmbgProsledjen = t2.Text;
+            KartonLekar karton = new KartonLekar(JmbgProsledjen);
+            this.Close();
+            karton.ShowDialog();
+        }
+
+        private void Nazad_Click(object sender, RoutedEventArgs e)
+        {
+            string JmbgProsledjen = t2.Text;
+            KartonLekar karton = new KartonLekar(JmbgProsledjen);
+            this.Close();
+            karton.ShowDialog();
+
         }
     }
 }

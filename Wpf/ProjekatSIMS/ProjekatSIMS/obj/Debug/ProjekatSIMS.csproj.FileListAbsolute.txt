@@ -1517,3 +1517,11 @@ C:\Users\Natasa\Desktop\Prov\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Deb
 C:\Users\Natasa\Desktop\Prov\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\ProjekatSIMS.csproj.GenerateResource.Cache
 C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\SpisakLekova.g.cs
 C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\SpisakLekova.baml
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageHitnoZakazivanje.g.cs
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageHitnoZakazTermin.g.cs
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\SpisakLekova.g.cs
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\UputSpecijalisti.g.cs
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageHitnoZakazivanje.baml
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageHitnoZakazTermin.baml
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\SpisakLekova.baml
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\UputSpecijalisti.baml

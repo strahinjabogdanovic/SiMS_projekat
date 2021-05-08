@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="KartonLekar" Height="450" Width="800">
+        Title="KartonLekar" Height="700" Width="1000">
     <Grid>
         <Label Content="Ime" HorizontalAlignment="Left" Margin="33,101,0,0" VerticalAlignment="Top" Width="93"/>
         <Label Content="Prezime" HorizontalAlignment="Left" Margin="33,132,0,0" VerticalAlignment="Top" Width="93"/>
@@ -26,6 +26,8 @@
         <TextBlock x:Name="t7" HorizontalAlignment="Left" Margin="507,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="152"/>
         <Button Content="Napiši izveštaj" HorizontalAlignment="Left" Height="21" Margin="195,252,0,0" VerticalAlignment="Top" Width="81" Click="Napisi_izvestaj"/>
         <Button Content="Izveštaj o pregledu stanja" HorizontalAlignment="Left" Height="21" Margin="549,253,0,0" VerticalAlignment="Top" Width="148" Click="Izvest_Click"/>
+        <Button Content="Uput za lekara specijalistu" HorizontalAlignment="Left" Margin="195,384,0,0" VerticalAlignment="Top" Width="75" Click="UputLekaruSpecijalisti_Click"/>
+        <Button Content="Nazad" HorizontalAlignment="Left" Margin="33,40,0,0" VerticalAlignment="Top" Width="75" Click="Nazad_Click"/>
 
     </Grid>
 </Window>

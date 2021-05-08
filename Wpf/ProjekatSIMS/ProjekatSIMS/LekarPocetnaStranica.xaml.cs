@@ -196,13 +196,21 @@ namespace ProjekatSIMS
         private void Karton_Click(object sender, RoutedEventArgs e)
         {
             KartonLekar kl = new KartonLekar(dataGridLekar);
+            this.Close();
             kl.ShowDialog();
         }
 
         private void Validation_Click(object sender, RoutedEventArgs e)
         {
             ZahteviZaValidaciju z = new ZahteviZaValidaciju();
+            this.Close();
             z.ShowDialog();
+        }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.ShowDialog();
         }
     }
 }

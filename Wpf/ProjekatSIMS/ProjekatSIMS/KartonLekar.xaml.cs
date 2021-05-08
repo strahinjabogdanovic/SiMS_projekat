@@ -20,21 +20,19 @@ namespace ProjekatSIMS
     /// </summary>
     public partial class KartonLekar : Window
     {
+        String ime = "";
+        String prezime = "";
+        String jmbg = "";
+        String pol = "";
+        String datumr = "";
+        String mail = "";
+        String broj = "";
+        String adresa = "";
+        String idd = "";
+
         public KartonLekar(DataGrid dataGridLekar)
         {
             InitializeComponent();
-
-
-            String ime = "";
-            String prezime = "";
-            String jmbg = "";
-            String pol = "";
-            String datumr = "";
-            String mail = "";
-            String broj = "";
-            String adresa = "";
-            String idd = "";
-
 
             int currentRowIndex = dataGridLekar.Items.IndexOf(dataGridLekar.SelectedItem);
 
@@ -106,19 +104,65 @@ namespace ProjekatSIMS
             }
         }
 
+        public KartonLekar(string jmbg)
+        {
+            InitializeComponent();
+            using (var sars = new StreamReader("podaci.txt"))
+
+            {
+
+                string line;
+                int idps = 0;
+                while ((line = sars.ReadLine()) != null)
+                {
+                    //if (idps == currentRowIndex)
+                    //{
 
 
+                    String[] termini = line.Split('/');
+                    String idK = termini[2];
+
+                    Console.WriteLine(idK);
+                    Console.WriteLine(idd);
+                    ime = termini[0];
+                    prezime = termini[1];
+                    pol = termini[3];
+                    datumr = termini[4];
+                    mail = termini[5];
+                    broj = termini[6];
+                    adresa = termini[7];
+                    if (idK == jmbg)
+                    {
+
+                        t.Text = ime;
+                        t1.Text = prezime;
+                        t2.Text = jmbg;
+                        t3.Text = pol;
+                        t4.Text = datumr;
+                        t5.Text = mail;
+                        t6.Text = broj;
+                        t7.Text = adresa;
+                    }
+                    idps++;
+
+                }
+
+            }
+
+            }
 
 
         private void Recepti_Click(object sender, RoutedEventArgs e)
         {
             SpisakRecepata sr = new SpisakRecepata(t2);
+            this.Close();
             sr.ShowDialog();
         }
 
         private void Napisi_izvestaj(object sender, RoutedEventArgs e)
         {
             Izvestaj iz = new Izvestaj(t, t1, t2);
+            this.Close();
             iz.ShowDialog();
         }
 
@@ -126,7 +170,21 @@ namespace ProjekatSIMS
         private void Izvest_Click(object sender, RoutedEventArgs e)
         {
             Izvestaji_o_pregledu_stanja izv = new Izvestaji_o_pregledu_stanja(t2);
+            this.Close();
             izv.ShowDialog();
+        }
+
+        private void UputLekaruSpecijalisti_Click(object sender, RoutedEventArgs e)
+        {
+            UputSpecijalisti uput = new UputSpecijalisti(jmbg);
+            this.Close();
+            uput.ShowDialog();
+        }
+
+        private void Nazad_Click(object sender, RoutedEventArgs e)
+        {
+            LekarPocetnaStranica lekarPocetnaStranica = new LekarPocetnaStranica();
+            lekarPocetnaStranica.ShowDialog();
         }
     }
 }
