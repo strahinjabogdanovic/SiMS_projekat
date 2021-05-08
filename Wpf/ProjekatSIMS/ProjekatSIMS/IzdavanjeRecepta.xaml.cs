@@ -38,7 +38,6 @@ namespace ProjekatSIMS
             string naKolikoSati = t4.Text;
             using (var sw = new StreamWriter("recepti.txt", true))
             {
-                string line;
                 int id = 0;
 
                 sw.WriteLine(sifra + "/" + naziv + "/" + nacin + "/" + naKolikoSati + "/" + textBlock.Text);

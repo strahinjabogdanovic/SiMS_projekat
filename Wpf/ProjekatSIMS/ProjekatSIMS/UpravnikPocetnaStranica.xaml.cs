@@ -46,6 +46,8 @@ namespace ProjekatSIMS
                 prostorije.oznaka = termin[1].ToString();
                 prostorije.namena = termin[2].ToString();
                 prostorije.oprema = termin[3].ToString();
+                prostorije.renoviranje = termin[5].ToString();
+                
 
 
                 Prostorije.Add(prostorije);
@@ -137,6 +139,13 @@ namespace ProjekatSIMS
             String o = tb1.Text;
             FiltriranaOprema fo = new FiltriranaOprema(o);
             fo.ShowDialog();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ProstorijeFileStorage p = new ProstorijeFileStorage();
+            p.renoviranje(dataGridProstorije);
+
         }
     }
 }

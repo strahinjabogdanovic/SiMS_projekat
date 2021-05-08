@@ -15,18 +15,20 @@
                 <DataGridTextColumn Header="Oznaka" Binding="{Binding Path = oznaka}" />
                 <DataGridTextColumn Header="Namena" Binding="{Binding Path = namena}" />
                 <DataGridTextColumn Header="Oprema" Binding="{Binding Path = oprema}" />
-                <DataGridTextColumn Header="Pocetak koriscenja prostorije" Binding="{Binding Path = vremePocetkaKoriscenja}" />
-                <DataGridTextColumn Header="Kraj koriscenja prostorije" Binding="{Binding Path = vremeKrajaKoriscenja}" />
+                <DataGridTextColumn Header="Pocetak" Binding="{Binding Path = vremePocetkaKoriscenja}" Width="55"/>
+                <DataGridTextColumn Header="Kraj" Binding="{Binding Path = vremeKrajaKoriscenja}" Width="55"/>
+                <DataGridTextColumn Header="Renoviranje" Binding="{Binding Path = renoviranje}" Width="70"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="button" Content="Kreiraj" HorizontalAlignment="Left" Margin="38,398,0,0" VerticalAlignment="Top" Width="127" Height="40"  FontSize="18" Click="KreirajProstoriju_Click" />
         <Button x:Name="button1" Content="Obrisi" HorizontalAlignment="Left" Margin="193,398,0,0" VerticalAlignment="Top" Width="134" Height="40" FontSize="18" Click="ObrisiProstoriju_Click"  />
         <Button x:Name="button2" Content="Izmeni" HorizontalAlignment="Left" Margin="355,398,0,0" VerticalAlignment="Top" Width="134" Height="40" FontSize="18" Click="IzmeniProstoriju_Click" />
         <Button x:Name="button3" Content="Prikazi sve informacije" HorizontalAlignment="Left" Margin="517,398,0,0" VerticalAlignment="Top" Width="206" Height="40" FontSize="18" RenderTransformOrigin="0.021,-4.428" Click="PrikaziSveInfo_Click"/>
-        <Button x:Name="button4" Content="Oprema" HorizontalAlignment="Left" Margin="647,47,0,0" VerticalAlignment="Top" Width="76" Click="oprema_click"/>
-        <Button x:Name="button5" Content="Rasporedjivanje" HorizontalAlignment="Left" Margin="639,124,0,0" VerticalAlignment="Top" Width="94" Click="rasporedjivanje_click"/>
-        <Button x:Name="button6" Content="Lekovi" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="648,206,0,0" Click="lekovi_click"/>
+        <Button x:Name="button4" Content="Oprema" HorizontalAlignment="Left" Margin="647,50,0,0" VerticalAlignment="Top" Width="76" Click="oprema_click"/>
+        <Button x:Name="button5" Content="Rasporedjivanje" HorizontalAlignment="Left" Margin="637,122,0,0" VerticalAlignment="Top" Width="94" Click="rasporedjivanje_click"/>
+        <Button x:Name="button6" Content="Lekovi" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="647,207,0,0" Click="lekovi_click"/>
         <TextBox x:Name="tb1" HorizontalAlignment="Left" Height="23" Margin="749,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="s?" HorizontalAlignment="Left" Margin="869,0,0,0" VerticalAlignment="Top" Width="23" Height="23" Click="pretrazi"/>
+        <Button Content="Renoviranje" HorizontalAlignment="Left" Margin="647,282,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
     </Grid>
 </Window>

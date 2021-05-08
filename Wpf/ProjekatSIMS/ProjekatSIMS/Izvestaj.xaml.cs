@@ -48,7 +48,7 @@ namespace ProjekatSIMS
             using (var sw = new StreamWriter("izvestaji.txt", true))
             {
                 string line;
-                int id = 0;
+                //int id = 0;
 
 
                 if (radio == true)

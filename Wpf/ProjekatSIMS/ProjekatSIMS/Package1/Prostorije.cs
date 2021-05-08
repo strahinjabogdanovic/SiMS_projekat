@@ -52,6 +52,7 @@ namespace Package1
       private string Oprema;
       private string VremePocetkaKoriscenja;
       private string VremeKrajaKoriscenja;
+      private string Renoviranje;
 
       public string ime
         {
@@ -65,6 +66,22 @@ namespace Package1
                 {
                     Ime = value;
                     OnPropertyChanged("ime");
+                }
+            }
+        }
+
+        public string renoviranje
+        {
+            get
+            {
+                return Renoviranje;
+            }
+            set
+            {
+                if (value != Renoviranje)
+                {
+                    Renoviranje = value;
+                    OnPropertyChanged("renoviranje");
                 }
             }
         }

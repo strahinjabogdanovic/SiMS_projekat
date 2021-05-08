@@ -1515,3 +1515,5 @@ C:\Users\Natasa\Desktop\Prov\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Deb
 C:\Users\Natasa\Desktop\Prov\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\ProjekatSIMS.g.resources
 C:\Users\Natasa\Desktop\Prov\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\ProjekatSIMS.Properties.Resources.resources
 C:\Users\Natasa\Desktop\Prov\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\ProjekatSIMS.csproj.GenerateResource.Cache
+C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\SpisakLekova.g.cs
+C:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\SpisakLekova.baml
