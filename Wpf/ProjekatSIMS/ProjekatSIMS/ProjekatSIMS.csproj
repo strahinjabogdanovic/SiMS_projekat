@@ -115,6 +115,7 @@
     <Compile Include="Package1\DummyClass.cs" />
     <Compile Include="Package1\GuestFileStorage.cs" />
     <Compile Include="Package1\Lek.cs" />
+    <Compile Include="Package1\LekarFileStorage.cs" />
     <Compile Include="Package1\LekoviFileStorage.cs" />
     <Compile Include="Package1\MedIzvestaj.cs" />
     <Compile Include="Package1\NaloziPacijenataFileStorage.cs" />
@@ -187,6 +188,9 @@
     <Compile Include="pomeranjeTermina.xaml.cs">
       <DependentUpon>pomeranjeTermina.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PopUpPogresnoUnesenLek.xaml.cs">
+      <DependentUpon>PopUpPogresnoUnesenLek.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PrioritetDatum.xaml.cs">
       <DependentUpon>PrioritetDatum.xaml</DependentUpon>
     </Compile>
@@ -201,6 +205,9 @@
     </Compile>
     <Compile Include="SekretarPocetnaStrana.xaml.cs">
       <DependentUpon>SekretarPocetnaStrana.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SlobodniTerminiSpecijaliste.xaml.cs">
+      <DependentUpon>SlobodniTerminiSpecijaliste.xaml</DependentUpon>
     </Compile>
     <Compile Include="SpisakLekova.xaml.cs">
       <DependentUpon>SpisakLekova.xaml</DependentUpon>
@@ -396,6 +403,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PopUpPogresnoUnesenLek.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PrioritetDatum.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -413,6 +424,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SekretarPocetnaStrana.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SlobodniTerminiSpecijaliste.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

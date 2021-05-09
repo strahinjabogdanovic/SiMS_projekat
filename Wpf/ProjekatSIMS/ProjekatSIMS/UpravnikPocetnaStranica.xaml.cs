@@ -69,7 +69,13 @@ namespace ProjekatSIMS
             }
             sr.Close();
 
-
+            LekoviFileStorage lfs = new LekoviFileStorage();
+            bool imaPogresnihLekova = lfs.proveriPogresneLekove();
+            if (imaPogresnihLekova == true)
+            {
+                PopUpPogresnoUnesenLek pu = new PopUpPogresnoUnesenLek();
+                pu.ShowDialog();
+            }
         }
 
         private void KreirajProstoriju_Click(object sender, RoutedEventArgs e)

@@ -20,5 +20,6 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Izmeni" HorizontalAlignment="Left" Margin="89,348,0,0" VerticalAlignment="Top" Width="138" Height="36" Click="Izmeni_Click"/>
+        <Button Content="Postoji greska-vrati upravniku" HorizontalAlignment="Left" Margin="445,348,0,0" VerticalAlignment="Top" Width="204" Height="36" Click="Upravniku_Click"/>
     </Grid>
 </Window>

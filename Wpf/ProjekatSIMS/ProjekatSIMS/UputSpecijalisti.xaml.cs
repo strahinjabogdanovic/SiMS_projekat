@@ -31,6 +31,7 @@ namespace ProjekatSIMS
 
             tBlock1.Text = ime + ' ' + prezime;
             tBlock2.Text = jmbg;
+            jmbgP = jmbg;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -54,10 +55,14 @@ namespace ProjekatSIMS
             karton.ShowDialog();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void Zakazi(object sender, RoutedEventArgs e)
         {
+            jmbgP = tBlock2.Text;
             spec = tBox3.Text;
-
+            SlobodniTerminiSpecijaliste termin = new SlobodniTerminiSpecijaliste(jmbgP, spec);
+            this.Close();
+            termin.ShowDialog();
         }
+
     }
 }

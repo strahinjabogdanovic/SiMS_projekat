@@ -1525,3 +1525,7 @@ C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageHitnoZ
 C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageHitnoZakazTermin.baml
 C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\SpisakLekova.baml
 C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\UputSpecijalisti.baml
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\SlobodniTerminiSpecijaliste.g.cs
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\SlobodniTerminiSpecijaliste.baml
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\PopUpPogresnoUnesenLek.g.cs
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\PopUpPogresnoUnesenLek.baml

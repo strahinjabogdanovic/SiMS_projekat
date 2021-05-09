@@ -78,5 +78,14 @@ namespace ProjekatSIMS
             p.Izmeni(dataGridLekovi);
 
         }
+
+
+        private void Upravniku_Click(object sender, RoutedEventArgs e)
+        {
+            LekoviFileStorage p = new LekoviFileStorage();
+            Lek zaUpravnika = new Lek();
+            zaUpravnika=p.vratiUpravniku(dataGridLekovi);
+            
+        }
     }
 }
