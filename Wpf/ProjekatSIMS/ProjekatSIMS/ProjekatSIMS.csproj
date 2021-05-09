@@ -55,8 +55,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Ankete.xaml.cs">
+      <DependentUpon>Ankete.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BiranjePrioritetaZakazivanja.xaml.cs">
       <DependentUpon>BiranjePrioritetaZakazivanja.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BolnicaAnketa.xaml.cs">
+      <DependentUpon>BolnicaAnketa.xaml</DependentUpon>
     </Compile>
     <Compile Include="DatumZakaz.xaml.cs">
       <DependentUpon>DatumZakaz.xaml</DependentUpon>
@@ -100,6 +106,9 @@
     <Compile Include="KreirajTerminPacijenta.xaml.cs">
       <DependentUpon>KreirajTerminPacijenta.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LekarAnketa.xaml.cs">
+      <DependentUpon>LekarAnketa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LekarPocetnaStranica.xaml.cs">
       <DependentUpon>LekarPocetnaStranica.xaml</DependentUpon>
     </Compile>
@@ -112,6 +121,8 @@
     <Compile Include="PacijentPocetnaStranica.xaml.cs">
       <DependentUpon>PacijentPocetnaStranica.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Package1\AnketaStorage.cs" />
+    <Compile Include="Package1\antiTrol.cs" />
     <Compile Include="Package1\DummyClass.cs" />
     <Compile Include="Package1\GuestFileStorage.cs" />
     <Compile Include="Package1\Lek.cs" />
@@ -239,7 +250,15 @@
     <Compile Include="ZahteviZaValidaciju.xaml.cs">
       <DependentUpon>ZahteviZaValidaciju.xaml</DependentUpon>
     </Compile>
+    <Page Include="Ankete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BiranjePrioritetaZakazivanja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BolnicaAnketa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -296,6 +315,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="KreirajTerminPacijenta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LekarAnketa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

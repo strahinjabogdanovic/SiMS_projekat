@@ -43,14 +43,15 @@ namespace ProjekatSIMS
             foreach (string linee in lines)
             {
                 String[] termin = linee.Split('/');
-                var pacijent = new TerminiPacijenata();
-                pacijent.datum = termin[0].ToString();
-                pacijent.vreme = termin[1].ToString();
-                pacijent.lekar = termin[2].ToString();
-                pacijent.soba = termin[3].ToString();
-                pacijent.id = int.Parse(termin[4].ToString());
-                TerminiP.Add(pacijent);
-
+                if (termin[5].Equals("Ana Markovic")) {
+                    var pacijent = new TerminiPacijenata();
+                    pacijent.datum = termin[0].ToString();
+                    pacijent.vreme = termin[1].ToString();
+                    pacijent.lekar = termin[2].ToString();
+                    pacijent.soba = termin[3].ToString();
+                    pacijent.id = int.Parse(termin[4].ToString());
+                    TerminiP.Add(pacijent);
+                }
 
             }
 
@@ -73,8 +74,16 @@ namespace ProjekatSIMS
         {
             // KreirajTerminPacijenta k = new KreirajTerminPacijenta();
             // k.ShowDialog();
-            BiranjePrioritetaZakazivanja bp = new BiranjePrioritetaZakazivanja();
-            bp.ShowDialog();
+            antiTrol anti = new antiTrol();
+            if (anti.maksimalan_broj_termina())
+            {
+                BiranjePrioritetaZakazivanja bp = new BiranjePrioritetaZakazivanja();
+                bp.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Prekoracili ste broj termina koje mozete da zakazete.");
+            }
         }
 
         private void ObrisiTermin_Click(object sender, RoutedEventArgs e)
@@ -114,6 +123,12 @@ namespace ProjekatSIMS
             // t.ShowDialog();
             ReceptiPacijent rp = new ReceptiPacijent();
             rp.ShowDialog();
+        }
+
+        private void Anketa_Click(object sender, RoutedEventArgs e)
+        {
+            Ankete a = new Ankete();
+            a.ShowDialog();
         }
     }
 }

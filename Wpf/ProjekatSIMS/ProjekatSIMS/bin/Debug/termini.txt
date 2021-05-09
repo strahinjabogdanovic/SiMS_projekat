@@ -1,32 +1,33 @@
-02.10.2021./8:00/Jova Jovic/A1/1/Ana Markovic
-02.10.2021./8:30/Jova Jovic/A1/2/Marija Pavlov
-02.10.2021./9:00/Jova Jovic/A1/3/Ana Markovic
-03.10.2021./8:00/Jovan Jovanovic/A2/4/Ana Jovanovic
-03.10.2021./8:30/Jovan Jovanovic/A2/5/Marija Pavlov
-03.10.2021./12:00/Jova Jovic/A2/6/Petar Petrovic
-03.10.2021./9:30/Jovan Jovanovic/A2/7/Nina Radic
-30.04.2021./9:00/Jova Jovic/A2/8/ 
-01.05.2021./8:00/Jova Jovic/A2/9/ 
-30.04.2021./8:30/Jovan Jovanovic/A2/10/ 
-10.05.2021./7:00/Jova Jovic/A2/11/
-10.05.2021./7:30/Jova Jovic/A2/12/
-10.05.2021./12:00/Jova Jovic/A2/13/Marija Pavlov 
-10.05.2021./12:30/Jova Jovic/A2/14/Nina Radic
-10.05.2021./17:00/Jova Jovic/A2/15/Milutin Gordic
-10.05.2021./17:30/Jova Jovic/A2/16/Ana Jovanovic 
-10.05.2021./11:00/Jovan Jovanovic/A2/17/
-10.05.2021./11:30/Jovan Jovanovic/A2/18/
-10.05.2021./12:00/Jovan Jovanovic/A2/19/ 
-10.05.2021./12:30/Jovan Jovanovic/A2/20/Marija Pavlov
-10.05.2021./17:00/Jovan Jovanovic/A2/21/Milutin Gordic
-10.05.2021./17:30/Jovan Jovanovic/A2/22/Nina Radic  
-11.05.2021./17:30/Jova Jovic/A2/23/Masa Pasic
-11.05.2021./18:00/Jova Jovic/A2/24/Ana Markovic
-11.05.2021./18:30/Jova Jovic/A2/25/
-11.05.2021./19:00/Jova Jovic/A2/26/
-11.05.2021./17:30/Jovan Jovanovic/A2/27/Masa Pasic
-11.05.2021./18:00/Jovan Jovanovic/A2/28/Ana Markovic 
-11.05.2021./18:30/Jovan Jovanovic/A2/29/
-11.05.2021./19:00/Jovan Jovanovic/A2/30/
-10.5.2021./8:30/Jovan Jovanovic/A2/31/Ana Markovic
-10.5.2021./8:30/Jova Jovic/A1/32/Ana Jovanovic
+4.10.2021./8:00/Jova Jovic/A1/1/Ana Markovic/ 
+02.10.2021./8:30/Jova Jovic/A1/2/Marija Pavlov/ 
+30.10.2021./8:00/Jova Jovic/A1/3/Ana Markovic/x
+01.11.2021./8:00/Jova Jovic/A1/3/Ana Markovic/x
+23.10.2021./8:00/Jova Jovic/A1/3/Ana Markovic/x
+30.12.2021./8:00/Jova Jovic/A1/3/Ana Markovic/x
+03.10.2021./8:00/Jovan Jovanovic/A2/4/Ana Jovanovic/ 
+03.10.2021./8:30/Jovan Jovanovic/A2/5/Marija Pavlov/ 
+03.10.2021./12:00/Jova Jovic/A2/6/Petar Petrovic/ 
+03.10.2021./9:30/Jovan Jovanovic/A2/7/Nina Radic/ 
+30.04.2021./9:00/Jova Jovic/A2/8/ / 
+01.05.2021./8:00/Jova Jovic/A2/9/ / 
+01.04.2021./8:30/Jovan Jovanovic/A2/10/ / 
+10.05.2021./7:00/Jova Jovic/A2/11/ / 
+10.05.2021./7:30/Jova Jovic/A2/12/ /x
+10.05.2021./12:00/Jova Jovic/A2/13/Marija Pavlov/  
+10.05.2021./12:30/Jova Jovic/A2/14/Nina Radic/ 
+10.05.2021./17:00/Jova Jovic/A2/15/Milutin Gordic/ 
+10.05.2021./17:30/Jova Jovic/A2/16/Ana Jovanovic/ 
+10.05.2021./11:00/Jovan Jovanovic/A2/17/ / 
+10.05.2021./11:30/Jovan Jovanovic/A2/18/ / 
+10.05.2021./12:00/Jovan Jovanovic/A2/19/ / 
+10.05.2021./12:30/Jovan Jovanovic/A2/20/Marija Pavlov/ 
+10.05.2021./17:00/Jovan Jovanovic/A2/21/Milutin Gordic/ 
+10.05.2021./17:30/Jovan Jovanovic/A2/22/Nina Radic/ 
+11.05.2021./17:30/Jova Jovic/A2/23/Masa Pasic/ 
+11.05.2021./18:00/Jova Jovic/A2/24/Ana Markovic/ 
+11.05.2021./18:30/Jova Jovic/A2/25/ / 
+11.05.2021./19:00/Jova Jovic/A2/26/ / 
+11.05.2021./17:30/Jovan Jovanovic/A2/27/Masa Pasic/ 
+11.05.2021./18:00/Jovan Jovanovic/A2/28/Ana Markovic/  
+11.05.2021./18:30/Jovan Jovanovic/A2/29/ / 
+11.05.2021./19:00/Jovan Jovanovic/A2/30/ / 

@@ -37,7 +37,7 @@ namespace ProjekatSIMS
         {
             InitializeComponent();
             int currentRowIndex = 0;
-           
+
 
 
 
@@ -52,7 +52,7 @@ namespace ProjekatSIMS
 
             int datum = 0;
 
-          
+
 
             using (var sr = new StreamReader("termini.txt"))
             {
@@ -139,7 +139,8 @@ namespace ProjekatSIMS
                                 datum2 = (++datum).ToString();
                             }
                         }
-                        else if(klj == 4 || klj == 6 || klj == 9 || klj == 11) {
+                        else if (klj == 4 || klj == 6 || klj == 9 || klj == 11)
+                        {
 
                             if (datum == 29)
                             {
@@ -180,7 +181,7 @@ namespace ProjekatSIMS
                 }
             }
 
-            
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -213,10 +214,13 @@ namespace ProjekatSIMS
 
                 while ((line = sr.ReadLine()) != null)
                 {
-                    
-                    if (id == currentRowIndex)
+                    String[] termini = line.Split('/');
+                    antiTrol anti = new antiTrol();
+
+                    if (id == currentRowIndex && anti.mogucnost_pomeranja(termini[6]))
                     {
                         String[] termin = line.Split('/');
+
                         var pacijent = new TerminiPacijenata();
                         idx = int.Parse(termin[4]);
 
@@ -229,14 +233,14 @@ namespace ProjekatSIMS
 
                             if (gdatum.Contains(datum1))
                             {
-                                
+
                                 slj = datum1;
                                 klj = klj1;
 
                             }
                             else if (gdatum.Contains(datum2))
                             {
-                                
+
                                 slj = datum2;
                                 klj = klj2;
                             }
@@ -361,10 +365,10 @@ namespace ProjekatSIMS
                                     timee = ttt[0] + ":" + ttt[1];
 
                                 }
-                                
+
                             }
                         }
-                        sw.WriteLine(slj + "." + klj + "." + god + "." + "/" + timee + "/" + doktor + "/" + termin[3] + "/" + termin[4] + "/" + "Ana Markovic");
+                        sw.WriteLine(slj + "." + klj + "." + god + "." + "/" + timee + "/" + doktor + "/" + termin[3] + "/" + termin[4] + "/" + "Ana Markovic" + "/" + "x");
                     }
                     else
                     {
