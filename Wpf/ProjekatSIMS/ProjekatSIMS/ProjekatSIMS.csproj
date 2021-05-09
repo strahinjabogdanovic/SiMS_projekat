@@ -129,6 +129,7 @@
     <Compile Include="Package1\Sastojci.cs" />
     <Compile Include="Package1\TerminiFileStorage.cs" />
     <Compile Include="Package1\TerminiPacijenata.cs" />
+    <Compile Include="Package1\UputiFileStorage.cs" />
     <Compile Include="PageAzurirajAlergene.xaml.cs">
       <DependentUpon>PageAzurirajAlergene.xaml</DependentUpon>
     </Compile>

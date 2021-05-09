@@ -119,18 +119,18 @@ namespace ProjekatSIMS
                     //{
 
 
-                    String[] termini = line.Split('/');
-                    String idK = termini[2];
+                    String[] deo = line.Split('/');
+                    String idK = deo[2];
 
                     Console.WriteLine(idK);
                     Console.WriteLine(idd);
-                    ime = termini[0];
-                    prezime = termini[1];
-                    pol = termini[3];
-                    datumr = termini[4];
-                    mail = termini[5];
-                    broj = termini[6];
-                    adresa = termini[7];
+                    ime = deo[0];
+                    prezime = deo[1];
+                    pol = deo[3];
+                    datumr = deo[4];
+                    mail = deo[5];
+                    broj = deo[6];
+                    adresa = deo[7];
                     if (idK == jmbg)
                     {
 
@@ -176,7 +176,7 @@ namespace ProjekatSIMS
 
         private void UputLekaruSpecijalisti_Click(object sender, RoutedEventArgs e)
         {
-            UputSpecijalisti uput = new UputSpecijalisti(jmbg);
+            UputSpecijalisti uput = new UputSpecijalisti(jmbg,ime,prezime);
             this.Close();
             uput.ShowDialog();
         }
