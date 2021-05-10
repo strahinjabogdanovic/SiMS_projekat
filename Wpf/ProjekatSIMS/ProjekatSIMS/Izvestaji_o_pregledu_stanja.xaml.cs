@@ -56,6 +56,7 @@ namespace ProjekatSIMS
                 if (t2.Text == izvestaj.jmbg)
                 {
                     Izvopr.Add(izvestaj);
+                    tjmbg.Text = izvestaj.jmbg;
                 }
 
 
@@ -132,6 +133,27 @@ namespace ProjekatSIMS
             }
             File.Delete("izvestaji.txt");
             File.Move(tempFile, "izvestaji.txt");
+        }
+
+        private void TextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+            KartonLekar karton = new KartonLekar(tjmbg.Text);
+            this.Close();
+            karton.ShowDialog();
+
+        }
+
+        private void Button_MouseEnter(object sender, MouseEventArgs e)
+        {
+            tooltip.Visibility = Visibility.Visible;
+            labtooltip.Visibility = Visibility.Visible;
+        }
+
+        private void Button_MouseLeave(object sender, MouseEventArgs e)
+        {
+            tooltip.Visibility = Visibility.Hidden;
+            labtooltip.Visibility = Visibility.Hidden;
         }
     }
 }

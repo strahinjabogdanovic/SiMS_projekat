@@ -8,8 +8,10 @@
         Title="ZahteviZaValidaciju" Height="700" Width="1000">
     <Grid>
         <Label Content="Validacija leka" HorizontalAlignment="Left" Margin="75,95,0,0" VerticalAlignment="Top" Height="40" Width="154" FontSize="16"/>
-        <TextBlock x:Name="t" HorizontalAlignment="Left" Margin="75,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="786" MouseLeftButtonDown="Zahtev_Click"/>
+        <TextBlock x:Name="t" HorizontalAlignment="Left" Margin="75,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="786" MouseLeftButtonDown="Zahtev_Click" FontSize="14" MouseEnter="t_MouseEnter" MouseLeave="t_MouseLeave"/>
         <Button Content="Svi lekovi" HorizontalAlignment="Left" Margin="709,95,0,0" VerticalAlignment="Top" Width="170" Height="40" Click="LekoviRU_Click"/>
+        <Rectangle x:Name="tooltipRct" HorizontalAlignment="Left" Height="60" RadiusX="20" RadiusY="20" Margin="229,140,0,0" VerticalAlignment="Top" Width="144" Visibility="Hidden"/>
+        <Label x:Name="tooltip"  Content="Klikni me" HorizontalAlignment="Left" Margin="267,145,0,0" VerticalAlignment="Top" Height="38" Width="144" Visibility="Hidden"/>
 
     </Grid>
 </Window>

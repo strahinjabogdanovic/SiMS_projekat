@@ -9,7 +9,7 @@
     <Grid>
         <DataGrid x:Name="dataGridLekar" ItemsSource="{Binding Path = ReceptiSpisak, UpdateSourceTrigger=PropertyChanged}"
                   SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
-                  Height="250" Margin="30,84,0,0" VerticalAlignment="Top" Width="500">
+                  Height="250" Margin="30,119,0,0" VerticalAlignment="Top" Width="500">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Sifra Leka" Binding="{Binding Path = sifraLeka}"/>
                 <DataGridTextColumn Header="Naziv Leka" Binding="{Binding Path = nazivLeka}" />
@@ -18,8 +18,9 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Dodaj novi recept" HorizontalAlignment="Left" Margin="652,77,0,0" VerticalAlignment="Top" Width="112" Click="NoviRecept_Click" Height="41"/>
-        <Label Content="JMBG pacijenta" HorizontalAlignment="Left" Margin="30,31,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="t" HorizontalAlignment="Left" Margin="148,36,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="21" Width="103"/>
+        <Label Content="JMBG pacijenta" HorizontalAlignment="Left" Margin="30,77,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="t" HorizontalAlignment="Left" Margin="165,82,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="21" Width="103"/>
+        <TextBlock x:Name="nazad" Text="&#129044;" HorizontalAlignment="Left" Margin="30,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" RenderTransformOrigin="1.241,1.027" MouseLeftButtonUp="nazad_MouseLeftButtonUp"/>
 
     </Grid>
 </Window>

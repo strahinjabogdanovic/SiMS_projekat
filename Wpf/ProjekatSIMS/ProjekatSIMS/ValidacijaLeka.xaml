@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="ValidacijaLeka" Height="700" Width="1000">
     <Grid>
-        <TextBlock x:Name="t" HorizontalAlignment="Left" Height="42" Margin="66,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="358"/>
+        <TextBlock x:Name="nazad" Text="&#129044;"  HorizontalAlignment="Left" Height="44" Margin="66,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontSize="30" MouseLeftButtonUp="nazad_MouseLeftButtonUp"><InlineUIContainer>
+                <TextBlock TextWrapping="Wrap" Text="TextBlock" Height="29" Width="80"/>
+            </InlineUIContainer></TextBlock>
         <Label Content="Naziv leka" HorizontalAlignment="Left" Margin="66,157,0,0" VerticalAlignment="Top" Height="39" Width="129"/>
         <Label Content="Sifra leka" HorizontalAlignment="Left" Margin="66,214,0,0" VerticalAlignment="Top" Height="39" Width="129"/>
         <CheckBox Content="Lek ispunjava sve propise i garantujem njegovu bezbednost." HorizontalAlignment="Left" Margin="66,282,0,0" VerticalAlignment="Top" Height="30" Width="740" Checked="CheckBox1_Checked"/>

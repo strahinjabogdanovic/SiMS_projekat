@@ -58,11 +58,14 @@ namespace ProjekatSIMS
 
         private void combo_DropDownClosed(object sender, EventArgs e)
         {
-            LekarImePr = combo.SelectedItem.ToString();
-            PopuniSlobodneTermine(LekarImePr);
-            Labela.Visibility = Visibility.Visible;
-            slobcombo.Visibility = Visibility.Visible;
-            zakazi.Visibility = Visibility.Visible;
+            if (combo.SelectedItem != null)
+            {
+                LekarImePr = combo.SelectedItem.ToString();
+                PopuniSlobodneTermine(LekarImePr);
+                Labela.Visibility = Visibility.Visible;
+                slobcombo.Visibility = Visibility.Visible;
+                zakazi.Visibility = Visibility.Visible;
+            }
         }
 
         private void zakazi_Click(object sender, RoutedEventArgs e)

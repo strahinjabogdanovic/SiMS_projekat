@@ -71,5 +71,17 @@ namespace ProjekatSIMS
             spisakLekova.ShowDialog();
 
         }
+
+        private void t_MouseEnter(object sender, MouseEventArgs e)
+        {
+            tooltip.Visibility = Visibility.Visible;
+            tooltipRct.Visibility = Visibility.Visible;
+        }
+
+        private void t_MouseLeave(object sender, MouseEventArgs e)
+        {
+            tooltip.Visibility = Visibility.Hidden;
+            tooltipRct.Visibility = Visibility.Hidden;
+        }
     }
 }

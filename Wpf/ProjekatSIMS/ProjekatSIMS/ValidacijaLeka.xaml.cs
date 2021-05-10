@@ -68,6 +68,13 @@ namespace ProjekatSIMS
             File.Delete("lekovi.txt");
             File.Move(tempFile, "lekovi.txt");
         }
+
+        private void nazad_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            LekarPocetnaStranica lekarPocetnaStranica = new LekarPocetnaStranica();
+            this.Close();
+            lekarPocetnaStranica.ShowDialog();
+        }
     }
 
 }

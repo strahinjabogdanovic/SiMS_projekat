@@ -20,8 +20,9 @@ namespace ProjekatSIMS
     /// </summary>
     public partial class KartonLekar : Window
     {
-        String ime = "";
-        String prezime = "";
+
+        public String ime = "";
+        public String prezime = "";
         String jmbg = "";
         String pol = "";
         String datumr = "";
@@ -29,7 +30,7 @@ namespace ProjekatSIMS
         String broj = "";
         String adresa = "";
         String idd = "";
-
+        public KartonLekar() {  }
         public KartonLekar(DataGrid dataGridLekar)
         {
             InitializeComponent();
@@ -124,24 +125,27 @@ namespace ProjekatSIMS
 
                     Console.WriteLine(idK);
                     Console.WriteLine(idd);
-                    ime = deo[0];
-                    prezime = deo[1];
-                    pol = deo[3];
-                    datumr = deo[4];
-                    mail = deo[5];
-                    broj = deo[6];
-                    adresa = deo[7];
+                    string im = deo[0];
+                    string prezim = deo[1];
+                    string po = deo[3];
+                    string datu = deo[4];
+                    string mai = deo[5];
+                    string br = deo[6];
+                    string adre = deo[7];
                     if (idK == jmbg)
                     {
 
-                        t.Text = ime;
-                        t1.Text = prezime;
+                        t.Text = im;
+                        t1.Text = prezim;
                         t2.Text = jmbg;
-                        t3.Text = pol;
-                        t4.Text = datumr;
-                        t5.Text = mail;
-                        t6.Text = broj;
-                        t7.Text = adresa;
+                        t3.Text = po;
+                        t4.Text = datu;
+                        t5.Text = mai;
+                        t6.Text = br;
+                        t7.Text = adre;
+                        ime = im;
+                        prezime = prezim;
+                        jmbg = jmbg;
                     }
                     idps++;
 
@@ -176,7 +180,7 @@ namespace ProjekatSIMS
 
         private void UputLekaruSpecijalisti_Click(object sender, RoutedEventArgs e)
         {
-            UputSpecijalisti uput = new UputSpecijalisti(jmbg,ime,prezime);
+            UputSpecijalisti uput = new UputSpecijalisti(t2.Text,t.Text,t1.Text);
             this.Close();
             uput.ShowDialog();
         }
@@ -184,6 +188,7 @@ namespace ProjekatSIMS
         private void Nazad_Click(object sender, RoutedEventArgs e)
         {
             LekarPocetnaStranica lekarPocetnaStranica = new LekarPocetnaStranica();
+            this.Close();
             lekarPocetnaStranica.ShowDialog();
         }
     }

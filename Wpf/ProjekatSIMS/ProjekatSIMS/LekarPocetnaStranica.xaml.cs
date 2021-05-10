@@ -85,73 +85,21 @@ namespace ProjekatSIMS
 
         private void Kreiraj_Click(object sender, RoutedEventArgs e)
         {
-            int currentRowIndex = dataGridLekar.Items.IndexOf(dataGridLekar.SelectedItem);
+            KreirajTerminLekar k = new KreirajTerminLekar();
+            if (dataGridLekar.SelectedItem != null)
+            {
+                int currentRowIndex = dataGridLekar.Items.IndexOf(dataGridLekar.SelectedItem);
 
-            DataGridRow row = (DataGridRow)dataGridLekar.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
+                DataGridRow row = (DataGridRow)dataGridLekar.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
 
-            TextBlock t5 = dataGridLekar.Columns[5].GetCellContent(row) as TextBlock;
-            string jmbg=t5.Text;
+                TextBlock t5 = dataGridLekar.Columns[5].GetCellContent(row) as TextBlock;
+                string jmbg = t5.Text;
 
-            KreirajTerminLekar k = new KreirajTerminLekar(jmbg);
-            k.ShowDialog();
+                k = new KreirajTerminLekar(jmbg);
+            }
+                k.ShowDialog();
         }
 
-        private void Obrisi_Click(object sender, RoutedEventArgs e)
-        {
-            TerminiFileStorage tf = new TerminiFileStorage();
-            int currentRowIndex = dataGridLekar.Items.IndexOf(dataGridLekar.SelectedItem);
-            TerminiPacijenata k = ZakazTermina.ElementAt(currentRowIndex);
-            if (ZakazTermina.Count > 0)
-            {
-                ZakazTermina.RemoveAt(currentRowIndex);
-            }
-            else
-            {
-                MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-
-            tf.Obrisi(k);
-            /*
-            int currentRowIndex = dataGridLekar.Items.IndexOf(dataGridLekar.SelectedItem);
-            TerminiPacijenata k = ZakazTermina.ElementAt(currentRowIndex);
-            if (ZakazTermina.Count > 0)
-            {
-                ZakazTermina.RemoveAt(currentRowIndex);
-            }
-            else
-            {
-                MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-
-
-
-            string tempFile = System.IO.Path.GetTempFileName();
-
-            using (var sr = new StreamReader("lekar.txt"))
-            using (var sw = new StreamWriter(tempFile))
-            {
-                string line;
-
-                while ((line = sr.ReadLine()) != null)
-                {
-                    ZakazTermina = new ObservableCollection<TerminiPacijenata>();
-
-                    var priv = new TerminiPacijenata();
-
-                    String[] termin = line.Split('/');
-
-                    priv.id = int.Parse(termin[5].ToString());
-
-
-                    if (priv.id != k.id)
-                        sw.WriteLine(line);
-                }
-            }
-
-            File.Delete("lekar.txt");
-            File.Move(tempFile, "lekar.txt");
-            */
-        }
 
         private void Izmeni_Click(object sender, RoutedEventArgs e)
         {
@@ -213,11 +161,54 @@ namespace ProjekatSIMS
             this.Close();
             z.ShowDialog();
         }
-
-        private void Logout_Click(object sender, RoutedEventArgs e)
+        private void logout_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
+            this.Close();
             mainWindow.ShowDialog();
+
+        }
+
+        private void TextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            TerminiFileStorage tf = new TerminiFileStorage();
+            int currentRowIndex = dataGridLekar.Items.IndexOf(dataGridLekar.SelectedItem);
+            TerminiPacijenata k = ZakazTermina.ElementAt(currentRowIndex);
+            if (ZakazTermina.Count > 0)
+            {
+                ZakazTermina.RemoveAt(currentRowIndex);
+            }
+            else
+            {
+                MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            tf.Obrisi(k);
+
+        }
+
+        private void button3_MouseEnter(object sender, MouseEventArgs e)
+        {
+            klikni.Visibility = Visibility.Visible;
+            klikniLab.Visibility = Visibility.Visible;
+        }
+
+        private void button3_MouseLeave(object sender, MouseEventArgs e)
+        {
+            klikni.Visibility = Visibility.Hidden;
+            klikniLab.Visibility = Visibility.Hidden;
+        }
+
+        private void button_MouseEnter(object sender, MouseEventArgs e)
+        {
+            izaberi.Visibility = Visibility.Visible;
+            izaberiLab.Visibility = Visibility.Visible;
+        }
+
+        private void button_MouseLeave(object sender, MouseEventArgs e)
+        {
+            izaberi.Visibility = Visibility.Hidden;
+            izaberiLab.Visibility = Visibility.Hidden;
         }
     }
 }

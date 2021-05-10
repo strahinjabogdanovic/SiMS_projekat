@@ -80,5 +80,12 @@ namespace ProjekatSIMS
             IzdavanjeRecepta ir = new IzdavanjeRecepta(t);
             ir.ShowDialog();
         }
+
+        private void nazad_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            KartonLekar kartonLekar = new KartonLekar(t.Text);
+            this.Close();
+            kartonLekar.ShowDialog();
+        }
     }
 }

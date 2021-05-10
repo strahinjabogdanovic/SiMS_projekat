@@ -41,6 +41,10 @@ namespace ProjekatSIMS
             JmbgP = jmbg;
             tBlock.Text = jmbg;
 
+            KartonLekar karton = new KartonLekar(jmbg);
+            textBox_ime.Text = karton.ime;
+            textBox_prz.Text = karton.prezime;
+
         }
 
         private void Odustani_Click(object sender, RoutedEventArgs e)
@@ -56,7 +60,8 @@ namespace ProjekatSIMS
             ComboBoxItem lekaro = (ComboBoxItem)comboBox1.SelectedItem;
             string vrstaTermina = vrsta.Content.ToString();
             string lekar = lekaro.Content.ToString();
-            string tb = textBox.Text;
+            DateTime date = d.DisplayDate;
+            string tb = date.ToString("dd.mm.yyyy");
             string tb1 = textBox1.Text;
             string tb2 = textBox2.Text;
             string tb3 = tBlock.Text;
