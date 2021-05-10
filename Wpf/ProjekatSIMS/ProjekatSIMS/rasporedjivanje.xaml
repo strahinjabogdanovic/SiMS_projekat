@@ -6,19 +6,19 @@
         xmlns:local="clr-namespace:ProjekatSIMS"
         xml:lang="en-IN"
         mc:Ignorable="d"
-        Title="rasporedjivanje" Height="450" Width="800">
+        Title="rasporedjivanje" Height="750" Width="430">
     <Grid>
         <Label Content="Premesta se u:" HorizontalAlignment="Left"  Margin="50,50,0,0" VerticalAlignment="Top" Height="40"/>
         <Label Content="Oprema za premestanje:" HorizontalAlignment="Left" Margin="50,125,0,0" VerticalAlignment="Top"/>
         <Label Content="Kolicina opreme:" HorizontalAlignment="Left" Margin="50,200,0,0" VerticalAlignment="Top"/>
-        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="130,350,0,0" VerticalAlignment="Top" Width="75" Click="potvrdi_click"/>
-        <TextBox x:Name="t1" HorizontalAlignment="Left" Height="23" Margin="200,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="t2" HorizontalAlignment="Left" Height="23" Margin="200,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="200,50,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="170,350,0,0" VerticalAlignment="Top" Width="75" Click="potvrdi_click"/>
+        <TextBox x:Name="t1" HorizontalAlignment="Left" Height="23" Margin="220,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="t2" HorizontalAlignment="Left" Height="23" Margin="220,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="220,50,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBlock x:Name="tb1" HorizontalAlignment="Left" Margin="140,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Label Content="Premestiti kada:" HorizontalAlignment="Left" Margin="50,275,0,0" VerticalAlignment="Top"/>
         <DatePicker SelectedDate="{Binding myVideModelProperty}"
-                    Height="23" HorizontalAlignment="Left" Margin="200,275,0,0" Name="myDatePicker" VerticalAlignment="Top" Width="125" FontSize="20">
+                    Height="23" HorizontalAlignment="Left" Margin="220,275,0,0" Name="myDatePicker" VerticalAlignment="Top" Width="125" FontSize="20">
             <DatePicker.Resources>
                 <Style TargetType="{x:Type DatePickerTextBox}">
                     <Setter Property="Control.Template">

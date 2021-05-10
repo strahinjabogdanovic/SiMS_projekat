@@ -67,6 +67,7 @@ namespace ProjekatSIMS
                     string naziv = informacije[0];
                     string oznaka = informacije[1];
                     string namena = informacije[2];
+                    string ren = informacije[5];
 
                     if (idp == izabrani_red)
                     {
@@ -75,7 +76,7 @@ namespace ProjekatSIMS
                         foreach(string o_k in prostorije) {
                             oprema_kol = o_k;
                         }
-                        sw.WriteLine(naziv + "/" + oznaka + "/" + namena + "/" + oprema_kol);
+                        sw.WriteLine(naziv + "/" + oznaka + "/" + namena + "/" + oprema_kol + "/" + ren);
                     }
                     else if (cb1.SelectedValue.ToString().Contains(informacije[0]))
                     {
@@ -86,7 +87,7 @@ namespace ProjekatSIMS
                         {
                             oprema_kol = o_k;
                         }
-                        sw.WriteLine(naziv + "/" + oznaka + "/" + namena + "/" + oprema_kol);
+                        sw.WriteLine(naziv + "/" + oznaka + "/" + namena + "/" + oprema_kol + "/" + ren);
                     }
                     else
                     {

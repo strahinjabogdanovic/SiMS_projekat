@@ -18,7 +18,7 @@ namespace Package1
             set;
         }
 
-        public void Kreiraj(string tb, string tb1, string tb2, string tb3)
+        public void Kreiraj(string tb, string tb1, string tb2, string tb3, string tb4)
       {
             Prostorije = new ObservableCollection<Prostorije>();
 
@@ -37,7 +37,7 @@ namespace Package1
                     sw.WriteLine(line);
 
                 }
-                sw.WriteLine(tb + "/" + tb1 + "/" + tb2 + "/" + tb3 + "/" + ",");
+                sw.WriteLine(tb + "/" + tb1 + "/" + tb2 + "/" + tb3 + "/" + tb4 + "/" + "-");
 
 
             }
@@ -119,7 +119,7 @@ namespace Package1
                         TextBlock t3 = dataGridProstorije.Columns[2].GetCellContent(row) as TextBlock;
                         TextBlock t4 = dataGridProstorije.Columns[3].GetCellContent(row) as TextBlock;
 
-                        sw.WriteLine(t1.Text + "/" + t2.Text + "/" + t3.Text + "/" + t4.Text + "/" + termin[4]);
+                        sw.WriteLine(t1.Text + "/" + t2.Text + "/" + t3.Text + "/" + t4.Text + "/" + termin[4] + "/" + termin[5]);
                     }
                     else
                     {

@@ -5,18 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="KreirajProstoriju" Height="400" Width="500">
+        Title="KreirajProstoriju" Height="750" Width="430">
     <Grid>
-        <Label x:Name="label" Content="Ime" HorizontalAlignment="Left" Margin="156,34,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Oznaka" HorizontalAlignment="Left" Margin="137,83,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="Namena" HorizontalAlignment="Left" Margin="131,128,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label3" Content="Oprema" HorizontalAlignment="Left" Margin="133,178,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="216,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="216,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="216,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="216,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
-        <Button x:Name="button" Content="Odustani" HorizontalAlignment="Left" Margin="131,318,0,0" VerticalAlignment="Top" Width="76" Click="Odustani_Click"/>
-        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="288,318,0,0" VerticalAlignment="Top" Width="76" Click="Potvrdi_Click"/>
+        <Label x:Name="label" Content="Ime" HorizontalAlignment="Left" Margin="70,35,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Oznaka" HorizontalAlignment="Left" Margin="70,85,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Namena" HorizontalAlignment="Left" Margin="70,135,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Oprema" HorizontalAlignment="Left" Margin="70,185,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="190,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="190,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="190,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="190,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
+        <Button x:Name="button" Content="Odustani" HorizontalAlignment="Left" Margin="70,318,0,0" VerticalAlignment="Top" Width="76" Click="Odustani_Click"/>
+        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="240,318,0,0" VerticalAlignment="Top" Width="76" Click="Potvrdi_Click"/>
+        <Label Content="Kolicina" HorizontalAlignment="Left" Margin="70,235,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="23" Margin="190,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
 
     </Grid>
 </Window>

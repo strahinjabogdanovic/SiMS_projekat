@@ -40,6 +40,7 @@ namespace Package1
                         string s1 = termin[0];
                         string s2 = termin[1];
                         string s3 = termin[2];
+                        string ren = termin[5];
 
                         string s4 = termin[3];
                         string[] oprema_split = s4.Split(',');
@@ -60,7 +61,7 @@ namespace Package1
                         }
                         nova_kolicina += "," + tb1;
 
-                        sw.WriteLine(s1 + "/" + s2 + "/" + s3 + "/" + nova_oprema + "/" + nova_kolicina);
+                        sw.WriteLine(s1 + "/" + s2 + "/" + s3 + "/" + nova_oprema + "/" + nova_kolicina + "/" + ren);
                     }
                     else
                     {
@@ -113,6 +114,7 @@ namespace Package1
                         string s1 = termin[0];
                         string s2 = termin[1];
                         string s3 = termin[2];
+                        string ren = termin[5];
 
                         string s4 = termin[3];
                         string[] oprema_split = s4.Split(',');
@@ -130,7 +132,7 @@ namespace Package1
                             {
                                 nova_oprema += "," + oprema_split[i];
                             }
-                            for (int i = 1; i < ki; i++)
+                            for (int i = 1; i < oi; i++)
                             {
                                 nova_kolicina += "," + kolicina_split[i];
                             }
@@ -142,7 +144,8 @@ namespace Package1
                             {
                                 nova_oprema += "," + oprema_split[i];
                             }
-                            int crio = ++currentRowIndexo;
+                            int c = currentRowIndexo;
+                            int crio = ++c;
                             for (int i = crio; i<oi; i++)
                             {
                                 nova_oprema += "," + oprema_split[i];
@@ -153,14 +156,16 @@ namespace Package1
                             {
                                 nova_kolicina += "," + kolicina_split[i];
                             }
-                            for (int i = crio; i < ki; i++)
+                            int d = currentRowIndexo;
+                            int crip = ++d;
+                            for (int i = crip; i < oi; i++)
                             {
                                 nova_kolicina += "," + kolicina_split[i];
                             }
 
                         }
 
-                        sw.WriteLine(s1 + "/" + s2 + "/" + s3 + "/" + nova_oprema + "/" + nova_kolicina);
+                        sw.WriteLine(s1 + "/" + s2 + "/" + s3 + "/" + nova_oprema + "/" + nova_kolicina + "/" + ren);
                     }
                     else
                     {
@@ -215,6 +220,7 @@ namespace Package1
                         string s1 = termin[0];
                         string s2 = termin[1];
                         string s3 = termin[2];
+                        string ren = termin[5];
 
                         string s4 = termin[3];
                         string[] oprema_split = s4.Split(',');
@@ -268,7 +274,7 @@ namespace Package1
                             }
                         }
 
-                        sw.WriteLine(s1 + "/" + s2 + "/" + s3 + "/" + nova_oprema + "/" + nova_kolicina);
+                        sw.WriteLine(s1 + "/" + s2 + "/" + s3 + "/" + nova_oprema + "/" + nova_kolicina + "/" + ren);
                     }
                     else
                     {
