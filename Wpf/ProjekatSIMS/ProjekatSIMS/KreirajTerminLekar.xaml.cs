@@ -23,6 +23,7 @@ namespace ProjekatSIMS
     /// </summary>
     public partial class KreirajTerminLekar : Window
     {
+        string JmbgP;
         public ObservableCollection<TerminiPacijenata> ZakazTermina
         {
             get;
@@ -34,6 +35,13 @@ namespace ProjekatSIMS
         {
             InitializeComponent();
         }
+        public KreirajTerminLekar(string jmbg)
+        {
+            InitializeComponent();
+            JmbgP = jmbg;
+            tBlock.Text = jmbg;
+
+        }
 
         private void Odustani_Click(object sender, RoutedEventArgs e)
         {
@@ -44,14 +52,15 @@ namespace ProjekatSIMS
         {
             Close();
             TerminiFileStorage tfs = new TerminiFileStorage();
-
-            string vrstaTermina = comboBox.SelectedValue.ToString();
-            string lekar = comboBox1.SelectedValue.ToString();
+            ComboBoxItem vrsta = (ComboBoxItem)comboBox.SelectedItem;
+            ComboBoxItem lekaro = (ComboBoxItem)comboBox1.SelectedItem;
+            string vrstaTermina = vrsta.Content.ToString();
+            string lekar = lekaro.Content.ToString();
             string tb = textBox.Text;
             string tb1 = textBox1.Text;
             string tb2 = textBox2.Text;
-
-            tfs.Kreiraj(vrstaTermina,lekar,tb,tb1,tb2);
+            string tb3 = tBlock.Text;
+            tfs.Kreiraj(vrstaTermina,lekar,tb,tb1,tb2,tb3);
             
             //ZakazTermina = new ObservableCollection<TerminiPacijenata>();
             //string slj = "";

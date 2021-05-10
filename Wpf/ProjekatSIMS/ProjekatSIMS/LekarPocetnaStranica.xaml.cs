@@ -85,7 +85,14 @@ namespace ProjekatSIMS
 
         private void Kreiraj_Click(object sender, RoutedEventArgs e)
         {
-            KreirajTerminLekar k = new KreirajTerminLekar();
+            int currentRowIndex = dataGridLekar.Items.IndexOf(dataGridLekar.SelectedItem);
+
+            DataGridRow row = (DataGridRow)dataGridLekar.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
+
+            TextBlock t5 = dataGridLekar.Columns[5].GetCellContent(row) as TextBlock;
+            string jmbg=t5.Text;
+
+            KreirajTerminLekar k = new KreirajTerminLekar(jmbg);
             k.ShowDialog();
         }
 

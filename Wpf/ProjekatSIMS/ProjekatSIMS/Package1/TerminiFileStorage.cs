@@ -18,42 +18,9 @@ namespace Package1
             set;
         }
 
-        public void Kreiraj(string vt, string l, string tb, string tb1, string tb2)
+        public void Kreiraj(string vt, string l, string tb, string tb1, string tb2,string jmbg)
       {
             ZakazTermina = new ObservableCollection<TerminiPacijenata>();
-            string slj = "";
-            string kfr = "";
-
-            //string vrstaTermina = comboBox.SelectedValue.ToString();
-            //string lekar = comboBox1.SelectedValue.ToString();
-
-            if (l != null)
-            {
-
-                if (l.Contains("Jova Jovic"))
-                {
-                    slj = "Jova Jovic";
-
-                }
-                else if (l.Contains("Jovan Jovanovic"))
-                {
-                    slj = "Jovan Jovanovic";
-                }
-            }
-
-            if (vt != null)
-            {
-
-                if (vt.Contains("Pregled"))
-                {
-                    kfr = "Pregled";
-
-                }
-                else if (vt.Contains("Operacija"))
-                {
-                    kfr = "Operacija";
-                }
-            }
 
 
             string tempFile = System.IO.Path.GetTempFileName();
@@ -74,16 +41,13 @@ namespace Package1
 
                 }
 
-                sw.WriteLine(kfr + "/" + tb + "/" + tb1 + "/" + tb2 + "/" + slj + "/" + id);
+                sw.WriteLine(vt + "/" + tb + "/" + tb1 + "/" + tb2 + "/" + l + "/" + id + "/" + jmbg);
 
 
             }
             File.Delete("lekar.txt");
             File.Move(tempFile, "lekar.txt");
 
-
-
-            //this.Close();
             LekarPocetnaStranica s = new LekarPocetnaStranica();
             s.ShowDialog();
         }
@@ -167,7 +131,6 @@ namespace Package1
                         TextBlock t3 = dataGridLekar.Columns[2].GetCellContent(row) as TextBlock;
                         TextBlock t4 = dataGridLekar.Columns[3].GetCellContent(row) as TextBlock;
                         TextBlock t5 = dataGridLekar.Columns[4].GetCellContent(row) as TextBlock;
-
                         sw.WriteLine(t1.Text + "/" + t2.Text + "/" + t3.Text + "/" + t4.Text + "/" + t5.Text + "/" + termin[5]);
                     }
                     else
