@@ -8,6 +8,7 @@ namespace Package1
 {
    public class NaloziPacijenataFileStorage
    {
+        
         public ObservableCollection<Pacijent> Korisnici
         {
             get;
@@ -247,6 +248,56 @@ namespace Package1
             }
             File.Delete("podaci.txt");
             File.Move(tempFile, "podaci.txt");
+        }
+
+        public int dobaviIdPacijentaPoJmbgu(string jmbg)
+        {
+            int idp=0;
+            using (var sars = new StreamReader("podaci.txt"))
+
+            {
+                string line;
+                int idps = 0;
+                while ((line = sars.ReadLine()) != null)
+                {
+                    String[] deo = line.Split('/');
+                    String idK = deo[2];
+
+                    string sifra = deo[8];
+                    if (idK == jmbg)
+                    {
+                        idp = int.Parse(sifra);
+                    }
+                    idps++;
+
+                }
+            }
+            return idp;
+        }
+        public string DobaviAlergije(int idP)
+        {
+            string alergije = "";
+            using (var sars = new StreamReader("medKarton.txt"))
+
+            {
+                string line;
+                int idps = 0;
+                while ((line = sars.ReadLine()) != null)
+                {
+                    String[] deo = line.Split('/');
+                    String idK = deo[0];
+
+                    String alergijica = deo[1];
+                    if (int.Parse(idK) == idP)
+                    {
+                        alergije = alergijica;
+                    }
+                    idps++;
+
+                }
+            }
+            return alergije;
+
         }
    
    }

@@ -1617,3 +1617,9 @@ C:\Users\Tatjana\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\ob
 C:\Users\Tatjana\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\UputSpecijalisti.baml
 C:\Users\Tatjana\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\ValidacijaLeka.baml
 C:\Users\Tatjana\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\ZahteviZaValidaciju.baml
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\Ankete.g.cs
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\BolnicaAnketa.g.cs
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\LekarAnketa.g.cs
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\Ankete.baml
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\BolnicaAnketa.baml
+C:\Users\Tatjana\OneDrive\Desktop\ProjekatSIMS\ProjekatSIMS\obj\Debug\LekarAnketa.baml

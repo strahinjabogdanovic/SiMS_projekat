@@ -1,9 +1,10 @@
 using System;
 using System.ComponentModel;
+using System.IO;
 
 namespace Package1
 {
-   public class Lek: INotifyPropertyChanged
+    public class Lek : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string name)
@@ -59,13 +60,13 @@ namespace Package1
               sastojci.Clear();
         }*/
 
-        private string SifraLeka;
-        private string NazivLeka;
-        private string Sastojci;
-        private string Zamena;
-        private string Validiran;
+        public string SifraLeka;
+        public string NazivLeka;
+        public string Sastojci;
+        public string Zamena;
+        public string Validiran;
 
-
+        public Lek() { }
         public string nazivleka
         {
             get
@@ -84,7 +85,7 @@ namespace Package1
 
 
 
-            public string sifraleka
+        public string sifraleka
         {
             get
             {
@@ -145,6 +146,40 @@ namespace Package1
                     OnPropertyChanged("validiran");
                 }
             }
+        }
+
+        public Lek dobaviLekPoNazivu(string naziv)
+        {
+            Lek lekic = new Lek();
+            using (var sars = new StreamReader("lekovi.txt"))
+
+            {
+                string line;
+                int idps = 0;
+                while ((line = sars.ReadLine()) != null)
+                {
+                    String[] deo = line.Split('/');
+                    String idK = deo[1];
+
+                    Console.WriteLine(idK);
+                    string sifra = deo[0];
+                    string sastojci = deo[2];
+                    string zamena = deo[3];
+                    string validiran = deo[4];
+                    if (idK == naziv)
+                    {
+                        lekic.sifraleka = sifra;
+                        lekic.nazivleka = naziv;
+                        lekic.sastojci = sastojci;
+                        lekic.zamena = zamena;
+                        lekic.validiran = validiran;
+                    }
+                    idps++;
+
+                }
+            }
+
+            return lekic;
         }
     }
 }
