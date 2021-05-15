@@ -21,52 +21,39 @@ namespace ProjekatSIMS
     public partial class Stvari : Window
     {
         private readonly string filePath;
-
+        int redProstorije = 0;
         public ObservableCollection<Oprema> Oprema
         {
             get;
             set;
         }
-        public Stvari()
+        public Stvari(int currentRowIndex)
         {
+            redProstorije = currentRowIndex;
             {
                 InitializeComponent();
-                filePath = "prostorije.txt";
+
                 Oprema = new ObservableCollection<Oprema>();
-                List<String> lines = new List<string>();
-                lines = File.ReadAllLines(filePath).ToList();
 
-                int currentRowIndex = 0;
-
-                using (var rsr = new StreamReader("redopreme.txt"))
-                {
-
-                    String sdfg = "";
-
-                    sdfg = rsr.ReadLine();
-                    currentRowIndex = int.Parse(sdfg);
-                }
-
+                List<string> prostorije = new List<string>();
+                prostorije = File.ReadAllLines("prostorije.txt").ToList();
 
                 int idp = 0;
-                foreach (string linee in lines)
+                foreach (string red in prostorije)
                 {
-
                     if (idp == currentRowIndex)
                     {
+                        string[] termin = red.Split('/');
 
-                        String[] termin = linee.Split('/');
-
-                        String sala = termin[0];
+                        string sala = termin[0];
                         t1.Text = sala;
 
-                        String opreman = termin[3];
-                        String[] priv = opreman.Split(',');
-
+                        string opreman = termin[3];
+                        string[] priv = opreman.Split(',');
                         int s = priv.Length;
 
-                        String kolic = termin[4];
-                        String[] kolii = kolic.Split(',');
+                        string kolic = termin[4];
+                        string[] kolii = kolic.Split(',');
 
                         for (int i = 0; i < s; i++)
                         {
@@ -78,58 +65,45 @@ namespace ProjekatSIMS
                     }
                     idp++;
                 }
-
-                
-
                 this.DataContext = this;
-
-                /* StreamReader sr = new StreamReader("oprema.txt");
-                 string line = "";
-
-                 while ((line = sr.ReadLine()) != null)
-                 {
-                     string[] components = line.Split("/".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-
-                 }
-                 sr.Close();*/
             }
         }
 
         private void dodaj_opremu_click(object sender, RoutedEventArgs e)
         {
-            DodajOpremu d = new DodajOpremu();
+            DodajOpremu d = new DodajOpremu(redProstorije);
             d.ShowDialog();
         }
 
         private void obrisi_opremu_click(object sender, RoutedEventArgs e)
         {
             OpremaFileStorage p = new OpremaFileStorage();
-            int currentRowIndex = dataGridOprema.Items.IndexOf(dataGridOprema.SelectedItem);
-
-            using (var sw = new StreamWriter("redopreme1.txt"))
-            {
-                sw.WriteLine(currentRowIndex);
-            }
+            int currentRowIndexO = dataGridOprema.Items.IndexOf(dataGridOprema.SelectedItem);
             
-            Oprema k = Oprema.ElementAt(currentRowIndex);
             if (Oprema.Count > 0)
             {
-                Oprema.RemoveAt(currentRowIndex);
+                Oprema.RemoveAt(currentRowIndexO);
             }
             else
             {
                 MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            p.Obrisi(k);
+            p.Obrisi(redProstorije, currentRowIndexO);
 
 
         }
 
         private void izmeni_opremu_click(object sender, RoutedEventArgs e)
         {
+            int currentRowIndex = dataGridOprema.Items.IndexOf(dataGridOprema.SelectedItem);
+            DataGridRow row = (DataGridRow)dataGridOprema.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
+
+            TextBlock t1 = dataGridOprema.Columns[0].GetCellContent(row) as TextBlock;
+            TextBlock t2 = dataGridOprema.Columns[1].GetCellContent(row) as TextBlock;
+
             OpremaFileStorage o = new OpremaFileStorage();
-            o.Update(dataGridOprema);
+            o.Update(redProstorije, currentRowIndex, t1.Text, t2.Text);
         }
     }
 }

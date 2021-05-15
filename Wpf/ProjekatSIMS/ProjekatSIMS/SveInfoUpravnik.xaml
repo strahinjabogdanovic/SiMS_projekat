@@ -7,14 +7,16 @@
         mc:Ignorable="d"
         Title="SveInfoUpravnik" Height="750" Width="430">
     <Grid>
-        <Label x:Name="label" Content="Ime" HorizontalAlignment="Left" Margin="50,48,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Oznaka" HorizontalAlignment="Left" Margin="50,99,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="Namena" HorizontalAlignment="Left" Margin="50,154,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label3" Content="Oprema" HorizontalAlignment="Left" Margin="50,210,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="t1" HorizontalAlignment="Left" Margin="134,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="231"/>
-        <TextBlock x:Name="t2" HorizontalAlignment="Left" Margin="134,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" RenderTransformOrigin="0.5,0.5" Width="234"/>
-        <TextBlock x:Name="t3" HorizontalAlignment="Left" Margin="134,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="231"/>
-        <TextBlock x:Name="t4" HorizontalAlignment="Left" Margin="134,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="231"/>
+        <Label x:Name="label" Content="Ime" HorizontalAlignment="Left" Margin="50,50,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Oznaka" HorizontalAlignment="Left" Margin="50,120,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Namena" HorizontalAlignment="Left" Margin="50,190,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Oprema" HorizontalAlignment="Left" Margin="50,260,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="t0" HorizontalAlignment="Left" Margin="135,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="231"/>
+        <TextBlock x:Name="t1" HorizontalAlignment="Left" Margin="135,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" RenderTransformOrigin="0.5,0.5" Width="234"/>
+        <TextBlock x:Name="t2" HorizontalAlignment="Left" Margin="135,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="231"/>
+        <TextBlock x:Name="t3" HorizontalAlignment="Left" Margin="135,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="231"/>
+        <Label x:Name="label4" Content="Renoviranje" HorizontalAlignment="Left" Margin="50,320,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="t4" HorizontalAlignment="Left" Margin="135,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="231"/>
 
     </Grid>
 </Window>

@@ -17,22 +17,19 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
-    /// <summary>
-    /// Interaction logic for DodajOpremu.xaml
-    /// </summary>
     public partial class DodajOpremu : Window
     {
+        int redStvari = 0;
         public ObservableCollection<Oprema> Opreme
         {
             get;
             set;
         }
-        public DodajOpremu()
+        public DodajOpremu(int c)
         {
+            redStvari = c;
             InitializeComponent();
-
-
-         }
+        }
         private void odustani_click(object sender, RoutedEventArgs e)
         {
             Close();
@@ -45,7 +42,7 @@ namespace ProjekatSIMS
             string tb = tb2.Text;
             string tb1 = tb3.Text;
 
-            p.Kreiraj(tb, tb1);
+            p.Kreiraj(tb, tb1, redStvari);
         }
     }
 }

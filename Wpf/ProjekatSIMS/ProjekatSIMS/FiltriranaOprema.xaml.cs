@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
-    /// <summary>
-    /// Interaction logic for FiltriranaOprema.xaml
-    /// </summary>
     public partial class FiltriranaOprema : Window
     {
         private readonly string filePath;
@@ -31,13 +28,11 @@ namespace ProjekatSIMS
         }
         public FiltriranaOprema(String s)
         {
-
             InitializeComponent();
 
-            filePath = "prostorije.txt";
             PO = new ObservableCollection<ProstorijeOprema>();
             List<String> lines = new List<string>();
-            lines = File.ReadAllLines(filePath).ToList();
+            lines = File.ReadAllLines("prostorije.txt").ToList();
 
             foreach (string linee in lines)
             {
@@ -66,24 +61,7 @@ namespace ProjekatSIMS
 
             tb2.Text = s;
 
-
             this.DataContext = this;
-
-            StreamReader sr = new StreamReader("prostorije.txt");
-            string line = "";
-
-            while ((line = sr.ReadLine()) != null)
-            {
-                string[] components = line.Split("/".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-
-            }
-            sr.Close();
-
-
-
-
-
-
         }
     }
 }

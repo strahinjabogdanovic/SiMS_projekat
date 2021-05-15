@@ -10,8 +10,6 @@ namespace Package1
 {
    public class ProstorijeFileStorage
    {
-        string oprema_glavna = "";
-        string kolicina_glavna = "";
         public ObservableCollection<Prostorije> Prostorije
         {
             get;
@@ -20,129 +18,71 @@ namespace Package1
 
         public void Kreiraj(string tb, string tb1, string tb2, string tb3, string tb4)
       {
-            Prostorije = new ObservableCollection<Prostorije>();
+            var text = File.ReadAllText(@"prostorije.txt");
+            File.WriteAllText(@"prostorije.txt", text + tb + "/" + tb1 + "/" + tb2 + "/" + tb3 + "/" + tb4 + "/" + "-" + Environment.NewLine);
 
-            string tempFile = System.IO.Path.GetTempFileName();
-
-            using (var sr = new StreamReader("prostorije.txt"))
-            using (var sw = new StreamWriter(tempFile))
-            {
-                string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-
-                    String[] termin = line.Split('/');
-                    var prostorije = new Prostorije();
-
-                    sw.WriteLine(line);
-
-                }
-                sw.WriteLine(tb + "/" + tb1 + "/" + tb2 + "/" + tb3 + "/" + tb4 + "/" + "-");
-
-
-            }
-            File.Delete("prostorije.txt");
-            File.Move(tempFile, "prostorije.txt");
-
-
-
-            //Close();
             UpravnikPocetnaStranica s = new UpravnikPocetnaStranica();
             s.ShowDialog();
         }
       
-      public void Obrisi(Prostorije k)
+      public void Obrisi(int currentRowIndex)
       {
-            string tempFile = System.IO.Path.GetTempFileName();
+            int idp = 0;
 
-            using (var sr = new StreamReader("prostorije.txt"))
-            using (var sw = new StreamWriter(tempFile))
+            try
             {
-                string line;
-
-                while ((line = sr.ReadLine()) != null)
+                ProstorijeFileStorage p = new ProstorijeFileStorage();
+                List<string> sveProstorije = p.procitaneProstorije();
+                foreach (string sveP in sveProstorije)
                 {
-                    Prostorije = new ObservableCollection<Prostorije>();
-
-                    var priv = new Prostorije();
-
-                    String[] termin = line.Split('/');
-                    priv.oznaka = termin[1].ToString();
-
-                    if (priv.oznaka != k.oznaka)
-                        sw.WriteLine(line);
+                    if (idp == currentRowIndex)
+                    {
+                        sveProstorije.RemoveAt(currentRowIndex);
+                        File.WriteAllLines(@"prostorije.txt", sveProstorije);
+                    }
+                    idp++;
                 }
             }
-
-            File.Delete("prostorije.txt");
-            File.Move(tempFile, "prostorije.txt");
+            catch (Exception e)
+            { }
         }
       
-      public void Prikazi(DataGrid dataGridProstorije)
+      public void Prikazi(int currentRowIndex)
       {
-            int currentRowIndex = dataGridProstorije.Items.IndexOf(dataGridProstorije.SelectedItem);
-
-            using (var sw = new StreamWriter("redovi1.txt"))
-            {
-                sw.WriteLine(currentRowIndex);
-            }
-            SveInfoUpravnik svu = new SveInfoUpravnik();
+            SveInfoUpravnik svu = new SveInfoUpravnik(currentRowIndex);
             svu.ShowDialog();
-
         }
       
-      public void Update(DataGrid dataGridProstorije)
+      public void Update(string update, int currentRowIndex)
       {
-            int currentRowIndex = dataGridProstorije.Items.IndexOf(dataGridProstorije.SelectedItem);
+            int idp = 0;
+            string prostorija = "";
 
-            string tempFile = System.IO.Path.GetTempFileName();
-
-            using (var sr = new StreamReader("prostorije.txt"))
-            using (var sw = new StreamWriter(tempFile))
+            try
             {
-
-                string line;
-                int id = 0;
-                while ((line = sr.ReadLine()) != null)
+                ProstorijeFileStorage p = new ProstorijeFileStorage();
+                List<string> sveProstorije = p.procitaneProstorije();
+                foreach (string sveP in sveProstorije)
                 {
-                    //id++;
-                    if (id == currentRowIndex)
+                    prostorija = sveP;
+                    string[] infoProstorija = prostorija.Split('/');
+                    if (idp == currentRowIndex)
                     {
-
-                        String[] termin = line.Split('/');
-                        var prostorija = new Prostorije();
-
-                        DataGridRow row = (DataGridRow)dataGridProstorije.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
-
-                        TextBlock t1 = dataGridProstorije.Columns[0].GetCellContent(row) as TextBlock;
-                        TextBlock t2 = dataGridProstorije.Columns[1].GetCellContent(row) as TextBlock;
-                        TextBlock t3 = dataGridProstorije.Columns[2].GetCellContent(row) as TextBlock;
-                        TextBlock t4 = dataGridProstorije.Columns[3].GetCellContent(row) as TextBlock;
-
-                        sw.WriteLine(t1.Text + "/" + t2.Text + "/" + t3.Text + "/" + t4.Text + "/" + termin[4] + "/" + termin[5]);
+                        sveProstorije.RemoveAt(currentRowIndex);
+                        sveProstorije.Insert(currentRowIndex, update + infoProstorija[4] + "/" + infoProstorija[5]);
+                        File.WriteAllLines(@"prostorije.txt", sveProstorije);
                     }
-                    else
-                    {
-                        sw.WriteLine(line);
-                    }
-                    id++;
+                    idp++;
                 }
             }
-            File.Delete("prostorije.txt");
-            File.Move(tempFile, "prostorije.txt");
+            catch (Exception e)
+            { }
         }
 
-        public void stvari(DataGrid dataGridProstorije)
+        public void stvari(int currentRowIndex)
         {
-            int currentRowIndex = dataGridProstorije.Items.IndexOf(dataGridProstorije.SelectedItem);
-
-            using (var sw = new StreamWriter("redopreme.txt"))
-            {
-                sw.WriteLine(currentRowIndex);
-            }
-            Stvari w1 = new Stvari();
+            Stvari w1 = new Stvari(currentRowIndex);
             w1.ShowDialog();
-
         }
 
         public int red_prostorije(string s)
@@ -151,7 +91,6 @@ namespace Package1
             using (var sr = new StreamReader(s))
             {
                 string ucitano = "";
-
                 ucitano = sr.ReadLine();
                 red = int.Parse(ucitano);
             }
@@ -160,24 +99,21 @@ namespace Package1
 
         public List<string> prostorije_u_cb(int izabrani_red)
         {
-            using (var sr = new StreamReader("prostorije.txt"))
+            int idp = 0;
+            List<string> prostorije = procitaneProstorije();
+            List<string> nazivi = new List<string>();
+
+            foreach(string sveP in prostorije)
             {
-                List<string> prostorije = new List<string>();
-                string ime = "";
-                string line = "";
-                int idp = 0;
-                while ((line = sr.ReadLine()) != null)
+                if (idp != izabrani_red)
                 {
-                    if (idp != izabrani_red)
-                    {
-                        string[] informacije = line.Split('/');
-                        ime = informacije[0];
-                        prostorije.Add(ime);
-                    }
-                    idp++;
+                    string prostorija = sveP;
+                    string[] infoProstorija = prostorija.Split('/');
+                    nazivi.Add(infoProstorija[0]);
                 }
-                return prostorije;
+                idp++;
             }
+            return nazivi;
         }
 
         public List<string> prostorija_iz(string oprema_u, string kolicina_u, string naziv, int intkol)
@@ -298,10 +234,39 @@ namespace Package1
             return prostorije;
         }
 
-        public void renoviranje(DataGrid dataGridProstorije)
+        public void renoviranje(string update, int currentRowIndex, string ren)
         {
-            int currentRowIndex = dataGridProstorije.Items.IndexOf(dataGridProstorije.SelectedItem);
+            int idp = 0;
+            string prostorija = "";
 
+            try
+            {
+                ProstorijeFileStorage p = new ProstorijeFileStorage();
+                List<string> sveProstorije = p.procitaneProstorije();
+                foreach (string sveP in sveProstorije)
+                {
+                    prostorija = sveP;
+                    string[] infoProstorija = prostorija.Split('/');
+                    if (idp == currentRowIndex)
+                    {
+                        sveProstorije.RemoveAt(currentRowIndex);
+                        sveProstorije.Insert(currentRowIndex, update + infoProstorija[4] + "/" + ren);
+                        File.WriteAllLines(@"prostorije.txt", sveProstorije);
+                    }
+                    idp++;
+                }
+            }
+            catch (Exception e)
+            { }
+
+
+
+
+
+
+
+
+            /*
             string tempFile = System.IO.Path.GetTempFileName();
 
             using (var sr = new StreamReader("prostorije.txt"))
@@ -337,9 +302,31 @@ namespace Package1
                 }
             }
             File.Delete("prostorije.txt");
-            File.Move(tempFile, "prostorije.txt");
+            File.Move(tempFile, "prostorije.txt");*/
 
 
         }
+        public List<string> procitaneProstorije()
+        {
+            List<string> prostorije = new List<string>();
+
+            using (var sr = new StreamReader("prostorije.txt"))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    String[] termin = line.Split('/');
+                    String ime = termin[0];
+                    String oznaka = termin[1];
+                    String namena = termin[2];
+                    String oprema = termin[3];
+                    String kolicina = termin[4];
+                    String ren = termin[5];
+                    prostorije.Add(ime + "/" + oznaka + "/" + namena + "/" + oprema + "/" + kolicina + "/" + ren);
+                }
+            }
+            return prostorije;
+        }
+
     }
 }

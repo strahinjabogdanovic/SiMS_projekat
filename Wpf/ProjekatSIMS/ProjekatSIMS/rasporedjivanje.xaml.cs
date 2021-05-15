@@ -35,12 +35,9 @@ namespace ProjekatSIMS
                 cb1.Items.Add(newitem);
             }
         }
-        private void potvrdi_click(object sender, RoutedEventArgs e)
-        {
-            String naziv_u = t2.Text;
-            String kolicina_u = t1.Text;
-            int intkol = int.Parse(kolicina_u);
 
+        private int vreme_ren()
+        {
             string datep = myDatePicker.ToString();
             string[] datump = datep.Split(' ');
             string[] datumpr = datump[0].Split('-');
@@ -54,6 +51,16 @@ namespace ProjekatSIMS
             int datum_danas = int.Parse(dan);
 
             int premestanje = datum_premestanja - datum_danas;
+            return premestanje;
+        }
+
+        private void potvrdi_click(object sender, RoutedEventArgs e)
+        {
+            String naziv_u = t2.Text;
+            String kolicina_u = t1.Text;
+            int intkol = int.Parse(kolicina_u);
+
+            int premestanje = vreme_ren();
 
             string tempFile = System.IO.Path.GetTempFileName();
             using (var sr = new StreamReader("prostorije.txt"))

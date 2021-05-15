@@ -29,7 +29,7 @@
         <Button x:Name="button6" Content="Lekovi" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="20" Margin="115,680,0,0" Click="lekovi_click"/>
         <TextBox x:Name="tb1" HorizontalAlignment="Left" Height="23" Margin="281,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="s?" HorizontalAlignment="Left" Margin="401,0,0,0" VerticalAlignment="Top" Width="23" Height="23" Click="pretrazi"/>
-        <Button Content="Renoviranje" HorizontalAlignment="Left" Margin="215,680,0,0" VerticalAlignment="Top" Width="90" Height="20" Click="Button_Click"/>
+        <Button Content="Renoviranje" HorizontalAlignment="Left" Margin="215,680,0,0" VerticalAlignment="Top" Width="90" Height="20" Click="renoviranje_click"/>
         <Label Content="Prostorije" HorizontalAlignment="Left" Margin="5,23,0,0" VerticalAlignment="Top" Height="24"/>
         <Button Content="Demo" HorizontalAlignment="Left" Margin="339,25,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>

@@ -29,11 +29,9 @@ namespace ProjekatSIMS
 
         public Lekovi_U()
         {
-            filePath = "lekovi.txt";
             Lek = new ObservableCollection<Lek>();
             List<String> lines = new List<string>();
-            lines = File.ReadAllLines(filePath).ToList();
-
+            lines = File.ReadAllLines("lekovi.txt").ToList();
 
             foreach (string linee in lines)
             {
@@ -44,7 +42,6 @@ namespace ProjekatSIMS
                 lekovi.sastojci = termin[2].ToString();
                 lekovi.zamena = termin[3].ToString();
 
-
                 Lek.Add(lekovi);
             }
 
@@ -52,15 +49,6 @@ namespace ProjekatSIMS
 
             this.DataContext = this;
 
-            StreamReader sr = new StreamReader("lekovi.txt");
-            string line = "";
-
-            while ((line = sr.ReadLine()) != null)
-            {
-                string[] components = line.Split("/".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-
-            }
-            sr.Close();
         }
 
         private void dodaj_lek(object sender, RoutedEventArgs e)
@@ -73,7 +61,6 @@ namespace ProjekatSIMS
         {
             LekoviFileStorage l = new LekoviFileStorage();
             int currentRowIndex = dataGridLekovi.Items.IndexOf(dataGridLekovi.SelectedItem);
-            Lek k = Lek.ElementAt(currentRowIndex);
             if (Lek.Count > 0)
             {
                 Lek.RemoveAt(currentRowIndex);
@@ -83,13 +70,22 @@ namespace ProjekatSIMS
                 MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            l.Obrisi(k);
+            l.Obrisi(currentRowIndex);
         }
 
         private void izmeni_lek(object sender, RoutedEventArgs e)
         {
+            int currentRowIndex = dataGridLekovi.Items.IndexOf(dataGridLekovi.SelectedItem);
+            DataGridRow row = (DataGridRow)dataGridLekovi.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
+
+            TextBlock t1 = dataGridLekovi.Columns[0].GetCellContent(row) as TextBlock;
+            TextBlock t2 = dataGridLekovi.Columns[1].GetCellContent(row) as TextBlock;
+            TextBlock t3 = dataGridLekovi.Columns[2].GetCellContent(row) as TextBlock;
+            TextBlock t4 = dataGridLekovi.Columns[3].GetCellContent(row) as TextBlock;
+            string update = (t1.Text + "/" + t2.Text + "/" + t3.Text + "/" + t4.Text + "/");
+
             LekoviFileStorage p = new LekoviFileStorage();
-            p.Izmeni(dataGridLekovi);
+            p.Izmeni(update, currentRowIndex);
         }
     }
 }

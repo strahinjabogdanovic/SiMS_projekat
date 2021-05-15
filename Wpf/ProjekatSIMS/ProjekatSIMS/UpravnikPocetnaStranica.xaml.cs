@@ -32,11 +32,9 @@ namespace ProjekatSIMS
 
         public UpravnikPocetnaStranica()
         {
-            filePath = "prostorije.txt";
             Prostorije = new ObservableCollection<Prostorije>();
             List<String> lines = new List<string>();
-            lines = File.ReadAllLines(filePath).ToList();
-
+            lines = File.ReadAllLines("prostorije.txt").ToList();
 
             foreach (string linee in lines)
             {
@@ -47,27 +45,13 @@ namespace ProjekatSIMS
                 prostorije.namena = termin[2].ToString();
                 prostorije.oprema = termin[3].ToString();
                 prostorije.renoviranje = termin[5].ToString();
-                
-
 
                 Prostorije.Add(prostorije);
-
-
             }
 
             InitializeComponent();
 
             this.DataContext = this;
-
-            StreamReader sr = new StreamReader("prostorije.txt");
-            string line = "";
-
-            while ((line = sr.ReadLine()) != null)
-            {
-                string[] components = line.Split("/".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-
-            }
-            sr.Close();
 
             /*LekoviFileStorage lfs = new LekoviFileStorage();
             bool imaPogresnihLekova = lfs.proveriPogresneLekove();
@@ -80,15 +64,16 @@ namespace ProjekatSIMS
 
         private void KreirajProstoriju_Click(object sender, RoutedEventArgs e)
         {
+            Close();
             KreirajProstoriju kp = new KreirajProstoriju();
             kp.ShowDialog();
+            
         }
 
         private void ObrisiProstoriju_Click(object sender, RoutedEventArgs e)
         {
             ProstorijeFileStorage p = new ProstorijeFileStorage();
             int currentRowIndex = dataGridProstorije.Items.IndexOf(dataGridProstorije.SelectedItem);
-            Prostorije k = Prostorije.ElementAt(currentRowIndex);
             if (Prostorije.Count > 0)
             {
                 Prostorije.RemoveAt(currentRowIndex);
@@ -98,28 +83,37 @@ namespace ProjekatSIMS
                 MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            p.Obrisi(k);
+            p.Obrisi(currentRowIndex);
 
         }
 
         private void IzmeniProstoriju_Click(object sender, RoutedEventArgs e)
         {
-            ProstorijeFileStorage p = new ProstorijeFileStorage();
-            p.Update(dataGridProstorije);
+            int currentRowIndex = dataGridProstorije.Items.IndexOf(dataGridProstorije.SelectedItem);
+            DataGridRow row = (DataGridRow)dataGridProstorije.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
 
+            TextBlock t1 = dataGridProstorije.Columns[0].GetCellContent(row) as TextBlock;
+            TextBlock t2 = dataGridProstorije.Columns[1].GetCellContent(row) as TextBlock;
+            TextBlock t3 = dataGridProstorije.Columns[2].GetCellContent(row) as TextBlock;
+            TextBlock t4 = dataGridProstorije.Columns[3].GetCellContent(row) as TextBlock;
+            string update = (t1.Text + "/" + t2.Text + "/" + t3.Text + "/" + t4.Text + "/");
+
+            ProstorijeFileStorage p = new ProstorijeFileStorage();
+            p.Update(update, currentRowIndex);
         }
 
         private void PrikaziSveInfo_Click(object sender, RoutedEventArgs e)
         {
+            int currentRowIndex = dataGridProstorije.Items.IndexOf(dataGridProstorije.SelectedItem);
             ProstorijeFileStorage p = new ProstorijeFileStorage();
-            p.Prikazi(dataGridProstorije);
-            
+            p.Prikazi(currentRowIndex);
         }
 
         private void oprema_click(object sender, RoutedEventArgs e)
-        {
+        { 
+            int currentRowIndex = dataGridProstorije.Items.IndexOf(dataGridProstorije.SelectedItem);
             ProstorijeFileStorage p = new ProstorijeFileStorage();
-            p.stvari(dataGridProstorije);
+            p.stvari(currentRowIndex);
         }
 
         private void rasporedjivanje_click(object sender, RoutedEventArgs e)
@@ -147,11 +141,20 @@ namespace ProjekatSIMS
             fo.ShowDialog();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void renoviranje_click(object sender, RoutedEventArgs e)
         {
-            ProstorijeFileStorage p = new ProstorijeFileStorage();
-            p.renoviranje(dataGridProstorije);
+            int currentRowIndex = dataGridProstorije.Items.IndexOf(dataGridProstorije.SelectedItem);
+            DataGridRow row = (DataGridRow)dataGridProstorije.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
 
+            TextBlock t1 = dataGridProstorije.Columns[0].GetCellContent(row) as TextBlock;
+            TextBlock t2 = dataGridProstorije.Columns[1].GetCellContent(row) as TextBlock;
+            TextBlock t3 = dataGridProstorije.Columns[2].GetCellContent(row) as TextBlock;
+            TextBlock t4 = dataGridProstorije.Columns[3].GetCellContent(row) as TextBlock;
+            TextBlock t5 = dataGridProstorije.Columns[6].GetCellContent(row) as TextBlock;
+            string update = (t1.Text + "/" + t2.Text + "/" + t3.Text + "/" + t4.Text + "/");
+
+            ProstorijeFileStorage p = new ProstorijeFileStorage();
+            p.renoviranje(update, currentRowIndex, t5.Text);
         }
     }
 }

@@ -74,9 +74,9 @@ namespace ProjekatSIMS
 
         private void Izmeni_Click(object sender, RoutedEventArgs e)
         {
-            LekoviFileStorage p = new LekoviFileStorage();
-            p.Izmeni(dataGridLekovi);
-
+            //update funkcija kod lekova je izmenjena, prima druge parametre (15.05.2021.)
+            /*LekoviFileStorage p = new LekoviFileStorage();
+            p.Izmeni(dataGridLekovi);*/
         }
 
 

@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
-    /// <summary>
-    /// Interaction logic for KreirajProstoriju.xaml
-    /// </summary>
     public partial class KreirajProstoriju : Window
     {
         public ObservableCollection<Prostorije> Prostorije
@@ -50,7 +47,6 @@ namespace ProjekatSIMS
             string tb4 = textBox4.Text;
 
             p.Kreiraj(tb, tb1, tb2, tb3, tb4);
-
         }
     }
 }
