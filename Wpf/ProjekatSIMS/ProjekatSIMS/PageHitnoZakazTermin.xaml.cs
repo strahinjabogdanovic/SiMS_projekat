@@ -61,9 +61,17 @@ namespace ProjekatSIMS
             {
                 dan = "0" + termin1[1];
             }
-            if(int.Parse(termin1[0]) < 10)
+            else
+            {
+                dan = termin1[1];
+            }
+            if (int.Parse(termin1[0]) < 10)
             {
                 mesec = "0" + termin1[0];
+            }
+            else
+            {
+                mesec = termin1[0];
             }
             string datum = dan + "." + mesec + "." + termin1[2] + ".";
 

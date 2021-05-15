@@ -6,10 +6,10 @@
       xmlns:local="clr-namespace:ProjekatSIMS"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="PageHitnoZakazTermin" Width="1272" Height="649">
+      Title="PageHitnoZakazTermin" Width="1272" Height="649" Background="LightBlue">
 
     <Grid>
-        <Label x:Name="label" Content="Termini" HorizontalAlignment="Left" Margin="591,63,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <Label x:Name="label" Content="Termini" HorizontalAlignment="Left" Margin="563,63,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
         <DataGrid x:Name="dataGridHitnoZakazivanje" ItemsSource="{Binding Path = TerminiP, UpdateSourceTrigger=PropertyChanged}"
                   SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
                   Height="329" Margin="269,190,0,0" VerticalAlignment="Top" Width="719" FontSize="20">
@@ -21,8 +21,20 @@
                 <DataGridTextColumn Header="Soba" Binding="{Binding Path = soba}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="350,554,0,0" VerticalAlignment="Top" Width="93" Height="45" FontSize="24" Click="Nazad_Click"/>
-        <Button x:Name="button1" Content="Zakazi" HorizontalAlignment="Left" Margin="830,554,0,0" VerticalAlignment="Top" Width="105" Height="45" FontSize="24" Click="Zakazi_Click" />
-        <Button x:Name="button2" Content="Pomeranje termina" HorizontalAlignment="Left" Margin="523,554,0,0" VerticalAlignment="Top" Width="225" Height="45" FontSize="24" Click="PomeranjeTermina_Click"/>
+        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="350,554,0,0" VerticalAlignment="Top" Click="Nazad_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button1" Content="Zakazi" HorizontalAlignment="Left" Margin="779,554,0,0" VerticalAlignment="Top" Click="Zakazi_Click" Style="{StaticResource ResourceKey=ButtonStyle}">
+            <Button.ToolTip>
+                <ToolTip>
+                    Ako zelite da zakazete termin, prvo unesite ime i prezime pacijenta u tabelu
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <Button x:Name="button2" Content="Pomeri" HorizontalAlignment="Left" Margin="561,554,0,0" VerticalAlignment="Top" Click="PomeranjeTermina_Click" Style="{StaticResource ResourceKey=ButtonStyle}">
+            <Button.ToolTip>
+                <ToolTip>
+                    Ako zelite da pomerite termin, prvo ga selektujte u tabeli
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
     </Grid>
 </Page>

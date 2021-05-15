@@ -6,13 +6,13 @@
       xmlns:local="clr-namespace:ProjekatSIMS"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="PagePrioritetZakazivanja" Width="1272" Height="649">
+      Title="PagePrioritetZakazivanja" Width="1272" Height="649" Background="LightBlue">
 
     <Grid>
-        <Label x:Name="label" Content="Izaberite prioritet zakazivanja" HorizontalAlignment="Left" Margin="418,92,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <Label x:Name="label" Content="Izaberite prioritet zakazivanja" HorizontalAlignment="Left" Margin="384,95,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
         <RadioButton x:Name="radioButton" Content="Datum" HorizontalAlignment="Left" Margin="548,250,0,0" VerticalAlignment="Top" FontSize="36" Checked="Datum_Checked"/>
         <RadioButton x:Name="radioButton1" Content="Lekar" HorizontalAlignment="Left" Margin="548,340,0,0" VerticalAlignment="Top" FontSize="36" Checked="Lekar_Checked"/>
-        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="576,484,0,0" VerticalAlignment="Top" Width="98" Height="45" FontSize="24" Click="Nazad_Click"/>
+        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="548,484,0,0" VerticalAlignment="Top" Click="Nazad_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
 
     </Grid>
 </Page>

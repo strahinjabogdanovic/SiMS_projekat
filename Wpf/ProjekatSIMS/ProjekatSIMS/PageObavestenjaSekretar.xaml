@@ -6,11 +6,11 @@
       xmlns:local="clr-namespace:ProjekatSIMS"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="PageObavestenjaSekretar" Width="1272" Height="649">
+      Title="PageObavestenjaSekretar" Width="1272" Height="649" Background="LightBlue">
 
-   
+
     <Grid>
-        <Label x:Name="label" Content="Obavestenja" HorizontalAlignment="Left" Margin="470,44,0,0" VerticalAlignment="Top" Width="294" Height="88" FontSize="48"/>
+        <Label x:Name="label" Content="Obavestenja" HorizontalAlignment="Left" Margin="504,44,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
 
         <DataGrid x:Name="dataGridObavestenja" ItemsSource="{Binding Path = Obavesti, UpdateSourceTrigger=PropertyChanged}"
                   SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
@@ -43,10 +43,28 @@
                 <DataGridTextColumn Header="Datum" Binding="{Binding Path = datum}" Width="160"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="button" Content="Kreiraj" HorizontalAlignment="Left" Margin="55,549,0,0" VerticalAlignment="Top" Width="157" Height="45"  FontSize="24" Click="Kreiraj_Click" />
-        <Button x:Name="button1" Content="Obrisi" HorizontalAlignment="Left" Margin="256,549,0,0" VerticalAlignment="Top" Width="157" Height="45"  FontSize="24" Click="Obrisi_Click" />
-        <Button x:Name="button2" Content="Izmeni" HorizontalAlignment="Left" Margin="450,549,0,0" VerticalAlignment="Top" Width="157" Height="45"  FontSize="24" Click="Izmeni_Click" />
-        <Button x:Name="button3" Content="Nazad" HorizontalAlignment="Left" Margin="654,549,0,0" VerticalAlignment="Top" Width="157" Height="45"  FontSize="24" Click="Nazad_Click" />
+        <Button x:Name="button" Content="Kreiraj" HorizontalAlignment="Left" Margin="55,549,0,0" VerticalAlignment="Top" Click="Kreiraj_Click" Style="{StaticResource ResourceKey=ButtonStyle}">
+            <Button.ToolTip>
+                <ToolTip>
+                    Kreiranje obavestenja
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <Button x:Name="button1" Content="Obrisi" HorizontalAlignment="Left" Margin="256,549,0,0" VerticalAlignment="Top" Click="Obrisi_Click" Style="{StaticResource ResourceKey=ButtonStyle}">
+            <Button.ToolTip>
+                <ToolTip>
+                    Ako zelite da obrisete obavestenje, prvo ga selektujte u tabeli
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <Button x:Name="button2" Content="Izmeni" HorizontalAlignment="Left" Margin="450,549,0,0" VerticalAlignment="Top" Click="Izmeni_Click" Style="{StaticResource ResourceKey=ButtonStyle}">
+            <Button.ToolTip>
+                <ToolTip>
+                    Prvo izmenite podatak u tabeli pa kliknite ovo dugme
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <Button x:Name="button3" Content="Nazad" HorizontalAlignment="Left" Margin="654,549,0,0" VerticalAlignment="Top" Click="Nazad_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
 
     </Grid>
 </Page>

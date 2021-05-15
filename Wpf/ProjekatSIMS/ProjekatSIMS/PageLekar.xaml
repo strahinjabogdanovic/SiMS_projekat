@@ -6,14 +6,14 @@
       xmlns:local="clr-namespace:ProjekatSIMS"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="PageLekar" Width="1272" Height="649">
+      Title="PageLekar" Width="1272" Height="649" Background="LightBlue">
 
     <Grid>
-        <Label x:Name="label" Content="Izaberite lekara" HorizontalAlignment="Left" Margin="525,91,0,0" VerticalAlignment="Top" FontSize="36"/>
-        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="486,466,0,0" VerticalAlignment="Top" Width="98" Height="45" FontSize="24" Click="Nazad_Click" />
-        <Label x:Name="label1" Content="Lekar" HorizontalAlignment="Left" Margin="418,278,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="726,466,0,0" VerticalAlignment="Top" Width="115" Height="45" FontSize="24" Click="Potvrdi_Click" />
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="525,278,0,0" VerticalAlignment="Top" Width="251" Height="37" FontSize="20">
+        <Label x:Name="label" Content="Izaberite lekara" HorizontalAlignment="Left" Margin="488,94,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
+        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="441,466,0,0" VerticalAlignment="Top" Click="Nazad_Click"  Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Label x:Name="label1" Content="Lekar" HorizontalAlignment="Left" Margin="441,276,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="666,466,0,0" VerticalAlignment="Top" Click="Potvrdi_Click"  Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="542,278,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=ComboBoxStyle}" Width="264">
             <ComboBoxItem>Jova Jovic</ComboBoxItem>
             <ComboBoxItem>Jovan Jovanovic</ComboBoxItem>
         </ComboBox>

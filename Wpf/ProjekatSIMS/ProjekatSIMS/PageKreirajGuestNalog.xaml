@@ -6,18 +6,18 @@
       xmlns:local="clr-namespace:ProjekatSIMS"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="PageKreirajGuestNalog" Width="1272" Height="649">
+      Title="PageKreirajGuestNalog" Width="1272" Height="649" Background="LightBlue">
 
     <Grid>
-        <Label x:Name="label" Content="Ime" HorizontalAlignment="Left" Margin="523,200,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label x:Name="label1" Content="Prezime" HorizontalAlignment="Left" Margin="486,260,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label x:Name="label2" Content="JMBG" HorizontalAlignment="Left" Margin="506,321,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="30" Margin="593,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" FontSize="20"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="30" Margin="593,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" FontSize="20"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="30" Margin="593,328,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" FontSize="20"/>
-        <Button x:Name="button" Content="Odustani" HorizontalAlignment="Left" Margin="458,453,0,0" VerticalAlignment="Top" Width="140" Click="Odustani_Click" FontSize="24" Height="45"/>
-        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="691,453,0,0" VerticalAlignment="Top" Width="140" Click="Potvrdi_Click" Height="45" FontSize="24"/>
-        <Label x:Name="label3" Content="Kreiranje guest naloga" HorizontalAlignment="Left" Margin="426,77,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <Label x:Name="label" Content="Ime" HorizontalAlignment="Left" Margin="458,206,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label1" Content="Prezime" HorizontalAlignment="Left" Margin="414,261,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label2" Content="JMBG" HorizontalAlignment="Left" Margin="438,316,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="550,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="550,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="550,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}"/>
+        <Button x:Name="button" Content="Odustani" HorizontalAlignment="Left" Margin="458,453,0,0" VerticalAlignment="Top" Click="Odustani_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="691,453,0,0" VerticalAlignment="Top" Click="Potvrdi_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Label x:Name="label3" Content="Kreiranje guest naloga" HorizontalAlignment="Left" Margin="426,77,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
 
     </Grid>
 </Page>

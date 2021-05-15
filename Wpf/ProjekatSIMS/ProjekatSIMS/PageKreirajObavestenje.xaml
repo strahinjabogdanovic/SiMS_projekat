@@ -7,21 +7,21 @@
       xml:lang="en-IN"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="PageKreirajObavestenje" Width="1272" Height="649">
+      Title="PageKreirajObavestenje" Width="1272" Height="649" Background="LightBlue">
 
     <Grid>
-        <Label x:Name="label" Content="Kreiranje obavestenja" HorizontalAlignment="Left" Margin="422,48,0,0" VerticalAlignment="Top" FontSize="40"/>
-        <Label x:Name="label1" Content="Naziv obavestenja" HorizontalAlignment="Left" Margin="125,276,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label x:Name="label2" Content="Sadrzaj obavestenja" HorizontalAlignment="Left" Margin="110,392,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Button x:Name="button" Content="Odustani" HorizontalAlignment="Left" Margin="450,545,0,0" VerticalAlignment="Top" Width="118" FontSize="24" Click="Odustani_Click" Height="45"/>
-        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="648,545,0,0" VerticalAlignment="Top" Width="106" FontSize="24" Click="Potvrdi_Click" Height="45"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="77" Margin="334,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="630" FontSize="20"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="127" Margin="334,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="630" FontSize="20"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="29" Margin="334,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" FontSize="20"/>
-        <Label x:Name="label3" Content="Datum" HorizontalAlignment="Left" Margin="229,150,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label x:Name="label4" Content="Obavestenja vide" HorizontalAlignment="Left" Margin="140,206,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.895,2.577" FontSize="20"/>
+        <Label x:Name="label" Content="Kreiranje obavestenja" HorizontalAlignment="Left" Margin="422,48,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
+        <Label x:Name="label1" Content="Naziv obavestenja" HorizontalAlignment="Left" Margin="108,272,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label2" Content="Sadrzaj obavestenja" HorizontalAlignment="Left" Margin="90,388,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Button x:Name="button" Content="Odustani" HorizontalAlignment="Left" Margin="450,545,0,0" VerticalAlignment="Top" Click="Odustani_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="648,545,0,0" VerticalAlignment="Top" Click="Potvrdi_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="77" Margin="334,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="774" FontSize="24"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="127" Margin="334,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="774" FontSize="24"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="334,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}" Width="350"/>
+        <Label x:Name="label3" Content="Datum" HorizontalAlignment="Left" Margin="229,150,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label4" Content="Obavestenja vide" HorizontalAlignment="Left" Margin="118,210,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <DatePicker SelectedDate="{Binding myVideModelProperty}"
-                    Height="33" HorizontalAlignment="Left" Margin="334,154,0,0" Name="myDatePicker" VerticalAlignment="Top" Width="278" FontSize="20">
+                    Height="40" HorizontalAlignment="Left" Margin="334,154,0,0" Name="myDatePicker" VerticalAlignment="Top" Width="350" FontSize="24">
             <DatePicker.Resources>
                 <Style TargetType="{x:Type DatePickerTextBox}">
                     <Setter Property="Control.Template">
