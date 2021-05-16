@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Linq;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Package1
@@ -58,8 +60,8 @@ namespace Package1
 
             ProstorijeFileStorage p = new ProstorijeFileStorage();
             List<string> sveProstorije = p.procitaneProstorije();
-            List<string> sveOprema = svaOprema();
-            List<string> sveKolicina = svaKolicina();
+            List<string> sveOprema = svaOprema(temp);
+            List<string> sveKolicina = svaKolicina(temp);
             try
             {
                 foreach (string sveP in sveProstorije)
@@ -104,8 +106,8 @@ namespace Package1
 
             ProstorijeFileStorage p = new ProstorijeFileStorage();
             List<string> sveProstorije = p.procitaneProstorije();
-            List<string> sveOprema = svaOprema();
-            List<string> sveKolicina = svaKolicina();
+            List<string> sveOprema = svaOprema(redProstorije);
+            List<string> sveKolicina = svaKolicina(redProstorije);
             try
             {
                 foreach (string sveP in sveProstorije)
@@ -137,7 +139,7 @@ namespace Package1
             s.ShowDialog();
         }
 
-        public List<string> svaOprema()
+        public List<string> svaOprema(int temp)
         {
             int idp = 0;
             List<string> opremaL = new List<string>();
@@ -167,7 +169,7 @@ namespace Package1
             return opremaL;
         }
 
-        public List<string> svaKolicina()
+        public List<string> svaKolicina(int temp)
         {
             int idp = 0;
             List<string> kolicinaL = new List<string>();
@@ -196,6 +198,22 @@ namespace Package1
                 }
             }
             return kolicinaL;
+        }
+
+        public int viseNegoDostupno(string oprema, int kolicina, int izabraniRed)
+        {
+            List<string> kolicinaL = svaKolicina(izabraniRed);
+            List<string> opremaL = svaOprema(izabraniRed);
+
+            int indexOpreme = opremaL.IndexOf(oprema);
+            int kol = int.Parse(kolicinaL.ElementAt(indexOpreme));
+
+            if ((kol - kolicina) < 0)
+            {
+                MessageBox.Show("izabrali ste previse opreme za premestanje");
+                return 0;
+            }
+            else return kol - kolicina;
         }
 
     }

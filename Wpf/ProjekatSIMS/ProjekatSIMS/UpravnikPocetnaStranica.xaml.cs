@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
-    /// <summary>
-    /// Interaction logic for UpravnikPocetnaStranica.xaml
-    /// </summary>
     public partial class UpravnikPocetnaStranica : Window
     {
         private readonly string filePath;
@@ -119,12 +116,7 @@ namespace ProjekatSIMS
         private void rasporedjivanje_click(object sender, RoutedEventArgs e)
         {
             int currentRowIndex = dataGridProstorije.Items.IndexOf(dataGridProstorije.SelectedItem);
-
-            using (var sw = new StreamWriter("redzarasp.txt"))
-            {
-                sw.WriteLine(currentRowIndex);
-            }
-            rasporedjivanje r = new rasporedjivanje();
+            rasporedjivanje r = new rasporedjivanje(currentRowIndex);
             r.ShowDialog();
         }
 
