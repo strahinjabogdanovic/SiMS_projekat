@@ -18,13 +18,8 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
-    /// <summary>
-    /// Interaction logic for PageSekretar.xaml
-    /// </summary>
     public partial class PageSekretar : Page
     {
-        private readonly string filePath;
-
         public ObservableCollection<Pacijent> Korisnici
         {
             get;
@@ -33,10 +28,9 @@ namespace ProjekatSIMS
 
         public PageSekretar()
         {
-            filePath = "podaci.txt";
             Korisnici = new ObservableCollection<Pacijent>();
             List<String> lines = new List<string>();
-            lines = File.ReadAllLines(filePath).ToList();
+            lines = File.ReadAllLines("podaci.txt").ToList();
 
 
             foreach (string linee in lines)
@@ -68,19 +62,9 @@ namespace ProjekatSIMS
 
             }
 
-
             InitializeComponent();
             this.DataContext = this;
 
-            StreamReader sr = new StreamReader("podaci.txt");
-            string line = "";
-
-            while ((line = sr.ReadLine()) != null)
-            {
-                string[] components = line.Split("/".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-
-            }
-            sr.Close();
         }
 
         private void KreirajNalog_Click(object sender, RoutedEventArgs e)
@@ -96,7 +80,6 @@ namespace ProjekatSIMS
 
             if (currentRowIndex != -1)
             {
-                Pacijent k = Korisnici.ElementAt(currentRowIndex);
                 if (Korisnici.Count > 0)
                 {
                     Korisnici.RemoveAt(currentRowIndex);
@@ -105,35 +88,40 @@ namespace ProjekatSIMS
                 {
                     MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-
-                n.Obrisi(k);
+                n.Obrisi(currentRowIndex);
             }
 
-            //dataGridNalozi.Items.Refresh();
         }
 
         private void IzmeniNalog_Click(object sender, RoutedEventArgs e)
         {
-            NaloziPacijenataFileStorage np = new NaloziPacijenataFileStorage();
-            np.Update(dataGridNalozi);
+            int currentRowIndex = dataGridNalozi.Items.IndexOf(dataGridNalozi.SelectedItem);
+            DataGridRow row = (DataGridRow)dataGridNalozi.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
 
+            TextBlock ime = dataGridNalozi.Columns[0].GetCellContent(row) as TextBlock;
+            TextBlock prezime = dataGridNalozi.Columns[1].GetCellContent(row) as TextBlock;
+            TextBlock jmbg = dataGridNalozi.Columns[2].GetCellContent(row) as TextBlock;
+            TextBlock datum = dataGridNalozi.Columns[3].GetCellContent(row) as TextBlock;
+            TextBlock brojTel = dataGridNalozi.Columns[4].GetCellContent(row) as TextBlock;
+            string update = (ime.Text + "/" + prezime.Text + "/" + jmbg.Text + "/" + datum.Text + "/" + brojTel.Text);
+
+            NaloziPacijenataFileStorage p = new NaloziPacijenataFileStorage();
+            p.Update(update, currentRowIndex);
 
         }
 
+        /*
         private void PrikaziSveInfo_Click(object sender, RoutedEventArgs e)
         {
             NaloziPacijenataFileStorage n = new NaloziPacijenataFileStorage();
             n.Prikazi(dataGridNalozi);
             this.NavigationService.Navigate(new PageSPrikazInfo());
 
-        }
+        }*/
 
         private void GuestNalog_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new PageGuestNalozi());
-            //GuestNalozi gn = new GuestNalozi();
-            //gn.ShowDialog();
-
         }
 
         private void Obavestenja_Click(object sender, RoutedEventArgs e)
@@ -143,9 +131,13 @@ namespace ProjekatSIMS
 
         private void MedKarton_Click(object sender, RoutedEventArgs e)
         {
-            NaloziPacijenataFileStorage n = new NaloziPacijenataFileStorage();
-            n.Prikazi(dataGridNalozi);
-            this.NavigationService.Navigate(new PageMedKarton());
+            int currentRowIndex = dataGridNalozi.Items.IndexOf(dataGridNalozi.SelectedItem);
+            NaloziPacijenataFileStorage p = new NaloziPacijenataFileStorage();
+            //p.Prikazi(currentRowIndex);
+
+            //NaloziPacijenataFileStorage n = new NaloziPacijenataFileStorage();
+            //n.Prikazi(dataGridNalozi);
+            this.NavigationService.Navigate(new PageMedKarton(currentRowIndex));
 
         }
 

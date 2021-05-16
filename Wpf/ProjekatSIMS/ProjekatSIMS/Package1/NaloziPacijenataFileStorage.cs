@@ -1,5 +1,6 @@
 using ProjekatSIMS;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Windows.Controls;
@@ -16,173 +17,87 @@ namespace Package1
         }
 
         Pol p;
-        public void Kreiraj(string gender, string tb, string tb1, string tb2, string tb3, string tb5, string tb6, string tb7)
-      {
-            Korisnici = new ObservableCollection<Pacijent>();
-            string slj = "";
+        public void Kreiraj(string nalog, string gender, string nalogNastavak)
+        {     
+            string nalozi = "";           
+            int currentRowIndex = 0;
+            NaloziPacijenataFileStorage pn = new NaloziPacijenataFileStorage();
+            List<string> sviNalozi = pn.procitaniNalozi();
+            foreach (string sviN in sviNalozi)
+            {
+                nalozi = sviN;
+                string[] informacije = nalozi.Split('/');
+                currentRowIndex = int.Parse(informacije[8]) + 1;
+            }
 
-            //string gender = comboBox.SelectedValue.ToString();
+            var text = File.ReadAllText(@"podaci.txt");
+            File.WriteAllText(@"podaci.txt", text + nalog + "/" + proveraPola(gender) + "/" + nalogNastavak + "/" + currentRowIndex + Environment.NewLine);
+
+            var tekst = File.ReadAllText(@"medKarton.txt");
+            File.WriteAllText(@"medKarton.txt", tekst + currentRowIndex + "/" + Environment.NewLine);
+
+        }
+
+        public string proveraPola(string gender)
+        {
+            string pol = "";
 
             if (gender != null)
             {
-
                 if (gender.Contains("Muski"))
                 {
                     p = Pol.Muski;
-                    slj = "Muski";
+                    pol = "Muski";
 
                 }
                 else if (gender.Contains("Zenski"))
                 {
                     p = Pol.Zenski;
-                    slj = "Zenski";
+                    pol = "Zenski";
                 }
             }
+            return pol;
+        }
 
-
-            string tempFile = System.IO.Path.GetTempFileName();
-            string tempFile1 = System.IO.Path.GetTempFileName();
-
-            using (var sr = new StreamReader("podaci.txt"))
-            using (var sw = new StreamWriter(tempFile))
+        public void Obrisi(int currentRowIndex)
+      {          
+            try
             {
-                string line;
-                int id = 0;
-                while ((line = sr.ReadLine()) != null)
+                int idp = 0;
+                NaloziPacijenataFileStorage p = new NaloziPacijenataFileStorage();
+                List<string> sviNalozi = p.procitaniNalozi();
+                foreach (string sviN in sviNalozi)
                 {
-
-                    //var lastLine = File.ReadLines("podaci.txt").Last();
-                    String[] termin = line.Split('/');
-                    var korisnik = new Pacijent();
-                    id = int.Parse(termin[8]);
-                    id++;
-
-                    sw.WriteLine(line);
-
-                }
-                sw.WriteLine(tb + "/" + tb1 + "/" + tb2 + "/" + slj + "/" + tb3 + "/" + tb5 + "/" + tb6 + "/" + tb7 + "/" + id);
-
-
-                using (var srev = new StreamReader("medKarton.txt"))
-                using (var swev = new StreamWriter(tempFile1))
-                {
-                    string liness;
-                    while ((liness = srev.ReadLine()) != null)
+                    if (idp == currentRowIndex)
                     {
-
-                        String[] termin = liness.Split('/');
-                        var zdravKarton = new ZdravstveniKarton();
-
-
-                        swev.WriteLine(liness);
-
+                        sviNalozi.RemoveAt(currentRowIndex);
+                        File.WriteAllLines(@"podaci.txt", sviNalozi);
                     }
-                    swev.WriteLine(id + "/");
-
-
+                    idp++;
                 }
-                File.Delete("medKarton.txt");
-                File.Move(tempFile1, "medKarton.txt");
-
             }
-            File.Delete("podaci.txt");
-            File.Move(tempFile, "podaci.txt");
+            catch (Exception e)
+            { }
 
-            //Close();
-            //SekretarPocetnaStrana s = new SekretarPocetnaStrana();
-            //s.ShowDialog();
-            //this.NavigationService.Navigate(new PageSekretar());
+            try
+            {
+                int idp = 0;
+                NaloziPacijenataFileStorage p = new NaloziPacijenataFileStorage();
+                List<string> sviNalozi = p.procitaniMedKartoni();
+                foreach (string sviN in sviNalozi)
+                {
+                    if (idp == currentRowIndex)
+                    {
+                        sviNalozi.RemoveAt(currentRowIndex);
+                        File.WriteAllLines(@"medKarton.txt", sviNalozi);
+                    }
+                    idp++;
+                }
+            }
+            catch (Exception e)
+            { }
         }
       
-      public void Obrisi(Pacijent k)
-      {
-            string tempFile = System.IO.Path.GetTempFileName();
-
-            using (var sr = new StreamReader("podaci.txt"))
-            using (var sw = new StreamWriter(tempFile))
-            {
-
-                string line;
-
-                while ((line = sr.ReadLine()) != null)
-                {
-                    Korisnici = new ObservableCollection<Pacijent>();
-
-                    var priv = new Pacijent();
-
-                    String[] termin = line.Split('/');
-                    priv.jmbg = long.Parse(termin[2].ToString());
-
-                    if (priv.jmbg != k.jmbg)
-                    {
-                        sw.WriteLine(line);
-
-                    }
-                    else
-                    {
-                        k.idKorisnika = int.Parse(termin[8].ToString());
-
-                        string tempFile1 = System.IO.Path.GetTempFileName();
-                        using (var srpp = new StreamReader("medKarton.txt"))
-                        using (var swpp = new StreamWriter(tempFile1))
-                        {
-                            string linessi;
-
-                            while ((linessi = srpp.ReadLine()) != null)
-                            {
-
-                                String[] term = linessi.Split('/');
-
-                                int p = int.Parse(term[0].ToString());
-                                //Console.WriteLine(p);
-
-                                if (p != k.idKorisnika)
-                                {
-                                    swpp.WriteLine(linessi);
-                                }
-
-                            }
-
-
-                        }
-                        File.Delete("medKarton.txt");
-                        File.Move(tempFile1, "medKarton.txt");
-                    }
-
-                }
-
-            }
-
-            File.Delete("podaci.txt");
-            File.Move(tempFile, "podaci.txt");
-
-            /*
-            string tempFile = System.IO.Path.GetTempFileName();
-
-            using (var sr = new StreamReader("podaci.txt"))
-            using (var sw = new StreamWriter(tempFile))
-            {
-                string line;
-
-                while ((line = sr.ReadLine()) != null)
-                {
-                    Korisnici = new ObservableCollection<Pacijent>();
-
-                    var priv = new Pacijent();
-
-                    String[] termin = line.Split('/');
-                    priv.jmbg = long.Parse(termin[2].ToString());
-
-
-                    if (priv.jmbg != k.jmbg)
-                        sw.WriteLine(line);
-                }
-            }
-
-            File.Delete("podaci.txt");
-            File.Move(tempFile, "podaci.txt");
-            */
-        }
       
       public void Prikazi(DataGrid dataGridNalozi)
       {
@@ -192,62 +107,34 @@ namespace Package1
             {
                 sw.WriteLine(currentRowIndex);
             }
-            //this.NavigationService.Navigate(new PageSPrikazInfo());
-            //Window2 w2 = new Window2();
-            //w2.ShowDialog();
+
         }
       
-      public void Update(DataGrid dataGridNalozi)
+      public void Update(string update, int currentRowIndex)
       {
-            int currentRowIndex = dataGridNalozi.Items.IndexOf(dataGridNalozi.SelectedItem);
+            int idp = 0;
+            string nalozi = "";
 
-            string tempFile = System.IO.Path.GetTempFileName();
-
-            using (var sr = new StreamReader("podaci.txt"))
-            using (var sw = new StreamWriter(tempFile))
+            try
             {
-
-                String pol = "";
-                String mail = "";
-                String adresa = "";
-                int idx = 0;
-
-                string line;
-                int id = 0;
-                while ((line = sr.ReadLine()) != null)
+                NaloziPacijenataFileStorage p = new NaloziPacijenataFileStorage();
+                List<string> sviNalozi = p.procitaniNalozi();
+                foreach (string sviN in sviNalozi)
                 {
-                    //id++;
-                    if (id == currentRowIndex)
+                    nalozi = sviN;
+                    string[] informacije = nalozi.Split('/');
+                    string[] infoOstalo = update.Split('/');
+                    if (idp == currentRowIndex)
                     {
-                        //var lastLine = File.ReadLines("podaci.txt").Last();
-                        String[] termin = line.Split('/');
-                        var korisnik = new Pacijent();
-                        pol = termin[3];
-                        mail = termin[5];
-                        adresa = termin[7];
-                        idx = int.Parse(termin[8]);
-
-
-
-                        DataGridRow row = (DataGridRow)dataGridNalozi.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
-
-                        TextBlock t1 = dataGridNalozi.Columns[0].GetCellContent(row) as TextBlock;
-                        TextBlock t2 = dataGridNalozi.Columns[1].GetCellContent(row) as TextBlock;
-                        TextBlock t3 = dataGridNalozi.Columns[2].GetCellContent(row) as TextBlock;
-                        TextBlock t4 = dataGridNalozi.Columns[3].GetCellContent(row) as TextBlock;
-                        TextBlock t5 = dataGridNalozi.Columns[4].GetCellContent(row) as TextBlock;
-
-                        sw.WriteLine(t1.Text + "/" + t2.Text + "/" + long.Parse(t3.Text) + "/" + pol + "/" + t4.Text + "/" + mail + "/" + t5.Text + "/" + adresa + "/" + idx);
+                        sviNalozi.RemoveAt(currentRowIndex);
+                        sviNalozi.Insert(currentRowIndex, infoOstalo[0] + "/" + infoOstalo[1] + "/" + infoOstalo[2] + "/" + informacije[3] + "/" + infoOstalo[3] + "/" + informacije[5] + "/" + infoOstalo[4] + "/" + informacije[7] + "/" + informacije[8]);
+                        File.WriteAllLines(@"podaci.txt", sviNalozi);
                     }
-                    else
-                    {
-                        sw.WriteLine(line);
-                    }
-                    id++;
+                    idp++;
                 }
             }
-            File.Delete("podaci.txt");
-            File.Move(tempFile, "podaci.txt");
+            catch (Exception e)
+            { }
         }
 
         public int dobaviIdPacijentaPoJmbgu(string jmbg)
@@ -299,6 +186,51 @@ namespace Package1
             return alergije;
 
         }
-   
-   }
+
+
+        public List<string> procitaniNalozi()
+        {
+            List<string> nalozi = new List<string>();
+
+            using (var sr = new StreamReader("podaci.txt"))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    String[] informacije = line.Split('/');
+                    String ime = informacije[0];
+                    String prezime = informacije[1];
+                    String jmbg = informacije[2];
+                    String pol = informacije[3];
+                    String datum = informacije[4];
+                    String mail = informacije[5];
+                    String brojTel = informacije[6];
+                    String adresa = informacije[7];
+                    String idx = informacije[8];
+                    nalozi.Add(ime + "/" + prezime + "/" + jmbg + "/" + pol + "/" + datum + "/" + mail + "/" + brojTel + "/" + adresa + "/" + idx);
+                }
+            }
+            return nalozi;
+        }
+
+        public List<string> procitaniMedKartoni()
+        {
+            List<string> medKartoni = new List<string>();
+
+            using (var sr = new StreamReader("medKarton.txt"))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    String[] informacije = line.Split('/');
+                    String idx = informacije[0];
+                    String alergen = informacije[1];
+
+                    medKartoni.Add(idx + "/" + alergen);
+                }
+            }
+            return medKartoni;
+        }
+
+    }
 }

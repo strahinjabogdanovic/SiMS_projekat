@@ -51,7 +51,7 @@ namespace ProjekatSIMS
             string tb6 = textBox6.Text;
             string tb7 = textBox7.Text;
 
-            np.Kreiraj(gender, tb, tb1, tb2, tb3, tb5, tb6, tb7);
+            //np.Kreiraj(gender, tb, tb1, tb2, tb3, tb5, tb6, tb7);
 
 
         }

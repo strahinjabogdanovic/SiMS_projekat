@@ -27,7 +27,7 @@
         <TextBlock x:Name="t6" HorizontalAlignment="Left" Margin="814,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
         <TextBlock x:Name="t7" HorizontalAlignment="Left" Margin="814,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
         <Label x:Name="label9" Content="Alergeni" HorizontalAlignment="Left" Margin="119,367,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <TextBlock x:Name="t8" HorizontalAlignment="Left" Margin="240,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="667" Height="40" FontSize="24" Background="White"/>
+        <TextBlock x:Name="t8" HorizontalAlignment="Left" Margin="240,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="667" Height="92" FontSize="24" Background="White"/>
         <Button x:Name="button" Content="Azuriraj alergene" HorizontalAlignment="Left" Margin="594,492,0,0" VerticalAlignment="Top" Click="Azuriraj_Click" Style="{StaticResource ResourceKey=ButtonStyle}" Width="240"/>
         <Button x:Name="button1" Content="Nazad" HorizontalAlignment="Left" Margin="384,492,0,0" VerticalAlignment="Top" Click="Nazad_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
 
