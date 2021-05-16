@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
-    /// <summary>
-    /// Interaction logic for PageKreirajGuestNalog.xaml
-    /// </summary>
     public partial class PageKreirajGuestNalog : Page
     {
         public ObservableCollection<GuestNalog> Guest
@@ -41,10 +38,11 @@ namespace ProjekatSIMS
         private void Potvrdi_Click(object sender, RoutedEventArgs e)
         {
             GuestFileStorage g = new GuestFileStorage();
-            string tb = textBox.Text;
-            string tb1 = textBox1.Text;
-            string tb2 = textBox2.Text;
-            g.Kreiraj(tb, tb1, tb2);
+            string ime = textBox.Text;
+            string prezime = textBox1.Text;
+            string jmbg = textBox2.Text;
+            string guestNalog = (ime + "/" + prezime + "/" + jmbg);
+            g.Kreiraj(guestNalog);
 
             this.NavigationService.Navigate(new PageGuestNalozi());
 

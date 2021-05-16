@@ -18,12 +18,8 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
-    /// <summary>
-    /// Interaction logic for PageGuestNalozi.xaml
-    /// </summary>
     public partial class PageGuestNalozi : Page
     {
-        private readonly string filePath;
         public ObservableCollection<GuestNalog> Guest
         {
             get;
@@ -32,10 +28,9 @@ namespace ProjekatSIMS
 
         public PageGuestNalozi()
         {
-            filePath = "naloziGuest.txt";
             Guest = new ObservableCollection<GuestNalog>();
             List<String> lines = new List<string>();
-            lines = File.ReadAllLines(filePath).ToList();
+            lines = File.ReadAllLines("naloziGuest.txt").ToList();
 
 
             foreach (string linee in lines)
@@ -46,47 +41,25 @@ namespace ProjekatSIMS
                 guest.prezime = termin[1].ToString();
                 guest.jmbg = long.Parse(termin[2].ToString());
 
-
-
-
                 Guest.Add(guest);
-
-
             }
-
-
-
 
             InitializeComponent();
 
             this.DataContext = this;
-
-            StreamReader sr = new StreamReader("naloziGuest.txt");
-            string line = "";
-
-            while ((line = sr.ReadLine()) != null)
-            {
-                string[] components = line.Split("/".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-
-            }
-            sr.Close();
         }
 
         private void KreirajGuestNalog_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new PageKreirajGuestNalog());
-            //KreirajGuestNalog kr = new KreirajGuestNalog();
-            //kr.ShowDialog();
         }
 
         private void ObrisiGuestNalog_Click(object sender, RoutedEventArgs e)
         {
             GuestFileStorage g = new GuestFileStorage();
             int currentRowIndex = dataGridGuestNalozi.Items.IndexOf(dataGridGuestNalozi.SelectedItem);
-
             if (currentRowIndex != -1)
             {
-                GuestNalog k = Guest.ElementAt(currentRowIndex);
                 if (Guest.Count > 0)
                 {
                     Guest.RemoveAt(currentRowIndex);
@@ -96,7 +69,7 @@ namespace ProjekatSIMS
                     MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                g.Obrisi(k);
+                g.Obrisi(currentRowIndex);
             }
 
         }

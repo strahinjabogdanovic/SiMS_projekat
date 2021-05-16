@@ -18,13 +18,8 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
-    /// <summary>
-    /// Interaction logic for PageObavestenjaSekretar.xaml
-    /// </summary>
     public partial class PageObavestenjaSekretar : Page
     {
-        private readonly string filePath;
-
         public ObservableCollection<Obavestenja> Obavesti
         {
             get;
@@ -33,10 +28,9 @@ namespace ProjekatSIMS
 
         public PageObavestenjaSekretar()
         {
-            filePath = "obavestenja.txt";
             Obavesti = new ObservableCollection<Obavestenja>();
             List<String> lines = new List<string>();
-            lines = File.ReadAllLines(filePath).ToList();
+            lines = File.ReadAllLines("obavestenja.txt").ToList();
 
 
             foreach (string linee in lines)
@@ -52,19 +46,9 @@ namespace ProjekatSIMS
 
             }
 
-
             InitializeComponent();
             this.DataContext = this;
 
-            StreamReader sr = new StreamReader("obavestenja.txt");
-            string line = "";
-
-            while ((line = sr.ReadLine()) != null)
-            {
-                string[] components = line.Split("/".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-
-            }
-            sr.Close();
         }
 
         private void Nazad_Click(object sender, RoutedEventArgs e)
@@ -75,13 +59,10 @@ namespace ProjekatSIMS
 
         private void Obrisi_Click(object sender, RoutedEventArgs e)
         {
-            ObavestenjaFileStorage n = new ObavestenjaFileStorage();
-            
+            ObavestenjaFileStorage n = new ObavestenjaFileStorage();           
             int currentRowIndex = dataGridObavestenja.Items.IndexOf(dataGridObavestenja.SelectedItem);
-
             if (currentRowIndex != -1)
             {
-                Obavestenja k = Obavesti.ElementAt(currentRowIndex);
                 if (Obavesti.Count > 0)
                 {
                     Obavesti.RemoveAt(currentRowIndex);
@@ -91,14 +72,23 @@ namespace ProjekatSIMS
                     MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                n.Obrisi(k);
+                n.Obrisi(currentRowIndex);
             }
         }
 
         private void Izmeni_Click(object sender, RoutedEventArgs e)
         {
-            ObavestenjaFileStorage n = new ObavestenjaFileStorage();
-            n.Update(dataGridObavestenja);
+            int currentRowIndex = dataGridObavestenja.Items.IndexOf(dataGridObavestenja.SelectedItem);
+            DataGridRow row = (DataGridRow)dataGridObavestenja.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
+
+            TextBlock uloga = dataGridObavestenja.Columns[0].GetCellContent(row) as TextBlock;
+            TextBlock naziv = dataGridObavestenja.Columns[1].GetCellContent(row) as TextBlock;
+            TextBlock sadraj = dataGridObavestenja.Columns[2].GetCellContent(row) as TextBlock;
+            TextBlock datum = dataGridObavestenja.Columns[3].GetCellContent(row) as TextBlock;
+            string update = (naziv.Text + "/" + sadraj.Text + "/" + datum.Text + "/" + uloga.Text);
+
+            ObavestenjaFileStorage p = new ObavestenjaFileStorage();
+            p.Update(update, currentRowIndex);
         }
 
         private void Kreiraj_Click(object sender, RoutedEventArgs e)

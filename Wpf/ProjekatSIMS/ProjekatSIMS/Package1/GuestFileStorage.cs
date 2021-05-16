@@ -1,5 +1,6 @@
 using ProjekatSIMS;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 
@@ -13,71 +14,53 @@ namespace Package1
             set;
         }
 
-        public void Kreiraj(string tb,string tb1,string tb2)
-      {
-            Guest = new ObservableCollection<GuestNalog>();
+        public void Kreiraj(string guestNalog)
+        {
+            var text = File.ReadAllText(@"naloziGuest.txt");
+            File.WriteAllText(@"naloziGuest.txt", text + guestNalog + Environment.NewLine);
 
-
-            string tempFile = System.IO.Path.GetTempFileName();
-
-            using (var sr = new StreamReader("naloziGuest.txt"))
-            using (var sw = new StreamWriter(tempFile))
-            {
-                string line;
-                //int id = 0;
-                while ((line = sr.ReadLine()) != null)
-                {
-
-                    String[] termin = line.Split('/');
-                    var guest = new GuestNalog();
-                    //id = int.Parse(termin[8]);
-                    //id++;
-
-                    sw.WriteLine(line);
-
-                }
-                sw.WriteLine(tb + "/" + tb1 + "/" + tb2);
-
-
-            }
-            File.Delete("naloziGuest.txt");
-            File.Move(tempFile, "naloziGuest.txt");
-
-
-
-            //Close();
-            //GuestNalozi s = new GuestNalozi();
-            //s.ShowDialog();
-            //PageGuestNalozi p = new PageGuestNalozi();
         }
-      
-      public void Obrisi(GuestNalog k)
-      {
-            string tempFile = System.IO.Path.GetTempFileName();
 
-            using (var sr = new StreamReader("naloziGuest.txt"))
-            using (var sw = new StreamWriter(tempFile))
+        public void Obrisi(int currentRowIndex)
+        {
+            try
             {
-                string line;
-
-                while ((line = sr.ReadLine()) != null)
+                int idp = 0;
+                GuestFileStorage p = new GuestFileStorage();
+                List<string> sviNalozi = p.procitaniGuestNalozi();
+                foreach (string sviN in sviNalozi)
                 {
-                    Guest = new ObservableCollection<GuestNalog>();
-
-                    var priv = new GuestNalog();
-
-                    String[] termin = line.Split('/');
-                    priv.jmbg = long.Parse(termin[2].ToString());
-
-                    if (priv.jmbg != k.jmbg)
-                        sw.WriteLine(line);
+                    if (idp == currentRowIndex)
+                    {
+                        sviNalozi.RemoveAt(currentRowIndex);
+                        File.WriteAllLines(@"naloziGuest.txt", sviNalozi);
+                    }
+                    idp++;
                 }
             }
-
-            File.Delete("naloziGuest.txt");
-            File.Move(tempFile, "naloziGuest.txt");
+            catch (Exception e)
+            { }
         }
-      
-   
-   }
+
+
+        public List<string> procitaniGuestNalozi()
+        {
+            List<string> guestNalozi = new List<string>();
+
+            using (var sr = new StreamReader("naloziGuest.txt"))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    String[] informacije = line.Split('/');
+                    String ime = informacije[0];
+                    String prezime = informacije[1];
+                    String jmbg = informacije[2];
+
+                    guestNalozi.Add(ime + "/" + prezime + "/" + jmbg);
+                }
+            }
+            return guestNalozi;
+        }
+    }
 }

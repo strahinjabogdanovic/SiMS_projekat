@@ -133,10 +133,6 @@ namespace ProjekatSIMS
         {
             int currentRowIndex = dataGridNalozi.Items.IndexOf(dataGridNalozi.SelectedItem);
             NaloziPacijenataFileStorage p = new NaloziPacijenataFileStorage();
-            //p.Prikazi(currentRowIndex);
-
-            //NaloziPacijenataFileStorage n = new NaloziPacijenataFileStorage();
-            //n.Prikazi(dataGridNalozi);
             this.NavigationService.Navigate(new PageMedKarton(currentRowIndex));
 
         }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Windows.Controls;
@@ -13,115 +14,83 @@ namespace Package1
             set;
         }
 
-        public void Kreiraj(string tb, string tb1, string tb2, string tb3)
-      {
-            Obavesti = new ObservableCollection<Obavestenja>();
-
-            string tempFile = System.IO.Path.GetTempFileName();
-
-            using (var sr = new StreamReader("obavestenja.txt"))
-            using (var sw = new StreamWriter(tempFile))
-            {
-                string line;
-                //int id = 0;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    String[] termin = line.Split('/');
-                    var obavestenja = new Obavestenja();
-                    //id = int.Parse(termin[8]);
-                    //id++;
-
-                    sw.WriteLine(line);
-
-                }
-                sw.WriteLine(tb + "/" + tb1 + "/" + tb2 + "/" + tb3);
-
-
-            }
-            File.Delete("obavestenja.txt");
-            File.Move(tempFile, "obavestenja.txt");
+        public void Kreiraj(string obavestenje)
+        {
+            var text = File.ReadAllText(@"obavestenja.txt");
+            File.WriteAllText(@"obavestenja.txt", text + obavestenje + Environment.NewLine);
         }
-      
-      public void Obrisi(Obavestenja k)
-      {
-            string tempFile = System.IO.Path.GetTempFileName();
 
-            using (var sr = new StreamReader("obavestenja.txt"))
-            using (var sw = new StreamWriter(tempFile))
+        public void Obrisi(int currentRowIndex)
+        {
+            try
             {
-                string line;
-
-                while ((line = sr.ReadLine()) != null)
+                int idp = 0;
+                ObavestenjaFileStorage p = new ObavestenjaFileStorage();
+                List<string> svaObavestenja = p.procitanaObavestenja();
+                foreach (string svaO in svaObavestenja)
                 {
-                    Obavesti = new ObservableCollection<Obavestenja>();
-
-                    var priv = new Obavestenja();
-
-                    String[] termin = line.Split('/');
-                    
-                    priv.sadrzaj = termin[1].ToString();
-
-
-                    if (priv.sadrzaj != k.sadrzaj)
-                        sw.WriteLine(line);
-                    
+                    if (idp == currentRowIndex)
+                    {
+                        svaObavestenja.RemoveAt(currentRowIndex);
+                        File.WriteAllLines(@"obavestenja.txt", svaObavestenja);
+                    }
+                    idp++;
                 }
             }
+            catch (Exception e)
+            { }
 
-            File.Delete("obavestenja.txt");
-            File.Move(tempFile, "obavestenja.txt");
         }
       
       public void Prikazi()
-      {
-         // TODO: implement
-      }
+      {}
       
-      public void Update(DataGrid dataGridObavestenja)
+      public void Update(string update, int currentRowIndex)
       {
-            int currentRowIndex = dataGridObavestenja.Items.IndexOf(dataGridObavestenja.SelectedItem);
+            int idp = 0;
+            string obavestenja = "";
 
-            string tempFile = System.IO.Path.GetTempFileName();
-
-            using (var sr = new StreamReader("obavestenja.txt"))
-            using (var sw = new StreamWriter(tempFile))
+            try
             {
-
-
-
-                string line;
-                int id = 0;
-                while ((line = sr.ReadLine()) != null)
+                ObavestenjaFileStorage p = new ObavestenjaFileStorage();
+                List<string> svaObavestenja = p.procitanaObavestenja();
+                foreach (string svaO in svaObavestenja)
                 {
-                    //id++;
-                    if (id == currentRowIndex)
+                    obavestenja = svaO;
+                    string[] informacije = obavestenja.Split('/');
+                    if (idp == currentRowIndex)
                     {
-
-                        String[] termin = line.Split('/');
-                        var obavestenja = new Obavestenja();
-
-
-
-
-                        DataGridRow row = (DataGridRow)dataGridObavestenja.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
-
-                        TextBlock t1 = dataGridObavestenja.Columns[0].GetCellContent(row) as TextBlock;
-                        TextBlock t2 = dataGridObavestenja.Columns[1].GetCellContent(row) as TextBlock;
-                        TextBlock t3 = dataGridObavestenja.Columns[2].GetCellContent(row) as TextBlock;
-                        TextBlock t4 = dataGridObavestenja.Columns[3].GetCellContent(row) as TextBlock;
-
-                        sw.WriteLine(t2.Text + "/" + t3.Text + "/" + t4.Text + "/" + t1.Text);
+                        svaObavestenja.RemoveAt(currentRowIndex);
+                        svaObavestenja.Insert(currentRowIndex, update);
+                        File.WriteAllLines(@"obavestenja.txt", svaObavestenja);
                     }
-                    else
-                    {
-                        sw.WriteLine(line);
-                    }
-                    id++;
+                    idp++;
                 }
             }
-            File.Delete("obavestenja.txt");
-            File.Move(tempFile, "obavestenja.txt");
+            catch (Exception e)
+            { }
         }
-   
-   }
+
+        public List<string> procitanaObavestenja()
+        {
+            List<string> obavestenja = new List<string>();
+
+            using (var sr = new StreamReader("obavestenja.txt"))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    String[] informacije = line.Split('/');
+                    String naslov = informacije[0];
+                    String sadrzaj = informacije[1];
+                    String datum = informacije[2];
+                    String uloga = informacije[3];
+
+                    obavestenja.Add(naslov + "/" + sadrzaj + "/" + datum + "/" + uloga);
+                }
+            }
+            return obavestenja;
+        }
+
+    }
 }

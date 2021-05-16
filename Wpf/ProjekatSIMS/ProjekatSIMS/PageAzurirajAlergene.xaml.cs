@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
-    /// <summary>
-    /// Interaction logic for PageAzurirajAlergene.xaml
-    /// </summary>
     public partial class PageAzurirajAlergene : Page
     {
         int trenutniRed = 0;
@@ -72,50 +69,6 @@ namespace ProjekatSIMS
             }
             catch (Exception exp)
             { }
-
-
-            /*
-            int currentRowIndex = 0;
- 
-            using (var sr = new StreamReader("redovi.txt"))
-            {
-
-                String line = "";
-
-                line = sr.ReadLine();
-                currentRowIndex = int.Parse(line);
-            }
-
-            string tempFile = System.IO.Path.GetTempFileName();
-
-            using (var sr = new StreamReader("medKarton.txt"))
-            using (var sw = new StreamWriter(tempFile))
-            {
-
-                int idx = 0;
-
-                string line;
-                int id = 0;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    //id++;
-                    if (id == currentRowIndex)
-                    {
-
-                        String[] termin = line.Split('/');
-
-
-                        sw.WriteLine(termin[0] + "/" + textBox.Text);
-                    }
-                    else
-                    {
-                        sw.WriteLine(line);
-                    }
-                    id++;
-                }
-            }
-            File.Delete("medKarton.txt");
-            File.Move(tempFile, "medKarton.txt");*/
 
             this.NavigationService.Navigate(new PageMedKarton(trenutniRed));
         }

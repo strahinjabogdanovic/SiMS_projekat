@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
-    /// <summary>
-    /// Interaction logic for PageKreirajObavestenje.xaml
-    /// </summary>
     public partial class PageKreirajObavestenje : Page
     {
         public PageKreirajObavestenje()
@@ -35,15 +32,16 @@ namespace ProjekatSIMS
         {
             ObavestenjaFileStorage n = new ObavestenjaFileStorage();
 
-            string tb = textBox.Text;
-            string tb1 = textBox1.Text;
-            string tb3 = textBox3.Text;
+            string naziv = textBox.Text;
+            string sadrzaj = textBox1.Text;
+            string uloga = textBox3.Text;
             string datum = myDatePicker.ToString();
             String[] termin = datum.Split(' ');
             String[] termin1 = termin[0].Split('-');
             string datum1 = termin1[0] + "." + termin1[1] + "." + termin1[2] + ".";
+            string obavestenje = (naziv + "/" + sadrzaj + "/" + datum1 + "/" + uloga);
 
-            n.Kreiraj(tb, tb1, datum1, tb3);
+            n.Kreiraj(obavestenje);
 
             this.NavigationService.Navigate(new PageObavestenjaSekretar());
         }

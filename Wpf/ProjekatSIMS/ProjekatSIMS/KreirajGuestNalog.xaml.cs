@@ -44,7 +44,7 @@ namespace ProjekatSIMS
             string tb = textBox.Text;
             string tb1 = textBox1.Text;
             string tb2 = textBox2.Text;
-            g.Kreiraj(tb, tb1, tb2);
+            //g.Kreiraj(tb, tb1, tb2);
            
         }
     }

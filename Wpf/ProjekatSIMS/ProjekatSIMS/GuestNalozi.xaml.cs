@@ -93,7 +93,7 @@ namespace ProjekatSIMS
                 MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            g.Obrisi(k);
+            //g.Obrisi(k);
 
         }
     }
