@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
-    /// <summary>
-    /// Interaction logic for PageDatum.xaml
-    /// </summary>
     public partial class PageDatum : Page
     {
         public PageDatum()

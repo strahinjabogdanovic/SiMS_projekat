@@ -19,13 +19,8 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
-    /// <summary>
-    /// Interaction logic for PageTerminiSekretar.xaml
-    /// </summary>
     public partial class PageTerminiSekretar : Page
     {
-        private readonly string filePath;       
-
         public ObservableCollection<TerminiPacijenata> TerminiP
         {
             get;
@@ -35,10 +30,9 @@ namespace ProjekatSIMS
         
         public PageTerminiSekretar()
         {
-            filePath = "termini.txt";
             TerminiP = new ObservableCollection<TerminiPacijenata>();
             List<String> lines = new List<string>();
-            lines = File.ReadAllLines(filePath).ToList();
+            lines = File.ReadAllLines("termini.txt").ToList();
 
 
             foreach (string linee in lines)
@@ -58,16 +52,6 @@ namespace ProjekatSIMS
 
             InitializeComponent();
             this.DataContext = this;
-
-            StreamReader sr = new StreamReader("termini.txt");
-            string line = "";
-
-            while ((line = sr.ReadLine()) != null)
-            {
-                string[] components = line.Split("/".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-
-            }
-            sr.Close();
         }
 
         private void Nazad_Click(object sender, RoutedEventArgs e)
@@ -84,10 +68,8 @@ namespace ProjekatSIMS
         {
             TerminiFileStorage t = new TerminiFileStorage();
             int currentRowIndex = dataGridTerminiSekretar.Items.IndexOf(dataGridTerminiSekretar.SelectedItem);
-
             if (currentRowIndex != -1)
             {
-                TerminiPacijenata k = TerminiP.ElementAt(currentRowIndex);
                 if (TerminiP.Count > 0)
                 {
                     TerminiP.RemoveAt(currentRowIndex);
@@ -97,7 +79,7 @@ namespace ProjekatSIMS
                     MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                t.OtkazivanjeSekretar(k);
+                t.OtkazivanjeSekretar(currentRowIndex);
             }
 
             this.NavigationService.Navigate(new PageTerminiSekretar());
@@ -106,8 +88,13 @@ namespace ProjekatSIMS
 
         private void PromenaT_Click(object sender, RoutedEventArgs e)
         {
-            TerminiFileStorage t = new TerminiFileStorage();
-            t.UpdateSekretar(dataGridTerminiSekretar);
+            int currentRowIndex = dataGridTerminiSekretar.Items.IndexOf(dataGridTerminiSekretar.SelectedItem);
+            DataGridRow row = (DataGridRow)dataGridTerminiSekretar.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
+
+            TextBlock pacijent = dataGridTerminiSekretar.Columns[0].GetCellContent(row) as TextBlock;
+
+            TerminiFileStorage p = new TerminiFileStorage();
+            p.UpdateSekretar(pacijent.Text, currentRowIndex);
         }
     }
 }

@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
-    /// <summary>
-    /// Interaction logic for PagePrioritetZakazivanja.xaml
-    /// </summary>
     public partial class PagePrioritetZakazivanja : Page
     {
         public PagePrioritetZakazivanja()

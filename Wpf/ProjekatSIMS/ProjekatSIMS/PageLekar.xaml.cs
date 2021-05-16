@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
-    /// <summary>
-    /// Interaction logic for PageLekar.xaml
-    /// </summary>
     public partial class PageLekar : Page
     {
         public PageLekar()

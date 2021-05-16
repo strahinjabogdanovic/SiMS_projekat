@@ -144,93 +144,6 @@ namespace Package1
             File.Move(tempFile, "lekar.txt");
         }
 
-
-        /*
-        Boolean nasao = false;
-        public void ZakazivanjeSekretar(DataGrid dataGridPacijenti)
-        {
-            int trenutniIndeksReda = dataGridPacijenti.Items.IndexOf(dataGridPacijenti.SelectedItem);
-            string privremeniFajl = System.IO.Path.GetTempFileName();
-
-            String ime = "";
-
-            using (var sr = new StreamReader("termini.txt"))
-            using (var sw = new StreamWriter(privremeniFajl))
-            {
-                String datum = "";
-                String vreme = "";
-                String lekar = "";
-                String soba = "";
-                int idx = 0;
-                int id = 0;
-
-                string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    String[] podaci = line.Split('/');
-
-                    datum = podaci[0];
-                    vreme = podaci[1];
-                    lekar = podaci[2];
-                    soba = podaci[3];
-                    idx = int.Parse(podaci[4]);
-
-                    DataGridRow red = (DataGridRow)dataGridPacijenti.ItemContainerGenerator.ContainerFromIndex(trenutniIndeksReda);
-
-                    TextBlock tbPacijent = dataGridPacijenti.Columns[0].GetCellContent(red) as TextBlock;
-                    TextBlock tbDatum = dataGridPacijenti.Columns[1].GetCellContent(red) as TextBlock;
-                    TextBlock tbVreme = dataGridPacijenti.Columns[2].GetCellContent(red) as TextBlock;
-                    TextBlock tbLekar = dataGridPacijenti.Columns[3].GetCellContent(red) as TextBlock;
-                    TextBlock tbSoba = dataGridPacijenti.Columns[4].GetCellContent(red) as TextBlock;
-                                        
-                    using (var srr = new StreamReader("podaci.txt"))
-                    {
-                        string liness;
-                        while ((liness = srr.ReadLine()) != null)
-                        {
-                            String[] termin = liness.Split('/');
-                            ime = termin[0] + " " + termin[1];
-
-                            if (tbPacijent.Text.Equals(ime))
-                            {
-                                nasao = true;
-                            }
-
-                        }
-
-                    }
-
-                    if (nasao == true)
-                    {
-                        if (datum.Equals(tbDatum.Text) && vreme.Equals(tbVreme.Text) && lekar.Equals(tbLekar.Text) && soba.Equals(tbSoba.Text))
-                        {
-                            sw.WriteLine(tbDatum.Text + "/" + tbVreme.Text + "/" + tbLekar.Text + "/" + tbSoba.Text + "/" + ++id + "/" + tbPacijent.Text);
-                        }
-                        else
-                        {
-                            sw.WriteLine(line);
-                        }
-                        id = idx;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Pacijent ne postoji u sistemu");
-                        sw.WriteLine(line);
-                        while ((line = sr.ReadLine()) != null)
-                        {
-                            sw.WriteLine(line);
-                        }
-
-                    }
- 
-                  }
-
-              }
-              File.Delete("termini.txt");
-              File.Move(privremeniFajl, "termini.txt");
-        }*/
-
-
         Boolean nasao = false;
         public void ZakazivanjeSekretar(DataGrid dataGrid)
         {
@@ -239,7 +152,6 @@ namespace Package1
             ZakazivanjeTerminaSekretar(dataGrid, trenutniIndeksReda);
         }
 
-        //
         public void ZakazivanjeTerminaSekretar(DataGrid dataGrid, int trenutniIndeksReda)
         {
             string privremeniFajl = System.IO.Path.GetTempFileName();
@@ -305,7 +217,6 @@ namespace Package1
             File.Move(privremeniFajl, "termini.txt");
         }
 
-        //
         public Boolean ProveraPacijentPostoji(TextBlock tbPacijent)
         {
             String ime = "";
@@ -327,75 +238,79 @@ namespace Package1
         }
 
 
-        public void OtkazivanjeSekretar(TerminiPacijenata termin)
+        public void OtkazivanjeSekretar(int currentRowIndex)
         {
-            string privremeniFajl = System.IO.Path.GetTempFileName();
+            int idp = 0;
+            string termini = "";
 
-            using (var sr = new StreamReader("termini.txt"))
-            using (var sw = new StreamWriter(privremeniFajl))
+            try
             {
-                string line;
-
-                while ((line = sr.ReadLine()) != null)
+                TerminiFileStorage p = new TerminiFileStorage();
+                List<string> sviTermini = p.procitaniTermini();
+                foreach (string sviT in sviTermini)
                 {
-                    var privremeni = new TerminiPacijenata();
-
-                    String[] podaci = line.Split('/');
-                    privremeni.id = int.Parse(podaci[4].ToString());
-
-                    if (privremeni.id != termin.id)
+                    termini = sviT;
+                    string[] informacije = termini.Split('/');
+                    if (idp == currentRowIndex)
                     {
-                        sw.WriteLine(line);
+                        sviTermini.RemoveAt(currentRowIndex);
+                        sviTermini.Insert(currentRowIndex, informacije[0] + "/" + informacije[1] + "/" + informacije[2] + "/" + informacije[3] + "/" + informacije[4] + "/"  + " " + "/" + informacije[6]);
+                        File.WriteAllLines(@"termini.txt", sviTermini);
                     }
-                    else
-                    {
-                        sw.WriteLine(podaci[0] + "/" + podaci[1] + "/" + podaci[2] + "/" + podaci[3] + "/" + podaci[4] + "/" + " ");
-                    }
-
+                    idp++;
                 }
             }
-
-            File.Delete("termini.txt");
-            File.Move(privremeniFajl, "termini.txt");
+            catch (Exception e)
+            { }
         }
 
-        public void UpdateSekretar(DataGrid dataGrid)
+        public List<string> procitaniTermini()
         {
-            int trenutniIndeksReda = dataGrid.Items.IndexOf(dataGrid.SelectedItem);
-
-            string privremeniFajl = System.IO.Path.GetTempFileName();
+            List<string> termini = new List<string>();
 
             using (var sr = new StreamReader("termini.txt"))
-            using (var sw = new StreamWriter(privremeniFajl))
             {
-
                 string line;
-                int id = 0;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    if (id == trenutniIndeksReda)
-                    {
-                        DataGridRow red = (DataGridRow)dataGrid.ItemContainerGenerator.ContainerFromIndex(trenutniIndeksReda);
-
-                        TextBlock pacijent = dataGrid.Columns[0].GetCellContent(red) as TextBlock;
-                        TextBlock datum = dataGrid.Columns[1].GetCellContent(red) as TextBlock;
-                        TextBlock vreme = dataGrid.Columns[2].GetCellContent(red) as TextBlock;
-                        TextBlock lekar = dataGrid.Columns[3].GetCellContent(red) as TextBlock;
-                        TextBlock soba = dataGrid.Columns[4].GetCellContent(red) as TextBlock;
-
-                        id++;
-                        sw.WriteLine(datum.Text + "/" + vreme.Text + "/" + lekar.Text + "/" + soba.Text + "/" + id + "/" + pacijent.Text);
-                    }
-                    else
-                    {
-                        sw.WriteLine(line);
-                    }
-                    id++;
+                    String[] informacije = line.Split('/');
+                    String datum = informacije[0];
+                    String vreme = informacije[1];
+                    String lekar = informacije[2];
+                    String soba = informacije[3];
+                    String id = informacije[4];
+                    String pacijent = informacije[5];
+                    String podatak = informacije[6];
+                    termini.Add(datum + "/" + vreme + "/" + lekar + "/" + soba + "/" + id + "/" + pacijent + "/" + podatak);
                 }
             }
-            File.Delete("termini.txt");
-            File.Move(privremeniFajl, "termini.txt");
+            return termini;
+        }
 
+        public void UpdateSekretar(string pacijent, int currentRowIndex)
+        {
+            int idp = 0;
+            string termini = "";
+
+            try
+            {
+                TerminiFileStorage p = new TerminiFileStorage();
+                List<string> sviTermini = p.procitaniTermini();
+                foreach (string sviT in sviTermini)
+                {
+                    termini = sviT;
+                    string[] informacije = termini.Split('/');
+                    if (idp == currentRowIndex)
+                    {
+                        sviTermini.RemoveAt(currentRowIndex);
+                        sviTermini.Insert(currentRowIndex, informacije[0] + "/" + informacije[1] + "/" + informacije[2] + "/" + informacije[3] + "/" + informacije[4] + "/" + pacijent + "/" + informacije[6]);
+                        File.WriteAllLines(@"termini.txt", sviTermini);
+                    }
+                    idp++;
+                }
+            }
+            catch (Exception e)
+            { }
         }
 
         string imePacijenta;

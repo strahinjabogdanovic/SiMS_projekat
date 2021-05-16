@@ -19,13 +19,8 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
-    /// <summary>
-    /// Interaction logic for PageZakazivanjeLekar.xaml
-    /// </summary>
     public partial class PageZakazivanjeLekar : Page
     {
-        private readonly string filePath;
-
         public ObservableCollection<TerminiPacijenata> TerminiP
         {
             get;
@@ -34,10 +29,9 @@ namespace ProjekatSIMS
 
         public PageZakazivanjeLekar(string lekar)
         {
-            filePath = "termini.txt";
             TerminiP = new ObservableCollection<TerminiPacijenata>();
             List<String> lines = new List<string>();
-            lines = File.ReadAllLines(filePath).ToList();
+            lines = File.ReadAllLines("termini.txt").ToList();
 
 
             foreach (string linee in lines)
@@ -76,16 +70,6 @@ namespace ProjekatSIMS
 
             InitializeComponent();
             this.DataContext = this;
-
-            StreamReader sr = new StreamReader("termini.txt");
-            string line = "";
-
-            while ((line = sr.ReadLine()) != null)
-            {
-                string[] components = line.Split("/".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-
-            }
-            sr.Close();
         }
 
         private void Nazad_Click(object sender, RoutedEventArgs e)
