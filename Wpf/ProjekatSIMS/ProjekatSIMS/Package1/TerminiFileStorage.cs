@@ -145,94 +145,60 @@ namespace Package1
         }
 
         Boolean nasao = false;
-        public void ZakazivanjeSekretar(DataGrid dataGrid)
+        public void ZakazivanjeSekretar(string update)
         {
-            int trenutniIndeksReda = dataGrid.Items.IndexOf(dataGrid.SelectedItem);
+            string termini = "";
 
-            ZakazivanjeTerminaSekretar(dataGrid, trenutniIndeksReda);
-        }
-
-        public void ZakazivanjeTerminaSekretar(DataGrid dataGrid, int trenutniIndeksReda)
-        {
-            string privremeniFajl = System.IO.Path.GetTempFileName();
-
-            using (var sr = new StreamReader("termini.txt"))
-            using (var sw = new StreamWriter(privremeniFajl))
+            try
             {
-                String datum = "";
-                String vreme = "";
-                String lekar = "";
-                String soba = "";
-                int idx = 0;
-                int id = 0;
-
-                string line;
-                while ((line = sr.ReadLine()) != null)
+                TerminiFileStorage p = new TerminiFileStorage();
+                List<string> sviTermini = p.procitaniTermini();
+                foreach (string sviT in sviTermini)
                 {
-                    String[] podaci = line.Split('/');
+                    termini = sviT;
+                    string[] informacije = termini.Split('/');
+                    string[] infoData = update.Split('/');
 
-                    datum = podaci[0];
-                    vreme = podaci[1];
-                    lekar = podaci[2];
-                    soba = podaci[3];
-                    idx = int.Parse(podaci[4]);
-
-                    DataGridRow red = (DataGridRow)dataGrid.ItemContainerGenerator.ContainerFromIndex(trenutniIndeksReda);
-
-                    TextBlock tbPacijent = dataGrid.Columns[0].GetCellContent(red) as TextBlock;
-                    TextBlock tbDatum = dataGrid.Columns[1].GetCellContent(red) as TextBlock;
-                    TextBlock tbVreme = dataGrid.Columns[2].GetCellContent(red) as TextBlock;
-                    TextBlock tbLekar = dataGrid.Columns[3].GetCellContent(red) as TextBlock;
-                    TextBlock tbSoba = dataGrid.Columns[4].GetCellContent(red) as TextBlock;
-
-                    Boolean nasao = ProveraPacijentPostoji(tbPacijent);
+                    Boolean nasao = ProveraPacijentPostoji(infoData[0]);
 
                     if (nasao == true)
                     {
-                        if (datum.Equals(tbDatum.Text) && vreme.Equals(tbVreme.Text) && lekar.Equals(tbLekar.Text) && soba.Equals(tbSoba.Text))
+                        if (informacije[0].Equals(infoData[1]) && informacije[1].Equals(infoData[2]) && informacije[2].Equals(infoData[3]) && informacije[3].Equals(infoData[4]))
                         {
-                            sw.WriteLine(tbDatum.Text + "/" + tbVreme.Text + "/" + tbLekar.Text + "/" + tbSoba.Text + "/" + ++id + "/" + tbPacijent.Text);
-                        }
-                        else
-                        {
-                            sw.WriteLine(line);
-                        }
-                        id = idx;
+                            sviTermini.RemoveAt(int.Parse(informacije[4])-1);
+                            sviTermini.Insert(int.Parse(informacije[4])-1, informacije[0] + "/" + informacije[1] + "/" + informacije[2] + "/" + informacije[3] + "/" + informacije[4] + "/" + infoData[0] + "/" + informacije[6]);
+                            File.WriteAllLines(@"termini.txt", sviTermini);
+                        }                 
                     }
                     else
                     {
                         MessageBox.Show("Pacijent ne postoji u sistemu");
-                        sw.WriteLine(line);
-                        while ((line = sr.ReadLine()) != null)
-                        {
-                            sw.WriteLine(line);
-                        }
-
+                        break;
                     }
-
                 }
-
             }
-            File.Delete("termini.txt");
-            File.Move(privremeniFajl, "termini.txt");
+            catch (Exception e)
+            { }
+
         }
 
-        public Boolean ProveraPacijentPostoji(TextBlock tbPacijent)
+        public Boolean ProveraPacijentPostoji(string tbPacijent)
         {
-            String ime = "";
-            using (var srr = new StreamReader("podaci.txt"))
+            string nalozi = "";
+            string ime = "";
+            NaloziPacijenataFileStorage p = new NaloziPacijenataFileStorage();
+            List<string> sviNalozi = p.procitaniNalozi();
+            foreach (string sviN in sviNalozi)
             {
-                string liness;
-                while ((liness = srr.ReadLine()) != null)
-                {
-                    String[] termin = liness.Split('/');
-                    ime = termin[0] + " " + termin[1];
+                nalozi = sviN;
+                string[] informacije = nalozi.Split('/');
+                ime = informacije[0] + " " + informacije[1];
 
-                    if (tbPacijent.Text.Equals(ime))
-                    {
-                        nasao = true;
-                    }
+                if (tbPacijent.Equals(ime))
+                {
+                    nasao = true;
                 }
+
             }
             return nasao;
         }
@@ -273,15 +239,7 @@ namespace Package1
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    String[] informacije = line.Split('/');
-                    String datum = informacije[0];
-                    String vreme = informacije[1];
-                    String lekar = informacije[2];
-                    String soba = informacije[3];
-                    String id = informacije[4];
-                    String pacijent = informacije[5];
-                    String podatak = informacije[6];
-                    termini.Add(datum + "/" + vreme + "/" + lekar + "/" + soba + "/" + id + "/" + pacijent + "/" + podatak);
+                    termini.Add(line);
                 }
             }
             return termini;
@@ -317,8 +275,65 @@ namespace Package1
         string imeLekara;
         public void PomeranjeTerminaSekretar(TerminiPacijenata termin)
         {
-            string privremeniFajl = System.IO.Path.GetTempFileName();
+            Boolean pronasao = false;
+            int brojac = 0;
+            string termini = "";
+            string pronadjenDatum = "";
+            TerminiFileStorage p = new TerminiFileStorage();
+            List<string> sviTermini = p.procitaniTermini();
+            try
+            {
+                foreach (string sviT in sviTermini)
+                {
+                    termini = sviT;
+                    string[] informacije = termini.Split('/');
+                    var privremeni = new TerminiPacijenata();
+                    privremeni.id = int.Parse(informacije[4].ToString());
+                    if (privremeni.id == termin.id)
+                    {
+                        imePacijenta = informacije[5];
+                        imeLekara = informacije[2];
+                        pronasao = true;
+                        brojac++;
+                        sviTermini.RemoveAt(int.Parse(informacije[4])-1);
+                        sviTermini.Insert(int.Parse(informacije[4])-1, informacije[0] + "/" + informacije[1] + "/" + informacije[2] + "/" + informacije[3] + "/" + informacije[4] + "/" + " " + "/" + informacije[6]);
+                        File.WriteAllLines(@"termini.txt", sviTermini);
+                    }
+                   
+                    if (pronasao == true && brojac == 1)
+                    {
+                        pronadjenDatum = pronadjiSutrasnjiDatum(informacije[0]);
+                        brojac++;
+                    }
 
+                }
+            }
+            catch (Exception e)
+            { }
+ 
+            try
+            {
+                int br = 0;
+                foreach (string sviT in sviTermini)
+                {
+                    termini = sviT;
+                    string[] informacije = termini.Split('/');
+
+                    if (pronadjenDatum.Equals(informacije[0]) && imeLekara.Equals(informacije[2]) && string.IsNullOrWhiteSpace(informacije[5]) && br == 0)
+                    {
+                        br++;
+                        sviTermini.RemoveAt(int.Parse(informacije[4])-1);
+                        sviTermini.Insert(int.Parse(informacije[4])-1, informacije[0] + "/" + informacije[1] + "/" + informacije[2] + "/" + informacije[3] + "/" + informacije[4] + "/" + imePacijenta + "/" + informacije[6]);
+                        File.WriteAllLines(@"termini.txt", sviTermini);
+                    }                 
+                }
+            }
+            catch (Exception e)
+            { }
+        }
+
+        public string pronadjiSutrasnjiDatum(string datum)
+        {
             string datum1 = "";
             String[] datumi;
             int mesec = 0;
@@ -327,160 +342,88 @@ namespace Package1
             int dan = 0;
             string noviDatum = "";
 
-            using (var sr = new StreamReader("termini.txt"))
-            using (var sw = new StreamWriter(privremeniFajl))
+            datumi = datum.Split('.');
+            dan = int.Parse(datumi[0]);
+
+            mesec = int.Parse(datumi[1]);
+            mesec1 = int.Parse(datumi[1]);
+            god = int.Parse(datumi[2]);
+
+            if (mesec == 1 || mesec == 3 || mesec == 5 || mesec == 7 || mesec == 8 || mesec == 10 || mesec == 12)
             {
-                string line;
-                Boolean pronasao = false;
-                int brojac = 0;
-
-                while ((line = sr.ReadLine()) != null)
+                if (dan == 30)
                 {
-                    var privremeni = new TerminiPacijenata();
-
-                    String[] podaci = line.Split('/');
-                    privremeni.id = int.Parse(podaci[4].ToString());
-
-                    if (privremeni.id != termin.id)
+                    datum1 = 31.ToString();
+                    if (mesec == 12)
                     {
-                        sw.WriteLine(line);
-                    }
-                    else
-                    {
-                        imePacijenta = podaci[5];
-                        imeLekara = podaci[2];
-                        pronasao = true;
-                        brojac++;
-                        sw.WriteLine(podaci[0] + "/" + podaci[1] + "/" + podaci[2] + "/" + podaci[3] + "/" + podaci[4] + "/" + " ");                  
-                    }
-
-                    if (pronasao == true && brojac==1)
-                    {
-                        datumi = podaci[0].Split('.');
-                        dan = int.Parse(datumi[0]);
-
-                        mesec = int.Parse(datumi[1]);
-                        mesec1 = int.Parse(datumi[1]);
-                        god = int.Parse(datumi[2]);
-
-                        if (mesec == 1 || mesec == 3 || mesec == 5 || mesec == 7 || mesec == 8 || mesec == 10 || mesec == 12)
-                        {
-                            if (dan == 30)
-                            {
-                                datum1 = 31.ToString();
-                                if (mesec == 12)
-                                {
-                                    datumi[1] = 1.ToString();
-                                    ++god;
-                                }
-
-                            }
-                            else if (dan == 31)
-                            {
-                                datum1 = 1.ToString();
-                                if (mesec == 12) { datumi[1] = 1.ToString(); ++god; }
-                                else
-                                {
-                                    ++mesec1;
-                                }
-
-                            }
-                            else
-                            {
-                                datum1 = (++dan).ToString();
-                            }
-                        }
-                        else if (mesec == 2)
-                        {
-                            if (dan == 27)
-                            {
-                                datum1 = 28.ToString();
-
-                            }
-                            else if (dan == 28)
-                            {
-                                datum1 = 1.ToString();
-
-                                ++mesec1;
-                            }
-                            else
-                            {
-                                datum1 = (++dan).ToString();
-                            }
-                        }
-                        else if (mesec == 4 || mesec == 6 || mesec == 9 || mesec == 11)
-                        {
-
-                            if (dan == 29)
-                            {
-                                datum1 = 30.ToString();
-
-                            }
-                            else if (dan == 30)
-                            {
-                                datum1 = 1.ToString();
-
-                                ++mesec1;
-                            }
-                            else
-                            {
-                                datum1 = (++dan).ToString();
-                            }
-                        }
-
-                        brojac++;
-                        string mes = "";
-                        if (int.Parse(datum1) < 10)
-                        {
-                            datum1 = "0" + datum1;
-                        }
-                        if (mesec1 < 10)
-                        {
-                            mes = "0" + mesec1.ToString();
-                        }
-                        noviDatum = datum1 + "." + mes + "." + god + ".";
-                        //Console.WriteLine(noviDatum);
-                       
-                    }
-                    /*
-                    if (noviDatum.Equals(podaci[0]) && podaci[5]=="")
-                    {
-                        sw.WriteLine(noviDatum + "/" + podaci[1] + "/" + podaci[2] + "/" + podaci[3] + "/" + podaci[4] + "/" + imePacijenta);
-                    }  */                
-                }                                
-
-            }
-
-            File.Delete("termini.txt");
-            File.Move(privremeniFajl, "termini.txt");
-
-            using (var srr = new StreamReader("termini.txt"))
-            using (var sww = new StreamWriter(privremeniFajl))
-            {
-                
-                string lin;
-                int br = 0;
-                while ((lin = srr.ReadLine()) != null)
-                {
-                    String[] podacii = lin.Split('/');
-                    //Console.WriteLine(noviDatum);
-
-                    if (noviDatum.Equals(podacii[0]) && imeLekara.Equals(podacii[2]) && string.IsNullOrWhiteSpace(podacii[5]) && br ==0)
-                    {
-                        br++;
-                        sww.WriteLine(podacii[0] + "/" + podacii[1] + "/" + podacii[2] + "/" + podacii[3] + "/" + podacii[4] + "/" + imePacijenta);
-                    }
-                    else
-                    {
-                        sww.WriteLine(lin);
+                        datumi[1] = 1.ToString();
+                        ++god;
                     }
 
                 }
+                else if (dan == 31)
+                {
+                    datum1 = 1.ToString();
+                    if (mesec == 12) { datumi[1] = 1.ToString(); ++god; }
+                    else
+                    {
+                        ++mesec1;
+                    }
+
+                }
+                else
+                {
+                    datum1 = (++dan).ToString();
+                }
             }
-            File.Delete("termini.txt");
-            File.Move(privremeniFajl, "termini.txt");
+            else if (mesec == 2)
+            {
+                if (dan == 27)
+                {
+                    datum1 = 28.ToString();
 
+                }
+                else if (dan == 28)
+                {
+                    datum1 = 1.ToString();
 
+                    ++mesec1;
+                }
+                else
+                {
+                    datum1 = (++dan).ToString();
+                }
+            }
+            else if (mesec == 4 || mesec == 6 || mesec == 9 || mesec == 11)
+            {
+
+                if (dan == 29)
+                {
+                    datum1 = 30.ToString();
+
+                }
+                else if (dan == 30)
+                {
+                    datum1 = 1.ToString();
+
+                    ++mesec1;
+                }
+                else
+                {
+                    datum1 = (++dan).ToString();
+                }
+            }
+            string mes = "";
+            if (int.Parse(datum1) < 10)
+            {
+                datum1 = "0" + datum1;
+            }
+            if (mesec1 < 10)
+            {
+                mes = "0" + mesec1.ToString();
+            }
+            noviDatum = datum1 + "." + mes + "." + god + ".";
+            return noviDatum;
         }
 
         public List<string> DobaviTerminePoLekaru(string imeiPr)

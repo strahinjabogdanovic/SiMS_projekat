@@ -19,9 +19,6 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS
 {
-    /// <summary>
-    /// Interaction logic for PageHitnoZakazTermin.xaml
-    /// </summary>
     public partial class PageHitnoZakazTermin : Page
     {
         private readonly string filePath;
@@ -49,12 +46,9 @@ namespace ProjekatSIMS
                 }
             }
 
-
-
             DateTime danas = DateTime.Now;
             String[] terminin = danas.ToString().Split(' ');
             String[] termin1 = terminin[0].Split('/');
-            //string datum = termin1[1] + "." + termin1[0] + "." + termin1[2] + ".";
             string dan = "";
             string mesec = "";
             if (int.Parse(termin1[1]) < 10)
@@ -115,16 +109,11 @@ namespace ProjekatSIMS
                             String[] termini = linee.Split('/');
                             var pacijent = new TerminiPacijenata();
 
-                            //Console.WriteLine(datum);
-                            //Console.WriteLine(vreme);
-
                             if (termini[2].Equals(ime) && termini[0].Equals(datum))
                             {
                                 String[] sat = termini[1].Split(':');
                                 string sati = sat[0] + sat[1];
                                 string sadSati = v.ToString() + termin2[1];
-
-                                //termini[5] == ""
                                                             
                                 if (int.Parse(sati) >= int.Parse(sadSati))  
                                 {
@@ -147,16 +136,6 @@ namespace ProjekatSIMS
 
             InitializeComponent();
             this.DataContext = this;
-
-            StreamReader sr = new StreamReader("termini.txt");
-            string line = "";
-
-            while ((line = sr.ReadLine()) != null)
-            {
-                string[] components = line.Split("/".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-
-            }
-            sr.Close();
         }
 
         private void Nazad_Click(object sender, RoutedEventArgs e)
@@ -166,8 +145,18 @@ namespace ProjekatSIMS
 
         private void Zakazi_Click(object sender, RoutedEventArgs e)
         {
+            int currentRowIndex = dataGridHitnoZakazivanje.Items.IndexOf(dataGridHitnoZakazivanje.SelectedItem);
+            DataGridRow row = (DataGridRow)dataGridHitnoZakazivanje.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
+
+            TextBlock tbPacijent = dataGridHitnoZakazivanje.Columns[0].GetCellContent(row) as TextBlock;
+            TextBlock tbDatum = dataGridHitnoZakazivanje.Columns[1].GetCellContent(row) as TextBlock;
+            TextBlock tbVreme = dataGridHitnoZakazivanje.Columns[2].GetCellContent(row) as TextBlock;
+            TextBlock tbLekar = dataGridHitnoZakazivanje.Columns[3].GetCellContent(row) as TextBlock;
+            TextBlock tbSoba = dataGridHitnoZakazivanje.Columns[4].GetCellContent(row) as TextBlock;
+            string update = (tbPacijent.Text + "/" + tbDatum.Text + "/" + tbVreme.Text + "/" + tbLekar.Text + "/" + tbSoba.Text);
+
             TerminiFileStorage t = new TerminiFileStorage();
-            t.ZakazivanjeSekretar(dataGridHitnoZakazivanje);
+            t.ZakazivanjeSekretar(update);
         }
 
         private void PomeranjeTermina_Click(object sender, RoutedEventArgs e)

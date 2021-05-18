@@ -63,8 +63,18 @@ namespace ProjekatSIMS
 
         private void Zakazi_Click(object sender, RoutedEventArgs e)
         {
+            int currentRowIndex = dataGridTerminiDatum.Items.IndexOf(dataGridTerminiDatum.SelectedItem);
+            DataGridRow row = (DataGridRow)dataGridTerminiDatum.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
+
+            TextBlock tbPacijent = dataGridTerminiDatum.Columns[0].GetCellContent(row) as TextBlock;
+            TextBlock tbDatum = dataGridTerminiDatum.Columns[1].GetCellContent(row) as TextBlock;
+            TextBlock tbVreme = dataGridTerminiDatum.Columns[2].GetCellContent(row) as TextBlock;
+            TextBlock tbLekar = dataGridTerminiDatum.Columns[3].GetCellContent(row) as TextBlock;
+            TextBlock tbSoba = dataGridTerminiDatum.Columns[4].GetCellContent(row) as TextBlock;
+            string update = (tbPacijent.Text + "/" + tbDatum.Text + "/" + tbVreme.Text + "/" + tbLekar.Text + "/" + tbSoba.Text);
+
             TerminiFileStorage t = new TerminiFileStorage();
-            t.ZakazivanjeSekretar(dataGridTerminiDatum);
+            t.ZakazivanjeSekretar(update);
         }
 
         private void NazadTermini_Click(object sender, RoutedEventArgs e)
