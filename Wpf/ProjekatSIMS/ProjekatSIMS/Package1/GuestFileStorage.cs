@@ -8,34 +8,27 @@ namespace Package1
 {
    public class GuestFileStorage
    {
-        public ObservableCollection<GuestNalog> Guest
-        {
-            get;
-            set;
-        }
-
         public void Kreiraj(string guestNalog)
         {
             var text = File.ReadAllText(@"naloziGuest.txt");
             File.WriteAllText(@"naloziGuest.txt", text + guestNalog + Environment.NewLine);
-
         }
 
         public void Obrisi(int currentRowIndex)
         {
             try
             {
-                int idp = 0;
-                GuestFileStorage p = new GuestFileStorage();
-                List<string> sviNalozi = p.procitaniGuestNalozi();
+                int id = 0;
+                GuestFileStorage g = new GuestFileStorage();
+                List<string> sviNalozi = g.procitaniGuestNalozi();
                 foreach (string sviN in sviNalozi)
                 {
-                    if (idp == currentRowIndex)
+                    if (id == currentRowIndex)
                     {
                         sviNalozi.RemoveAt(currentRowIndex);
                         File.WriteAllLines(@"naloziGuest.txt", sviNalozi);
                     }
-                    idp++;
+                    id++;
                 }
             }
             catch (Exception e)
@@ -52,12 +45,7 @@ namespace Package1
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    String[] informacije = line.Split('/');
-                    String ime = informacije[0];
-                    String prezime = informacije[1];
-                    String jmbg = informacije[2];
-
-                    guestNalozi.Add(ime + "/" + prezime + "/" + jmbg);
+                    guestNalozi.Add(line);
                 }
             }
             return guestNalozi;

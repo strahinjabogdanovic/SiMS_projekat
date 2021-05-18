@@ -110,15 +110,6 @@ namespace ProjekatSIMS
 
         }
 
-        /*
-        private void PrikaziSveInfo_Click(object sender, RoutedEventArgs e)
-        {
-            NaloziPacijenataFileStorage n = new NaloziPacijenataFileStorage();
-            n.Prikazi(dataGridNalozi);
-            this.NavigationService.Navigate(new PageSPrikazInfo());
-
-        }*/
-
         private void GuestNalog_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new PageGuestNalozi());

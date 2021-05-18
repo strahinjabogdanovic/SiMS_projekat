@@ -8,12 +8,6 @@ namespace Package1
 {
    public class ObavestenjaFileStorage
    {
-        public ObservableCollection<Obavestenja> Obavesti
-        {
-            get;
-            set;
-        }
-
         public void Kreiraj(string obavestenje)
         {
             var text = File.ReadAllText(@"obavestenja.txt");
@@ -24,17 +18,17 @@ namespace Package1
         {
             try
             {
-                int idp = 0;
-                ObavestenjaFileStorage p = new ObavestenjaFileStorage();
-                List<string> svaObavestenja = p.procitanaObavestenja();
+                int id = 0;
+                ObavestenjaFileStorage o = new ObavestenjaFileStorage();
+                List<string> svaObavestenja = o.procitanaObavestenja();
                 foreach (string svaO in svaObavestenja)
                 {
-                    if (idp == currentRowIndex)
+                    if (id == currentRowIndex)
                     {
                         svaObavestenja.RemoveAt(currentRowIndex);
                         File.WriteAllLines(@"obavestenja.txt", svaObavestenja);
                     }
-                    idp++;
+                    id++;
                 }
             }
             catch (Exception e)
@@ -47,24 +41,24 @@ namespace Package1
       
       public void Update(string update, int currentRowIndex)
       {
-            int idp = 0;
+            int id = 0;
             string obavestenja = "";
 
             try
             {
-                ObavestenjaFileStorage p = new ObavestenjaFileStorage();
-                List<string> svaObavestenja = p.procitanaObavestenja();
+                ObavestenjaFileStorage o = new ObavestenjaFileStorage();
+                List<string> svaObavestenja = o.procitanaObavestenja();
                 foreach (string svaO in svaObavestenja)
                 {
                     obavestenja = svaO;
                     string[] informacije = obavestenja.Split('/');
-                    if (idp == currentRowIndex)
+                    if (id == currentRowIndex)
                     {
                         svaObavestenja.RemoveAt(currentRowIndex);
                         svaObavestenja.Insert(currentRowIndex, update);
                         File.WriteAllLines(@"obavestenja.txt", svaObavestenja);
                     }
-                    idp++;
+                    id++;
                 }
             }
             catch (Exception e)
@@ -80,13 +74,7 @@ namespace Package1
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    String[] informacije = line.Split('/');
-                    String naslov = informacije[0];
-                    String sadrzaj = informacije[1];
-                    String datum = informacije[2];
-                    String uloga = informacije[3];
-
-                    obavestenja.Add(naslov + "/" + sadrzaj + "/" + datum + "/" + uloga);
+                    obavestenja.Add(line);
                 }
             }
             return obavestenja;

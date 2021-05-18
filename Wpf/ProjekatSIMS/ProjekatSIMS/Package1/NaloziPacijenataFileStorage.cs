@@ -9,48 +9,41 @@ namespace Package1
 {
    public class NaloziPacijenataFileStorage
    {
-        
-        public ObservableCollection<Pacijent> Korisnici
-        {
-            get;
-            set;
-        }
-
         Pol p;
-        public void Kreiraj(string nalog, string gender, string nalogNastavak)
+        public void Kreiraj(string nalog, string pol, string nalogNastavak)
         {     
             string nalozi = "";           
-            int currentRowIndex = 0;
-            NaloziPacijenataFileStorage pn = new NaloziPacijenataFileStorage();
-            List<string> sviNalozi = pn.procitaniNalozi();
+            int trenutniRed = 0;
+            NaloziPacijenataFileStorage np = new NaloziPacijenataFileStorage();
+            List<string> sviNalozi = np.procitaniNalozi();
             foreach (string sviN in sviNalozi)
             {
                 nalozi = sviN;
                 string[] informacije = nalozi.Split('/');
-                currentRowIndex = int.Parse(informacije[8]) + 1;
+                trenutniRed = int.Parse(informacije[8]) + 1;
             }
 
             var text = File.ReadAllText(@"podaci.txt");
-            File.WriteAllText(@"podaci.txt", text + nalog + "/" + proveraPola(gender) + "/" + nalogNastavak + "/" + currentRowIndex + Environment.NewLine);
+            File.WriteAllText(@"podaci.txt", text + nalog + "/" + proveraPola(pol) + "/" + nalogNastavak + "/" + trenutniRed + Environment.NewLine);
 
             var tekst = File.ReadAllText(@"medKarton.txt");
-            File.WriteAllText(@"medKarton.txt", tekst + currentRowIndex + "/" + Environment.NewLine);
+            File.WriteAllText(@"medKarton.txt", tekst + trenutniRed + "/" + Environment.NewLine);
 
         }
 
-        public string proveraPola(string gender)
+        public string proveraPola(string polOsobe)
         {
             string pol = "";
 
-            if (gender != null)
+            if (polOsobe != null)
             {
-                if (gender.Contains("Muski"))
+                if (polOsobe.Contains("Muski"))
                 {
                     p = Pol.Muski;
                     pol = "Muski";
 
                 }
-                else if (gender.Contains("Zenski"))
+                else if (polOsobe.Contains("Zenski"))
                 {
                     p = Pol.Zenski;
                     pol = "Zenski";
@@ -60,20 +53,20 @@ namespace Package1
         }
 
         public void Obrisi(int currentRowIndex)
-      {          
+        {          
             try
             {
-                int idp = 0;
-                NaloziPacijenataFileStorage p = new NaloziPacijenataFileStorage();
-                List<string> sviNalozi = p.procitaniNalozi();
+                int id = 0;
+                NaloziPacijenataFileStorage np = new NaloziPacijenataFileStorage();
+                List<string> sviNalozi = np.procitaniNalozi();
                 foreach (string sviN in sviNalozi)
                 {
-                    if (idp == currentRowIndex)
+                    if (id == currentRowIndex)
                     {
                         sviNalozi.RemoveAt(currentRowIndex);
                         File.WriteAllLines(@"podaci.txt", sviNalozi);
                     }
-                    idp++;
+                    id++;
                 }
             }
             catch (Exception e)
@@ -81,56 +74,44 @@ namespace Package1
 
             try
             {
-                int idp = 0;
-                NaloziPacijenataFileStorage p = new NaloziPacijenataFileStorage();
-                List<string> sviNalozi = p.procitaniMedKartoni();
+                int id = 0;
+                NaloziPacijenataFileStorage np = new NaloziPacijenataFileStorage();
+                List<string> sviNalozi = np.procitaniMedKartoni();
                 foreach (string sviN in sviNalozi)
                 {
-                    if (idp == currentRowIndex)
+                    if (id == currentRowIndex)
                     {
                         sviNalozi.RemoveAt(currentRowIndex);
                         File.WriteAllLines(@"medKarton.txt", sviNalozi);
                     }
-                    idp++;
+                    id++;
                 }
             }
             catch (Exception e)
             { }
         }
       
-      
-      public void Prikazi(DataGrid dataGridNalozi)
-      {
-            int currentRowIndex = dataGridNalozi.Items.IndexOf(dataGridNalozi.SelectedItem);
-
-            using (var sw = new StreamWriter("redovi.txt"))
-            {
-                sw.WriteLine(currentRowIndex);
-            }
-
-        }
-      
       public void Update(string update, int currentRowIndex)
       {
-            int idp = 0;
+            int id = 0;
             string nalozi = "";
 
             try
             {
-                NaloziPacijenataFileStorage p = new NaloziPacijenataFileStorage();
-                List<string> sviNalozi = p.procitaniNalozi();
+                NaloziPacijenataFileStorage np = new NaloziPacijenataFileStorage();
+                List<string> sviNalozi = np.procitaniNalozi();
                 foreach (string sviN in sviNalozi)
                 {
                     nalozi = sviN;
                     string[] informacije = nalozi.Split('/');
                     string[] infoOstalo = update.Split('/');
-                    if (idp == currentRowIndex)
+                    if (id == currentRowIndex)
                     {
                         sviNalozi.RemoveAt(currentRowIndex);
                         sviNalozi.Insert(currentRowIndex, infoOstalo[0] + "/" + infoOstalo[1] + "/" + infoOstalo[2] + "/" + informacije[3] + "/" + infoOstalo[3] + "/" + informacije[5] + "/" + infoOstalo[4] + "/" + informacije[7] + "/" + informacije[8]);
                         File.WriteAllLines(@"podaci.txt", sviNalozi);
                     }
-                    idp++;
+                    id++;
                 }
             }
             catch (Exception e)
@@ -197,17 +178,7 @@ namespace Package1
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    String[] informacije = line.Split('/');
-                    String ime = informacije[0];
-                    String prezime = informacije[1];
-                    String jmbg = informacije[2];
-                    String pol = informacije[3];
-                    String datum = informacije[4];
-                    String mail = informacije[5];
-                    String brojTel = informacije[6];
-                    String adresa = informacije[7];
-                    String idx = informacije[8];
-                    nalozi.Add(ime + "/" + prezime + "/" + jmbg + "/" + pol + "/" + datum + "/" + mail + "/" + brojTel + "/" + adresa + "/" + idx);
+                    nalozi.Add(line);
                 }
             }
             return nalozi;
@@ -222,11 +193,7 @@ namespace Package1
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    String[] informacije = line.Split('/');
-                    String idx = informacije[0];
-                    String alergen = informacije[1];
-
-                    medKartoni.Add(idx + "/" + alergen);
+                    medKartoni.Add(line);
                 }
             }
             return medKartoni;

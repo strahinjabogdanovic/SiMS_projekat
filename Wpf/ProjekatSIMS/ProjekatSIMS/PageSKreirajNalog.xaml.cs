@@ -34,7 +34,7 @@ namespace ProjekatSIMS
         {
             NaloziPacijenataFileStorage np = new NaloziPacijenataFileStorage();
 
-            string gender = comboBox.SelectedValue.ToString();
+            string pol = comboBox.SelectedValue.ToString();
             string ime = textBox.Text;
             string prezime = textBox1.Text;
             string jmbg = textBox2.Text;
@@ -48,7 +48,7 @@ namespace ProjekatSIMS
             string nalog = (ime + "/" + prezime + "/" + jmbg);
             string nalogNastavak = (datum1 + "/" + mail + "/" + brojTel + "/" + adresa);
 
-            np.Kreiraj(nalog, gender, nalogNastavak);
+            np.Kreiraj(nalog, pol, nalogNastavak);
 
             this.NavigationService.Navigate(new PageSekretar());
         }
