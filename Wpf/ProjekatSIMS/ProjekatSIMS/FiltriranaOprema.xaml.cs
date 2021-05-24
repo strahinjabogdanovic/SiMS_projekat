@@ -14,13 +14,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjekatSIMS.Package1.Model;
 
 namespace ProjekatSIMS
 {
     public partial class FiltriranaOprema : Window
     {
-        private readonly string filePath;
-
         public ObservableCollection<ProstorijeOprema> PO
         {
             get;

@@ -15,6 +15,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjekatSIMS.Package1.Model;
+using ProjekatSIMS.Package1.Repozitorijum;
 
 namespace ProjekatSIMS
 {

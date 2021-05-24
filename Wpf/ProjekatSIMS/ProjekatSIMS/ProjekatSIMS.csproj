@@ -76,9 +76,6 @@
     <Compile Include="FiltriranaOprema.xaml.cs">
       <DependentUpon>FiltriranaOprema.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GuestNalozi.xaml.cs">
-      <DependentUpon>GuestNalozi.xaml</DependentUpon>
-    </Compile>
     <Compile Include="IzdavanjeRecepta.xaml.cs">
       <DependentUpon>IzdavanjeRecepta.xaml</DependentUpon>
     </Compile>
@@ -90,12 +87,6 @@
     </Compile>
     <Compile Include="KartonLekar.xaml.cs">
       <DependentUpon>KartonLekar.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="KreirajGuestNalog.xaml.cs">
-      <DependentUpon>KreirajGuestNalog.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="KreirajNalog.xaml.cs">
-      <DependentUpon>KreirajNalog.xaml</DependentUpon>
     </Compile>
     <Compile Include="KreirajProstoriju.xaml.cs">
       <DependentUpon>KreirajProstoriju.xaml</DependentUpon>
@@ -123,25 +114,24 @@
     </Compile>
     <Compile Include="Package1\AnketaStorage.cs" />
     <Compile Include="Package1\antiTrol.cs" />
-    <Compile Include="Package1\DummyClass.cs" />
-    <Compile Include="Package1\GuestFileStorage.cs" />
-    <Compile Include="Package1\Lek.cs" />
-    <Compile Include="Package1\LekarFileStorage.cs" />
-    <Compile Include="Package1\LekoviFileStorage.cs" />
-    <Compile Include="Package1\MedIzvestaj.cs" />
-    <Compile Include="Package1\NaloziPacijenataFileStorage.cs" />
-    <Compile Include="Package1\Obavestenja.cs" />
-    <Compile Include="Package1\ObavestenjaFileStorage.cs" />
-    <Compile Include="Package1\Oprema.cs" />
-    <Compile Include="Package1\OpremaFileStorage.cs" />
-    <Compile Include="Package1\PacijentFileStorage.cs" />
-    <Compile Include="Package1\ProstorijeFileStorage.cs" />
-    <Compile Include="Package1\ProstorijeOprema.cs" />
-    <Compile Include="Package1\Recepti.cs" />
-    <Compile Include="Package1\Sastojci.cs" />
-    <Compile Include="Package1\TerminiFileStorage.cs" />
-    <Compile Include="Package1\TerminiPacijenata.cs" />
-    <Compile Include="Package1\UputiFileStorage.cs" />
+    <Compile Include="Package1\Repozitorijum\GuestFileStorage.cs" />
+    <Compile Include="Package1\Model\Lek.cs" />
+    <Compile Include="Package1\Model\MedIzvestaj.cs" />
+    <Compile Include="Package1\Model\Obavestenja.cs" />
+    <Compile Include="Package1\Model\Oprema.cs" />
+    <Compile Include="Package1\Model\ProstorijeOprema.cs" />
+    <Compile Include="Package1\Model\Recepti.cs" />
+    <Compile Include="Package1\Repozitorijum\LekarFileStorage.cs" />
+    <Compile Include="Package1\Repozitorijum\LekoviFileStorage.cs" />
+    <Compile Include="Package1\Repozitorijum\NaloziPacijenataFileStorage.cs" />
+    <Compile Include="Package1\Repozitorijum\ObavestenjaFileStorage.cs" />
+    <Compile Include="Package1\Repozitorijum\OpremaFileStorage.cs" />
+    <Compile Include="Package1\Repozitorijum\PacijentFileStorage.cs" />
+    <Compile Include="Package1\Repozitorijum\ProstorijeFileStorage.cs" />
+    <Compile Include="Package1\Repozitorijum\TerminiFileStorage.cs" />
+    <Compile Include="Package1\Repozitorijum\UputiFileStorage.cs" />
+    <Compile Include="Package1\Model\Sastojci.cs" />
+    <Compile Include="Package1\Model\TerminiPacijenata.cs" />
     <Compile Include="PageAzurirajAlergene.xaml.cs">
       <DependentUpon>PageAzurirajAlergene.xaml</DependentUpon>
     </Compile>
@@ -244,9 +234,6 @@
     <Compile Include="ValidacijaLeka.xaml.cs">
       <DependentUpon>ValidacijaLeka.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Window2.xaml.cs">
-      <DependentUpon>Window2.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ZahteviZaValidaciju.xaml.cs">
       <DependentUpon>ZahteviZaValidaciju.xaml</DependentUpon>
     </Compile>
@@ -278,10 +265,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GuestNalozi.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="IzdavanjeRecepta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -295,14 +278,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="KartonLekar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="KreirajGuestNalog.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="KreirajNalog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -486,31 +461,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Window2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ZahteviZaValidaciju.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Package1\GuestNalog.cs" />
-    <Compile Include="Package1\Korisnik.cs" />
-    <Compile Include="Package1\Lekar.cs" />
-    <Compile Include="Package1\Pacijent.cs" />
-    <Compile Include="Package1\Pol.cs" />
-    <Compile Include="Package1\Prostorije.cs" />
-    <Compile Include="Package1\RegistrovanKorisnik.cs" />
-    <Compile Include="Package1\Sekretar.cs" />
-    <Compile Include="Package1\Specijalizacija.cs" />
-    <Compile Include="Package1\Termin.cs" />
-    <Compile Include="Package1\TipZaposlenog.cs" />
-    <Compile Include="Package1\Upravnik.cs" />
+    <Compile Include="Package1\Model\GuestNalog.cs" />
+    <Compile Include="Package1\Model\Korisnik.cs" />
+    <Compile Include="Package1\Model\Lekar.cs" />
+    <Compile Include="Package1\Model\Pacijent.cs" />
+    <Compile Include="Package1\Model\Pol.cs" />
+    <Compile Include="Package1\Model\Prostorije.cs" />
+    <Compile Include="Package1\Model\RegistrovanKorisnik.cs" />
+    <Compile Include="Package1\Model\Sekretar.cs" />
+    <Compile Include="Package1\Model\Specijalizacija.cs" />
+    <Compile Include="Package1\Model\Termin.cs" />
+    <Compile Include="Package1\Model\TipZaposlenog.cs" />
+    <Compile Include="Package1\Model\Upravnik.cs" />
     <Compile Include="Package1\ZakazivanjeTermina.cs" />
-    <Compile Include="Package1\Zaposleni.cs" />
-    <Compile Include="Package1\ZdravstveniKarton.cs" />
+    <Compile Include="Package1\Model\Zaposleni.cs" />
+    <Compile Include="Package1\Model\ZdravstveniKarton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -537,6 +508,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

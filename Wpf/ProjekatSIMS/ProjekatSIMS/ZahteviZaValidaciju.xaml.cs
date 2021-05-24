@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Package1;
 using System.Collections.ObjectModel;
+using ProjekatSIMS.Package1.Model;
 
 namespace ProjekatSIMS
 {
