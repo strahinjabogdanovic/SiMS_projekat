@@ -114,6 +114,12 @@
     </Compile>
     <Compile Include="Package1\AnketaStorage.cs" />
     <Compile Include="Package1\antiTrol.cs" />
+    <Compile Include="Package1\Kontroler\LekoviKontroler.cs" />
+    <Compile Include="Package1\Kontroler\OpremaKontroler.cs" />
+    <Compile Include="Package1\Kontroler\ProstorijeKontroler.cs" />
+    <Compile Include="Package1\Servis\LekoviServis.cs" />
+    <Compile Include="Package1\Servis\OpremaServis.cs" />
+    <Compile Include="Package1\Servis\ProstorijeServis.cs" />
     <Compile Include="Package1\Repozitorijum\GuestFileStorage.cs" />
     <Compile Include="Package1\Model\Lek.cs" />
     <Compile Include="Package1\Model\MedIzvestaj.cs" />

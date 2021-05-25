@@ -18,7 +18,7 @@ namespace ProjekatSIMS.Package1.Repozitorijum
             set;
         }
         public void Kreiraj(string tb, string tb1, string tb2, string tb3, string tb4)
-      {
+        {
             var text = File.ReadAllText(@"prostorije.txt");
             File.WriteAllText(@"prostorije.txt", text + tb + "/" + tb1 + "/" + tb2 + "/" + tb3 + "/" + tb4 + "/" + "-" + Environment.NewLine);
 
@@ -52,7 +52,7 @@ namespace ProjekatSIMS.Package1.Repozitorijum
       {
             SveInfoUpravnik svu = new SveInfoUpravnik(currentRowIndex);
             svu.ShowDialog();
-        }
+      }
       
       public void Update(string update, int currentRowIndex)
       {
@@ -82,8 +82,8 @@ namespace ProjekatSIMS.Package1.Repozitorijum
 
         public void stvari(int currentRowIndex)
         {
-            Stvari w1 = new Stvari(currentRowIndex);
-            w1.ShowDialog();
+            Stvari st = new Stvari(currentRowIndex);
+            st.ShowDialog();
         }
 
         public List<string> prostorije_u_cb(int izabrani_red)
@@ -222,20 +222,14 @@ namespace ProjekatSIMS.Package1.Repozitorijum
             DateTime dP = DateTime.Parse(datumiRen[0] + " 00:00");
             DateTime dK = DateTime.Parse(datumiRen[1] + " 00:00");
 
-            Console.WriteLine(dP);
-            Console.WriteLine(dK);
-
             TerminiFileStorage t = new TerminiFileStorage();
             List<string> sveTermini = t.procitaniTermini();
-
-
 
                 foreach (string sveT in sveTermini)
                 {
                     termin = sveT;
                     string[] infoTermin = termin.Split('/');
                     DateTime dd = DateTime.Parse(infoTermin[0] + " 15:00");
-                    Console.WriteLine(dd);
                     if (DateTime.Compare(dP, dK) < 0 && DateTime.Compare(dP, dd) <0 && DateTime.Compare(dK, dd) > 0 && infoTermin[3].Equals(prostorijaRen))
                     {
                             date = false;

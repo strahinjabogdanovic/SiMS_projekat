@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjekatSIMS.Package1.Kontroler;
 using ProjekatSIMS.Package1.Model;
 using ProjekatSIMS.Package1.Repozitorijum;
 
@@ -39,12 +40,12 @@ namespace ProjekatSIMS
         private void potvrdi_click(object sender, RoutedEventArgs e)
         {
             Close();
-            OpremaFileStorage p = new OpremaFileStorage();
+            OpremaKontroler ok = new OpremaKontroler();
 
             string tb = tb2.Text;
             string tb1 = tb3.Text;
 
-            p.Kreiraj(tb, tb1, redStvari);
+            ok.Kreiraj(tb, tb1, redStvari);
         }
     }
 }

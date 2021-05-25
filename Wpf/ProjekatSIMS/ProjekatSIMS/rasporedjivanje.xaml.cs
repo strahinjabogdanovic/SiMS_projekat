@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Package1;
+using ProjekatSIMS.Package1.Kontroler;
 using ProjekatSIMS.Package1.Repozitorijum;
 
 namespace ProjekatSIMS
@@ -22,14 +23,14 @@ namespace ProjekatSIMS
     {
         int izabrani_red = 0;
         ProstorijeFileStorage p = new ProstorijeFileStorage();
-        OpremaFileStorage o = new OpremaFileStorage();
+        private ProstorijeKontroler pk = new ProstorijeKontroler();
         public rasporedjivanje(int currentRowIndex)
         {
             InitializeComponent();
 
             izabrani_red = currentRowIndex;
 
-            List<string> imena_prostorija = p.prostorije_u_cb(izabrani_red);
+            List<string> imena_prostorija = pk.prostorije_u_cb(izabrani_red);
             foreach (string imena in imena_prostorija)
             {
                 ComboBoxItem newitem = new ComboBoxItem();
@@ -85,9 +86,9 @@ namespace ProjekatSIMS
             String kolicina_u = t1.Text;
 
             Close();
-            p.prostorija_iz(naziv_u, kolicina_u, izabrani_red);
+            pk.prostorija_iz(naziv_u, kolicina_u, izabrani_red);
             stoperica();
-            p.prostorija_u(cb1.SelectedValue.ToString(),naziv_u, kolicina_u);
+            pk.prostorija_u(cb1.SelectedValue.ToString(),naziv_u, kolicina_u);
 
         }
     }

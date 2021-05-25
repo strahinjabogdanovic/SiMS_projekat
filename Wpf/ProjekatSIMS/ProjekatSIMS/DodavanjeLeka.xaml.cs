@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjekatSIMS.Package1.Kontroler;
 using ProjekatSIMS.Package1.Repozitorijum;
 
 namespace ProjekatSIMS
@@ -26,7 +27,7 @@ namespace ProjekatSIMS
         private void potvrdi_click(object sender, RoutedEventArgs e)
         {
             Close();
-            LekoviFileStorage l = new LekoviFileStorage();
+            LekoviKontroler lk = new LekoviKontroler();
 
             string t1 = tb1.Text;
             string t2 = tb2.Text;
@@ -35,7 +36,7 @@ namespace ProjekatSIMS
 
             MessageBox.Show("Lek poslat na validaciju kod lekara");
 
-            l.Kreiraj(t1, t2, t3, t4);
+            lk.Kreiraj(t1, t2, t3, t4);
 
         }
     }

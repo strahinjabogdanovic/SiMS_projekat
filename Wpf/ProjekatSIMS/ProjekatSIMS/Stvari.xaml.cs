@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjekatSIMS.Package1.Kontroler;
 using ProjekatSIMS.Package1.Model;
 using ProjekatSIMS.Package1.Repozitorijum;
 
@@ -78,7 +79,7 @@ namespace ProjekatSIMS
 
         private void obrisi_opremu_click(object sender, RoutedEventArgs e)
         {
-            OpremaFileStorage p = new OpremaFileStorage();
+            OpremaKontroler ok = new OpremaKontroler();
             int currentRowIndexO = dataGridOprema.Items.IndexOf(dataGridOprema.SelectedItem);
             
             if (Oprema.Count > 0)
@@ -90,7 +91,7 @@ namespace ProjekatSIMS
                 MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            p.Obrisi(redProstorije, currentRowIndexO);
+            ok.Obrisi(redProstorije, currentRowIndexO);
 
 
         }
@@ -103,8 +104,8 @@ namespace ProjekatSIMS
             TextBlock t1 = dataGridOprema.Columns[0].GetCellContent(row) as TextBlock;
             TextBlock t2 = dataGridOprema.Columns[1].GetCellContent(row) as TextBlock;
 
-            OpremaFileStorage o = new OpremaFileStorage();
-            o.Update(redProstorije, currentRowIndex, t1.Text, t2.Text);
+            OpremaKontroler ok = new OpremaKontroler();
+            ok.Update(redProstorije, currentRowIndex, t1.Text, t2.Text);
         }
     }
 }

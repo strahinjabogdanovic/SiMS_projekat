@@ -1,7 +1,7 @@
-Sala 10/A1/operacije/rukavice,makaze,stolica,krevet/23,5,1,1/-
-Sala 11/A4/operacije/rukavice,sto,krevet/27,3,2/-
+Sala 10/A1/operacije/rukavice,makaze,stolica,krevet/22,5,1,1/-
+Sala 11/A4/operacije/rukavice,sto,krevet/28,3,2/-
 Sala 14/A2/pregled/makaze,sto,rukavice,krevet/4,2,1,3/-
 Sala 15/A3/pregled/makaze,rukavice,stolica/1,8,1/-
 Sala 16/A5/operacije/sto,makaze/1,1/-
 Magacin/1/Ostava/rukavice,makaze,sto,krevet/150,50,20,50/nedostupno
-Sala 18/B13/pregled/testera,makaze,sto/2,6,1/-
+Sala 18/B12/pregled/testera,makaze,sto/2,6,1/-

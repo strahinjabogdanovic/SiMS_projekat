@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjekatSIMS.Package1.Kontroler;
 using ProjekatSIMS.Package1.Model;
 using ProjekatSIMS.Package1.Repozitorijum;
 
@@ -59,7 +60,7 @@ namespace ProjekatSIMS
 
         private void obrisi_lek(object sender, RoutedEventArgs e)
         {
-            LekoviFileStorage l = new LekoviFileStorage();
+            LekoviKontroler lk = new LekoviKontroler();
             int currentRowIndex = dataGridLekovi.Items.IndexOf(dataGridLekovi.SelectedItem);
             if (Lek.Count > 0)
             {
@@ -70,7 +71,7 @@ namespace ProjekatSIMS
                 MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            l.Obrisi(currentRowIndex);
+            lk.Obrisi(currentRowIndex);
         }
 
         private void izmeni_lek(object sender, RoutedEventArgs e)
@@ -84,8 +85,8 @@ namespace ProjekatSIMS
             TextBlock t4 = dataGridLekovi.Columns[3].GetCellContent(row) as TextBlock;
             string update = (t1.Text + "/" + t2.Text + "/" + t3.Text + "/" + t4.Text + "/");
 
-            LekoviFileStorage p = new LekoviFileStorage();
-            p.Izmeni(update, currentRowIndex);
+            LekoviKontroler lk = new LekoviKontroler();
+            lk.Izmeni(update, currentRowIndex);
         }
     }
 }

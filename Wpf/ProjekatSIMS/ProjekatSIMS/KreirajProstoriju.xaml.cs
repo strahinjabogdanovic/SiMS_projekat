@@ -14,6 +14,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjekatSIMS.Package1;
+using ProjekatSIMS.Package1.Kontroler;
 using ProjekatSIMS.Package1.Model;
 using ProjekatSIMS.Package1.Repozitorijum;
 
@@ -40,7 +42,7 @@ namespace ProjekatSIMS
         private void Potvrdi_Click(object sender, RoutedEventArgs e)
         {
             Close();
-            ProstorijeFileStorage p = new ProstorijeFileStorage();
+            ProstorijeKontroler pk = new ProstorijeKontroler();
 
             string tb = textBox.Text;
             string tb1 = textBox1.Text;
@@ -48,7 +50,7 @@ namespace ProjekatSIMS
             string tb3 = textBox3.Text;
             string tb4 = textBox4.Text;
 
-            p.Kreiraj(tb, tb1, tb2, tb3, tb4);
+            pk.Kreiraj(tb, tb1, tb2, tb3, tb4);
         }
     }
 }
