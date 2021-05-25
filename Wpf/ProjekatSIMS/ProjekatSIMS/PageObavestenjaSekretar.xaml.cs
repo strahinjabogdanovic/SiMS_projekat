@@ -17,6 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProjekatSIMS.Package1.Model;
 using ProjekatSIMS.Package1.Repozitorijum;
+using ProjekatSIMS.Package1.Kontroler;
 
 namespace ProjekatSIMS
 {
@@ -61,7 +62,7 @@ namespace ProjekatSIMS
 
         private void Obrisi_Click(object sender, RoutedEventArgs e)
         {
-            ObavestenjaFileStorage n = new ObavestenjaFileStorage();           
+            ObavestenjaKontroler ok = new ObavestenjaKontroler();          
             int currentRowIndex = dataGridObavestenja.Items.IndexOf(dataGridObavestenja.SelectedItem);
             if (currentRowIndex != -1)
             {
@@ -74,7 +75,7 @@ namespace ProjekatSIMS
                     MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                n.Obrisi(currentRowIndex);
+                ok.Obrisi(currentRowIndex);
             }
         }
 
@@ -89,8 +90,8 @@ namespace ProjekatSIMS
             TextBlock datum = dataGridObavestenja.Columns[3].GetCellContent(row) as TextBlock;
             string update = (naziv.Text + "/" + sadraj.Text + "/" + datum.Text + "/" + uloga.Text);
 
-            ObavestenjaFileStorage p = new ObavestenjaFileStorage();
-            p.Update(update, currentRowIndex);
+            ObavestenjaKontroler ok = new ObavestenjaKontroler();
+            ok.Update(update, currentRowIndex);
         }
 
         private void Kreiraj_Click(object sender, RoutedEventArgs e)

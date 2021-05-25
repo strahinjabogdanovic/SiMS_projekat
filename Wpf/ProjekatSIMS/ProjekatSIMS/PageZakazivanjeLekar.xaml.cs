@@ -18,6 +18,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProjekatSIMS.Package1.Model;
 using ProjekatSIMS.Package1.Repozitorijum;
+using ProjekatSIMS.Package1.Kontroler;
 
 namespace ProjekatSIMS
 {
@@ -91,8 +92,8 @@ namespace ProjekatSIMS
             TextBlock tbSoba = dataGridTerminiLekar.Columns[4].GetCellContent(row) as TextBlock;
             string update = (tbPacijent.Text + "/" + tbDatum.Text + "/" + tbVreme.Text + "/" + tbLekar.Text + "/" + tbSoba.Text);
 
-            TerminiFileStorage t = new TerminiFileStorage();
-            t.ZakazivanjeSekretar(update);
+            TerminiKontroler tk = new TerminiKontroler();
+            tk.ZakazivanjeSekretar(update);
         }
 
         private void NazadTermini_Click(object sender, RoutedEventArgs e)

@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProjekatSIMS.Package1.Model;
 using ProjekatSIMS.Package1.Repozitorijum;
+using ProjekatSIMS.Package1.Kontroler;
 
 namespace ProjekatSIMS
 {
@@ -34,7 +35,7 @@ namespace ProjekatSIMS
 
         private void PotvrdiNalog_Click(object sender, RoutedEventArgs e)
         {
-            NaloziPacijenataFileStorage np = new NaloziPacijenataFileStorage();
+            NaloziPacijenataKontroler npk = new NaloziPacijenataKontroler();
 
             string pol = comboBox.SelectedValue.ToString();
             string ime = textBox.Text;
@@ -50,7 +51,7 @@ namespace ProjekatSIMS
             string nalog = (ime + "/" + prezime + "/" + jmbg);
             string nalogNastavak = (datum1 + "/" + mail + "/" + brojTel + "/" + adresa);
 
-            np.Kreiraj(nalog, pol, nalogNastavak);
+            npk.Kreiraj(nalog, pol, nalogNastavak);
 
             this.NavigationService.Navigate(new PageSekretar());
         }

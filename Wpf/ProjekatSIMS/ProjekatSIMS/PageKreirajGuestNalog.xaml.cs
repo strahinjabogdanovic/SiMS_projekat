@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProjekatSIMS.Package1.Model;
 using ProjekatSIMS.Package1.Repozitorijum;
+using ProjekatSIMS.Package1.Kontroler;
 
 namespace ProjekatSIMS
 {
@@ -39,12 +40,12 @@ namespace ProjekatSIMS
 
         private void Potvrdi_Click(object sender, RoutedEventArgs e)
         {
-            GuestFileStorage g = new GuestFileStorage();
+            GuestKontroler gk = new GuestKontroler();
             string ime = textBox.Text;
             string prezime = textBox1.Text;
             string jmbg = textBox2.Text;
             string guestNalog = (ime + "/" + prezime + "/" + jmbg);
-            g.Kreiraj(guestNalog);
+            gk.Kreiraj(guestNalog);
 
             this.NavigationService.Navigate(new PageGuestNalozi());
 

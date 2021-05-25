@@ -17,6 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProjekatSIMS.Package1.Model;
 using ProjekatSIMS.Package1.Repozitorijum;
+using ProjekatSIMS.Package1.Kontroler;
 
 namespace ProjekatSIMS
 {
@@ -77,7 +78,7 @@ namespace ProjekatSIMS
 
         private void ObrisiNalog_Click(object sender, RoutedEventArgs e)
         {
-            NaloziPacijenataFileStorage n = new NaloziPacijenataFileStorage();
+            NaloziPacijenataKontroler npk = new NaloziPacijenataKontroler();
             int currentRowIndex = dataGridNalozi.Items.IndexOf(dataGridNalozi.SelectedItem);
 
             if (currentRowIndex != -1)
@@ -90,7 +91,7 @@ namespace ProjekatSIMS
                 {
                     MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-                n.Obrisi(currentRowIndex);
+                npk.Obrisi(currentRowIndex);
             }
 
         }
@@ -107,8 +108,8 @@ namespace ProjekatSIMS
             TextBlock brojTel = dataGridNalozi.Columns[4].GetCellContent(row) as TextBlock;
             string update = (ime.Text + "/" + prezime.Text + "/" + jmbg.Text + "/" + datum.Text + "/" + brojTel.Text);
 
-            NaloziPacijenataFileStorage p = new NaloziPacijenataFileStorage();
-            p.Update(update, currentRowIndex);
+            NaloziPacijenataKontroler npk = new NaloziPacijenataKontroler();
+            npk.Update(update, currentRowIndex);
 
         }
 
@@ -125,9 +126,7 @@ namespace ProjekatSIMS
         private void MedKarton_Click(object sender, RoutedEventArgs e)
         {
             int currentRowIndex = dataGridNalozi.Items.IndexOf(dataGridNalozi.SelectedItem);
-            NaloziPacijenataFileStorage p = new NaloziPacijenataFileStorage();
             this.NavigationService.Navigate(new PageMedKarton(currentRowIndex));
-
         }
 
         private void Termini_Click(object sender, RoutedEventArgs e)

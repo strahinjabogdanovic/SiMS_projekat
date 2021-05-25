@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProjekatSIMS.Package1.Repozitorijum;
+using ProjekatSIMS.Package1.Kontroler;
 
 namespace ProjekatSIMS
 {
@@ -31,7 +32,7 @@ namespace ProjekatSIMS
 
         private void Potvrdi_Click(object sender, RoutedEventArgs e)
         {
-            ObavestenjaFileStorage n = new ObavestenjaFileStorage();
+            ObavestenjaKontroler ok = new ObavestenjaKontroler();
 
             string naziv = textBox.Text;
             string sadrzaj = textBox1.Text;
@@ -42,7 +43,7 @@ namespace ProjekatSIMS
             string datum1 = termin1[0] + "." + termin1[1] + "." + termin1[2] + ".";
             string obavestenje = (naziv + "/" + sadrzaj + "/" + datum1 + "/" + uloga);
 
-            n.Kreiraj(obavestenje);
+            ok.Kreiraj(obavestenje);
 
             this.NavigationService.Navigate(new PageObavestenjaSekretar());
         }

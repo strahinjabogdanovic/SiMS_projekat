@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProjekatSIMS.Package1.Repozitorijum;
+using ProjekatSIMS.Package1.Kontroler;
 
 namespace ProjekatSIMS
 {
@@ -27,8 +28,8 @@ namespace ProjekatSIMS
             string karton = "";
             InitializeComponent();
             trenutniRed = currentRowIndex;
-            NaloziPacijenataFileStorage p = new NaloziPacijenataFileStorage();
-            List<string> sviMedKartoni = p.procitaniMedKartoni();
+            NaloziPacijenataKontroler npk = new NaloziPacijenataKontroler();
+            List<string> sviMedKartoni = npk.procitaniMedKartoni();
             foreach (string svi in sviMedKartoni)
             {
                 if (redovi == currentRowIndex)
@@ -53,8 +54,8 @@ namespace ProjekatSIMS
 
             try
             {
-                NaloziPacijenataFileStorage p = new NaloziPacijenataFileStorage();
-                List<string> sviKartoni = p.procitaniMedKartoni();
+                NaloziPacijenataKontroler npk = new NaloziPacijenataKontroler();
+                List<string> sviKartoni = npk.procitaniMedKartoni();
                 foreach (string sviK in sviKartoni)
                 {
                     kartoni = sviK;

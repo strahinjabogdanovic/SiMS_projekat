@@ -17,6 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProjekatSIMS.Package1.Model;
 using ProjekatSIMS.Package1.Repozitorijum;
+using ProjekatSIMS.Package1.Kontroler;
 
 namespace ProjekatSIMS
 {
@@ -58,7 +59,7 @@ namespace ProjekatSIMS
 
         private void ObrisiGuestNalog_Click(object sender, RoutedEventArgs e)
         {
-            GuestFileStorage g = new GuestFileStorage();
+            GuestKontroler gk = new GuestKontroler();
             int currentRowIndex = dataGridGuestNalozi.Items.IndexOf(dataGridGuestNalozi.SelectedItem);
             if (currentRowIndex != -1)
             {
@@ -71,7 +72,7 @@ namespace ProjekatSIMS
                     MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                g.Obrisi(currentRowIndex);
+                gk.Obrisi(currentRowIndex);
             }
 
         }

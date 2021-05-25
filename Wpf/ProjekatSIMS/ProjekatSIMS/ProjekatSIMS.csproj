@@ -114,10 +114,17 @@
     </Compile>
     <Compile Include="Package1\AnketaStorage.cs" />
     <Compile Include="Package1\antiTrol.cs" />
+    <Compile Include="Package1\Kontroler\GuestKontroler.cs" />
     <Compile Include="Package1\Kontroler\LekoviKontroler.cs" />
+    <Compile Include="Package1\Kontroler\NaloziPacijenataKontroler.cs" />
+    <Compile Include="Package1\Kontroler\ObavestenjaKontroler.cs" />
     <Compile Include="Package1\Kontroler\OpremaKontroler.cs" />
     <Compile Include="Package1\Kontroler\ProstorijeKontroler.cs" />
+    <Compile Include="Package1\Kontroler\TerminiKontroler.cs" />
+    <Compile Include="Package1\Servis\GuestServis.cs" />
     <Compile Include="Package1\Servis\LekoviServis.cs" />
+    <Compile Include="Package1\Servis\NaloziPacijenataServis.cs" />
+    <Compile Include="Package1\Servis\ObavestenjaServis.cs" />
     <Compile Include="Package1\Servis\OpremaServis.cs" />
     <Compile Include="Package1\Servis\ProstorijeServis.cs" />
     <Compile Include="Package1\Repozitorijum\GuestFileStorage.cs" />
@@ -138,6 +145,7 @@
     <Compile Include="Package1\Repozitorijum\UputiFileStorage.cs" />
     <Compile Include="Package1\Model\Sastojci.cs" />
     <Compile Include="Package1\Model\TerminiPacijenata.cs" />
+    <Compile Include="Package1\Servis\TerminiServis.cs" />
     <Compile Include="PageAzurirajAlergene.xaml.cs">
       <DependentUpon>PageAzurirajAlergene.xaml</DependentUpon>
     </Compile>

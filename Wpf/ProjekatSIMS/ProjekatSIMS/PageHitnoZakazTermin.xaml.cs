@@ -18,6 +18,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProjekatSIMS.Package1.Model;
 using ProjekatSIMS.Package1.Repozitorijum;
+using ProjekatSIMS.Package1.Kontroler;
 
 namespace ProjekatSIMS
 {
@@ -157,13 +158,13 @@ namespace ProjekatSIMS
             TextBlock tbSoba = dataGridHitnoZakazivanje.Columns[4].GetCellContent(row) as TextBlock;
             string update = (tbPacijent.Text + "/" + tbDatum.Text + "/" + tbVreme.Text + "/" + tbLekar.Text + "/" + tbSoba.Text);
 
-            TerminiFileStorage t = new TerminiFileStorage();
-            t.ZakazivanjeSekretar(update);
+            TerminiKontroler tk = new TerminiKontroler();
+            tk.ZakazivanjeSekretar(update);
         }
 
         private void PomeranjeTermina_Click(object sender, RoutedEventArgs e)
         {
-            TerminiFileStorage t = new TerminiFileStorage();
+            TerminiKontroler tk = new TerminiKontroler();
             int currentRowIndex = dataGridHitnoZakazivanje.Items.IndexOf(dataGridHitnoZakazivanje.SelectedItem);
 
             if (currentRowIndex != -1)
@@ -178,7 +179,7 @@ namespace ProjekatSIMS
                     MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                t.PomeranjeTerminaSekretar(k);
+                tk.PomeranjeTerminaSekretar(k);
             }
 
             this.NavigationService.Navigate(new PageHitnoZakazTermin(oblastL));
