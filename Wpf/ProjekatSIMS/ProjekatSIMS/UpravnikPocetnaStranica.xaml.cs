@@ -146,7 +146,7 @@ namespace ProjekatSIMS
             string update = (t1.Text + "/" + t2.Text + "/" + t3.Text + "/" + t4.Text + "/");
 
             ProstorijeFileStorage p = new ProstorijeFileStorage();
-            p.renoviranje(update, currentRowIndex, t5.Text);
+            p.renoviranje(update, currentRowIndex, t5.Text, t2.Text);
         }
     }
 }

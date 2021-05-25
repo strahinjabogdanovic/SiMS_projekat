@@ -24,7 +24,9 @@
 19.05.2021./18:00/Jova Jovic/A2/24/Milutin Gordic/  
 19.05.2021./18:30/Jova Jovic/A2/25/Marija Pavlov/ 
 19.05.2021./19:30/Jova Jovic/A2/26/ /
-19.05.2021./17:30/Jovan Jovanovic/A2/27/Masa Pasic/ 
-19.05.2021./18:00/Jovan Jovanovic/A2/28/Ana Markovic/  
-19.05.2021./18:30/Jovan Jovanovic/A2/29/ / 
-19.05.2021./19:00/Jovan Jovanovic/A2/30/ / 
+19.05.2021./17:30/Jovan Jovanovic/A6/27/Masa Pasic/ 
+19.05.2021./18:00/Jovan Jovanovic/A6/28/Ana Markovic/  
+19.05.2021./18:30/Jovan Jovanovic/A1/29/ / 
+23.05.2021./19:00/Jovan Jovanovic/A1/30/Ana Markovic/ 
+30.05.2021./19:00/Jovan Jovanovic/A1/31/ / 
+15.06.2021./10:00/Jovan Jovanovic/A1/33/ /

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Windows;
 using Package1;
 using ProjekatSIMS.Package1.Model;
 
@@ -83,18 +84,6 @@ namespace ProjekatSIMS.Package1.Repozitorijum
         {
             Stvari w1 = new Stvari(currentRowIndex);
             w1.ShowDialog();
-        }
-
-        public int red_prostorije(string s)
-        {
-            int red = 0;
-            using (var sr = new StreamReader(s))
-            {
-                string ucitano = "";
-                ucitano = sr.ReadLine();
-                red = int.Parse(ucitano);
-            }
-            return red;
         }
 
         public List<string> prostorije_u_cb(int izabrani_red)
@@ -221,31 +210,67 @@ namespace ProjekatSIMS.Package1.Repozitorijum
             { }
         }
 
-        public void renoviranje(string update, int currentRowIndex, string ren)
+        public void renoviranje(string update, int currentRowIndex, string ren, string prostorijaRen)
         {
             int idp = 0;
             string prostorija = "";
+            string termin = "";
+            Boolean date = true;
 
-            try
-            {
-                ProstorijeFileStorage p = new ProstorijeFileStorage();
-                List<string> sveProstorije = p.procitaneProstorije();
-                foreach (string sveP in sveProstorije)
+            string[] datumiRen = ren.Split('-');
+
+            DateTime dP = DateTime.Parse(datumiRen[0] + " 00:00");
+            DateTime dK = DateTime.Parse(datumiRen[1] + " 00:00");
+
+            Console.WriteLine(dP);
+            Console.WriteLine(dK);
+
+            TerminiFileStorage t = new TerminiFileStorage();
+            List<string> sveTermini = t.procitaniTermini();
+
+
+
+                foreach (string sveT in sveTermini)
                 {
-                    prostorija = sveP;
-                    string[] infoProstorija = prostorija.Split('/');
-                    if (idp == currentRowIndex)
+                    termin = sveT;
+                    string[] infoTermin = termin.Split('/');
+                    DateTime dd = DateTime.Parse(infoTermin[0] + " 15:00");
+                    Console.WriteLine(dd);
+                    if (DateTime.Compare(dP, dK) < 0 && DateTime.Compare(dP, dd) <0 && DateTime.Compare(dK, dd) > 0 && infoTermin[3].Equals(prostorijaRen))
                     {
-                        sveProstorije.RemoveAt(currentRowIndex);
-                        sveProstorije.Insert(currentRowIndex, update + infoProstorija[4] + "/" + ren);
-                        File.WriteAllLines(@"prostorije.txt", sveProstorije);
+                            date = false;
                     }
-                    idp++;
                 }
-            }
-            catch (Exception e)
-            { }
+
+                if (date == false)
+                {
+                    MessageBox.Show("Izaberite druge datume za renoviranje");
+                }
+                else
+                {
+                    
+                    try
+                    {
+                        ProstorijeFileStorage p = new ProstorijeFileStorage();
+                        List<string> sveProstorije = p.procitaneProstorije();
+                        foreach (string sveP in sveProstorije)
+                        {
+                            prostorija = sveP;
+                            string[] infoProstorija = prostorija.Split('/');
+                            if (idp == currentRowIndex)
+                            {
+                                sveProstorije.RemoveAt(currentRowIndex);
+                                sveProstorije.Insert(currentRowIndex, update + infoProstorija[4] + "/" + ren);
+                                File.WriteAllLines(@"prostorije.txt", sveProstorije);
+                            }
+                            idp++;
+                        }
+                    }
+                    catch (Exception e)
+                    { }
+                }
         }
+
         public List<string> procitaneProstorije()
         {
             List<string> prostorije = new List<string>();
