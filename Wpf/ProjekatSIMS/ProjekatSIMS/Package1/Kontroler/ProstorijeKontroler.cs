@@ -50,5 +50,9 @@ namespace ProjekatSIMS.Package1.Kontroler
         {
             ps.prostorija_u(oprema_u, naziv_u, kolicina_u);
         }
+        public List<string> procitaneProstorije()
+        {
+            return ps.procitaneProstorije();
+        }
     }
 }

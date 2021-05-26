@@ -50,5 +50,10 @@ namespace ProjekatSIMS.Package1.Servis
         {
             pfs.prostorija_u(oprema_u, naziv_u, kolicina_u);
         }
+
+        public List<string> procitaneProstorije()
+        {
+            return pfs.procitaneProstorije();
+        }
     }
 }

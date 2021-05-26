@@ -1,0 +1,37 @@
+﻿<Window x:Class="ProjekatSIMS.Upravnik.View.Stvari"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS"
+        mc:Ignorable="d"
+        Title="Stvari" Height="750" Width="430">
+    <Grid>
+        <DataGrid x:Name="dataGridOprema" ItemsSource="{Binding Path = Oprema}"
+                  SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
+                  Height="300" Margin="10,47,0,0" VerticalAlignment="Top" Width="400">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Naziv" Binding="{Binding Path = opreme}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Količina" Binding="{Binding Path = kolicina}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock Text="{Binding S1}" x:Name="t1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="250"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="50,371,0,0" VerticalAlignment="Top" Width="75" Command="{Binding Dodaj}"/>
+        <Button Content="Obrisi" HorizontalAlignment="Left" Margin="175,371,0,0" VerticalAlignment="Top" Width="75" Command="{Binding Obrisi}"/>
+        <Button Content="Izmeni" HorizontalAlignment="Left" Margin="300,371,0,0" VerticalAlignment="Top" Width="75" Command="{Binding Izmeni}"/>
+    </Grid>
+</Window>

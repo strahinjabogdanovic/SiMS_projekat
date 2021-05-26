@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProjekatSIMS.Upravnik;
+using ProjekatSIMS.Upravnik.View;
 
 namespace ProjekatSIMS
 {

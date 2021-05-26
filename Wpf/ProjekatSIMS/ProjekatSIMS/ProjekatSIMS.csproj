@@ -58,6 +58,7 @@
     <Compile Include="Ankete.xaml.cs">
       <DependentUpon>Ankete.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BindableBase.cs" />
     <Compile Include="BiranjePrioritetaZakazivanja.xaml.cs">
       <DependentUpon>BiranjePrioritetaZakazivanja.xaml</DependentUpon>
     </Compile>
@@ -67,13 +68,19 @@
     <Compile Include="DatumZakaz.xaml.cs">
       <DependentUpon>DatumZakaz.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DodajOpremu.xaml.cs">
+    <Compile Include="Upravnik\ViewModel\DodajOpremuVM.cs" />
+    <Compile Include="Upravnik\ViewModel\StvariVM.cs" />
+    <Compile Include="Upravnik\View\DodajOpremu.xaml.cs">
       <DependentUpon>DodajOpremu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DodavanjeLeka.xaml.cs">
+    <Compile Include="Upravnik\ViewModel\DodavanjeLekaVM.cs" />
+    <Compile Include="Upravnik\ViewModel\FiltriranaOpremaVM.cs" />
+    <Compile Include="Upravnik\ViewModel\rasporedjivanjeVM.cs" />
+    <Compile Include="Upravnik\ViewModel\SveInfoUpravnikVM.cs" />
+    <Compile Include="Upravnik\View\DodavanjeLeka.xaml.cs">
       <DependentUpon>DodavanjeLeka.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FiltriranaOprema.xaml.cs">
+    <Compile Include="Upravnik\View\FiltriranaOprema.xaml.cs">
       <DependentUpon>FiltriranaOprema.xaml</DependentUpon>
     </Compile>
     <Compile Include="IzdavanjeRecepta.xaml.cs">
@@ -88,7 +95,9 @@
     <Compile Include="KartonLekar.xaml.cs">
       <DependentUpon>KartonLekar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="KreirajProstoriju.xaml.cs">
+    <Compile Include="Upravnik\ViewModel\KreirajProstorijuVM.cs" />
+    <Compile Include="Upravnik\ViewModel\Lekovi_UVM.cs" />
+    <Compile Include="Upravnik\View\KreirajProstoriju.xaml.cs">
       <DependentUpon>KreirajProstoriju.xaml</DependentUpon>
     </Compile>
     <Compile Include="KreirajTerminLekar.xaml.cs">
@@ -106,9 +115,10 @@
     <Compile Include="LekarZakaz.xaml.cs">
       <DependentUpon>LekarZakaz.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Lekovi_U.xaml.cs">
+    <Compile Include="Upravnik\View\Lekovi_U.xaml.cs">
       <DependentUpon>Lekovi_U.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyICommand.cs" />
     <Compile Include="PacijentPocetnaStranica.xaml.cs">
       <DependentUpon>PacijentPocetnaStranica.xaml</DependentUpon>
     </Compile>
@@ -212,7 +222,7 @@
     <Compile Include="PrioritetLekar.xaml.cs">
       <DependentUpon>PrioritetLekar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="rasporedjivanje.xaml.cs">
+    <Compile Include="Upravnik\View\rasporedjivanje.xaml.cs">
       <DependentUpon>rasporedjivanje.xaml</DependentUpon>
     </Compile>
     <Compile Include="ReceptiPacijent.xaml.cs">
@@ -230,16 +240,17 @@
     <Compile Include="SpisakRecepata.xaml.cs">
       <DependentUpon>SpisakRecepata.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Stvari.xaml.cs">
+    <Compile Include="Upravnik\View\Stvari.xaml.cs">
       <DependentUpon>Stvari.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SveInfoUpravnik.xaml.cs">
+    <Compile Include="Upravnik\View\SveInfoUpravnik.xaml.cs">
       <DependentUpon>SveInfoUpravnik.xaml</DependentUpon>
     </Compile>
     <Compile Include="Terapija.xaml.cs">
       <DependentUpon>Terapija.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UpravnikPocetnaStranica.xaml.cs">
+    <Compile Include="Upravnik\ViewModel\UpravnikPocetnaStranicaVM.cs" />
+    <Compile Include="Upravnik\View\UpravnikPocetnaStranica.xaml.cs">
       <DependentUpon>UpravnikPocetnaStranica.xaml</DependentUpon>
     </Compile>
     <Compile Include="UputSpecijalisti.xaml.cs">
@@ -267,15 +278,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DodajOpremu.xaml">
+    <Page Include="Upravnik\View\DodajOpremu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DodavanjeLeka.xaml">
+    <Page Include="Upravnik\View\DodavanjeLeka.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FiltriranaOprema.xaml">
+    <Page Include="Upravnik\View\FiltriranaOprema.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -295,7 +306,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="KreirajProstoriju.xaml">
+    <Page Include="Upravnik\View\KreirajProstoriju.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -319,7 +330,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Lekovi_U.xaml">
+    <Page Include="Upravnik\View\Lekovi_U.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -427,7 +438,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="rasporedjivanje.xaml">
+    <Page Include="Upravnik\View\rasporedjivanje.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -451,11 +462,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Stvari.xaml">
+    <Page Include="Upravnik\View\Stvari.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SveInfoUpravnik.xaml">
+    <Page Include="Upravnik\View\SveInfoUpravnik.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -463,7 +474,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UpravnikPocetnaStranica.xaml">
+    <Page Include="Upravnik\View\UpravnikPocetnaStranica.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

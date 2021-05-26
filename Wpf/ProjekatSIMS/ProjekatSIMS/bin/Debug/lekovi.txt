@@ -4,4 +4,4 @@ E867/Panadol/paracetamol,skrob,povidon K,talk/zamena3/ne
 F034/Bensedin/diazepam,laktoza,skrob,povidon/zamena4/
 H452/Amoksicilin/amoksicilin,celuloza,zelatin,azorubin/zamena5/podaciNETACNI
 A853/Hemomicin/Laktoza,paracetamol,skrob,zelatin/nema/da
-B734/Herbicid/laktoza,amiksicilin,celuloza/zamena7/
+B735/Herbicid/laktoza,amiksicilin,celuloza/zamena7/
