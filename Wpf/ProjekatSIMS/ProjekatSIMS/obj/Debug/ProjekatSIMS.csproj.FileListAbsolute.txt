@@ -2806,7 +2806,6 @@ C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debu
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageKreirajObavestenje.g.cs
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageLekar.g.cs
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageMedKarton.g.cs
-C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageObavestenjaSekretar.g.cs
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PagePrioritetZakazivanja.g.cs
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageSekretarZakazTermina.g.cs
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageSKreirajNalog.g.cs
@@ -2862,7 +2861,6 @@ C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debu
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageKreirajObavestenje.baml
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageLekar.baml
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageMedKarton.baml
-C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageObavestenjaSekretar.baml
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PagePrioritetZakazivanja.baml
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageSekretarZakazTermina.baml
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageSKreirajNalog.baml
@@ -2896,3 +2894,5 @@ C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debu
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageGuestNalozi.baml
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageKreirajGuestNalog.g.cs
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageKreirajGuestNalog.baml
+C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageObavestenjaSekretar.g.cs
+C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageObavestenjaSekretar.baml

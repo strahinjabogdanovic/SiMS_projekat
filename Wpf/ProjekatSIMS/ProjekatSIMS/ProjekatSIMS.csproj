@@ -72,6 +72,7 @@
     <Compile Include="SekretarPocetnaStranaVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageGuestNaloziVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageKreirajGuestNalogVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PageObavestenjaSekretarVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageSekretarVM.cs" />
     <Compile Include="Sekretar\ViewModel\ViewModels.cs" />
     <Compile Include="Upravnik\ViewModel\DodajOpremuVM.cs" />
@@ -189,7 +190,7 @@
     <Compile Include="PageMedKarton.xaml.cs">
       <DependentUpon>PageMedKarton.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageObavestenjaSekretar.xaml.cs">
+    <Compile Include="Sekretar\View\PageObavestenjaSekretar.xaml.cs">
       <DependentUpon>PageObavestenjaSekretar.xaml</DependentUpon>
     </Compile>
     <Compile Include="PagePrioritetZakazivanja.xaml.cs">
@@ -392,7 +393,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageObavestenjaSekretar.xaml">
+    <Page Include="Sekretar\View\PageObavestenjaSekretar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
