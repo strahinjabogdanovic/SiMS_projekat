@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using ProjekatSIMS.Package1.Model;
 using ProjekatSIMS.Package1.Repozitorijum;
 using ProjekatSIMS.Package1.Kontroler;
+using ProjekatSIMS.Sekretar.View;
 
 namespace ProjekatSIMS
 {

@@ -68,6 +68,12 @@
     <Compile Include="DatumZakaz.xaml.cs">
       <DependentUpon>DatumZakaz.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RelayCommand.cs" />
+    <Compile Include="SekretarPocetnaStranaVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PageGuestNaloziVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PageKreirajGuestNalogVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PageSekretarVM.cs" />
+    <Compile Include="Sekretar\ViewModel\ViewModels.cs" />
     <Compile Include="Upravnik\ViewModel\DodajOpremuVM.cs" />
     <Compile Include="Upravnik\ViewModel\StvariVM.cs" />
     <Compile Include="Upravnik\View\DodajOpremu.xaml.cs">
@@ -162,7 +168,7 @@
     <Compile Include="PageDatum.xaml.cs">
       <DependentUpon>PageDatum.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageGuestNalozi.xaml.cs">
+    <Compile Include="Sekretar\View\PageGuestNalozi.xaml.cs">
       <DependentUpon>PageGuestNalozi.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageHitnoZakazivanje.xaml.cs">
@@ -171,7 +177,7 @@
     <Compile Include="PageHitnoZakazTermin.xaml.cs">
       <DependentUpon>PageHitnoZakazTermin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageKreirajGuestNalog.xaml.cs">
+    <Compile Include="Sekretar\View\PageKreirajGuestNalog.xaml.cs">
       <DependentUpon>PageKreirajGuestNalog.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageKreirajObavestenje.xaml.cs">
@@ -189,7 +195,7 @@
     <Compile Include="PagePrioritetZakazivanja.xaml.cs">
       <DependentUpon>PagePrioritetZakazivanja.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageSekretar.xaml.cs">
+    <Compile Include="Sekretar\View\PageSekretar.xaml.cs">
       <DependentUpon>PageSekretar.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageSekretarZakazTermina.xaml.cs">
@@ -358,7 +364,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageGuestNalozi.xaml">
+    <Page Include="Sekretar\View\PageGuestNalozi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -370,7 +376,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageKreirajGuestNalog.xaml">
+    <Page Include="Sekretar\View\PageKreirajGuestNalog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -394,7 +400,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageSekretar.xaml">
+    <Page Include="Sekretar\View\PageSekretar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

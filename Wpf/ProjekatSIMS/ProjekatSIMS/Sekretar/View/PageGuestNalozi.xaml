@@ -1,4 +1,4 @@
-﻿<Page x:Class="ProjekatSIMS.PageGuestNalozi"
+﻿<Page x:Class="ProjekatSIMS.Sekretar.View.PageGuestNalozi"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -18,21 +18,21 @@
                 <DataGridTextColumn Header="JMBG" Binding="{Binding Path = jmbg}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="button" Content="Kreiraj" HorizontalAlignment="Left" Margin="383,511,0,0" VerticalAlignment="Top" Click="KreirajGuestNalog_Click" Style="{StaticResource ResourceKey=ButtonStyle}">
+        <Button x:Name="button" Content="Kreiraj" HorizontalAlignment="Left" Margin="383,511,0,0" VerticalAlignment="Top" Command="{Binding Kreiraj}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
                     Kreiranje guest naloga pacijenta
                 </ToolTip>
             </Button.ToolTip>
         </Button>
-        <Button x:Name="button1" Content="Obrisi" HorizontalAlignment="Left" Margin="566,511,0,0" VerticalAlignment="Top" Click="ObrisiGuestNalog_Click" Style="{StaticResource ResourceKey=ButtonStyle}">
+        <Button x:Name="button1" Content="Obrisi" HorizontalAlignment="Left" Margin="566,511,0,0" VerticalAlignment="Top" Command="{Binding Obrisi}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
                     Ako zelite da obrisete guest nalog, prvo ga selektujte u tabeli
                 </ToolTip>
             </Button.ToolTip>
         </Button>
-        <Button x:Name="button2" Content="Nazad" HorizontalAlignment="Left" Margin="745,511,0,0" VerticalAlignment="Top" Click="Nazad_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button2" Content="Nazad" HorizontalAlignment="Left" Margin="745,511,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
         <Label x:Name="label" Content="Guest nalozi" HorizontalAlignment="Left" Margin="520,86,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
 
     </Grid>
