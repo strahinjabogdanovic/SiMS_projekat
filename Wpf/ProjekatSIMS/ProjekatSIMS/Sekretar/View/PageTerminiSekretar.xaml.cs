@@ -11,15 +11,14 @@ using ProjekatSIMS.Sekretar.ViewModel;
 
 namespace ProjekatSIMS.Sekretar.View
 {
-    public partial class PageZakazivanjeLekar : Page
+    public partial class PageTerminiSekretar : Page
     {
+        private PageTerminiSekretarVM viewModel;
 
-        private PageZakazivanjeLekarVM viewModel;
-
-        public PageZakazivanjeLekar(string lekar)
+        public PageTerminiSekretar()
         {
             InitializeComponent();
-            this.viewModel = new PageZakazivanjeLekarVM(this, lekar, dataGridTerminiLekar);
+            this.viewModel = new PageTerminiSekretarVM(this, dataGridTerminiSekretar);
             this.DataContext = this.viewModel;
         }
 

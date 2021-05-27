@@ -1,5 +1,6 @@
-﻿using Package1;
-using ProjekatSIMS.Package1;
+﻿using ProjekatSIMS.Package1.Kontroler;
+using ProjekatSIMS.Package1.Model;
+using ProjekatSIMS.Sekretar.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,34 +10,56 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using ProjekatSIMS.Package1.Model;
-using ProjekatSIMS.Package1.Repozitorijum;
-using ProjekatSIMS.Package1.Kontroler;
-using ProjekatSIMS.Sekretar.View;
 
-namespace ProjekatSIMS
+namespace ProjekatSIMS.Sekretar.ViewModel
 {
-    public partial class PageHitnoZakazTermin : Page
+    public class PageHitnoZakazTerminVM : ViewModels
     {
+        public ObservableCollection<TerminiPacijenata> TerminiP { get; set; }
+
+        private PageHitnoZakazTermin page;
         private readonly string filePath;
 
-        public ObservableCollection<TerminiPacijenata> TerminiP
+        private RelayCommand nazad;
+        private RelayCommand zakazi;
+        private RelayCommand pomeranje;
+
+        public RelayCommand Nazad
         {
-            get;
-            set;
+            get { return nazad; }
+            set
+            {
+                nazad = value;
+            }
         }
 
-        String oblastL = "";
-        public PageHitnoZakazTermin(string oblastLekara)
+        public RelayCommand Zakazi
         {
-            
+            get { return zakazi; }
+            set
+            {
+                zakazi = value;
+            }
+        }
+
+        public RelayCommand Pomeranje
+        {
+            get { return pomeranje; }
+            set
+            {
+                pomeranje = value;
+            }
+        }
+
+
+        String oblastL = "";
+        private DataGrid tabela = new DataGrid();
+
+        public PageHitnoZakazTerminVM(PageHitnoZakazTermin page, string oblastLekara, DataGrid dataGridHitnoZakazivanje)
+        {
+            this.page = page;
+            tabela = dataGridHitnoZakazivanje;
+
             if (oblastLekara != null)
             {
                 if (oblastLekara.Contains("Opsta praksa"))
@@ -80,12 +103,13 @@ namespace ProjekatSIMS
             {
                 v = int.Parse(termin2[0]) + 12;
                 vreme = v.ToString() + ":" + termin2[1];
-            }else
+            }
+            else
             {
                 v = int.Parse(termin2[0]);
                 vreme = v.ToString() + ":" + termin2[1];
             }
-            
+
 
 
             String ime = "";
@@ -118,8 +142,8 @@ namespace ProjekatSIMS
                                 String[] sat = termini[1].Split(':');
                                 string sati = sat[0] + sat[1];
                                 string sadSati = v.ToString() + termin2[1];
-                                                            
-                                if (int.Parse(sati) >= int.Parse(sadSati))  
+
+                                if (int.Parse(sati) >= int.Parse(sadSati))
                                 {
                                     pacijent.datum = termini[0].ToString();
                                     pacijent.vreme = termini[1].ToString();
@@ -130,7 +154,7 @@ namespace ProjekatSIMS
 
                                     TerminiP.Add(pacijent);
 
-                                }  
+                                }
                             }
                         }
                     }
@@ -138,35 +162,37 @@ namespace ProjekatSIMS
 
             }
 
-            InitializeComponent();
-            this.DataContext = this;
+
+            this.Nazad = new RelayCommand(Executed_Nazad, CanExecute_NavigateCommand);
+            this.Zakazi = new RelayCommand(Executed_Zakazi, CanExecute_NavigateCommand);
+            this.Pomeranje = new RelayCommand(Executed_Pomeranje, CanExecute_NavigateCommand);
         }
 
-        private void Nazad_Click(object sender, RoutedEventArgs e)
+        public void Executed_Nazad(object obj)
         {
-            this.NavigationService.Navigate(new PageHitnoZakazivanje());
+            page.NavigationService.Navigate(new PageHitnoZakazivanje());
         }
 
-        private void Zakazi_Click(object sender, RoutedEventArgs e)
+        public void Executed_Zakazi(object obj)
         {
-            int currentRowIndex = dataGridHitnoZakazivanje.Items.IndexOf(dataGridHitnoZakazivanje.SelectedItem);
-            DataGridRow row = (DataGridRow)dataGridHitnoZakazivanje.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
+            int currentRowIndex = tabela.Items.IndexOf(tabela.SelectedItem);
+            DataGridRow row = (DataGridRow)tabela.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
 
-            TextBlock tbPacijent = dataGridHitnoZakazivanje.Columns[0].GetCellContent(row) as TextBlock;
-            TextBlock tbDatum = dataGridHitnoZakazivanje.Columns[1].GetCellContent(row) as TextBlock;
-            TextBlock tbVreme = dataGridHitnoZakazivanje.Columns[2].GetCellContent(row) as TextBlock;
-            TextBlock tbLekar = dataGridHitnoZakazivanje.Columns[3].GetCellContent(row) as TextBlock;
-            TextBlock tbSoba = dataGridHitnoZakazivanje.Columns[4].GetCellContent(row) as TextBlock;
+            TextBlock tbPacijent = tabela.Columns[0].GetCellContent(row) as TextBlock;
+            TextBlock tbDatum = tabela.Columns[1].GetCellContent(row) as TextBlock;
+            TextBlock tbVreme = tabela.Columns[2].GetCellContent(row) as TextBlock;
+            TextBlock tbLekar = tabela.Columns[3].GetCellContent(row) as TextBlock;
+            TextBlock tbSoba = tabela.Columns[4].GetCellContent(row) as TextBlock;
             string update = (tbPacijent.Text + "/" + tbDatum.Text + "/" + tbVreme.Text + "/" + tbLekar.Text + "/" + tbSoba.Text);
 
             TerminiKontroler tk = new TerminiKontroler();
             tk.ZakazivanjeSekretar(update);
         }
 
-        private void PomeranjeTermina_Click(object sender, RoutedEventArgs e)
+        public void Executed_Pomeranje(object obj)
         {
             TerminiKontroler tk = new TerminiKontroler();
-            int currentRowIndex = dataGridHitnoZakazivanje.Items.IndexOf(dataGridHitnoZakazivanje.SelectedItem);
+            int currentRowIndex = tabela.Items.IndexOf(tabela.SelectedItem);
 
             if (currentRowIndex != -1)
             {
@@ -183,7 +209,12 @@ namespace ProjekatSIMS
                 tk.PomeranjeTerminaSekretar(k);
             }
 
-            this.NavigationService.Navigate(new PageHitnoZakazTermin(oblastL));
+            page.NavigationService.Navigate(new PageHitnoZakazTermin(oblastL));
+        }
+
+        public bool CanExecute_NavigateCommand(object obj)
+        {
+            return true;
         }
     }
 }

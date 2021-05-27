@@ -2799,10 +2799,7 @@ C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debu
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Upravnik\View\Lekovi_U.g.cs
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\MainWindow.g.cs
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PacijentPocetnaStranica.g.cs
-C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageHitnoZakazTermin.g.cs
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageSPrikazInfo.g.cs
-C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageTerminiSekretar.g.cs
-C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageZakazivanjeDatum.g.cs
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\pomeranjeTermina.g.cs
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PopUpPogresnoUnesenLek.g.cs
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PrioritetDatum.g.cs
@@ -2844,10 +2841,7 @@ C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debu
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Upravnik\View\Lekovi_U.baml
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\MainWindow.baml
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PacijentPocetnaStranica.baml
-C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageHitnoZakazTermin.baml
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageSPrikazInfo.baml
-C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageTerminiSekretar.baml
-C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PageZakazivanjeDatum.baml
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\pomeranjeTermina.baml
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PopUpPogresnoUnesenLek.baml
 C:\Users\Natasa\Desktop\Hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PrioritetDatum.baml
@@ -2896,3 +2890,9 @@ C:\Users\Natasa\Desktop\hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debu
 C:\Users\Natasa\Desktop\hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageSekretarZakazTermina.baml
 C:\Users\Natasa\Desktop\hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageZakazivanjeLekar.g.cs
 C:\Users\Natasa\Desktop\hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageZakazivanjeLekar.baml
+C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageZakazivanjeDatum.g.cs
+C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageZakazivanjeDatum.baml
+C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageTerminiSekretar.g.cs
+C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageTerminiSekretar.baml
+C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageHitnoZakazTermin.g.cs
+C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageHitnoZakazTermin.baml
