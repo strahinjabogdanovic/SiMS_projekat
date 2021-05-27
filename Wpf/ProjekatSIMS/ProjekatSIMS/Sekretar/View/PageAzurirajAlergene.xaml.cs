@@ -1,33 +1,25 @@
-﻿using Package1;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using ProjekatSIMS.Package1.Repozitorijum;
 using ProjekatSIMS.Package1.Kontroler;
+using ProjekatSIMS.Sekretar.ViewModel;
 
-namespace ProjekatSIMS
+namespace ProjekatSIMS.Sekretar.View
 {
     public partial class PageAzurirajAlergene : Page
     {
-        int trenutniRed = 0;
+        private PageAzurirajAlergeneVM viewModel;
+        //int trenutniRed = 0;
         public PageAzurirajAlergene(int currentRowIndex)
         {
-            int redovi = 0;
-            string karton = "";
+            //int redovi = 0;
+            //string karton = "";
             InitializeComponent();
-            trenutniRed = currentRowIndex;
+            this.viewModel = new PageAzurirajAlergeneVM(this, currentRowIndex);
+            this.DataContext = this.viewModel;
+            /*trenutniRed = currentRowIndex;
             NaloziPacijenataKontroler npk = new NaloziPacijenataKontroler();
             List<string> sviMedKartoni = npk.procitaniMedKartoni();
             foreach (string svi in sviMedKartoni)
@@ -39,9 +31,10 @@ namespace ProjekatSIMS
                 redovi++;
             }
             string[] infoMedKarton = karton.Split('/');
-            textBox.Text = infoMedKarton[1];
+            textBox.Text = infoMedKarton[1];*/
         }
 
+        /*
         private void Nazad_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new PageMedKarton(trenutniRed));
@@ -73,6 +66,6 @@ namespace ProjekatSIMS
             { }
 
             this.NavigationService.Navigate(new PageMedKarton(trenutniRed));
-        }
+        }*/
     }
 }

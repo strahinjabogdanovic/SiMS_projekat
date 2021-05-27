@@ -70,8 +70,14 @@
     </Compile>
     <Compile Include="RelayCommand.cs" />
     <Compile Include="SekretarPocetnaStranaVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PageAzurirajAlergeneVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PageDatumVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageGuestNaloziVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PageHitnoZakazivanjeVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageKreirajGuestNalogVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PageKreirajObavestenjeVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PageLekarVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PageMedKartonVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageObavestenjaSekretarVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageSekretarVM.cs" />
     <Compile Include="Sekretar\ViewModel\ViewModels.cs" />
@@ -163,16 +169,16 @@
     <Compile Include="Package1\Model\Sastojci.cs" />
     <Compile Include="Package1\Model\TerminiPacijenata.cs" />
     <Compile Include="Package1\Servis\TerminiServis.cs" />
-    <Compile Include="PageAzurirajAlergene.xaml.cs">
+    <Compile Include="Sekretar\View\PageAzurirajAlergene.xaml.cs">
       <DependentUpon>PageAzurirajAlergene.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageDatum.xaml.cs">
+    <Compile Include="Sekretar\View\PageDatum.xaml.cs">
       <DependentUpon>PageDatum.xaml</DependentUpon>
     </Compile>
     <Compile Include="Sekretar\View\PageGuestNalozi.xaml.cs">
       <DependentUpon>PageGuestNalozi.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageHitnoZakazivanje.xaml.cs">
+    <Compile Include="Sekretar\View\PageHitnoZakazivanje.xaml.cs">
       <DependentUpon>PageHitnoZakazivanje.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageHitnoZakazTermin.xaml.cs">
@@ -181,13 +187,13 @@
     <Compile Include="Sekretar\View\PageKreirajGuestNalog.xaml.cs">
       <DependentUpon>PageKreirajGuestNalog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageKreirajObavestenje.xaml.cs">
+    <Compile Include="Sekretar\View\PageKreirajObavestenje.xaml.cs">
       <DependentUpon>PageKreirajObavestenje.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageLekar.xaml.cs">
+    <Compile Include="Sekretar\View\PageLekar.xaml.cs">
       <DependentUpon>PageLekar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageMedKarton.xaml.cs">
+    <Compile Include="Sekretar\View\PageMedKarton.xaml.cs">
       <DependentUpon>PageMedKarton.xaml</DependentUpon>
     </Compile>
     <Compile Include="Sekretar\View\PageObavestenjaSekretar.xaml.cs">
@@ -357,11 +363,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageAzurirajAlergene.xaml">
+    <Page Include="Sekretar\View\PageAzurirajAlergene.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageDatum.xaml">
+    <Page Include="Sekretar\View\PageDatum.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -369,7 +375,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageHitnoZakazivanje.xaml">
+    <Page Include="Sekretar\View\PageHitnoZakazivanje.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -381,15 +387,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageKreirajObavestenje.xaml">
+    <Page Include="Sekretar\View\PageKreirajObavestenje.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageLekar.xaml">
+    <Page Include="Sekretar\View\PageLekar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageMedKarton.xaml">
+    <Page Include="Sekretar\View\PageMedKarton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

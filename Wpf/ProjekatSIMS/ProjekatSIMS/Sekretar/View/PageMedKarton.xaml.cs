@@ -1,37 +1,27 @@
-﻿using Package1;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using ProjekatSIMS.Package1.Repozitorijum;
 using ProjekatSIMS.Package1.Kontroler;
-using ProjekatSIMS.Sekretar.View;
+using ProjekatSIMS.Sekretar.ViewModel;
 
-namespace ProjekatSIMS
+namespace ProjekatSIMS.Sekretar.View
 {
     public partial class PageMedKarton : Page
     {
-        int trenutniRed = 0;
+        //int trenutniRed = 0;
+        private PageMedKartonVM viewModel;
+
         public PageMedKarton(int currentRowIndex)
         {
-            int red = 0;
-            int redovi = 0;
-            trenutniRed = currentRowIndex;
-            string nalog = "";
-            string karton = "";
+            //int red = 0;
+            //int redovi = 0;
+            //trenutniRed = currentRowIndex;
+            //string nalog = "";
+            //string karton = "";
             InitializeComponent();
-
+            this.viewModel = new PageMedKartonVM(this, currentRowIndex);
+            this.DataContext = this.viewModel;
+            /*
             NaloziPacijenataKontroler npk = new NaloziPacijenataKontroler();
 
             List<string> sviNalozi = npk.procitaniNalozi();
@@ -63,10 +53,10 @@ namespace ProjekatSIMS
                 redovi++;
             }
             string[] infoMedKarton = karton.Split('/');
-            t8.Text = infoMedKarton[1];
+            t8.Text = infoMedKarton[1];*/
         }
      
-
+        /*
         private void Azuriraj_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new PageAzurirajAlergene(trenutniRed));
@@ -75,6 +65,6 @@ namespace ProjekatSIMS
         private void Nazad_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new PageSekretar());
-        }
+        }*/
     }
 }

@@ -1,4 +1,4 @@
-﻿<Page x:Class="ProjekatSIMS.PageMedKarton"
+﻿<Page x:Class="ProjekatSIMS.Sekretar.View.PageMedKarton"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -18,18 +18,18 @@
         <Label x:Name="label6" Content="Email" HorizontalAlignment="Left" Margin="728,200,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.579,-0.154" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label7" Content="Broj telefona" HorizontalAlignment="Left" Margin="650,310,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label8" Content="Adresa" HorizontalAlignment="Left" Margin="712,255,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <TextBlock x:Name="t" HorizontalAlignment="Left" Margin="240,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
-        <TextBlock x:Name="t1" HorizontalAlignment="Left" Margin="240,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
-        <TextBlock x:Name="t2" HorizontalAlignment="Left" Margin="240,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
-        <TextBlock x:Name="t3" HorizontalAlignment="Left" Margin="814,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
-        <TextBlock x:Name="t4" HorizontalAlignment="Left" Margin="240,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
-        <TextBlock x:Name="t5" HorizontalAlignment="Left" Margin="814,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
-        <TextBlock x:Name="t6" HorizontalAlignment="Left" Margin="814,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
-        <TextBlock x:Name="t7" HorizontalAlignment="Left" Margin="814,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock Text="{Binding S}" x:Name="t" HorizontalAlignment="Left" Margin="240,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock Text="{Binding S1}" x:Name="t1" HorizontalAlignment="Left" Margin="240,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock Text="{Binding S2}" x:Name="t2" HorizontalAlignment="Left" Margin="240,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock Text="{Binding S3}" x:Name="t3" HorizontalAlignment="Left" Margin="814,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock Text="{Binding S4}" x:Name="t4" HorizontalAlignment="Left" Margin="240,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock Text="{Binding S5}" x:Name="t5" HorizontalAlignment="Left" Margin="814,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock Text="{Binding S6}" x:Name="t6" HorizontalAlignment="Left" Margin="814,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock Text="{Binding S7}" x:Name="t7" HorizontalAlignment="Left" Margin="814,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
         <Label x:Name="label9" Content="Alergeni" HorizontalAlignment="Left" Margin="119,367,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <TextBlock x:Name="t8" HorizontalAlignment="Left" Margin="240,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="667" Height="92" FontSize="24" Background="White"/>
-        <Button x:Name="button" Content="Azuriraj alergene" HorizontalAlignment="Left" Margin="594,492,0,0" VerticalAlignment="Top" Click="Azuriraj_Click" Style="{StaticResource ResourceKey=ButtonStyle}" Width="240"/>
-        <Button x:Name="button1" Content="Nazad" HorizontalAlignment="Left" Margin="384,492,0,0" VerticalAlignment="Top" Click="Nazad_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <TextBlock Text="{Binding S8}" x:Name="t8" HorizontalAlignment="Left" Margin="240,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="667" Height="92" FontSize="24" Background="White"/>
+        <Button x:Name="button" Content="Azuriraj alergene" HorizontalAlignment="Left" Margin="594,492,0,0" VerticalAlignment="Top" Command="{Binding Azuriraj}" Style="{StaticResource ResourceKey=ButtonStyle}" Width="240"/>
+        <Button x:Name="button1" Content="Nazad" HorizontalAlignment="Left" Margin="384,492,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
 
     </Grid>
 </Page>
