@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProjekatSIMS.Lekar.View;
 using ProjekatSIMS.Upravnik;
 using ProjekatSIMS.Upravnik.View;
 

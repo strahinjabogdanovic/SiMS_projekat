@@ -1,0 +1,25 @@
+﻿<Window x:Class="ProjekatSIMS.Lekar.View.SpisakLekova"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS"
+        mc:Ignorable="d"
+        Title="SpisakLekova" Height="700" Width="1000">
+    <Grid>
+        <DataGrid x:Name="dataGridLekovi" ItemsSource="{Binding Path = SviLekovi, UpdateSourceTrigger=PropertyChanged}"
+                  SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
+                  Height="240" Margin="20,47,0,0" VerticalAlignment="Top" Width="685">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Sifra leka" Binding="{Binding Path = sifraleka}"/>
+                <DataGridTextColumn Header="Naziv Leka" Binding="{Binding Path = nazivleka}" />
+                <DataGridTextColumn Header="Sastojci" Binding="{Binding Path = sastojci}" />
+                <DataGridTextColumn Header="Zamena" Binding="{Binding Path = zamena}" />
+                <DataGridTextColumn Header="Validiran" Binding="{Binding Path = validiran}" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Izmeni" HorizontalAlignment="Left" Margin="89,348,0,0" VerticalAlignment="Top" Width="138" Height="36" Click="Izmeni_Click"/>
+        <Button Content="Postoji greska-vrati upravniku" HorizontalAlignment="Left" Margin="445,348,0,0" VerticalAlignment="Top" Width="204" Height="36" Click="Upravniku_Click"/>
+    </Grid>
+</Window>
