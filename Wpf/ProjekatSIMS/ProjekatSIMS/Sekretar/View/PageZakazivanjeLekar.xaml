@@ -1,4 +1,4 @@
-﻿<Page x:Class="ProjekatSIMS.PageZakazivanjeLekar"
+﻿<Page x:Class="ProjekatSIMS.Sekretar.View.PageZakazivanjeLekar"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -22,14 +22,14 @@
                 <DataGridTextColumn Header="Soba" Binding="{Binding Path = soba}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="313,568,0,0" VerticalAlignment="Top" Click="Nazad_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
-        <Button x:Name="button1" Content="Zakazi" HorizontalAlignment="Left" Margin="788,568,0,0" VerticalAlignment="Top" Click="Zakazi_Click" Style="{StaticResource ResourceKey=ButtonStyle}">
+        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="313,568,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button1" Content="Zakazi" HorizontalAlignment="Left" Margin="788,568,0,0" VerticalAlignment="Top" Command="{Binding Zakazi}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
                     Ako zelite da zakazete termin, prvo unesite ime i prezime pacijenta u tabelu
                 </ToolTip>
             </Button.ToolTip>
         </Button>
-        <Button x:Name="button2" Content="Nazad na sve termine" HorizontalAlignment="Left" Margin="491,568,0,0" VerticalAlignment="Top" Width="256" Height="45" FontSize="24" Click="NazadTermini_Click"/>
+        <Button x:Name="button2" Content="Nazad na sve termine" HorizontalAlignment="Left" Margin="491,568,0,0" VerticalAlignment="Top" Width="256" Height="45" FontSize="24" Command="{Binding NazadTermini}"/>
     </Grid>
 </Page>

@@ -1,38 +1,29 @@
-﻿using Package1;
-using ProjekatSIMS.Package1;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using ProjekatSIMS.Package1.Model;
-using ProjekatSIMS.Package1.Repozitorijum;
 using ProjekatSIMS.Package1.Kontroler;
-using ProjekatSIMS.Sekretar.View;
+using ProjekatSIMS.Package1.Model;
+using ProjekatSIMS.Sekretar.ViewModel;
 
-namespace ProjekatSIMS
+namespace ProjekatSIMS.Sekretar.View
 {
     public partial class PageZakazivanjeLekar : Page
     {
+        /*
         public ObservableCollection<TerminiPacijenata> TerminiP
         {
             get;
             set;
-        }
+        }*/
+        private PageZakazivanjeLekarVM viewModel;
 
         public PageZakazivanjeLekar(string lekar)
         {
+            /*
             TerminiP = new ObservableCollection<TerminiPacijenata>();
             List<String> lines = new List<string>();
             lines = File.ReadAllLines("termini.txt").ToList();
@@ -70,12 +61,14 @@ namespace ProjekatSIMS
 
                     TerminiP.Add(pacijent);
                 }
-            }
+            }*/
 
             InitializeComponent();
-            this.DataContext = this;
+            this.viewModel = new PageZakazivanjeLekarVM(this, lekar, dataGridTerminiLekar);
+            this.DataContext = this.viewModel;
         }
 
+        /*
         private void Nazad_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new PageLekar());
@@ -100,6 +93,6 @@ namespace ProjekatSIMS
         private void NazadTermini_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new PageTerminiSekretar());
-        }
+        }*/
     }
 }

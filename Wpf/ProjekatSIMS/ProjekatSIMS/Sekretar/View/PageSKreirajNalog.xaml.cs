@@ -1,37 +1,28 @@
-﻿using Package1;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using ProjekatSIMS.Package1.Model;
-using ProjekatSIMS.Package1.Repozitorijum;
 using ProjekatSIMS.Package1.Kontroler;
-using ProjekatSIMS.Sekretar.View;
+using ProjekatSIMS.Package1.Model;
+using ProjekatSIMS.Sekretar.ViewModel;
 
-namespace ProjekatSIMS
+namespace ProjekatSIMS.Sekretar.View
 {
     public partial class PageSKreirajNalog : Page
     {
+        /*
         public ObservableCollection<Pacijent> Korisnici
         {
             get;
             set;
-        }
+        }*/
+        private PageSKreirajNalogVM viewModel;
 
         public PageSKreirajNalog()
         {
             InitializeComponent();
+            //this.viewModel = new PageSKreirajNalogVM(this);
+            //this.DataContext = this.viewModel;
         }
 
         private void PotvrdiNalog_Click(object sender, RoutedEventArgs e)

@@ -1,6 +1,6 @@
 4.10.2021./8:00/Jova Jovic/A1/1/Ana Markovic/ 
 4.10.2021./8:30/Jova Jovic/A1/2/Marija Pavlov/ 
-30.10.2021./8:00/Jova Jovic/A1/3/ /x
+30.10.2021./8:00/Jova Jovic/A1/3/Petar Petrovic/x
 03.10.2021./8:00/Jovan Jovanovic/A2/4/Ana Jovanovic/ 
 03.10.2021./8:30/Jovan Jovanovic/A2/5/Marija Pavlov/ 
 03.10.2021./12:00/Jova Jovic/A2/6/Petar Petrovic/ 

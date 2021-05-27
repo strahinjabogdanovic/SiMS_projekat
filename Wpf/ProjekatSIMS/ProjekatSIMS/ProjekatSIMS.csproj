@@ -79,7 +79,11 @@
     <Compile Include="Sekretar\ViewModel\PageLekarVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageMedKartonVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageObavestenjaSekretarVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PagePrioritetZakazivanjaVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageSekretarVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PageSekretarZakazTerminaVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PageSKreirajNalogVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PageZakazivanjeLekarVM.cs" />
     <Compile Include="Sekretar\ViewModel\ViewModels.cs" />
     <Compile Include="Upravnik\ViewModel\DodajOpremuVM.cs" />
     <Compile Include="Upravnik\ViewModel\StvariVM.cs" />
@@ -199,16 +203,16 @@
     <Compile Include="Sekretar\View\PageObavestenjaSekretar.xaml.cs">
       <DependentUpon>PageObavestenjaSekretar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PagePrioritetZakazivanja.xaml.cs">
+    <Compile Include="Sekretar\View\PagePrioritetZakazivanja.xaml.cs">
       <DependentUpon>PagePrioritetZakazivanja.xaml</DependentUpon>
     </Compile>
     <Compile Include="Sekretar\View\PageSekretar.xaml.cs">
       <DependentUpon>PageSekretar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageSekretarZakazTermina.xaml.cs">
+    <Compile Include="Sekretar\View\PageSekretarZakazTermina.xaml.cs">
       <DependentUpon>PageSekretarZakazTermina.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageSKreirajNalog.xaml.cs">
+    <Compile Include="Sekretar\View\PageSKreirajNalog.xaml.cs">
       <DependentUpon>PageSKreirajNalog.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageSPrikazInfo.xaml.cs">
@@ -220,7 +224,7 @@
     <Compile Include="PageZakazivanjeDatum.xaml.cs">
       <DependentUpon>PageZakazivanjeDatum.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageZakazivanjeLekar.xaml.cs">
+    <Compile Include="Sekretar\View\PageZakazivanjeLekar.xaml.cs">
       <DependentUpon>PageZakazivanjeLekar.xaml</DependentUpon>
     </Compile>
     <Compile Include="pomeranjeTermina.xaml.cs">
@@ -403,7 +407,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PagePrioritetZakazivanja.xaml">
+    <Page Include="Sekretar\View\PagePrioritetZakazivanja.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -411,11 +415,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageSekretarZakazTermina.xaml">
+    <Page Include="Sekretar\View\PageSekretarZakazTermina.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageSKreirajNalog.xaml">
+    <Page Include="Sekretar\View\PageSKreirajNalog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -431,7 +435,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageZakazivanjeLekar.xaml">
+    <Page Include="Sekretar\View\PageZakazivanjeLekar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

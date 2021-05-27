@@ -1,4 +1,4 @@
-﻿<Page x:Class="ProjekatSIMS.PagePrioritetZakazivanja"
+﻿<Page x:Class="ProjekatSIMS.Sekretar.View.PagePrioritetZakazivanja"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -10,9 +10,9 @@
 
     <Grid>
         <Label x:Name="label" Content="Izaberite prioritet zakazivanja" HorizontalAlignment="Left" Margin="384,95,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
-        <RadioButton x:Name="radioButton" Content="Datum" HorizontalAlignment="Left" Margin="548,250,0,0" VerticalAlignment="Top" FontSize="36" Checked="Datum_Checked"/>
-        <RadioButton x:Name="radioButton1" Content="Lekar" HorizontalAlignment="Left" Margin="548,340,0,0" VerticalAlignment="Top" FontSize="36" Checked="Lekar_Checked"/>
-        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="548,484,0,0" VerticalAlignment="Top" Click="Nazad_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <RadioButton x:Name="radioButton" Content="Datum" HorizontalAlignment="Left" Margin="548,250,0,0" VerticalAlignment="Top" FontSize="36" Command="{Binding Datum}"/>
+        <RadioButton x:Name="radioButton1" Content="Lekar" HorizontalAlignment="Left" Margin="548,340,0,0" VerticalAlignment="Top" FontSize="36" Command="{Binding Lekar}"/>
+        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="548,484,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
 
     </Grid>
 </Page>
