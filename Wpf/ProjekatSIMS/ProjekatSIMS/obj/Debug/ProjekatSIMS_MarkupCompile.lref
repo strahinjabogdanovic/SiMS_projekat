@@ -4,7 +4,10 @@ FC:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Ankete.
 FC:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\BiranjePrioritetaZakazivanja.xaml;;
 FC:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\BolnicaAnketa.xaml;;
 FC:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\DatumZakaz.xaml;;
+FC:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Sekretar\View\PageGrafikonLekari.xaml;;
+FC:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Sekretar\View\PagePrikazLekara.xaml;;
 FC:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Sekretar\View\PageProfil.xaml;;
+FC:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Sekretar\View\PageProstorije.xaml;;
 FC:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Upravnik\View\DodajOpremu.xaml;;
 FC:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Upravnik\View\DodavanjeLeka.xaml;;
 FC:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Upravnik\View\FiltriranaOprema.xaml;;
@@ -56,6 +59,4 @@ FC:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Upravni
 FC:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Lekar\View\UputSpecijalisti.xaml;;
 FC:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Lekar\View\ValidacijaLeka.xaml;;
 FC:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Lekar\View\ZahteviZaValidaciju.xaml;;
-FC:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Sekretar\View\PageProstorije.xaml;;
-FC:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Sekretar\View\PagePrikazLekara.xaml;;
 

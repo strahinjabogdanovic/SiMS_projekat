@@ -65,6 +65,7 @@
     <Compile Include="BolnicaAnketa.xaml.cs">
       <DependentUpon>BolnicaAnketa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Category.cs" />
     <Compile Include="DatumZakaz.xaml.cs">
       <DependentUpon>DatumZakaz.xaml</DependentUpon>
     </Compile>
@@ -73,6 +74,7 @@
     <Compile Include="SekretarPocetnaStranaVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageAzurirajAlergeneVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageDatumVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PageGrafikonLekariVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageGuestNaloziVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageHitnoZakazivanjeVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageHitnoZakazTerminVM.cs" />
@@ -92,6 +94,9 @@
     <Compile Include="Sekretar\ViewModel\PageZakazivanjeDatumVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageZakazivanjeLekarVM.cs" />
     <Compile Include="Sekretar\ViewModel\ViewModels.cs" />
+    <Compile Include="Sekretar\View\PageGrafikonLekari.xaml.cs">
+      <DependentUpon>PageGrafikonLekari.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sekretar\View\PagePrikazLekara.xaml.cs">
       <DependentUpon>PagePrikazLekara.xaml</DependentUpon>
     </Compile>
@@ -308,6 +313,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DatumZakaz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sekretar\View\PageGrafikonLekari.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
