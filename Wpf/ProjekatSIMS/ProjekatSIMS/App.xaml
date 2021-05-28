@@ -39,7 +39,7 @@
             <Setter Property="TextBlock.FontSize" Value="24" />
             <Setter Property="TextBlock.Width" Value="350" />
             <Setter Property="TextBlock.Background" Value="White" />
-            <Setter Property="ComboBox.Height" Value="40" />
+            <Setter Property="TextBlock.Height" Value="40" />
         </Style>
     </Application.Resources>
 </Application>
