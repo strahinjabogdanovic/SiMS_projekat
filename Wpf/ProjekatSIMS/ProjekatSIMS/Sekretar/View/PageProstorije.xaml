@@ -31,6 +31,6 @@
         </DataGrid>
         <Label x:Name="label" Content="Prostorije" HorizontalAlignment="Left" Margin="44,68,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
         <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="538,568,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
-        <Button x:Name="button1" Content="Grafikon zauzetosti prostorija" HorizontalAlignment="Left" Margin="899,84,0,0" VerticalAlignment="Top" Width="332" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button1" Content="Grafikon zauzetosti prostorija" HorizontalAlignment="Left" Margin="899,84,0,0" VerticalAlignment="Top" Width="335" Style="{StaticResource ResourceKey=ButtonStyle}"/>
     </Grid>
 </Page>

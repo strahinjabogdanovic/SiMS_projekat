@@ -42,7 +42,7 @@
             </Button.ToolTip>
         </Button>
         <!--<Button x:Name="button3" Content="Prikaži sve informacije" HorizontalAlignment="Left" Margin="576,553,0,0" VerticalAlignment="Top" Width="250" Height="45" FontSize="24" Click="PrikaziSveInfo_Click"/>-->
-        <Button x:Name="button4" Content="Guest nalozi" HorizontalAlignment="Left" Margin="938,368,0,0" VerticalAlignment="Top" Width="250" Command="{Binding GuestNalog}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button4" Content="Guest nalozi" HorizontalAlignment="Left" Margin="938,330,0,0" VerticalAlignment="Top" Width="250" Command="{Binding GuestNalog}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
         <Label x:Name="label" Content="Nalozi pacijenata" HorizontalAlignment="Left" Margin="55,80,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
         <Button x:Name="button5" Content="Obavestenja" HorizontalAlignment="Left" Margin="938,553,0,0" VerticalAlignment="Top" Width="250" Command="{Binding Obavestenja}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
         <Button x:Name="button6" Content="Medicinski karton" HorizontalAlignment="Left" Margin="598,553,0,0" VerticalAlignment="Top" Width="250" Command="{Binding MedKarton}" Style="{StaticResource ResourceKey=ButtonStyle}">
@@ -52,8 +52,9 @@
                 </ToolTip>
             </Button.ToolTip>
         </Button>
-        <Button x:Name="button7" Content="Termini" HorizontalAlignment="Left" Margin="938,272,0,0" VerticalAlignment="Top" Width="250" Command="{Binding Termini}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button7" Content="Termini" HorizontalAlignment="Left" Margin="938,252,0,0" VerticalAlignment="Top" Width="250" Command="{Binding Termini}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
         <Button x:Name="button8" Content="Hitno zakazivanje" HorizontalAlignment="Left" Margin="938,173,0,0" VerticalAlignment="Top" Width="250" Command="{Binding HitnoZakazivanje}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
-        <Button x:Name="button3" Content="Prostorije" HorizontalAlignment="Left" Margin="938,457,0,0" VerticalAlignment="Top" Width="250" Command="{Binding Prostorije}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button3" Content="Prostorije" HorizontalAlignment="Left" Margin="938,485,0,0" VerticalAlignment="Top" Width="250" Command="{Binding Prostorije}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button9" Content="Lekari" HorizontalAlignment="Left" Margin="938,408,0,0" VerticalAlignment="Top" Width="250" Command="{Binding Lekari}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
     </Grid>
 </Page>

@@ -81,6 +81,7 @@
     <Compile Include="Sekretar\ViewModel\PageLekarVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageMedKartonVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageObavestenjaSekretarVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PagePrikazLekaraVM.cs" />
     <Compile Include="Sekretar\ViewModel\PagePrioritetZakazivanjaVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageProfilVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageProstorijeVM.cs" />
@@ -91,6 +92,9 @@
     <Compile Include="Sekretar\ViewModel\PageZakazivanjeDatumVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageZakazivanjeLekarVM.cs" />
     <Compile Include="Sekretar\ViewModel\ViewModels.cs" />
+    <Compile Include="Sekretar\View\PagePrikazLekara.xaml.cs">
+      <DependentUpon>PagePrikazLekara.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sekretar\View\PageProfil.xaml.cs">
       <DependentUpon>PageProfil.xaml</DependentUpon>
     </Compile>
@@ -304,6 +308,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DatumZakaz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sekretar\View\PagePrikazLekara.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

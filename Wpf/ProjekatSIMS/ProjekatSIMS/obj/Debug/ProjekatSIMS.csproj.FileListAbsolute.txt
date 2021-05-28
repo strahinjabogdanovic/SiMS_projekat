@@ -2893,3 +2893,5 @@ C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debu
 C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageProfil.baml
 C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageProstorije.g.cs
 C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageProstorije.baml
+C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PagePrikazLekara.g.cs
+C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PagePrikazLekara.baml
