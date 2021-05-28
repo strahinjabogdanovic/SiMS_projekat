@@ -75,6 +75,7 @@
     <Compile Include="Sekretar\ViewModel\PageAzurirajAlergeneVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageDatumVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageGrafikonLekariVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PageGrafikonProstorijaVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageGuestNaloziVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageHitnoZakazivanjeVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageHitnoZakazTerminVM.cs" />
@@ -96,6 +97,9 @@
     <Compile Include="Sekretar\ViewModel\ViewModels.cs" />
     <Compile Include="Sekretar\View\PageGrafikonLekari.xaml.cs">
       <DependentUpon>PageGrafikonLekari.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sekretar\View\PageGrafikonProstorija.xaml.cs">
+      <DependentUpon>PageGrafikonProstorija.xaml</DependentUpon>
     </Compile>
     <Compile Include="Sekretar\View\PagePrikazLekara.xaml.cs">
       <DependentUpon>PagePrikazLekara.xaml</DependentUpon>
@@ -317,6 +321,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Sekretar\View\PageGrafikonLekari.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sekretar\View\PageGrafikonProstorija.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

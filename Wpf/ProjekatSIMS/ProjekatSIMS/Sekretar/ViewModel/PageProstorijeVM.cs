@@ -68,7 +68,7 @@ namespace ProjekatSIMS.Sekretar.ViewModel
 
         public void Executed_Grafikon(object obj)
         {
-            //page.NavigationService.Navigate(new PageSekretar());
+            page.NavigationService.Navigate(new PageGrafikonProstorija());
         }
 
         public bool CanExecute_NavigateCommand(object obj)

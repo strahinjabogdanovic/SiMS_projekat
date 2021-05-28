@@ -2898,3 +2898,5 @@ C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debu
 C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageGrafikonLekari.g.cs
 C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageGrafikonLekari.baml
+C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageGrafikonProstorija.g.cs
+C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageGrafikonProstorija.baml
