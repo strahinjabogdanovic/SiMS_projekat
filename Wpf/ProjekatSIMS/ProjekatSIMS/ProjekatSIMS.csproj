@@ -83,6 +83,7 @@
     <Compile Include="Sekretar\ViewModel\PageObavestenjaSekretarVM.cs" />
     <Compile Include="Sekretar\ViewModel\PagePrioritetZakazivanjaVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageProfilVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PageProstorijeVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageSekretarVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageSekretarZakazTerminaVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageSKreirajNalogVM.cs" />
@@ -92,6 +93,9 @@
     <Compile Include="Sekretar\ViewModel\ViewModels.cs" />
     <Compile Include="Sekretar\View\PageProfil.xaml.cs">
       <DependentUpon>PageProfil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sekretar\View\PageProstorije.xaml.cs">
+      <DependentUpon>PageProstorije.xaml</DependentUpon>
     </Compile>
     <Compile Include="Upravnik\ViewModel\DodajOpremuVM.cs" />
     <Compile Include="Upravnik\ViewModel\StvariVM.cs" />
@@ -304,6 +308,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Sekretar\View\PageProfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sekretar\View\PageProstorije.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

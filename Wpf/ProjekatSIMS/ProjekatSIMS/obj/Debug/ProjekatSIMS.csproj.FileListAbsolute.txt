@@ -2891,3 +2891,5 @@ C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debu
 C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Lekar\View\ZahteviZaValidaciju.baml
 C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageProfil.g.cs
 C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageProfil.baml
+C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageProstorije.g.cs
+C:\Users\Natasa\Desktop\HCI\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Sekretar\View\PageProstorije.baml

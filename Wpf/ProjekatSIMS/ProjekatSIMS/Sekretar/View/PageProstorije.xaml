@@ -1,0 +1,36 @@
+﻿<Page x:Class="ProjekatSIMS.Sekretar.View.PageProstorije"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS.Sekretar.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="PageProstorije" Height="649" Width="1272" Background="LightBlue">
+
+    <Grid>
+        <DataGrid x:Name="dataGridProstorije" ItemsSource="{Binding Path = Prostorije}"
+                  SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
+                  Height="383" Margin="44,155,0,0" VerticalAlignment="Top" Width="1187" FontSize="20">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Ime" Binding="{Binding Path = ime}" Width="160"/>
+                <DataGridTextColumn Header="Oznaka" Binding="{Binding Path = oznaka}" Width="160"/>
+                <DataGridTextColumn Header="Namena" Binding="{Binding Path = namena}" Width="180"/>
+                <DataGridTextColumn Header="Oprema" Binding="{Binding Path = oprema}" Width="350">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <!--<DataGridTextColumn Header="Pocetak " Binding="{Binding Path = vremePocetkaKoriscenja}" Width="160"/>-->
+                <!--<DataGridTextColumn Header="Kraj" Binding="{Binding Path = vremeKrajaKoriscenja}" Width="160"/>-->
+                <DataGridTextColumn Header="Renoviranje" Binding="{Binding Path = renoviranje}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="label" Content="Prostorije" HorizontalAlignment="Left" Margin="44,68,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
+        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="538,568,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button1" Content="Grafikon zauzetosti prostorija" HorizontalAlignment="Left" Margin="899,84,0,0" VerticalAlignment="Top" Width="332" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+    </Grid>
+</Page>
