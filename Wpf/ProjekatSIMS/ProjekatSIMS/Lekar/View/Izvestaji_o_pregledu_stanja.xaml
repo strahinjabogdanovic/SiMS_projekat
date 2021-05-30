@@ -20,10 +20,10 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Izmeni" HorizontalAlignment="Left" Height="46" Margin="816,110,0,0" VerticalAlignment="Top" Width="156" Click="Izmeni_Click" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Background="Gold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="33,33,0,0" TextWrapping="Wrap" Text="&#129044;" VerticalAlignment="Top" Height="40" Width="64" FontSize="30" RenderTransformOrigin="0.516,0.533" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"/>
-        <TextBlock x:Name="tjmbg" HorizontalAlignment="Left" Margin="89,508,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="20" Width="131" Visibility="Hidden"/>
-        <Rectangle x:Name="tooltip" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="55" Margin="792,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="128" RadiusX="20" RadiusY="20" Visibility="Hidden"/>
-        <Label x:Name="labtooltip" Content="Prvo izmeni direktno &#10;   u tabeli i onda &#10;      me klikni" HorizontalAlignment="Left" Margin="792,50,0,0" VerticalAlignment="Top" Height="55" Width="128" Visibility="Hidden"/>
+        <Button Content="Izmeni" HorizontalAlignment="Left" Height="46" Margin="816,110,0,0" VerticalAlignment="Top" Width="156"   Command="{Binding Izmeni}" Background="Gold" BorderBrush="Goldenrod"/>
+        <Button Content="&#129044;" HorizontalAlignment="Left" Margin="33,33,0,0"  VerticalAlignment="Top" Height="40" Width="64" FontSize="30" RenderTransformOrigin="0.516,0.533" Command="{Binding Nazad}" Background="LightCyan" BorderBrush="LightCyan" Foreground="DarkBlue" />
+        <TextBlock Text="{Binding TJmbg}" x:Name="tjmbg" HorizontalAlignment="Left" Margin="89,508,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="20" Width="131" Visibility="Hidden"/>
+        <Rectangle x:Name="tooltip" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="55" Margin="792,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="128" RadiusX="20" RadiusY="20" Visibility="{Binding Tooltip}" />
+        <Label x:Name="labtooltip" Content="Prvo izmeni direktno &#10;   u tabeli i onda &#10;      me klikni" HorizontalAlignment="Left" Margin="792,50,0,0" VerticalAlignment="Top" Height="55" Width="128" Visibility="{Binding Tooltip}"/>
     </Grid>
 </Window>

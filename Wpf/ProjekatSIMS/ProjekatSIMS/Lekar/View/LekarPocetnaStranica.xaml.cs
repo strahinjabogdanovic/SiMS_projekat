@@ -78,7 +78,13 @@ namespace ProjekatSIMS.Lekar.View
 
         private void Kreiraj_Click(object sender, RoutedEventArgs e)
         {
-            KreirajTerminLekar k = new KreirajTerminLekar();
+            if (dataGridLekar.SelectedItem == null)
+            {
+                KreirajTerminLekar k = new KreirajTerminLekar();
+
+                k.ShowDialog();
+            }
+
             if (dataGridLekar.SelectedItem != null)
             {
                 int currentRowIndex = dataGridLekar.Items.IndexOf(dataGridLekar.SelectedItem);
@@ -88,9 +94,10 @@ namespace ProjekatSIMS.Lekar.View
                 TextBlock t5 = dataGridLekar.Columns[5].GetCellContent(row) as TextBlock;
                 string jmbg = t5.Text;
 
-                k = new KreirajTerminLekar(jmbg);
-            }
+                KreirajTerminLekar k = new KreirajTerminLekar(jmbg);
+
                 k.ShowDialog();
+            }
         }
 
 
@@ -143,7 +150,14 @@ namespace ProjekatSIMS.Lekar.View
 
         private void Karton_Click(object sender, RoutedEventArgs e)
         {
-            KartonLekar kl = new KartonLekar(dataGridLekar);
+
+            int currentRowIndex = dataGridLekar.Items.IndexOf(dataGridLekar.SelectedItem);
+
+            DataGridRow row = (DataGridRow)dataGridLekar.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
+
+            TextBlock t5 = dataGridLekar.Columns[5].GetCellContent(row) as TextBlock;
+            string jmbg = t5.Text;
+            KartonLekar kl = new KartonLekar(jmbg);
             this.Close();
             kl.ShowDialog();
         }

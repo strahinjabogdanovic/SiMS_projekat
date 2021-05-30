@@ -13,7 +13,7 @@ namespace ProjekatSIMS.Lekar.View
         string brKartona;
         string spec;
         string opisUputa;
-        public UputSpecijalisti(string jmbg,string ime,string prezime)
+        public UputSpecijalisti(string jmbg, string ime, string prezime)
         {
             InitializeComponent();
 

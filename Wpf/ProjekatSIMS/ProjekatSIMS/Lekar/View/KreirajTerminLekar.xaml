@@ -7,29 +7,32 @@
         mc:Ignorable="d"
         Title="KreirajTerminLekar" Height="800" Width="600">
     <Grid Background="LightCyan" Margin="0,0,2,0">
-        <Label x:Name="label" Content="Vrsta termina" HorizontalAlignment="Left" Margin="62,120,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Datum" HorizontalAlignment="Left" Margin="87,166,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="Vreme" HorizontalAlignment="Left" Margin="87,210,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label3" Content="Soba" HorizontalAlignment="Left" Margin="87,253,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label4" Content="Lekar" HorizontalAlignment="Left" Margin="86,294,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="175,125,0,0" VerticalAlignment="Top" Width="224" Height="21" >
+        <Label x:Name="label" Content="Vrsta termina" HorizontalAlignment="Left" Margin="62,171,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Datum" HorizontalAlignment="Left" Margin="87,217,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Vreme" HorizontalAlignment="Left" Margin="87,267,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.466,0.538"/>
+        <Label x:Name="label3" Content="Soba" HorizontalAlignment="Left" Margin="88,312,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label4" Content="Lekar" HorizontalAlignment="Left" Margin="87,361,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.452,0.558"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="175,171,0,0" VerticalAlignment="Top" Width="224" Height="21" 
+                  SelectedValue="{Binding Path=Vrsta}" >
             <ComboBoxItem>Pregled</ComboBoxItem>
             <ComboBoxItem>Operacija</ComboBoxItem>
         </ComboBox>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="24" Margin="175,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="24" Margin="175,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"/>
-        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="175,294,0,0" VerticalAlignment="Top" Width="224" Height="26" >
+        <TextBox Text="{Binding TVreme}" x:Name="textBox1" HorizontalAlignment="Left" Height="24" Margin="175,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"/>
+        <TextBox Text="{Binding TSoba}" x:Name="textBox2" HorizontalAlignment="Left" Height="24" Margin="175,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"/>
+        <ComboBox   x:Name="comboBox1" HorizontalAlignment="Left" Margin="175,361,0,0" VerticalAlignment="Top" Width="224" Height="26" >
             <ComboBoxItem>Jova Jovic</ComboBoxItem>
             <ComboBoxItem>Jovan Jovanovic</ComboBoxItem>
         </ComboBox>
-        <Button x:Name="button" Content="Odustani" HorizontalAlignment="Left" Margin="99,351,0,0" VerticalAlignment="Top" Width="84" Height="37" FontSize="16" Click="Odustani_Click"/>
-        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="308,351,0,0" VerticalAlignment="Top" Width="91" Height="37" FontSize="16" Click="Potvrdi_Click" Background="Gold"/>
-        <TextBlock x:Name="tBlock" HorizontalAlignment="Left" Margin="423,50,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="23" Width="142" Visibility="Hidden"/>
-        <Label Content="Ime Pacijenta" HorizontalAlignment="Left" Margin="62,34,0,0" VerticalAlignment="Top" Height="29" Width="93"/>
-        <Label Content="Prezime Pacijenta" HorizontalAlignment="Left" Margin="52,68,0,0" VerticalAlignment="Top" Height="29" Width="111"/>
-        <TextBox x:Name="textBox_ime" HorizontalAlignment="Left" Height="23" Margin="175,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"/>
-        <TextBox x:Name="textBox_prz" HorizontalAlignment="Left" Height="23" Margin="175,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"/>
-        <DatePicker x:Name="d" HorizontalAlignment="Left" Margin="175,166,0,0" VerticalAlignment="Top" Height="33" Width="224"/>
+        <Button Content="&#129044;" HorizontalAlignment="Left" Margin="10,18,0,0"  VerticalAlignment="Top" Height="40" Width="64" FontSize="30" RenderTransformOrigin="0.542,0.475" Command="{Binding Nazad}" Background="LightCyan" BorderBrush="LightCyan" Foreground="DarkBlue" />
+        <Button x:Name="button" Content="Odustani" HorizontalAlignment="Left" Margin="112,453,0,0" VerticalAlignment="Top" Width="84" Height="37" FontSize="16" Command="{Binding Odustani}" Background="MistyRose" BorderBrush="PeachPuff"/>
+        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="308,453,0,0" VerticalAlignment="Top" Width="91" Height="37" FontSize="16" Command="{Binding Potvrdi}" Background="Gold" BorderBrush="Yellow"/>
+        <TextBlock Text="{Binding TJmbg}"  x:Name="tBlock" HorizontalAlignment="Left" Margin="423,50,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="23" Width="142" Visibility="Hidden"/>
+        <Label Content="Ime Pacijenta" HorizontalAlignment="Left" Margin="62,74,0,0" VerticalAlignment="Top" Height="29" Width="93"/>
+        <Label Content="Prezime Pacijenta" HorizontalAlignment="Left" Margin="44,118,0,0" VerticalAlignment="Top" Height="29" Width="111"/>
+        <TextBox Text="{Binding TIme}" x:Name="textBox_ime" HorizontalAlignment="Left" Height="23" Margin="175,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"/>
+        <TextBox Text="{Binding TPrezime}" x:Name="textBox_prz" HorizontalAlignment="Left" Height="23" Margin="175,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"/>
+        <DatePicker 
+            SelectedDate="{Binding Path=Datum,  Mode=TwoWay}" x:Name="d" HorizontalAlignment="Left" Margin="175,217,0,0" VerticalAlignment="Top" Height="33" Width="224"/>
 
     </Grid>
 </Window>

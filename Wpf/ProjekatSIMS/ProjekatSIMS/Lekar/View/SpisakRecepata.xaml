@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
         Title="SpisakRecepata" Height="450" Width="800">
-    <Grid>
+    <Grid Background="LightCyan">
         <DataGrid x:Name="dataGridLekar" ItemsSource="{Binding Path = ReceptiSpisak, UpdateSourceTrigger=PropertyChanged}"
                   SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
                   Height="250" Margin="30,119,0,0" VerticalAlignment="Top" Width="500">
@@ -17,10 +17,10 @@
                 <DataGridTextColumn Header="Na koliko sati se lek uzima" Binding="{Binding Path = naKolikoSati}" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Dodaj novi recept" HorizontalAlignment="Left" Margin="652,77,0,0" VerticalAlignment="Top" Width="112" Click="NoviRecept_Click" Height="41"/>
+        <Button Content="Dodaj novi recept" HorizontalAlignment="Left" Margin="652,77,0,0" VerticalAlignment="Top" Width="112" Command="{Binding NoviRecept}" Height="41"/>
         <Label Content="JMBG pacijenta" HorizontalAlignment="Left" Margin="30,77,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="t" HorizontalAlignment="Left" Margin="165,82,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="21" Width="103"/>
-        <TextBlock x:Name="nazad" Text="&#129044;" HorizontalAlignment="Left" Margin="30,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" RenderTransformOrigin="1.241,1.027" MouseLeftButtonUp="nazad_MouseLeftButtonUp"/>
+        <TextBlock Text="{Binding TJmbg}" x:Name="t" HorizontalAlignment="Left" Margin="165,82,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="21" Width="103"/>
+        <Button Content="&#129044;" HorizontalAlignment="Left" Margin="33,33,0,0"  VerticalAlignment="Top" Height="40" Width="64" FontSize="30" RenderTransformOrigin="0.516,0.533" Command="{Binding Path=Nazad}" Background="LightCyan" BorderBrush="LightCyan" Foreground="DarkBlue" />
 
     </Grid>
 </Window>
