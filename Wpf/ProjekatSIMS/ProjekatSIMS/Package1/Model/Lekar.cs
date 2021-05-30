@@ -1,4 +1,3 @@
-using Package1;
 using System.ComponentModel;
 
 namespace ProjekatSIMS.Package1.Model

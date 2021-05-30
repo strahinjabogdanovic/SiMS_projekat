@@ -4,7 +4,6 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Windows;
-using Package1;
 using ProjekatSIMS.Package1.Model;
 using ProjekatSIMS.Upravnik;
 using ProjekatSIMS.Upravnik.View;

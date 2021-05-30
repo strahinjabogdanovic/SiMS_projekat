@@ -1,8 +1,6 @@
-using System;
 using System.ComponentModel;
-using ProjekatSIMS.Package1.Model;
 
-namespace Package1
+namespace ProjekatSIMS.Package1.Model
 {
    public class ZakazivanjeTermina : INotifyPropertyChanged
     {

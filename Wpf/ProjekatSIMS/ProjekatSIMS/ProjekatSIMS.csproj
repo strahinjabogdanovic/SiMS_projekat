@@ -164,8 +164,8 @@
     <Compile Include="PacijentPocetnaStranica.xaml.cs">
       <DependentUpon>PacijentPocetnaStranica.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Package1\AnketaStorage.cs" />
-    <Compile Include="Package1\antiTrol.cs" />
+    <Compile Include="Package1\Repozitorijum\AnketaStorage.cs" />
+    <Compile Include="Package1\Repozitorijum\antiTrol.cs" />
     <Compile Include="Package1\Kontroler\GuestKontroler.cs" />
     <Compile Include="Package1\Kontroler\LekoviKontroler.cs" />
     <Compile Include="Package1\Kontroler\NaloziPacijenataKontroler.cs" />
@@ -566,7 +566,7 @@
     <Compile Include="Package1\Model\Termin.cs" />
     <Compile Include="Package1\Model\TipZaposlenog.cs" />
     <Compile Include="Package1\Model\Upravnik.cs" />
-    <Compile Include="Package1\ZakazivanjeTermina.cs" />
+    <Compile Include="Package1\Model\ZakazivanjeTermina.cs" />
     <Compile Include="Package1\Model\Zaposleni.cs" />
     <Compile Include="Package1\Model\ZdravstveniKarton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

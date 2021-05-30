@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using Package1;
 using ProjekatSIMS.Package1.Model;
 
 namespace ProjekatSIMS.Package1.Repozitorijum

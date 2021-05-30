@@ -18,6 +18,7 @@ using System.IO;
 using System.Windows.Controls;
 using ProjekatSIMS.Package1;
 using ProjekatSIMS.Package1.Model;
+using ProjekatSIMS.Package1.Repozitorijum;
 
 namespace ProjekatSIMS
 {

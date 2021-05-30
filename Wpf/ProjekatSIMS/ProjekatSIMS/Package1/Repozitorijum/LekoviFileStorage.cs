@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Windows.Controls;
-using Package1;
 using ProjekatSIMS.Package1.Model;
 using ProjekatSIMS.Upravnik.View;
 
