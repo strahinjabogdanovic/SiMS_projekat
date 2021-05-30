@@ -29,6 +29,7 @@ namespace ProjekatSIMS.Sekretar.ViewModel
         private RelayCommand hitnoZakazivanje;
         private RelayCommand prostorije;
         private RelayCommand lekari;
+        private RelayCommand antitrol;
 
         public RelayCommand Kreiraj
         {
@@ -120,6 +121,15 @@ namespace ProjekatSIMS.Sekretar.ViewModel
             }
         }
 
+        public RelayCommand Antitrol
+        {
+            get { return antitrol; }
+            set
+            {
+                antitrol = value;
+            }
+        }
+
         private PageSekretar page;
         private DataGrid tabela = new DataGrid();
 
@@ -169,6 +179,7 @@ namespace ProjekatSIMS.Sekretar.ViewModel
             this.HitnoZakazivanje = new RelayCommand(Executed_HitnoZakazivanje, CanExecute_NavigateCommand);
             this.Prostorije = new RelayCommand(Executed_Prostorije, CanExecute_NavigateCommand);
             this.Lekari = new RelayCommand(Executed_Lekari, CanExecute_NavigateCommand);
+            this.Antitrol = new RelayCommand(Executed_Antitrol, CanExecute_NavigateCommand);
 
         }
 
@@ -246,6 +257,11 @@ namespace ProjekatSIMS.Sekretar.ViewModel
         public void Executed_Lekari(object obj)
         {
             page.NavigationService.Navigate(new PagePrikazLekara());
+        }
+
+        public void Executed_Antitrol(object obj)
+        {
+            page.NavigationService.Navigate(new PageAntiTrol());
         }
 
         public bool CanExecute_NavigateCommand(object obj)

@@ -31,5 +31,10 @@ namespace ProjekatSIMS.Package1.Kontroler
         {
             ts.PomeranjeTerminaSekretar(termin);
         }
+
+        public void AntiTrolSekretar(TerminiPacijenata termin)
+        {
+            ts.AntiTrolSekretar(termin);
+        }
     }
 }

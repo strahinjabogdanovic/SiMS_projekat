@@ -550,5 +550,32 @@ namespace ProjekatSIMS.Package1.Repozitorijum
                 }
             return dobavljenTermin;
             }
+
+
+        public void AntiTrolSekretar(TerminiPacijenata termin)
+        {
+            string termini = "";
+            TerminiFileStorage p = new TerminiFileStorage();
+            List<string> sviTermini = p.procitaniTermini();
+            try
+            {
+                foreach (string sviT in sviTermini)
+                {
+                    termini = sviT;
+                    string[] informacije = termini.Split('/');
+                    var privremeni = new TerminiPacijenata();
+                    privremeni.pacijenti = informacije[5];
+                    if (privremeni.pacijenti == termin.pacijenti && informacije[6].Equals("x"))
+                    {
+                        sviTermini.RemoveAt(int.Parse(informacije[4]) - 1);
+                        sviTermini.Insert(int.Parse(informacije[4]) - 1, informacije[0] + "/" + informacije[1] + "/" + informacije[2] + "/" + informacije[3] + "/" + informacije[4] + "/" + informacije[5] + "/");
+                        File.WriteAllLines(@"termini.txt", sviTermini);
+                    }
+
+                }
+            }
+            catch (Exception e)
+            { }
+        }
     }
 }

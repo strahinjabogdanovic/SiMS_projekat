@@ -52,9 +52,10 @@
                 </ToolTip>
             </Button.ToolTip>
         </Button>
-        <Button x:Name="button7" Content="Termini" HorizontalAlignment="Left" Margin="938,252,0,0" VerticalAlignment="Top" Width="250" Command="{Binding Termini}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
-        <Button x:Name="button8" Content="Hitno zakazivanje" HorizontalAlignment="Left" Margin="938,173,0,0" VerticalAlignment="Top" Width="250" Command="{Binding HitnoZakazivanje}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button7" Content="Termini" HorizontalAlignment="Left" Margin="938,168,0,0" VerticalAlignment="Top" Width="250" Command="{Binding Termini}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button8" Content="Hitno zakazivanje" HorizontalAlignment="Left" Margin="938,80,0,0" VerticalAlignment="Top" Width="250" Command="{Binding HitnoZakazivanje}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
         <Button x:Name="button3" Content="Prostorije" HorizontalAlignment="Left" Margin="938,485,0,0" VerticalAlignment="Top" Width="250" Command="{Binding Prostorije}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
         <Button x:Name="button9" Content="Lekari" HorizontalAlignment="Left" Margin="938,408,0,0" VerticalAlignment="Top" Width="250" Command="{Binding Lekari}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button10" Content="Anti-trol" HorizontalAlignment="Left" Margin="938,248,0,0" VerticalAlignment="Top" Width="250" Command="{Binding Antitrol}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
     </Grid>
 </Page>

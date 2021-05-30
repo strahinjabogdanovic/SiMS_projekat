@@ -72,6 +72,7 @@
     <Compile Include="Lekar\ViewModel\IzdavanjeReceptaVM.cs" />
     <Compile Include="RelayCommand.cs" />
     <Compile Include="SekretarPocetnaStranaVM.cs" />
+    <Compile Include="Sekretar\ViewModel\PageAntiTrolVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageAzurirajAlergeneVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageDatumVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageGrafikonLekariVM.cs" />
@@ -95,6 +96,9 @@
     <Compile Include="Sekretar\ViewModel\PageZakazivanjeDatumVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageZakazivanjeLekarVM.cs" />
     <Compile Include="Sekretar\ViewModel\ViewModels.cs" />
+    <Compile Include="Sekretar\View\PageAntiTrol.xaml.cs">
+      <DependentUpon>PageAntiTrol.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sekretar\View\PageGrafikonLekari.xaml.cs">
       <DependentUpon>PageGrafikonLekari.xaml</DependentUpon>
     </Compile>
@@ -317,6 +321,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DatumZakaz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sekretar\View\PageAntiTrol.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

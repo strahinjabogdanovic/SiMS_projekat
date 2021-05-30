@@ -31,5 +31,10 @@ namespace ProjekatSIMS.Package1.Servis
         {
             tfs.PomeranjeTerminaSekretar(termin);
         }
+
+        public void AntiTrolSekretar(TerminiPacijenata termin)
+        {
+            tfs.AntiTrolSekretar(termin);
+        }
     }
 }
