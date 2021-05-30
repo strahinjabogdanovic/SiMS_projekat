@@ -82,7 +82,7 @@ namespace ProjekatSIMS
                 else
                 {
                     this.Hide();
-                    PacijentPocetnaStranica ps = new PacijentPocetnaStranica();
+                    PocetnaPacijent ps = new PocetnaPacijent();
                     ps.ShowDialog();
                     this.Show();
                 }

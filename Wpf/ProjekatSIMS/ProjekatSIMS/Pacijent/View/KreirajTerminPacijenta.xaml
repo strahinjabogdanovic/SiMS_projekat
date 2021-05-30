@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="KreirajTerminPacijenta" Height="300" Width="300">
+        Title="KreirajTerminPacijenta" Height="300" Width="300" Background="LightBlue">
     <Grid>
         <Label x:Name="label" Content="Datum" HorizontalAlignment="Left" Margin="54,39,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Vreme" HorizontalAlignment="Left" Margin="54,81,0,0" VerticalAlignment="Top"/>

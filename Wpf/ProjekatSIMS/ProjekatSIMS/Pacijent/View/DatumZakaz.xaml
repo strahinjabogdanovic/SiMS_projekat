@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="DatumZakaz" Height="450" Width="800">
+        Title="DatumZakaz" Height="450" Width="800" Background="LightBlue">
     <Grid>
         <Label Content="Izaberite termin:" HorizontalAlignment="Left" Margin="361,125,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="251,217,0,0" VerticalAlignment="Top" Width="278"/>
