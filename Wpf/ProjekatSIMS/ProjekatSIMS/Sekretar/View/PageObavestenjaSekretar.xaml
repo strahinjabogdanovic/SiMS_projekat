@@ -10,13 +10,13 @@
 
 
     <Grid>
-        <Label x:Name="label" Content="Obavestenja" HorizontalAlignment="Left" Margin="504,44,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
+        <Label x:Name="label" Content="Obaveštenja" HorizontalAlignment="Left" Margin="504,44,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
 
         <DataGrid x:Name="dataGridObavestenja" ItemsSource="{Binding Path = Obavesti, UpdateSourceTrigger=PropertyChanged}"
                   SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
                   Height="329" Margin="55,173,0,0" VerticalAlignment="Top" Width="1155" FontSize="20">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Obavestenje vide" Binding="{Binding Path = uloga}" Width="170">
+                <DataGridTextColumn Header="Obaveštenje vide" Binding="{Binding Path = uloga}" Width="170">
                     <DataGridTextColumn.ElementStyle>
                         <Style>
                             <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
@@ -32,7 +32,7 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Sadrzaj" Binding="{Binding Path = sadrzaj}" Width="*">
+                <DataGridTextColumn Header="Sadržaj" Binding="{Binding Path = sadrzaj}" Width="*">
                     <DataGridTextColumn.ElementStyle>
                         <Style>
                             <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
@@ -43,28 +43,28 @@
                 <DataGridTextColumn Header="Datum" Binding="{Binding Path = datum}" Width="160"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="button" Content="Kreiraj" HorizontalAlignment="Left" Margin="55,549,0,0" VerticalAlignment="Top" Command="{Binding Kreiraj}" Style="{StaticResource ResourceKey=ButtonStyle}">
+        <Button x:Name="button" Content="Kreiraj" HorizontalAlignment="Left" Margin="238,549,0,0" VerticalAlignment="Top" Command="{Binding Kreiraj}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
                     Kreiranje obavestenja
                 </ToolTip>
             </Button.ToolTip>
         </Button>
-        <Button x:Name="button1" Content="Obrisi" HorizontalAlignment="Left" Margin="256,549,0,0" VerticalAlignment="Top" Command="{Binding Obrisi}" Style="{StaticResource ResourceKey=ButtonStyle}">
+        <Button x:Name="button1" Content="Obriši" HorizontalAlignment="Left" Margin="454,549,0,0" VerticalAlignment="Top" Command="{Binding Obrisi}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
                     Ako zelite da obrisete obavestenje, prvo ga selektujte u tabeli
                 </ToolTip>
             </Button.ToolTip>
         </Button>
-        <Button x:Name="button2" Content="Izmeni" HorizontalAlignment="Left" Margin="450,549,0,0" VerticalAlignment="Top" Command="{Binding Izmeni}" Style="{StaticResource ResourceKey=ButtonStyle}">
+        <Button x:Name="button2" Content="Izmeni" HorizontalAlignment="Left" Margin="660,549,0,0" VerticalAlignment="Top" Command="{Binding Izmeni}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
                     Prvo izmenite podatak u tabeli pa kliknite ovo dugme
                 </ToolTip>
             </Button.ToolTip>
         </Button>
-        <Button x:Name="button3" Content="Nazad" HorizontalAlignment="Left" Margin="654,549,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button3" Content="Nazad" HorizontalAlignment="Left" Margin="870,549,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
 
     </Grid>
 </Page>

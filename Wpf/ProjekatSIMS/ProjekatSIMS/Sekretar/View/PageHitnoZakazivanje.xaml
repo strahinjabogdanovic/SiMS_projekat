@@ -10,25 +10,25 @@
 
     <Grid>
         <Label x:Name="label" Content="Hitno zakazivanje" HorizontalAlignment="Left" Margin="496,59,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
-        <Label x:Name="label1" Content="Vrsta termina" HorizontalAlignment="Left" Margin="375,343,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="560,345,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=ComboBoxStyle}">
+        <Label x:Name="label1" Content="Vrsta termina" HorizontalAlignment="Left" Margin="393,343,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="590,345,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=ComboBoxStyle}">
             <ComboBoxItem>Pregled</ComboBoxItem>
             <ComboBoxItem>Operacija</ComboBoxItem>
         </ComboBox>
-        <Label x:Name="label2" Content="Ime" HorizontalAlignment="Left" Margin="476,176,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label3" Content="Prezime" HorizontalAlignment="Left" Margin="432,231,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="560,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="560,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}"/>
-        <Label x:Name="label4" Content="Oblast lekara" HorizontalAlignment="Left" Margin="378,398,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="560,400,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=ComboBoxStyle}">
+        <Label x:Name="label2" Content="Ime" HorizontalAlignment="Left" Margin="500,176,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label3" Content="Prezime" HorizontalAlignment="Left" Margin="454,231,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="590,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="590,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}"/>
+        <Label x:Name="label4" Content="Oblast lekara" HorizontalAlignment="Left" Margin="396,398,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="590,400,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=ComboBoxStyle}">
             <ComboBoxItem>Opsta praksa</ComboBoxItem>
             <ComboBoxItem>Hirurgija</ComboBoxItem>
             <!--<ComboBoxItem>Kardiologija</ComboBoxItem>-->
         </ComboBox>
-        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="423,492,0,0" VerticalAlignment="Top" Click="Nazad_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
-        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="684,492,0,0" VerticalAlignment="Top" Click="Potvrdi_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
-        <Label x:Name="label5" Content="JMBG" HorizontalAlignment="Left" Margin="456,286,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="560,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}"/>
+        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="646,498,0,0" VerticalAlignment="Top" Click="Nazad_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="454,498,0,0" VerticalAlignment="Top" Click="Potvrdi_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Label x:Name="label5" Content="JMBG" HorizontalAlignment="Left" Margin="474,286,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="590,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}"/>
 
     </Grid>
 </Page>

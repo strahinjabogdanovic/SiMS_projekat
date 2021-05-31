@@ -22,8 +22,8 @@
                 <DataGridTextColumn Header="Soba" Binding="{Binding Path = soba}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="313,568,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
-        <Button x:Name="button1" Content="Zakazi" HorizontalAlignment="Left" Margin="788,568,0,0" VerticalAlignment="Top" Command="{Binding Zakazi}" Style="{StaticResource ResourceKey=ButtonStyle}">
+        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="791,568,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button1" Content="Zakaži" HorizontalAlignment="Left" Margin="305,568,0,0" VerticalAlignment="Top" Command="{Binding Zakazi}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
                     Ako zelite da zakazete termin, prvo unesite ime i prezime pacijenta u tabelu

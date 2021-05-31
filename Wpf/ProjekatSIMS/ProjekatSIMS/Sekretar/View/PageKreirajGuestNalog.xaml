@@ -15,8 +15,8 @@
         <TextBox Text="{Binding S1}" x:Name="textBox" HorizontalAlignment="Left" Margin="550,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}"/>
         <TextBox Text="{Binding S2}" x:Name="textBox1" HorizontalAlignment="Left" Margin="550,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}"/>
         <TextBox Text="{Binding S3}" x:Name="textBox2" HorizontalAlignment="Left" Margin="550,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}"/>
-        <Button x:Name="button" Content="Odustani" HorizontalAlignment="Left" Margin="458,453,0,0" VerticalAlignment="Top" Command="{Binding Odustani}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
-        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="691,453,0,0" VerticalAlignment="Top" Command="{Binding Potvrdi}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="638,453,0,0" VerticalAlignment="Top" Command="{Binding Odustani}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="438,453,0,0" VerticalAlignment="Top" Command="{Binding Potvrdi}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
         <Label x:Name="label3" Content="Kreiranje guest naloga" HorizontalAlignment="Left" Margin="426,77,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
 
     </Grid>

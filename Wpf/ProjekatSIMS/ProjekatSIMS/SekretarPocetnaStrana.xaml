@@ -10,7 +10,6 @@
     <Grid>
         <Frame x:Name="PocetnaS" Margin="0,40,0,0" NavigationUIVisibility="Hidden" />
         <Button x:Name="button" Content="Odjava" HorizontalAlignment="Left" Margin="1150,7,0,0" VerticalAlignment="Top" Width="100" FontSize="18" Click="Odjava_Click"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="25" Margin="16,7,0,0" TextWrapping="Wrap" Background="LightGray" Text="Pretraži" VerticalAlignment="Top" Width="120" FontSize="18"/>
-        <Button x:Name="button1" Content="Profil" HorizontalAlignment="Left" Margin="1024,7,0,0" VerticalAlignment="Top" Width="100" FontSize="18" Click="Profil_Click"/>
+        <Button x:Name="button1" Content="Profil" HorizontalAlignment="Left" Margin="17,7,0,0" VerticalAlignment="Top" Width="100" FontSize="18" Click="Profil_Click"/>
     </Grid>
 </Window>

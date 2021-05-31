@@ -11,7 +11,7 @@
     <Grid>
         <Label x:Name="label" Content="Izaberite prioritet zakazivanja" HorizontalAlignment="Left" Margin="384,95,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
         <RadioButton x:Name="radioButton" Content="Datum" HorizontalAlignment="Left" Margin="548,250,0,0" VerticalAlignment="Top" FontSize="36" Command="{Binding Datum}"/>
-        <RadioButton x:Name="radioButton1" Content="Lekar" HorizontalAlignment="Left" Margin="548,340,0,0" VerticalAlignment="Top" FontSize="36" Command="{Binding Lekar}"/>
+        <RadioButton x:Name="radioButton1" Content="Lekar" HorizontalAlignment="Left" Margin="548,350,0,0" VerticalAlignment="Top" FontSize="36" Command="{Binding Lekar}"/>
         <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="548,484,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
 
     </Grid>

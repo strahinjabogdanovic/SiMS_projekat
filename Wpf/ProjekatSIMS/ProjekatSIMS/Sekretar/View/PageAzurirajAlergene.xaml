@@ -9,11 +9,11 @@
       Title="PageAzurirajAlergene" Height="649" Width="1272" Background="LightBlue">
 
     <Grid>
-        <Label x:Name="label" Content="Alergeni" HorizontalAlignment="Left" Margin="340,226,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <TextBox Text="{Binding S1}" x:Name="textBox" HorizontalAlignment="Left" Height="149" Margin="462,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="24"/>
-        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="434,498,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
-        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="665,498,0,0" VerticalAlignment="Top" Command="{Binding Potvrdi}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
-        <Label x:Name="label1" Content="Azuriranje alergena" HorizontalAlignment="Left" Margin="434,80,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
+        <Label x:Name="label" Content="Alergeni" HorizontalAlignment="Left" Margin="208,230,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <TextBox Text="{Binding S1}" x:Name="textBox" HorizontalAlignment="Left" Height="149" Margin="343,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="563" FontSize="24"/>
+        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="645,479,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="434,479,0,0" VerticalAlignment="Top" Command="{Binding Potvrdi}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Label x:Name="label1" Content="Ažuriranje alergena" HorizontalAlignment="Left" Margin="434,80,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
 
     </Grid>
 </Page>

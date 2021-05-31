@@ -14,7 +14,7 @@
         <Label x:Name="label2" Content="Prezime" HorizontalAlignment="Left" Margin="123,200,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label3" Content="JMBG" HorizontalAlignment="Left" Margin="147,255,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label4" Content="Pol" HorizontalAlignment="Left" Margin="753,145,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label5" Content="Datum rodjenja" HorizontalAlignment="Left" Margin="42,310,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label5" Content="Datum rođenja" HorizontalAlignment="Left" Margin="42,310,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label6" Content="Email" HorizontalAlignment="Left" Margin="728,200,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.579,-0.154" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label7" Content="Broj telefona" HorizontalAlignment="Left" Margin="650,310,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label8" Content="Adresa" HorizontalAlignment="Left" Margin="712,255,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
@@ -27,9 +27,9 @@
         <TextBlock Text="{Binding S6}" x:Name="t6" HorizontalAlignment="Left" Margin="814,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
         <TextBlock Text="{Binding S7}" x:Name="t7" HorizontalAlignment="Left" Margin="814,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
         <Label x:Name="label9" Content="Alergeni" HorizontalAlignment="Left" Margin="119,367,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <TextBlock Text="{Binding S8}" x:Name="t8" HorizontalAlignment="Left" Margin="240,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="667" Height="92" FontSize="24" Background="White"/>
-        <Button x:Name="button" Content="Azuriraj alergene" HorizontalAlignment="Left" Margin="594,492,0,0" VerticalAlignment="Top" Command="{Binding Azuriraj}" Style="{StaticResource ResourceKey=ButtonStyle}" Width="240"/>
-        <Button x:Name="button1" Content="Nazad" HorizontalAlignment="Left" Margin="384,492,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <TextBlock Text="{Binding S8}" x:Name="t8" HorizontalAlignment="Left" Margin="240,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="92" FontSize="24" Background="White"/>
+        <Button x:Name="button" Content="Ažuriraj alergene" HorizontalAlignment="Left" Margin="387,529,0,0" VerticalAlignment="Top" Command="{Binding Azuriraj}" Style="{StaticResource ResourceKey=ButtonStyle}" Width="240"/>
+        <Button x:Name="button1" Content="Nazad" HorizontalAlignment="Left" Margin="680,529,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
 
     </Grid>
 </Page>

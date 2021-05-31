@@ -17,7 +17,7 @@
                 <DataGridTextColumn Header="Prezime" Binding="{Binding Path = prezime}" Width="160"/>
                 <DataGridTextColumn Header="Specijalizacija" Binding="{Binding Path = specijalnost}" Width="160"/>
                 <DataGridTextColumn Header="JMBG" Binding="{Binding Path = jmbg}" Width="160"/>
-                <DataGridTextColumn Header="Datum rodjenja" Binding="{Binding Path = datumRodjenja}" Width="160"/>
+                <DataGridTextColumn Header="Datum rođenja" Binding="{Binding Path = datumRodjenja}" Width="160"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding Path = email}" Width="250">
                 <DataGridTextColumn.ElementStyle>
                     <Style>

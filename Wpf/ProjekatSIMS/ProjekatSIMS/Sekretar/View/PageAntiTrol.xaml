@@ -13,12 +13,18 @@
 
         <DataGrid x:Name="dataGridAntiTrol" ItemsSource="{Binding Path = TerminiP, UpdateSourceTrigger=PropertyChanged}"
                   SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
-                  Height="329" Margin="437,191,0,0" VerticalAlignment="Top" Width="391" FontSize="20">
+                  Height="365" Margin="437,155,0,0" VerticalAlignment="Top" Width="391" FontSize="20">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Pacijent" Binding="{Binding Path = pacijenti}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="437,560,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
-        <Button x:Name="button1" Content="Odblokiraj" HorizontalAlignment="Left" Margin="688,560,0,0" VerticalAlignment="Top" Command="{Binding Odblokiraj}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="688,560,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button1" Content="Odblokiraj" HorizontalAlignment="Left" Margin="437,560,0,0" VerticalAlignment="Top" Command="{Binding Odblokiraj}" Style="{StaticResource ResourceKey=ButtonStyle}">
+            <Button.ToolTip>
+                <ToolTip>
+                    Prvo izaberite pacijenta iz tabele
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
     </Grid>
 </Page>

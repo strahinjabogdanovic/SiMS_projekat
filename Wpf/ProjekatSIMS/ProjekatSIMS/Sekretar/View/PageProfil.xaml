@@ -14,7 +14,7 @@
         <Label x:Name="label2" Content="Prezime" HorizontalAlignment="Left" Margin="497,185,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label3" Content="JMBG" HorizontalAlignment="Left" Margin="521,230,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label4" Content="Pol" HorizontalAlignment="Left" Margin="549,275,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label5" Content="Datum rodjenja" HorizontalAlignment="Left" Margin="416,320,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label5" Content="Datum rođenja" HorizontalAlignment="Left" Margin="416,320,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label6" Content="Email" HorizontalAlignment="Left" Margin="524,365,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label7" Content="Broj telefona" HorizontalAlignment="Left" Margin="446,410,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label8" Content="Adresa" HorizontalAlignment="Left" Margin="508,455,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
@@ -23,7 +23,7 @@
         <Label x:Name="label11" Content="0303999567435" Background="White" Width="350" HorizontalAlignment="Left" Margin="627,230,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label12" Content="Ženski" Background="White" Width="350" HorizontalAlignment="Left" Margin="627,275,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label13" Content="03.03.1999." Background="White" Width="350" HorizontalAlignment="Left" Margin="627,320,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label14" Content="nataša@gmail.com" Background="White" Width="350" HorizontalAlignment="Left" Margin="627,365,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label14" Content="natasa@gmail.com" Background="White" Width="350" HorizontalAlignment="Left" Margin="627,365,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label15" Content="064537934" Background="White" Width="350" HorizontalAlignment="Left" Margin="627,410,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label16" Content="Stražilovska 3" Background="White" Width="350" HorizontalAlignment="Left" Margin="627,455,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="549,549,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=ButtonStyle}" Click="Nazad_Click"/>
