@@ -3198,3 +3198,5 @@ C:\Users\Tatjana\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\ob
 C:\Users\Tatjana\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Pacijent\View\PrioritetLekar.baml
 C:\Users\Tatjana\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Pacijent\View\ReceptiPacijent.baml
 C:\Users\Tatjana\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Lekar\View\UputZaBolnicu.baml
+C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Lekar\View\UputZaBolnicu.g.cs
+C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Lekar\View\UputZaBolnicu.baml

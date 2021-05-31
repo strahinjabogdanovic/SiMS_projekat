@@ -7,10 +7,9 @@
         mc:Ignorable="d"
         Title="DatumZakaz" Height="450" Width="800" Background="LightBlue">
     <Grid>
-        <Label Content="Izaberite termin:" HorizontalAlignment="Left" Margin="361,125,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="251,217,0,0" VerticalAlignment="Top" Width="278"/>
-        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="364,341,0,0" VerticalAlignment="Top" Width="75" Click="Potvrdi_Click"/>
+        <Label Content="Izaberite termin:" HorizontalAlignment="Left" Margin="281,97,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="222,182,0,0" VerticalAlignment="Top" Width="342" FontSize="30"/>
+        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="328,313,0,0" VerticalAlignment="Top" Width="129" Click="Potvrdi_Click" FontSize="28" Height="63"/>
 
     </Grid>
 </Window>
-

@@ -386,6 +386,12 @@ namespace ProjekatSIMS
             PacijentPocetnaStranica pp = new PacijentPocetnaStranica();
             pp.ShowDialog();
         }
+
+        private void Otkazi_Click(object sender, RoutedEventArgs e) {
+            Close();
+        }
+
+
     }
 
 }

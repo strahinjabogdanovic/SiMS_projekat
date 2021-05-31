@@ -1,31 +1,31 @@
-﻿<Window x:Class="ProjekatSIMS.LekarAnketa"
+﻿<Window x:Class="ProjekatSIMS.LekarAnketa" WindowStartupLocation="CenterScreen"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="LekarAnketa" Height="683" Width="1000">
+        Title="LekarAnketa" Height="630" Width="1000" Background="LightBlue">
     <Grid>
-        <Label Content="Ocenjivanje lekara" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="75" Height="113" Width="647"/>
-        <Label Content="Odaberite lekara:" HorizontalAlignment="Left" Margin="131,128,0,0" VerticalAlignment="Top" FontSize="35"/>
-        <Label Content="Ljubaznost:" HorizontalAlignment="Left" Margin="221,238,0,0" VerticalAlignment="Top" FontSize="35"/>
-        <Label Content="Strucnost:" HorizontalAlignment="Left" Margin="243,331,0,0" VerticalAlignment="Top" FontSize="35"/>
-        <Label Content="Vas komentar:" HorizontalAlignment="Left" Margin="58,428,0,0" VerticalAlignment="Top" FontSize="35"/>
-        <ComboBox x:Name="cb" HorizontalAlignment="Left" Margin="484,132,0,0" VerticalAlignment="Top" Width="395" FontSize="35"/>
-        <ComboBox x:Name="cbLjub" HorizontalAlignment="Left" Margin="484,242,0,0" VerticalAlignment="Top" Width="395" FontSize="35">
+        <Label Content="Ocenjivanje lekara" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="60" Height="85" Width="501"/>
+        <Label Content="Odaberite lekara:" HorizontalAlignment="Left" Margin="147,128,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label Content="Ljubaznost:" HorizontalAlignment="Left" Margin="224,202,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label Content="Strucnost:" HorizontalAlignment="Left" Margin="243,273,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label Content="Vas komentar:" HorizontalAlignment="Left" Margin="77,360,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <ComboBox x:Name="cb" HorizontalAlignment="Left" Margin="453,132,0,0" VerticalAlignment="Top" Width="395" FontSize="30"/>
+        <ComboBox x:Name="cbLjub" HorizontalAlignment="Left" Margin="453,202,0,0" VerticalAlignment="Top" Width="395" FontSize="30">
             <ComboBoxItem>Nezadovoljan/a</ComboBoxItem>
             <ComboBoxItem>Delimicno zadovoljan/a</ComboBoxItem>
             <ComboBoxItem>Zadovoljan/a</ComboBoxItem>
         </ComboBox>
-        <ComboBox x:Name="cbStr" HorizontalAlignment="Left" Margin="484,331,0,0" VerticalAlignment="Top" Width="395" FontSize="35">
+        <ComboBox x:Name="cbStr" HorizontalAlignment="Left" Margin="453,277,0,0" VerticalAlignment="Top" Width="395" FontSize="30">
             <ComboBoxItem>Nezadovoljan/a</ComboBoxItem>
             <ComboBoxItem>Delimicno zadovoljan/a</ComboBoxItem>
             <ComboBoxItem>Zadovoljan/a</ComboBoxItem>
         </ComboBox>
-        <TextBox x:Name="comm" HorizontalAlignment="Left" Height="115" Margin="334,428,0,0" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" MinLines="1" MaxLines="4" VerticalAlignment="Top" Width="545" FontSize="30"/>
-        <Button Content="Odustani" HorizontalAlignment="Left" Margin="194,579,0,22" Width="162" Click="Odustani_Click" FontSize="35"/>
-        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="604,579,0,0" VerticalAlignment="Top" Width="162" FontSize="35" Click="Potvrdi_Click"/>
+        <TextBox x:Name="comm" HorizontalAlignment="Left" Height="115" Margin="303,360,0,0" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" MinLines="1" MaxLines="4" VerticalAlignment="Top" Width="545" FontSize="30"/>
+        <Button Content="Odustani" HorizontalAlignment="Left" Margin="224,527,0,20" Width="162" Click="Odustani_Click" FontSize="28"/>
+        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="608,527,0,0" VerticalAlignment="Top" Width="162" FontSize="28" Click="Potvrdi_Click" Height="52"/>
 
     </Grid>
 </Window>

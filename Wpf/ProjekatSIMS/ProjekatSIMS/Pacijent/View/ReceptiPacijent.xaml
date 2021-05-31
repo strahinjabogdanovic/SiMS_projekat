@@ -1,23 +1,25 @@
-﻿<Window x:Class="ProjekatSIMS.ReceptiPacijent"
+﻿<Window x:Class="ProjekatSIMS.ReceptiPacijent" WindowStartupLocation="CenterScreen"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="ReceptiPacijent" Height="450" Width="800">
+        Title="ReceptiPacijent" Height="450" Width="800" Background="LightBlue">
     <Grid>
         <DataGrid x:Name="dataGridLekar" ItemsSource="{Binding Path = ReceptiSpisak, UpdateSourceTrigger=PropertyChanged}"
                   SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
-                  Height="250" Margin="30,84,0,0" VerticalAlignment="Top" Width="500">
+                  Height="288" Margin="109,37,0,0" VerticalAlignment="Top" Width="577">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Sifra Leka" Binding="{Binding Path = sifraLeka}"/>
-                <DataGridTextColumn Header="Naziv Leka" Binding="{Binding Path = nazivLeka}" />
-                <DataGridTextColumn Header="Način uzimanja" Binding="{Binding Path = nacinUzimanja}" />
-                <DataGridTextColumn Header="Na koliko sati se lek uzima" Binding="{Binding Path = naKolikoSati}" />
+                <DataGridTextColumn Header="Sifra Leka" Binding="{Binding Path = sifraLeka}" MinWidth="135"/>
+                <DataGridTextColumn Header="Naziv Leka" Binding="{Binding Path = nazivLeka}" MinWidth="135"/>
+                <DataGridTextColumn Header="Način uzimanja" Binding="{Binding Path = nacinUzimanja}" MinWidth="135"/>
+                <DataGridTextColumn Header="Na koliko sati se lek uzima" Binding="{Binding Path = naKolikoSati}" MinWidth="135"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Podsetnik" HorizontalAlignment="Left" Margin="631,199,0,0" VerticalAlignment="Top" Width="75" Click="Podsetnik_Click"/>
+        <Button Content="Podsetnik" HorizontalAlignment="Left" Margin="324,360,0,0" VerticalAlignment="Top" Width="138" Click="Podsetnik_Click" FontSize="25"/>
 
     </Grid>
 </Window>
+
+

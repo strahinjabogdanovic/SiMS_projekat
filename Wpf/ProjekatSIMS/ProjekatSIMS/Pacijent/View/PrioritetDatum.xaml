@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="PrioritetDatum" Height="450" Width="800">
+        Title="PrioritetDatum" Height="450" Width="800" Background="LightBlue">
     <Grid>
-        <Label Content="Unesite datum:" HorizontalAlignment="Left" Margin="286,58,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Width="151"/>
-        <TextBox x:Name="tb1" HorizontalAlignment="Left" Height="38" Margin="228,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" FontSize="20"/>
-        <Button Content="Zakazi" HorizontalAlignment="Left" Margin="337,345,0,0" VerticalAlignment="Top" Width="100" FontSize="20" Height="50" Click="DatumZakaz_Click"/>
+        <Label Content="Unesite datum:" HorizontalAlignment="Left" Margin="286,72,0,0" VerticalAlignment="Top" FontSize="30" Height="51" Width="208"/>
+        <TextBox x:Name="tb1" HorizontalAlignment="Left" Height="53" Margin="208,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="377" FontSize="30"/>
+        <Button Content="Zakazi" HorizontalAlignment="Left" Margin="316,318,0,0" VerticalAlignment="Top" Width="142" FontSize="28" Height="61" Click="DatumZakaz_Click"/>
 
     </Grid>
 </Window>

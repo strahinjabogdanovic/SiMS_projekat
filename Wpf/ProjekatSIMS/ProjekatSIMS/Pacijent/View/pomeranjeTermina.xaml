@@ -5,11 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="pomeranjeTermina" Height="450" Width="800">
+        Title="pomeranjeTermina" Height="450" Width="800" Background="LightBlue">
     <Grid>
-        <Label Content="Datum na koji zelite da pomerite termin:" HorizontalAlignment="Left" Margin="168,67,0,0" VerticalAlignment="Top" Width="418" FontSize="20"/>
-        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="199,145,0,0" VerticalAlignment="Top" Width="299" Height="69"/>
-        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="450,319,0,0" VerticalAlignment="Top" Width="217" Height="70" Click="Button_Click"/>
+        <Label Content="Datum na koji zelite da pomerite termin:" HorizontalAlignment="Left" Margin="142,67,0,0" VerticalAlignment="Top" Width="544" FontSize="30"/>
+        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="190,143,0,0" VerticalAlignment="Top" Width="417" Height="61" FontSize="30"/>
+        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="462,315,0,0" VerticalAlignment="Top" Width="211" Height="55" Click="Button_Click" FontSize="28"/>
+        <Button Content="Otkazi" HorizontalAlignment="Left" Margin="110,315,0,0" VerticalAlignment="Top" Width="211" Height="55" FontSize="28" Click="Otkazi_Click"/>
 
     </Grid>
 </Window>
+
