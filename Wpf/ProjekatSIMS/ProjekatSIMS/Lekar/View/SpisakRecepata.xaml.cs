@@ -17,20 +17,12 @@ namespace ProjekatSIMS.Lekar.View
     {
 
 
-        public SpisakRecepata(TextBlock tb)
-        {
-            InitializeComponent();
-
-            string jmbg = tb.Text;
-            this.DataContext = new ProjekatSIMS.Lekar.ViewModel.SpisakRecepataVM(dataGridLekar, jmbg);
-
-        }
+        
 
         public SpisakRecepata(string tJmbg)
         {
             InitializeComponent();
-            string jmbg = tJmbg;
-            this.DataContext = new ProjekatSIMS.Lekar.ViewModel.SpisakRecepataVM(dataGridLekar, jmbg);
+            this.DataContext = new ProjekatSIMS.Lekar.ViewModel.SpisakRecepataVM(dataGridLekar, tJmbg);
 
         }
 

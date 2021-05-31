@@ -20,10 +20,10 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="button" Content="Kreiraj" HorizontalAlignment="Left" Margin="74,326,0,0" VerticalAlignment="Top" Width="86" Height="32" FontSize="16" Click="Kreiraj_Click" MouseEnter="button_MouseEnter" MouseLeave="button_MouseLeave" Background="GreenYellow"/>
-        <Button x:Name="button2" Content="Izmeni" HorizontalAlignment="Left" Margin="320,326,0,0" VerticalAlignment="Top" Width="86" Height="32" FontSize="16" Click="Izmeni_Click" Background="Purple"/>
-        <Button x:Name="button3" Content="Karton" HorizontalAlignment="Left" Margin="788,50,0,0" VerticalAlignment="Top" Width="96" Click="Karton_Click" Height="25" FontSize="16" MouseEnter="button3_MouseEnter" MouseLeave="button3_MouseLeave" Background="Gold"/>
-        <Button x:Name="button4" Content="Validacija leka" HorizontalAlignment="Left" Height="28" Margin="788,229,0,0" VerticalAlignment="Top" Width="117" Click="Validation_Click" FontSize="16" Background="MistyRose"/>
+        <Button x:Name="button" Content="Kreiraj" HorizontalAlignment="Left" Margin="74,326,0,0" VerticalAlignment="Top" Width="86" Height="32" FontSize="16" Click="Kreiraj_Click" MouseEnter="button_MouseEnter" MouseLeave="button_MouseLeave" Background="GreenYellow" BorderBrush="YellowGreen"/>
+        <Button x:Name="button2" Content="Izmeni" HorizontalAlignment="Left" Margin="320,326,0,0" VerticalAlignment="Top" Width="86" Height="32" FontSize="16" Click="Izmeni_Click" Background="MistyRose" BorderBrush="PeachPuff"/>
+        <Button x:Name="button3" Content="Karton" HorizontalAlignment="Left" Margin="788,50,0,0" VerticalAlignment="Top" Width="96" Click="Karton_Click" Height="25" FontSize="16" MouseEnter="button3_MouseEnter" MouseLeave="button3_MouseLeave" Background="Gold" BorderBrush="Yellow"/>
+        <Button x:Name="button4" Content="Validacija leka" HorizontalAlignment="Left" Height="28" Margin="788,229,0,0" VerticalAlignment="Top" Width="117" Click="Validation_Click" FontSize="16" Background="MistyRose" BorderBrush="PeachPuff"/>
         <TextBlock x:Name="logout" HorizontalAlignment="Left" Margin="906,10,0,0" TextWrapping="Wrap" Text="&#11144;" VerticalAlignment="Top" Height="48" Width="59" FontSize="40" MouseLeftButtonUp="logout_MouseLeftButtonUp"/>
         <TextBlock HorizontalAlignment="Left" Margin="197,327,0,0" TextWrapping="Wrap" Text="&#128465;" VerticalAlignment="Top" Height="32" Width="36" FontSize="20" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"/>
         <Rectangle x:Name="klikni" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="44" Margin="840,80,0,0" RadiusY="20" RadiusX="20" Stroke="Black" VerticalAlignment="Top" Width="125" Visibility="Hidden"/>

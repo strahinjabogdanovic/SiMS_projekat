@@ -68,32 +68,11 @@ namespace ProjekatSIMS.Package1.Repozitorijum
             File.Move(tempFile, "izvestaji.txt");
         }
 
-        public void CitanjeIzvestaja(string tJmbg, DataGrid dgp, ObservableCollection<MedIzvestaj> Izvopr)
+        public List<String> CitanjeIzvestaja()
         {
             List<String> lines = new List<string>();
             lines = File.ReadAllLines("izvestaji.txt").ToList();
-
-            foreach (string linee in lines)
-            {
-                String[] deo = linee.Split('/');
-                var izvestaj = new MedIzvestaj();
-
-                izvestaj.vrsta = deo[0].ToString();
-                izvestaj.odeljenje = deo[1].ToString();
-                izvestaj.sala = deo[2].ToString();
-                izvestaj.nalaz = deo[3].ToString();
-                izvestaj.kontrola = deo[4].ToString();
-                izvestaj.terapija = deo[5].ToString();
-                izvestaj.datum = deo[6].ToString();
-                izvestaj.jmbg = deo[7].ToString();
-
-                if (tJmbg == izvestaj.jmbg)
-                {
-                    Izvopr.Add(izvestaj);
-                    tJmbg = izvestaj.jmbg;
-                }
-            }
-
+            return lines;
 
             StreamReader sr = new StreamReader("izvestaji.txt");
             string line = "";

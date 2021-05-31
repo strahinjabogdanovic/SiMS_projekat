@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using ProjekatSIMS.Lekar.View;
+using ProjekatSIMS.Package1.Kontroler;
 using ProjekatSIMS.Package1.Model;
 using ProjekatSIMS.Package1.Repozitorijum;
 
@@ -42,28 +43,14 @@ namespace ProjekatSIMS.Lekar.ViewModel
             tabela = dgl;
             tJmbg = jmbg;
             ReceptiSpisak = new ObservableCollection<Recepti>();
-            List<String> lines = new List<string>();
-            lines = File.ReadAllLines("recepti.txt").ToList();
-
-            foreach (string linee in lines)
-            {
-                String[] termin = linee.Split('/');
-                var recepti = new Recepti();
-                recepti.sifraLeka = termin[0].ToString();
-                recepti.nazivLeka = termin[1].ToString();
-                recepti.nacinUzimanja = termin[2].ToString();
-                recepti.naKolikoSati = int.Parse(termin[3].ToString());
-                if (termin[4] == jmbg)
-                {
-
-                    ReceptiSpisak.Add(recepti);
-                }
-            }
+            LekarKontroler lk = new LekarKontroler();
+            ReceptiSpisak=lk.ReceptiOdTogPacijenta(jmbg);
 
             NoviRecept = new MyICommand(NoviRecept_Click);
             Nazad = new MyICommand(nazad_Click);
         }
 
+        
 
 
         public string TJmbg

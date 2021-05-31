@@ -17,16 +17,12 @@ namespace ProjekatSIMS.Lekar.View
     {
         private string tJmbg;
 
-        public Izvestaji_o_pregledu_stanja(TextBlock t2)
-        {
-            InitializeComponent();
-            this.DataContext = new ProjekatSIMS.Lekar.ViewModel.Izvestaji_o_pregledu_stanjaVM(t2, Izvestaji);
-
-        }
+      
 
         public Izvestaji_o_pregledu_stanja(string tJmbg)
         {
             InitializeComponent();
+            this.DataContext = new ProjekatSIMS.Lekar.ViewModel.Izvestaji_o_pregledu_stanjaVM(tJmbg, Izvestaji);
 
             this.tJmbg = tJmbg;
         }

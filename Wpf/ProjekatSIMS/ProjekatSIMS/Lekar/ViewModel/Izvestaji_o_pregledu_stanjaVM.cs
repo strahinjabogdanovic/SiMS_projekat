@@ -11,6 +11,7 @@ using System.Windows.Controls;
 using ProjekatSIMS.Lekar.View;
 using ProjekatSIMS.Package1.Model;
 using ProjekatSIMS.Package1.Repozitorijum;
+using ProjekatSIMS.Package1.Servis;
 
 namespace ProjekatSIMS.Lekar.ViewModel
 {
@@ -40,14 +41,13 @@ namespace ProjekatSIMS.Lekar.ViewModel
             }
         }
         public ObservableCollection<MedIzvestaj> Izvopr { get; set; }
-        public Izvestaji_o_pregledu_stanjaVM(TextBlock t, DataGrid dgp)
+        public Izvestaji_o_pregledu_stanjaVM(string jmbg, DataGrid dgp)
         {
             tabela = dgp;
-            tJmbg = t.Text;
             Izvopr = new ObservableCollection<MedIzvestaj>();
-            IzvestajiFileStorage ifs = new IzvestajiFileStorage();
-            ifs.CitanjeIzvestaja(tJmbg, dgp, Izvopr);
-
+            LekarServis ifs = new LekarServis();
+            Izvopr=ifs.NadjiIzvestaje(jmbg);
+            
             PridruzivanjeMetodaKomandama();
         }
 

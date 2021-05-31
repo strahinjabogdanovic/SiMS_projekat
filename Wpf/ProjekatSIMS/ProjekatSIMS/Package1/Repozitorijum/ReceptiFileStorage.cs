@@ -56,5 +56,11 @@ namespace ProjekatSIMS.Package1.Repozitorijum
             sr.Close();
             return tJmbg;
         }
+        public List<string> Citanje()
+        {
+            List<String> lines = new List<string>();
+            lines = File.ReadAllLines("recepti.txt").ToList();
+            return lines;
+        }
     }
 }
