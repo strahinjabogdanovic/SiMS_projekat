@@ -9,27 +9,39 @@
       Title="PageMedKarton" Height="649" Width="1272" Background="LightBlue">
 
     <Grid>
-        <Label x:Name="label" Content="Medicinski karton" HorizontalAlignment="Left" Margin="450,46,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
-        <Label x:Name="label1" Content="Ime" HorizontalAlignment="Left" Margin="167,145,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label2" Content="Prezime" HorizontalAlignment="Left" Margin="123,200,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label3" Content="JMBG" HorizontalAlignment="Left" Margin="147,255,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label4" Content="Pol" HorizontalAlignment="Left" Margin="753,145,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label5" Content="Datum rođenja" HorizontalAlignment="Left" Margin="42,310,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label6" Content="Email" HorizontalAlignment="Left" Margin="728,200,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.579,-0.154" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label7" Content="Broj telefona" HorizontalAlignment="Left" Margin="650,310,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label8" Content="Adresa" HorizontalAlignment="Left" Margin="712,255,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <TextBlock Text="{Binding S}" x:Name="t" HorizontalAlignment="Left" Margin="240,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
-        <TextBlock Text="{Binding S1}" x:Name="t1" HorizontalAlignment="Left" Margin="240,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
-        <TextBlock Text="{Binding S2}" x:Name="t2" HorizontalAlignment="Left" Margin="240,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
-        <TextBlock Text="{Binding S3}" x:Name="t3" HorizontalAlignment="Left" Margin="814,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
-        <TextBlock Text="{Binding S4}" x:Name="t4" HorizontalAlignment="Left" Margin="240,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
-        <TextBlock Text="{Binding S5}" x:Name="t5" HorizontalAlignment="Left" Margin="814,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
-        <TextBlock Text="{Binding S6}" x:Name="t6" HorizontalAlignment="Left" Margin="814,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
-        <TextBlock Text="{Binding S7}" x:Name="t7" HorizontalAlignment="Left" Margin="814,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
-        <Label x:Name="label9" Content="Alergeni" HorizontalAlignment="Left" Margin="119,367,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <TextBlock Text="{Binding S8}" x:Name="t8" HorizontalAlignment="Left" Margin="240,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="92" FontSize="24" Background="White"/>
-        <Button x:Name="button" Content="Ažuriraj alergene" HorizontalAlignment="Left" Margin="387,529,0,0" VerticalAlignment="Top" Command="{Binding Azuriraj}" Style="{StaticResource ResourceKey=ButtonStyle}" Width="240"/>
-        <Button x:Name="button1" Content="Nazad" HorizontalAlignment="Left" Margin="680,529,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Label x:Name="label" Content="Medicinski karton" HorizontalAlignment="Left" Margin="454,36,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
+        <Label x:Name="label1" Content="Ime" HorizontalAlignment="Left" Margin="167,114,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label2" Content="Prezime" HorizontalAlignment="Left" Margin="123,159,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label3" Content="JMBG" HorizontalAlignment="Left" Margin="147,204,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label4" Content="Pol" HorizontalAlignment="Left" Margin="175,294,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label5" Content="Datum rođenja" HorizontalAlignment="Left" Margin="48,249,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label6" Content="Email" HorizontalAlignment="Left" Margin="728,114,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.579,-0.154" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label7" Content="Broj telefona" HorizontalAlignment="Left" Margin="650,204,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label8" Content="Adresa" HorizontalAlignment="Left" Margin="712,159,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <TextBlock Text="{Binding S}" x:Name="t" HorizontalAlignment="Left" Margin="240,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock Text="{Binding S1}" x:Name="t1" HorizontalAlignment="Left" Margin="240,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock Text="{Binding S2}" x:Name="t2" HorizontalAlignment="Left" Margin="240,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock Text="{Binding S3}" x:Name="t3" HorizontalAlignment="Left" Margin="240,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock Text="{Binding S4}" x:Name="t4" HorizontalAlignment="Left" Margin="240,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock Text="{Binding S5}" x:Name="t5" HorizontalAlignment="Left" Margin="814,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock Text="{Binding S6}" x:Name="t6" HorizontalAlignment="Left" Margin="814,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock Text="{Binding S7}" x:Name="t7" HorizontalAlignment="Left" Margin="814,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <Label x:Name="label9" Content="Alergeni" HorizontalAlignment="Left" Margin="119,384,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <TextBlock Text="{Binding S8}" x:Name="t8" HorizontalAlignment="Left" Margin="240,389,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="87" FontSize="24" Background="White"/>
+        <Button x:Name="button" Content="Ažuriraj alergene" HorizontalAlignment="Left" Margin="350,529,0,0" VerticalAlignment="Top" Command="{Binding Azuriraj}" Style="{StaticResource ResourceKey=ButtonStyle}" Width="240"/>
+        <Button x:Name="button1" Content="Nazad" HorizontalAlignment="Left" Margin="655,529,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Label x:Name="label10" Content="Izabrani lekar" HorizontalAlignment="Left" Margin="66,339,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label11" Content="Zaposlen/a" HorizontalAlignment="Left" Margin="667,249,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label12" Content="Osiguran/a" HorizontalAlignment="Left" Margin="667,294,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label13" Content="Krvna grupa" HorizontalAlignment="Left" Margin="656,339,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label14" Content="Primljene vakcine" HorizontalAlignment="Left" Margin="601,384,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label15" Content="Faktor rizika" HorizontalAlignment="Left" Margin="658,429,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="240,344,0,0" TextWrapping="Wrap" Text="Jova Jovic" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="814,254,0,0" TextWrapping="Wrap" Text="Da" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="814,299,0,0" TextWrapping="Wrap" Text="Da" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="814,344,0,0" TextWrapping="Wrap" Text="AB" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="814,389,0,0" TextWrapping="Wrap" Text="vakcina1,vakcina2" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
+        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Margin="814,434,0,0" TextWrapping="Wrap" Text="holesterol" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBlockStyle}"/>
 
     </Grid>
 </Page>
