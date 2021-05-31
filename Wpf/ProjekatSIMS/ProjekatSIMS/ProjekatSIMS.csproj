@@ -55,9 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Ankete.xaml.cs">
-      <DependentUpon>Ankete.xaml</DependentUpon>
-    </Compile>
     <Compile Include="BindableBase.cs" />
     <Compile Include="Lekar\ViewModel\Izvestaji_o_pregledu_stanjaVM.cs" />
     <Compile Include="Lekar\ViewModel\IzvestajVM.cs" />
@@ -68,6 +65,9 @@
     <Compile Include="Lekar\ViewModel\UputZaBolnicuVM.cs" />
     <Compile Include="Lekar\View\UputZaBolnicu.xaml.cs">
       <DependentUpon>UputZaBolnicu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pacijent\View\Ankete.xaml.cs">
+      <DependentUpon>Ankete.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pacijent\View\BiranjePrioritetaZakazivanja.xaml.cs">
       <DependentUpon>BiranjePrioritetaZakazivanja.xaml</DependentUpon>
@@ -325,11 +325,11 @@
     <Compile Include="Lekar\View\ZahteviZaValidaciju.xaml.cs">
       <DependentUpon>ZahteviZaValidaciju.xaml</DependentUpon>
     </Compile>
-    <Page Include="Ankete.xaml">
+    <Page Include="Lekar\View\UputZaBolnicu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Lekar\View\UputZaBolnicu.xaml">
+    <Page Include="Pacijent\View\Ankete.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

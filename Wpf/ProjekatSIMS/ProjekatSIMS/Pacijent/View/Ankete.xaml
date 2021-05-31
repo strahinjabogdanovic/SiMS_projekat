@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="Ankete" Height="800" Width="1343.774">
-    <Grid MinHeight="800" HorizontalAlignment="Left" VerticalAlignment="Top" Height="200" Margin="0,0,-209,-31" Width="1000" MinWidth="1500">
-        <Label Content="Aktivne ankete" HorizontalAlignment="Left" Margin="73,61,0,0" VerticalAlignment="Top" FontSize="100"/>
-        <Label Content="Ocenjivanje lekara" HorizontalAlignment="Left" Margin="191,307,0,0" VerticalAlignment="Top" FontSize="45"/>
-        <Label Content="Ocenjivanje bolnice" HorizontalAlignment="Left" Margin="191,534,0,0" VerticalAlignment="Top" FontSize="45"/>
-        <Button Content="anketa" HorizontalAlignment="Left" Margin="901,326,0,0" VerticalAlignment="Top" Width="253" FontSize="45" Click="LekarAnketa_Click"/>
-        <Button Content="anketa" HorizontalAlignment="Left" Margin="901,540,0,0" VerticalAlignment="Top" Width="253" FontSize="45" Click="BolnicaAnketa_Click" RenderTransformOrigin="0.573,-1.837"/>
+        Title="Ankete" Height="600" Width="1235.781" Background="LightBlue">
+    <Grid MinHeight="800" HorizontalAlignment="Left" VerticalAlignment="Top" Height="618" Margin="0,0,-8,-86" Width="1236" MinWidth="1500">
+        <Label Content="Aktivne ankete" HorizontalAlignment="Left" Margin="67,44,0,0" VerticalAlignment="Top" FontSize="60" Height="93" Width="419"/>
+        <Label Content="Ocenjivanje lekara" HorizontalAlignment="Left" Margin="191,193,0,0" VerticalAlignment="Top" FontSize="45"/>
+        <Label Content="Ocenjivanje bolnice" HorizontalAlignment="Left" Margin="164,358,0,0" VerticalAlignment="Top" FontSize="45"/>
+        <Button Content="anketa" HorizontalAlignment="Left" Margin="776,193,0,0" VerticalAlignment="Top" Width="253" FontSize="45" Click="LekarAnketa_Click" Height="70"/>
+        <Button Content="anketa" HorizontalAlignment="Left" Margin="776,358,0,0" VerticalAlignment="Top" Width="253" FontSize="45" Click="BolnicaAnketa_Click" RenderTransformOrigin="0.573,-1.837" Height="70"/>
     </Grid>
 </Window>
+
 
