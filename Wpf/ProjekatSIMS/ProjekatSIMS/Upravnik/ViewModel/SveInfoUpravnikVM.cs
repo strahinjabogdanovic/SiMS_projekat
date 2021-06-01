@@ -4,18 +4,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProjekatSIMS.Upravnik.View;
 
 namespace ProjekatSIMS.Upravnik.ViewModel
 {
     public class SveInfoUpravnikVM : BindableBase
     {
+        private SveInfoPage page;
         private string s1;
         private string s2;
         private string s3;
         private string s4;
         private string s5;
-        public SveInfoUpravnikVM(int currentRowIndex)
+        public SveInfoUpravnikVM(SveInfoPage page, int currentRowIndex)
         {
+            this.page = page;
             int idp = 0;
             string prostorija = "";
 

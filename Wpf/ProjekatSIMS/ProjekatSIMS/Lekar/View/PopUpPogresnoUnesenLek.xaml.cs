@@ -23,9 +23,10 @@ namespace ProjekatSIMS.Lekar.View
         }
 
         private void tBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            Lekovi_U noviProzor = new Lekovi_U();
-            noviProzor.ShowDialog();
+        {   
+            //svi prozori su prebaceni u page, pozvati dobar page ovde @Tanja
+            /*Lekovi_U noviProzor = new Lekovi_U();
+            noviProzor.ShowDialog();*/
         }
     }
 }

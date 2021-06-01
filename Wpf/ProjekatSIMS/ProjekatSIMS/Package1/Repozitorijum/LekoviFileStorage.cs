@@ -20,8 +20,8 @@ namespace ProjekatSIMS.Package1.Repozitorijum
             var text = File.ReadAllText(@"lekovi.txt");
             File.WriteAllText(@"lekovi.txt", text + s1 + "/" + s2 + "/" + s3 + "/" + s4 + "/" + "-" + Environment.NewLine);
 
-            Lekovi_U s = new Lekovi_U();
-            s.ShowDialog();
+            //Lekovi_U s = new Lekovi_U();
+            //s.ShowDialog();
         }
 
         public void Obrisi(int currentRowIndex)

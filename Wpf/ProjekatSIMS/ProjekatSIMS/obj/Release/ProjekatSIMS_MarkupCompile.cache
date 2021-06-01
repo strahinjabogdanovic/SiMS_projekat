@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Strahx\Documents\GitHub\sims kopija za hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Release\
+C:\Users\Strahx\Documents\GitHub\sims kopija posle kt5\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Release\
 ProjekatSIMS
 none
 false
 TRACE
-C:\Users\Strahx\Documents\GitHub\sims kopija za hci\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\App.xaml
-55-759064307
+C:\Users\Strahx\Documents\GitHub\sims kopija posle kt5\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\App.xaml
+721448087375
 
-1191253484423
+1771064999405
 131569487696
-Ankete.xaml;BiranjePrioritetaZakazivanja.xaml;BolnicaAnketa.xaml;DatumZakaz.xaml;Upravnik\View\DodajOpremu.xaml;Upravnik\View\DodavanjeLeka.xaml;Upravnik\View\FiltriranaOprema.xaml;IzdavanjeRecepta.xaml;Izvestaj.xaml;Izvestaji_o_pregledu_stanja.xaml;KartonLekar.xaml;Upravnik\View\KreirajProstoriju.xaml;KreirajTerminLekar.xaml;KreirajTerminPacijenta.xaml;LekarAnketa.xaml;LekarPocetnaStranica.xaml;LekarZakaz.xaml;Upravnik\View\Lekovi_U.xaml;MainWindow.xaml;PacijentPocetnaStranica.xaml;PageAzurirajAlergene.xaml;PageDatum.xaml;PageGuestNalozi.xaml;PageHitnoZakazivanje.xaml;PageHitnoZakazTermin.xaml;PageKreirajGuestNalog.xaml;PageKreirajObavestenje.xaml;PageLekar.xaml;PageMedKarton.xaml;PageObavestenjaSekretar.xaml;PagePrioritetZakazivanja.xaml;PageSekretar.xaml;PageSekretarZakazTermina.xaml;PageSKreirajNalog.xaml;PageSPrikazInfo.xaml;PageTerminiSekretar.xaml;PageZakazivanjeDatum.xaml;PageZakazivanjeLekar.xaml;pomeranjeTermina.xaml;PopUpPogresnoUnesenLek.xaml;PrioritetDatum.xaml;PrioritetLekar.xaml;Upravnik\View\rasporedjivanje.xaml;ReceptiPacijent.xaml;SekretarPocetnaStrana.xaml;SlobodniTerminiSpecijaliste.xaml;SpisakLekova.xaml;SpisakRecepata.xaml;Upravnik\View\Stvari.xaml;Upravnik\View\SveInfoUpravnik.xaml;Terapija.xaml;Upravnik\View\UpravnikPocetnaStranica.xaml;UputSpecijalisti.xaml;ValidacijaLeka.xaml;ZahteviZaValidaciju.xaml;
+Lekar\View\UputZaBolnicu.xaml;Pacijent\View\Ankete.xaml;Pacijent\View\BiranjePrioritetaZakazivanja.xaml;Pacijent\View\BolnicaAnketa.xaml;Pacijent\View\DatumZakaz.xaml;Pacijent\View\PocetnaPacijent.xaml;Sekretar\View\PageAntiTrol.xaml;Sekretar\View\PageGrafikonLekari.xaml;Sekretar\View\PageGrafikonProstorija.xaml;Sekretar\View\PagePrikazLekara.xaml;Sekretar\View\PageProfil.xaml;Sekretar\View\PageProstorije.xaml;Upravnik\View\DodajOpremu.xaml;Upravnik\View\DodavanjeLeka.xaml;Upravnik\View\DodavanjeLekaPage.xaml;Upravnik\View\DodavanjeOpremePage.xaml;Upravnik\View\DodavanjeProstorijePage.xaml;Upravnik\View\FiltriranaOprema.xaml;Lekar\View\IzdavanjeRecepta.xaml;Lekar\View\Izvestaj.xaml;Lekar\View\Izvestaji_o_pregledu_stanja.xaml;Lekar\View\KartonLekar.xaml;Upravnik\View\FiltriranaPage.xaml;Upravnik\View\KreirajProstoriju.xaml;Lekar\View\KreirajTerminLekar.xaml;Pacijent\View\KreirajTerminPacijenta.xaml;Pacijent\View\LekarAnketa.xaml;Lekar\View\LekarPocetnaStranica.xaml;Pacijent\View\LekarZakaz.xaml;Upravnik\View\LekoviPage.xaml;Upravnik\View\Lekovi_U.xaml;MainWindow.xaml;Pacijent\View\PacijentPocetnaStranica.xaml;Sekretar\View\PageAzurirajAlergene.xaml;Sekretar\View\PageDatum.xaml;Sekretar\View\PageGuestNalozi.xaml;Sekretar\View\PageHitnoZakazivanje.xaml;Sekretar\View\PageHitnoZakazTermin.xaml;Sekretar\View\PageKreirajGuestNalog.xaml;Sekretar\View\PageKreirajObavestenje.xaml;Sekretar\View\PageLekar.xaml;Sekretar\View\PageMedKarton.xaml;Sekretar\View\PageObavestenjaSekretar.xaml;Sekretar\View\PagePrioritetZakazivanja.xaml;Sekretar\View\PageSekretar.xaml;Sekretar\View\PageSekretarZakazTermina.xaml;Sekretar\View\PageSKreirajNalog.xaml;PageSPrikazInfo.xaml;Sekretar\View\PageTerminiSekretar.xaml;Sekretar\View\PageZakazivanjeDatum.xaml;Sekretar\View\PageZakazivanjeLekar.xaml;Pacijent\View\pomeranjeTermina.xaml;Lekar\View\PopUpPogresnoUnesenLek.xaml;Pacijent\View\PrioritetDatum.xaml;Pacijent\View\PrioritetLekar.xaml;Upravnik\View\OpremaPage.xaml;Upravnik\View\rasporedjivanje.xaml;Pacijent\View\ReceptiPacijent.xaml;SekretarPocetnaStrana.xaml;Lekar\View\SlobodniTerminiSpecijaliste.xaml;Lekar\View\SpisakLekova.xaml;Lekar\View\SpisakRecepata.xaml;Upravnik\View\RasporedjivanjePage.xaml;Upravnik\View\Stvari.xaml;Upravnik\View\SveInfoPage.xaml;Upravnik\View\SveInfoUpravnik.xaml;Terapija.xaml;Upravnik\View\UpravnikPage.xaml;Upravnik\View\UpravnikPocetnaStranica.xaml;Lekar\View\UputSpecijalisti.xaml;Lekar\View\ValidacijaLeka.xaml;Lekar\View\ZahteviZaValidaciju.xaml;
 
 True
 

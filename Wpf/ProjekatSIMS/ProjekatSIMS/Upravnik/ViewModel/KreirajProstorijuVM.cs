@@ -15,6 +15,7 @@ namespace ProjekatSIMS.Upravnik.ViewModel
 {
     public class KreirajProstorijuVM : BindableBase
     {
+        private DodavanjeProstorijePage page;
         public ObservableCollection<Prostorije> Prostorije { get; set; }
         public MyICommand Potvrdi { get; set; }
         private string s1;
@@ -23,14 +24,16 @@ namespace ProjekatSIMS.Upravnik.ViewModel
         private string s4;
         private string s5;
 
-        public KreirajProstorijuVM()
+        public KreirajProstorijuVM(DodavanjeProstorijePage page)
         {
             Potvrdi = new MyICommand(PotvrdiKlik);
+            this.page = page;
         }
         private void PotvrdiKlik()
         {
             ProstorijeKontroler pk = new ProstorijeKontroler();
             pk.Kreiraj(S1, S2, S3, S4, S5);
+            page.NavigationService.Navigate(new UpravnikPage());
         }
         public string S1
         {

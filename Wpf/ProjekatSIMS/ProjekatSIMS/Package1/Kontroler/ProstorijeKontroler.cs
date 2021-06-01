@@ -16,16 +16,6 @@ namespace ProjekatSIMS.Package1.Kontroler
             ps.Obrisi(currentRowIndex);
         }
 
-        public void Update(string update, int currentRowIndex)
-        {
-            ps.Update(update, currentRowIndex);
-        }
-
-        public void Prikazi(int currentRowIndex)
-        {
-            ps.Prikazi(currentRowIndex);
-        }
-
         public void stvari(int currentRowIndex)
         {
             ps.stvari(currentRowIndex);

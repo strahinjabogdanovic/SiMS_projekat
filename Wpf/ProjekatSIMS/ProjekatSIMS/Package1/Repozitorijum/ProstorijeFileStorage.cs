@@ -22,9 +22,6 @@ namespace ProjekatSIMS.Package1.Repozitorijum
         {
             var text = File.ReadAllText(@"prostorije.txt");
             File.WriteAllText(@"prostorije.txt", text + tb + "/" + tb1 + "/" + tb2 + "/" + tb3 + "/" + tb4 + "/" + "-" + Environment.NewLine);
-
-            UpravnikPocetnaStranica s = new UpravnikPocetnaStranica();
-            s.ShowDialog();
         }
       
       public void Obrisi(int currentRowIndex)
@@ -49,42 +46,10 @@ namespace ProjekatSIMS.Package1.Repozitorijum
             { }
         }
       
-      public void Prikazi(int currentRowIndex)
-      {
-            SveInfoUpravnik svu = new SveInfoUpravnik(currentRowIndex);
-            svu.ShowDialog();
-      }
-      
-      public void Update(string update, int currentRowIndex)
-      {
-            int idp = 0;
-            string prostorija = "";
-
-            try
-            {
-                ProstorijeFileStorage p = new ProstorijeFileStorage();
-                List<string> sveProstorije = p.procitaneProstorije();
-                foreach (string sveP in sveProstorije)
-                {
-                    prostorija = sveP;
-                    string[] infoProstorija = prostorija.Split('/');
-                    if (idp == currentRowIndex)
-                    {
-                        sveProstorije.RemoveAt(currentRowIndex);
-                        sveProstorije.Insert(currentRowIndex, update + infoProstorija[4] + "/" + infoProstorija[5]);
-                        File.WriteAllLines(@"prostorije.txt", sveProstorije);
-                    }
-                    idp++;
-                }
-            }
-            catch (Exception e)
-            { }
-        }
-
         public void stvari(int currentRowIndex)
         {
-            Stvari st = new Stvari(currentRowIndex);
-            st.ShowDialog();
+            /*Stvari st = new Stvari(currentRowIndex);
+            st.ShowDialog();*/
         }
 
         public List<string> prostorije_u_cb(int izabrani_red)

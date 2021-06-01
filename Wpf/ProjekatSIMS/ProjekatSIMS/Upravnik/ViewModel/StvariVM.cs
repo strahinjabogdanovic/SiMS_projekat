@@ -15,6 +15,7 @@ namespace ProjekatSIMS.Upravnik.ViewModel
 {
     public class StvariVM : BindableBase
     {
+        private OpremaPage page;
         public ObservableCollection<Oprema> Oprema{ get; set;}
         int redProstorije = 0;
         private string s1;
@@ -22,8 +23,10 @@ namespace ProjekatSIMS.Upravnik.ViewModel
         public MyICommand Dodaj { get; set; }
         public MyICommand Obrisi { get; set; }
         public MyICommand Izmeni { get; set; }
-        public StvariVM(int currentRowIndex, DataGrid dgo)
+        public MyICommand Rasporedjivanje { get; set; }
+        public StvariVM(OpremaPage page, DataGrid dgo,int currentRowIndex)
         {
+            this.page = page;
             tabela = dgo;
             redProstorije = currentRowIndex;
             Oprema = new ObservableCollection<Oprema>();
@@ -62,6 +65,7 @@ namespace ProjekatSIMS.Upravnik.ViewModel
             Dodaj = new MyICommand(DodajOpremu);
             Obrisi = new MyICommand(ObrisiOpremu);
             Izmeni = new MyICommand(IzmeniOpremu);
+            Rasporedjivanje = new MyICommand(RasporediOpremu);
         }
         public string S1
         {
@@ -78,8 +82,7 @@ namespace ProjekatSIMS.Upravnik.ViewModel
 
         private void DodajOpremu()
         {
-            DodajOpremu d = new DodajOpremu(redProstorije);
-            d.ShowDialog();
+            page.NavigationService.Navigate(new DodavanjeOpremePage(redProstorije));
         }
 
         private void ObrisiOpremu()
@@ -109,6 +112,11 @@ namespace ProjekatSIMS.Upravnik.ViewModel
 
             OpremaKontroler ok = new OpremaKontroler();
             ok.Update(redProstorije, currentRowIndex, t1.Text, t2.Text);
+        }
+
+        private void RasporediOpremu()
+        {
+            page.NavigationService.Navigate(new RasporedjivanjePage(redProstorije));
         }
     }
 }

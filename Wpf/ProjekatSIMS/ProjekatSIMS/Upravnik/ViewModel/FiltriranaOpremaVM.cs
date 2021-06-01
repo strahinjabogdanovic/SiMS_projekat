@@ -7,17 +7,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using ProjekatSIMS.Package1.Model;
+using ProjekatSIMS.Upravnik.View;
 
 namespace ProjekatSIMS.Upravnik.ViewModel
 {
     public class FiltriranaOpremaVM : BindableBase
     {
         public ObservableCollection<ProstorijeOprema> PO { get; set;}
+        private FiltriranaPage page;
         private DataGrid tabela = new DataGrid();
         private string s1;
 
-        public FiltriranaOpremaVM(DataGrid dgp, string s)
+        public FiltriranaOpremaVM(FiltriranaPage page, DataGrid dgp, string s)
         {
+            this.page = page;
             tabela = dgp;
             PO = new ObservableCollection<ProstorijeOprema>();
             List<String> lines = new List<string>();

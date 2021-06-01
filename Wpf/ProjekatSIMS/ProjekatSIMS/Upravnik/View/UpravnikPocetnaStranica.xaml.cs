@@ -15,11 +15,14 @@ namespace ProjekatSIMS.Upravnik.View
 {
     public partial class UpravnikPocetnaStranica : Window
     {
+        public UpravnikPocetnaStranicaVM viewModel { get; set; }
+        public LekoviPageVM viewM { get; set; }
         public UpravnikPocetnaStranica()
         {
 
             InitializeComponent();
-            this.DataContext = new ProjekatSIMS.Upravnik.ViewModel.UpravnikPocetnaStranicaVM(dataGridProstorije);
+            this.viewModel = new UpravnikPocetnaStranicaVM(this.PocetnaS.NavigationService, this);
+            this.DataContext = this.viewModel;
 
 
             /*LekoviFileStorage lfs = new LekoviFileStorage();
@@ -30,6 +33,18 @@ namespace ProjekatSIMS.Upravnik.View
                 pu.ShowDialog();
             }*/
 
+        }
+
+        private void lekovi_click(object sender, RoutedEventArgs e)
+        {
+            this.viewM = new LekoviPageVM(this.PocetnaS.NavigationService, this);
+            this.DataContext = this.viewM;
+        }
+
+        private void button0_Click(object sender, RoutedEventArgs e)
+        {
+            this.viewModel = new UpravnikPocetnaStranicaVM(this.PocetnaS.NavigationService, this);
+            this.DataContext = this.viewModel;
         }
     }
 }

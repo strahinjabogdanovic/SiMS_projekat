@@ -132,19 +132,21 @@
       <DependentUpon>PageProstorije.xaml</DependentUpon>
     </Compile>
     <Compile Include="Upravnik\ViewModel\DodajOpremuVM.cs" />
+    <Compile Include="Upravnik\ViewModel\LekoviPageVM.cs" />
     <Compile Include="Upravnik\ViewModel\StvariVM.cs" />
-    <Compile Include="Upravnik\View\DodajOpremu.xaml.cs">
-      <DependentUpon>DodajOpremu.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Upravnik\ViewModel\UpravnikPageVM.cs" />
     <Compile Include="Upravnik\ViewModel\DodavanjeLekaVM.cs" />
     <Compile Include="Upravnik\ViewModel\FiltriranaOpremaVM.cs" />
     <Compile Include="Upravnik\ViewModel\rasporedjivanjeVM.cs" />
     <Compile Include="Upravnik\ViewModel\SveInfoUpravnikVM.cs" />
-    <Compile Include="Upravnik\View\DodavanjeLeka.xaml.cs">
-      <DependentUpon>DodavanjeLeka.xaml</DependentUpon>
+    <Compile Include="Upravnik\View\DodavanjeLekaPage.xaml.cs">
+      <DependentUpon>DodavanjeLekaPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Upravnik\View\FiltriranaOprema.xaml.cs">
-      <DependentUpon>FiltriranaOprema.xaml</DependentUpon>
+    <Compile Include="Upravnik\View\DodavanjeOpremePage.xaml.cs">
+      <DependentUpon>DodavanjeOpremePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Upravnik\View\DodavanjeProstorijePage.xaml.cs">
+      <DependentUpon>DodavanjeProstorijePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Lekar\View\IzdavanjeRecepta.xaml.cs">
       <DependentUpon>IzdavanjeRecepta.xaml</DependentUpon>
@@ -159,9 +161,8 @@
       <DependentUpon>KartonLekar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Upravnik\ViewModel\KreirajProstorijuVM.cs" />
-    <Compile Include="Upravnik\ViewModel\Lekovi_UVM.cs" />
-    <Compile Include="Upravnik\View\KreirajProstoriju.xaml.cs">
-      <DependentUpon>KreirajProstoriju.xaml</DependentUpon>
+    <Compile Include="Upravnik\View\FiltriranaPage.xaml.cs">
+      <DependentUpon>FiltriranaPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Lekar\View\KreirajTerminLekar.xaml.cs">
       <DependentUpon>KreirajTerminLekar.xaml</DependentUpon>
@@ -178,8 +179,8 @@
     <Compile Include="Pacijent\View\LekarZakaz.xaml.cs">
       <DependentUpon>LekarZakaz.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Upravnik\View\Lekovi_U.xaml.cs">
-      <DependentUpon>Lekovi_U.xaml</DependentUpon>
+    <Compile Include="Upravnik\View\LekoviPage.xaml.cs">
+      <DependentUpon>LekoviPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MyICommand.cs" />
     <Compile Include="Pacijent\View\PacijentPocetnaStranica.xaml.cs">
@@ -285,8 +286,8 @@
     <Compile Include="Pacijent\View\PrioritetLekar.xaml.cs">
       <DependentUpon>PrioritetLekar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Upravnik\View\rasporedjivanje.xaml.cs">
-      <DependentUpon>rasporedjivanje.xaml</DependentUpon>
+    <Compile Include="Upravnik\View\OpremaPage.xaml.cs">
+      <DependentUpon>OpremaPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pacijent\View\ReceptiPacijent.xaml.cs">
       <DependentUpon>ReceptiPacijent.xaml</DependentUpon>
@@ -303,16 +304,19 @@
     <Compile Include="Lekar\View\SpisakRecepata.xaml.cs">
       <DependentUpon>SpisakRecepata.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Upravnik\View\Stvari.xaml.cs">
-      <DependentUpon>Stvari.xaml</DependentUpon>
+    <Compile Include="Upravnik\View\RasporedjivanjePage.xaml.cs">
+      <DependentUpon>RasporedjivanjePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Upravnik\View\SveInfoUpravnik.xaml.cs">
-      <DependentUpon>SveInfoUpravnik.xaml</DependentUpon>
+    <Compile Include="Upravnik\View\SveInfoPage.xaml.cs">
+      <DependentUpon>SveInfoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Terapija.xaml.cs">
       <DependentUpon>Terapija.xaml</DependentUpon>
     </Compile>
     <Compile Include="Upravnik\ViewModel\UpravnikPocetnaStranicaVM.cs" />
+    <Compile Include="Upravnik\View\UpravnikPage.xaml.cs">
+      <DependentUpon>UpravnikPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Upravnik\View\UpravnikPocetnaStranica.xaml.cs">
       <DependentUpon>UpravnikPocetnaStranica.xaml</DependentUpon>
     </Compile>
@@ -373,15 +377,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Upravnik\View\DodajOpremu.xaml">
+    <Page Include="Upravnik\View\DodavanjeLekaPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Upravnik\View\DodavanjeLeka.xaml">
+    <Page Include="Upravnik\View\DodavanjeOpremePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Upravnik\View\FiltriranaOprema.xaml">
+    <Page Include="Upravnik\View\DodavanjeProstorijePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -401,7 +405,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Upravnik\View\KreirajProstoriju.xaml">
+    <Page Include="Upravnik\View\FiltriranaPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -425,7 +429,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Upravnik\View\Lekovi_U.xaml">
+    <Page Include="Upravnik\View\LekoviPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -533,7 +537,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Upravnik\View\rasporedjivanje.xaml">
+    <Page Include="Upravnik\View\OpremaPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -557,15 +561,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Upravnik\View\Stvari.xaml">
+    <Page Include="Upravnik\View\RasporedjivanjePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Upravnik\View\SveInfoUpravnik.xaml">
+    <Page Include="Upravnik\View\SveInfoPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Terapija.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Upravnik\View\UpravnikPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

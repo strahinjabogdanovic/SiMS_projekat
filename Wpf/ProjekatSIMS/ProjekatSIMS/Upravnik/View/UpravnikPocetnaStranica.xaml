@@ -7,30 +7,8 @@
         mc:Ignorable="d"
         Title="UpravnikPocetnaStranica" Height="750" Width="430">
     <Grid>
-        <DataGrid x:Name="dataGridProstorije" ItemsSource="{Binding Path = Prostorije}"
-                  SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
-                  Height="489" Margin="10,47,0,0" VerticalAlignment="Top" Width="400">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Ime" Binding="{Binding Path = ime}"/>
-                <DataGridTextColumn Header="Oznaka" Binding="{Binding Path = oznaka}" />
-                <DataGridTextColumn Header="Namena" Binding="{Binding Path = namena}" />
-                <DataGridTextColumn Header="Oprema" Binding="{Binding Path = oprema}" />
-                <DataGridTextColumn Header="Pocetak" Binding="{Binding Path = vremePocetkaKoriscenja}" Width="55"/>
-                <DataGridTextColumn Header="Kraj" Binding="{Binding Path = vremeKrajaKoriscenja}" Width="55"/>
-                <DataGridTextColumn Header="Renoviranje" Binding="{Binding Path = renoviranje}" Width="70"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Button x:Name="button" Content="Kreiraj" HorizontalAlignment="Left" Margin="15,640,0,0" VerticalAlignment="Top" Width="90" Height="20" Command="{Binding Kreiraj}"/>
-        <Button x:Name="button1" Content="Obrisi" HorizontalAlignment="Left" Margin="115,640,0,0" VerticalAlignment="Top" Width="90" Height="20" Command="{Binding Obrisi}"  />
-        <Button x:Name="button2" Content="Izmeni" HorizontalAlignment="Left" Margin="215,640,0,0" VerticalAlignment="Top" Width="90" Height="20" Command="{Binding Promeni}" />
-        <Button x:Name="button3" Content="Info" HorizontalAlignment="Left" Margin="320,640,0,0" VerticalAlignment="Top" Width="90" Height="20" Command="{Binding Prikazi}"/>
-        <Button x:Name="button4" Content="Oprema" HorizontalAlignment="Left" Margin="15,680,0,0" VerticalAlignment="Top" Width="90" Height="20" Command="{Binding Oprema}"/>
-        <Button x:Name="button5" Content="Rasporedjivanje" HorizontalAlignment="Left" Margin="320,680,0,0" VerticalAlignment="Top" Width="90" Height="20" Command="{Binding Rasporedjivanje}"/>
-        <Button x:Name="button6" Content="Lekovi" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="20" Margin="115,680,0,0" Command="{Binding Lekovi}"/>
-        <TextBox Text="{Binding Pretraga}" x:Name="tb1" HorizontalAlignment="Left" Height="23" Margin="281,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="s?" HorizontalAlignment="Left" Margin="401,0,0,0" VerticalAlignment="Top" Width="23" Height="23" Command="{Binding Pretrazi}"/>
-        <Button Content="Renoviranje" HorizontalAlignment="Left" Margin="215,680,0,0" VerticalAlignment="Top" Width="90" Height="20" Command="{Binding Renoviranje}"/>
-        <Label Content="Prostorije" HorizontalAlignment="Left" Margin="5,23,0,0" VerticalAlignment="Top" Height="24"/>
-        <Button Content="Demo" HorizontalAlignment="Left" Margin="339,25,0,0" VerticalAlignment="Top" Width="75"/>
+        <Frame x:Name="PocetnaS" Margin="0,0,0,45.8" NavigationUIVisibility="Hidden" />
+        <Button x:Name="button1" Content="Lekovi" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="20" Margin="270,682,0,0" Click="lekovi_click"/>
+        <Button x:Name="button0" Content="Pocetna" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="20" Margin="70,682,0,0" Click="button0_Click"/>
     </Grid>
 </Window>

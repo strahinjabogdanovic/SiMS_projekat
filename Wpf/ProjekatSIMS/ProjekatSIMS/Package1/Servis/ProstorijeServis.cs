@@ -15,17 +15,7 @@ namespace ProjekatSIMS.Package1.Servis
         {
             pfs.Obrisi(currentRowIndex);
         }
-
-        public void Update(string update, int currentRowIndex)
-        {
-            pfs.Update(update, currentRowIndex);
-        }
-
-        public void Prikazi(int currentRowIndex)
-        {
-            pfs.Prikazi(currentRowIndex);
-        }
-
+        
         public void stvari(int currentRowIndex)
         {
             pfs.stvari(currentRowIndex);

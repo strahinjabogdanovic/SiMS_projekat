@@ -1,0 +1,24 @@
+﻿<Page x:Class="ProjekatSIMS.Upravnik.View.DodavanjeProstorijePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS.Upravnik.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DodavanjeProstorijePage" Height="675.2" Width="424">
+
+    <Grid>
+        <Label x:Name="label" Content="Ime" HorizontalAlignment="Left" Margin="70,35,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Oznaka" HorizontalAlignment="Left" Margin="70,85,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Namena" HorizontalAlignment="Left" Margin="70,135,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Oprema" HorizontalAlignment="Left" Margin="70,185,0,0" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding S1}" x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="190,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
+        <TextBox Text="{Binding S2}" x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="190,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
+        <TextBox Text="{Binding S3}" x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="190,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
+        <TextBox Text="{Binding S4}" x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="190,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
+        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="167,340,0,0" VerticalAlignment="Top" Width="76" Command="{Binding Potvrdi}"/>
+        <Label Content="Kolicina" HorizontalAlignment="Left" Margin="70,235,0,0" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding S5}" x:Name="textBox4" HorizontalAlignment="Left" Height="23" Margin="190,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
+    </Grid>
+</Page>

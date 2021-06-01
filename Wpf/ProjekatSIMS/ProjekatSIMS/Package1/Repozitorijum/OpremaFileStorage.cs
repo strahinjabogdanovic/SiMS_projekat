@@ -48,8 +48,6 @@ namespace ProjekatSIMS.Package1.Repozitorijum
                 }
             }
             catch (Exception e) { }
-            UpravnikPocetnaStranica s = new UpravnikPocetnaStranica();
-            s.ShowDialog();
         }
 
         public void Obrisi(int currentRowIndex, int currentRowIndexo)
@@ -93,13 +91,8 @@ namespace ProjekatSIMS.Package1.Repozitorijum
                 }
             }
             catch (Exception e) { }
-
-            UpravnikPocetnaStranica s = new UpravnikPocetnaStranica();
-            s.ShowDialog();
         }
-      
-      public void Prikazi(){}
-      
+        
       public void Update(int redProstorije, int currentRowIndex, string t1, string t2)
       {
             int idp = 0;
@@ -135,10 +128,7 @@ namespace ProjekatSIMS.Package1.Repozitorijum
                 }
             }
             catch (Exception e){ }
-
-            UpravnikPocetnaStranica s = new UpravnikPocetnaStranica();
-            s.ShowDialog();
-        }
+      }
 
         public List<string> svaOprema(int temp)
         {
