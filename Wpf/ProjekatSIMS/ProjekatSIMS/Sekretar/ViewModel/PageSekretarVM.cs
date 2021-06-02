@@ -148,7 +148,8 @@ namespace ProjekatSIMS.Sekretar.ViewModel
                 var korisnik = new Pacijent();
                 korisnik.ime = termin[0].ToString();
                 korisnik.prezime = termin[1].ToString();
-                korisnik.jmbg = long.Parse(termin[2].ToString());
+                //korisnik.jmbg = long.Parse(termin[2].ToString());
+                korisnik.jMBG = termin[2].ToString();
                 if (termin[3].ToString() != null)
                 {
 
@@ -210,17 +211,21 @@ namespace ProjekatSIMS.Sekretar.ViewModel
         public void Executed_Izmeni(object obj)
         {
             int currentRowIndex = tabela.Items.IndexOf(tabela.SelectedItem);
-            DataGridRow row = (DataGridRow)tabela.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
+            if (currentRowIndex != -1)
+            {
+                DataGridRow row = (DataGridRow)tabela.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
 
-            TextBlock ime = tabela.Columns[0].GetCellContent(row) as TextBlock;
-            TextBlock prezime = tabela.Columns[1].GetCellContent(row) as TextBlock;
-            TextBlock jmbg = tabela.Columns[2].GetCellContent(row) as TextBlock;
-            TextBlock datum = tabela.Columns[3].GetCellContent(row) as TextBlock;
-            TextBlock brojTel = tabela.Columns[4].GetCellContent(row) as TextBlock;
-            string update = (ime.Text + "/" + prezime.Text + "/" + jmbg.Text + "/" + datum.Text + "/" + brojTel.Text);
+                TextBlock ime = tabela.Columns[0].GetCellContent(row) as TextBlock;
+                TextBlock prezime = tabela.Columns[1].GetCellContent(row) as TextBlock;
+                TextBlock jmbg = tabela.Columns[2].GetCellContent(row) as TextBlock;
+                TextBlock datum = tabela.Columns[3].GetCellContent(row) as TextBlock;
+                TextBlock brojTel = tabela.Columns[4].GetCellContent(row) as TextBlock;
+                string update = (ime.Text + "/" + prezime.Text + "/" + jmbg.Text + "/" + datum.Text + "/" + brojTel.Text);
 
-            NaloziPacijenataKontroler npk = new NaloziPacijenataKontroler();
-            npk.Update(update, currentRowIndex);
+                NaloziPacijenataKontroler npk = new NaloziPacijenataKontroler();
+                npk.Update(update, currentRowIndex);
+            }
+
         }
 
         public void Executed_GuestNalog(object obj)
@@ -236,7 +241,10 @@ namespace ProjekatSIMS.Sekretar.ViewModel
         public void Executed_MedKarton(object obj)
         {
             int currentRowIndex = tabela.Items.IndexOf(tabela.SelectedItem);
-            page.NavigationService.Navigate(new PageMedKarton(currentRowIndex));
+            if (currentRowIndex != -1)
+            {
+                page.NavigationService.Navigate(new PageMedKarton(currentRowIndex));
+            }
         }
 
         public void Executed_Termini(object obj)

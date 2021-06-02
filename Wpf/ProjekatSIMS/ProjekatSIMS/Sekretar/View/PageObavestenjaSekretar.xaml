@@ -46,21 +46,21 @@
         <Button x:Name="button" Content="Kreiraj" HorizontalAlignment="Left" Margin="238,549,0,0" VerticalAlignment="Top" Command="{Binding Kreiraj}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
-                    Kreiranje obavestenja
+                    Kreiranje obaveštenja
                 </ToolTip>
             </Button.ToolTip>
         </Button>
         <Button x:Name="button1" Content="Obriši" HorizontalAlignment="Left" Margin="454,549,0,0" VerticalAlignment="Top" Command="{Binding Obrisi}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
-                    Ako zelite da obrisete obavestenje, prvo ga selektujte u tabeli
+                    Prvo izaberite obaveštenje iz tabele
                 </ToolTip>
             </Button.ToolTip>
         </Button>
         <Button x:Name="button2" Content="Izmeni" HorizontalAlignment="Left" Margin="660,549,0,0" VerticalAlignment="Top" Command="{Binding Izmeni}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
-                    Prvo izmenite podatak u tabeli pa kliknite ovo dugme
+                    Prvo izmenite podatak u tabeli
                 </ToolTip>
             </Button.ToolTip>
         </Button>

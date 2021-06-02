@@ -22,7 +22,25 @@ namespace ProjekatSIMS.Package1.Model
       private string Email;
       private string BrojTelefona;
       private string Adresa;
-      private int IdKorisnika;      
+      private int IdKorisnika;
+
+      private string JMBG;
+
+      public string jMBG
+      {
+          get
+          {
+              return JMBG;
+          }
+          set
+          {
+              if (value != JMBG)
+              {
+                  JMBG = value;
+                  OnPropertyChanged("jMBG");
+              }
+          }
+      }
 
         public string ime
         {

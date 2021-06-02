@@ -29,7 +29,7 @@
         <Label x:Name="label9" Content="Alergeni" HorizontalAlignment="Left" Margin="119,384,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <TextBlock Text="{Binding S8}" x:Name="t8" HorizontalAlignment="Left" Margin="240,389,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="87" FontSize="24" Background="White"/>
         <Button x:Name="button" Content="Ažuriraj alergene" HorizontalAlignment="Left" Margin="350,529,0,0" VerticalAlignment="Top" Command="{Binding Azuriraj}" Style="{StaticResource ResourceKey=ButtonStyle}" Width="240"/>
-        <Button x:Name="button1" Content="Nazad" HorizontalAlignment="Left" Margin="655,529,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button1" Content="Nazad" HorizontalAlignment="Left" Margin="712,529,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
         <Label x:Name="label10" Content="Izabrani lekar" HorizontalAlignment="Left" Margin="66,339,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label11" Content="Zaposlen/a" HorizontalAlignment="Left" Margin="667,249,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
         <Label x:Name="label12" Content="Osiguran/a" HorizontalAlignment="Left" Margin="667,294,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>

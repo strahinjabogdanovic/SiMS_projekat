@@ -15,7 +15,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Ime" Binding="{Binding Path = ime}" Width="160"/>
                 <DataGridTextColumn Header="Prezime" Binding="{Binding Path = prezime}" Width="160"/>
-                <DataGridTextColumn Header="JMBG" Binding="{Binding Path = jmbg}" Width="160"/>
+                <DataGridTextColumn Header="JMBG" Binding="{Binding Path = jMBG}" Width="160"/>
                 <DataGridTextColumn Header="Datum rođenja" Binding="{Binding Path = datumRodjenja}" Width="160"/>
                 <DataGridTextColumn Header="Broj telefona" Binding="{Binding Path = brojTelefona}" Width="*"/>
             </DataGrid.Columns>
@@ -30,14 +30,14 @@
         <Button x:Name="button1" Content="Obriši" HorizontalAlignment="Left" Margin="241,553,0,0" VerticalAlignment="Top" Command="{Binding Obrisi}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
-                    Ako zelite da obrisete nalog, prvo ga selektujte u tabeli
+                    Prvo izaberite nalog iz tabele
                 </ToolTip>
             </Button.ToolTip>
         </Button>
         <Button x:Name="button2" Content="Izmeni" HorizontalAlignment="Left" Margin="419,553,0,0" VerticalAlignment="Top" Command="{Binding Izmeni}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
-                    Prvo izmenite podatak u tabeli pa kliknite ovo dugme
+                    Prvo izmenite podatak u tabeli
                 </ToolTip>
             </Button.ToolTip>
         </Button>
@@ -48,7 +48,7 @@
         <Button x:Name="button6" Content="Medicinski karton" HorizontalAlignment="Left" Margin="598,553,0,0" VerticalAlignment="Top" Width="250" Command="{Binding MedKarton}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
-                    Prvo izaberite pacijenta iz tabele
+                    Prvo izaberite nalog iz tabele
                 </ToolTip>
             </Button.ToolTip>
         </Button>

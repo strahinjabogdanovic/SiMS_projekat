@@ -27,17 +27,17 @@
         <Button x:Name="button1" Content="Otkazivanje termina" HorizontalAlignment="Left" Margin="936,300,0,0" VerticalAlignment="Top" Width="250" Command="{Binding Otkazivanje}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
-                    Ako zelite da otkazete termin, prvo ga selektujte u tabeli
+                    Prvo izaberite termin iz tabele
                 </ToolTip>
             </Button.ToolTip>
         </Button>
         <Button x:Name="button2" Content="Promena termina" HorizontalAlignment="Left" Margin="936,420,0,0" VerticalAlignment="Top" Width="250" Command="{Binding Promena}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
-                    Prvo izmenite podatak u tabeli pa kliknite ovo dugme
+                    Prvo izmenite podatak u tabeli
                 </ToolTip>
             </Button.ToolTip>
         </Button>
-        <Button x:Name="button3" Content="Nazad" HorizontalAlignment="Left" Margin="585,567,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button3" Content="Nazad" HorizontalAlignment="Left" Margin="554,557,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
     </Grid>
 </Page>

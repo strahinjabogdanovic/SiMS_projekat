@@ -28,7 +28,7 @@
         <Button x:Name="button1" Content="Obriši" HorizontalAlignment="Left" Margin="562,524,0,0" VerticalAlignment="Top" Command="{Binding Obrisi}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
-                    Ako zelite da obrisete guest nalog, prvo ga selektujte u tabeli
+                    Prvo izaberite guest nalog iz tabele
                 </ToolTip>
             </Button.ToolTip>
         </Button>

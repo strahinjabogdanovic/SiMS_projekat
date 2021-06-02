@@ -25,14 +25,14 @@
         <Button x:Name="button1" Content="Zakaži" HorizontalAlignment="Left" Margin="336,554,0,0" VerticalAlignment="Top" Command="{Binding Zakazi}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
-                    Ako zelite da zakazete termin, prvo unesite ime i prezime pacijenta u tabelu
+                    Prvo unesite ime i prezime pacijenta u tabelu
                 </ToolTip>
             </Button.ToolTip>
         </Button>
         <Button x:Name="button2" Content="Pomeri" HorizontalAlignment="Left" Margin="561,554,0,0" VerticalAlignment="Top" Command="{Binding Pomeranje}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
-                    Ako zelite da pomerite termin, prvo ga selektujte u tabeli
+                    Prvo izaberite termin iz tabele
                 </ToolTip>
             </Button.ToolTip>
         </Button>

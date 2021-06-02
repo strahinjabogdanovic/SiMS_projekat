@@ -26,7 +26,7 @@
         <Button x:Name="button1" Content="Zakaži" HorizontalAlignment="Left" Margin="313,565,0,0" VerticalAlignment="Top" Command="{Binding Zakazi}" Style="{StaticResource ResourceKey=ButtonStyle}">
             <Button.ToolTip>
                 <ToolTip>
-                    Ako zelite da zakazete termin, prvo unesite ime i prezime pacijenta u tabelu
+                    Prvo unesite ime i prezime pacijenta u tabelu
                 </ToolTip>
             </Button.ToolTip>
         </Button>

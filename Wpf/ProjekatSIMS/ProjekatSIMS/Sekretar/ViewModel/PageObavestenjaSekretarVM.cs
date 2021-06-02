@@ -117,16 +117,19 @@ namespace ProjekatSIMS.Sekretar.ViewModel
         public void Executed_Izmeni(object obj)
         {
             int currentRowIndex = tabela.Items.IndexOf(tabela.SelectedItem);
-            DataGridRow row = (DataGridRow)tabela.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
+            if (currentRowIndex != -1)
+            {
+                DataGridRow row = (DataGridRow)tabela.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
 
-            TextBlock uloga = tabela.Columns[0].GetCellContent(row) as TextBlock;
-            TextBlock naziv = tabela.Columns[1].GetCellContent(row) as TextBlock;
-            TextBlock sadraj = tabela.Columns[2].GetCellContent(row) as TextBlock;
-            TextBlock datum = tabela.Columns[3].GetCellContent(row) as TextBlock;
-            string update = (naziv.Text + "/" + sadraj.Text + "/" + datum.Text + "/" + uloga.Text);
+                TextBlock uloga = tabela.Columns[0].GetCellContent(row) as TextBlock;
+                TextBlock naziv = tabela.Columns[1].GetCellContent(row) as TextBlock;
+                TextBlock sadraj = tabela.Columns[2].GetCellContent(row) as TextBlock;
+                TextBlock datum = tabela.Columns[3].GetCellContent(row) as TextBlock;
+                string update = (naziv.Text + "/" + sadraj.Text + "/" + datum.Text + "/" + uloga.Text);
 
-            ObavestenjaKontroler ok = new ObavestenjaKontroler();
-            ok.Update(update, currentRowIndex);
+                ObavestenjaKontroler ok = new ObavestenjaKontroler();
+                ok.Update(update, currentRowIndex);
+            }
         }
 
         public void Executed_Kreiraj(object obj)

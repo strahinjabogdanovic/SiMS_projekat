@@ -127,12 +127,15 @@ namespace ProjekatSIMS.Sekretar.ViewModel
         public void Executed_Promena(object obj)
         {
             int currentRowIndex = tabela.Items.IndexOf(tabela.SelectedItem);
-            DataGridRow row = (DataGridRow)tabela.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
+            if (currentRowIndex != -1)
+            {
+                DataGridRow row = (DataGridRow)tabela.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
 
-            TextBlock pacijent = tabela.Columns[0].GetCellContent(row) as TextBlock;
+                TextBlock pacijent = tabela.Columns[0].GetCellContent(row) as TextBlock;
 
-            TerminiKontroler tk = new TerminiKontroler();
-            tk.UpdateSekretar(pacijent.Text, currentRowIndex);
+                TerminiKontroler tk = new TerminiKontroler();
+                tk.UpdateSekretar(pacijent.Text.Trim(), currentRowIndex);
+            }
         }
 
         public bool CanExecute_NavigateCommand(object obj)

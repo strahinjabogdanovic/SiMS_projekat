@@ -92,17 +92,21 @@ namespace ProjekatSIMS.Sekretar.ViewModel
         public void Executed_Zakazi(object obj)
         {
             int currentRowIndex = tabela.Items.IndexOf(tabela.SelectedItem);
-            DataGridRow row = (DataGridRow)tabela.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
+            if (currentRowIndex != -1)
+            {
+                DataGridRow row = (DataGridRow)tabela.ItemContainerGenerator.ContainerFromIndex(currentRowIndex);
 
-            TextBlock tbPacijent = tabela.Columns[0].GetCellContent(row) as TextBlock;
-            TextBlock tbDatum = tabela.Columns[1].GetCellContent(row) as TextBlock;
-            TextBlock tbVreme = tabela.Columns[2].GetCellContent(row) as TextBlock;
-            TextBlock tbLekar = tabela.Columns[3].GetCellContent(row) as TextBlock;
-            TextBlock tbSoba = tabela.Columns[4].GetCellContent(row) as TextBlock;
-            string update = (tbPacijent.Text + "/" + tbDatum.Text + "/" + tbVreme.Text + "/" + tbLekar.Text + "/" + tbSoba.Text);
+                TextBlock tbPacijent = tabela.Columns[0].GetCellContent(row) as TextBlock;
+                TextBlock tbDatum = tabela.Columns[1].GetCellContent(row) as TextBlock;
+                TextBlock tbVreme = tabela.Columns[2].GetCellContent(row) as TextBlock;
+                TextBlock tbLekar = tabela.Columns[3].GetCellContent(row) as TextBlock;
+                TextBlock tbSoba = tabela.Columns[4].GetCellContent(row) as TextBlock;
+                string update = (tbPacijent.Text.Trim() + "/" + tbDatum.Text + "/" + tbVreme.Text + "/" + tbLekar.Text + "/" + tbSoba.Text);
 
-            TerminiKontroler tk = new TerminiKontroler();
-            tk.ZakazivanjeSekretar(update);
+                TerminiKontroler tk = new TerminiKontroler();
+                tk.ZakazivanjeSekretar(update);
+            }
+
         }
 
         public void Executed_NazadTermini(object obj)

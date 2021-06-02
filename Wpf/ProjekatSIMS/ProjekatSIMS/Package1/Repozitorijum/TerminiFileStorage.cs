@@ -324,6 +324,7 @@ namespace ProjekatSIMS.Package1.Repozitorijum
                         sviTermini.RemoveAt(int.Parse(informacije[4])-1);
                         sviTermini.Insert(int.Parse(informacije[4])-1, informacije[0] + "/" + informacije[1] + "/" + informacije[2] + "/" + informacije[3] + "/" + informacije[4] + "/" + imePacijenta + "/" + informacije[6]);
                         File.WriteAllLines(@"termini.txt", sviTermini);
+                        MessageBox.Show("Termin pomeren za " + informacije[0] + " u " + informacije[1] + "h");
                     }                 
                 }
             }
