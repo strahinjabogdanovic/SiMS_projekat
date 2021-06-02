@@ -116,11 +116,17 @@
     <Compile Include="Sekretar\View\PageAntiTrol.xaml.cs">
       <DependentUpon>PageAntiTrol.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Sekretar\View\PageGenerisanIzvestaj.xaml.cs">
+      <DependentUpon>PageGenerisanIzvestaj.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sekretar\View\PageGrafikonLekari.xaml.cs">
       <DependentUpon>PageGrafikonLekari.xaml</DependentUpon>
     </Compile>
     <Compile Include="Sekretar\View\PageGrafikonProstorija.xaml.cs">
       <DependentUpon>PageGrafikonProstorija.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sekretar\View\PageIzvestaj.xaml.cs">
+      <DependentUpon>PageIzvestaj.xaml</DependentUpon>
     </Compile>
     <Compile Include="Sekretar\View\PagePrikazLekara.xaml.cs">
       <DependentUpon>PagePrikazLekara.xaml</DependentUpon>
@@ -357,11 +363,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Sekretar\View\PageGenerisanIzvestaj.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Sekretar\View\PageGrafikonLekari.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Sekretar\View\PageGrafikonProstorija.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sekretar\View\PageIzvestaj.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

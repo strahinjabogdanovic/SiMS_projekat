@@ -5,8 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="SekretarPocetnaStrana" Height="720" Width="1280"
-        >
+        Title="SekretarPocetnaStrana" Height="720" Width="1280" WindowStartupLocation="CenterScreen">
     <Grid>
         <Frame x:Name="PocetnaS" Margin="0,40,0,0" NavigationUIVisibility="Hidden" />
         <Button x:Name="button" Content="Odjava" HorizontalAlignment="Left" Margin="1150,7,0,0" VerticalAlignment="Top" Width="100" FontSize="18" Click="Odjava_Click"/>
