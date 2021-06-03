@@ -4,11 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace ProjekatSIMS.Sekretar.ViewModel
 {
-    public class PageSKreirajNalogVM : ViewModels
+    public class PageSKreirajNalogVM : ValidationBase
     {
         private PageSKreirajNalog page;
 
@@ -117,37 +119,48 @@ namespace ProjekatSIMS.Sekretar.ViewModel
             }
         }
 
-        public PageSKreirajNalogVM(PageSKreirajNalog page)
+        private ComboBox c = new ComboBox();
+        private DatePicker d = new DatePicker();
+
+        public PageSKreirajNalogVM(PageSKreirajNalog page, ComboBox pol, DatePicker datum)
         {
             this.page = page;
+            c = pol;
+            d = datum;
 
-            this.Potvrdi = new RelayCommand(Executed_Potvrdi, CanExecute_NavigateCommand);
+            this.Potvrdi = new RelayCommand(Executed_Potvrdi);
             this.Odustani = new RelayCommand(Executed_Odustani, CanExecute_NavigateCommand);
         }
 
         public void Executed_Potvrdi(object obj)
         {
-            NaloziPacijenataKontroler npk = new NaloziPacijenataKontroler();
+            this.Validate();
+            if (this.IsValid)
+            {
+                NaloziPacijenataKontroler npk = new NaloziPacijenataKontroler();
 
-            //string pol = comboBox.SelectedValue.ToString();
-            string ime = S1;
-            string prezime = S2;
-            string jmbg = S3;
-            string mail = S4;
-            string brojTel = S5;
-            string adresa = S6;
-            /*
-            string datum = myDatePicker.ToString();
-            String[] termin = datum.Split(' ');
-            String[] termin1 = termin[0].Split('-');
-            string datum1 = termin1[0] + "." + termin1[1] + "." + termin1[2] + ".";
-            string nalog = (ime + "/" + prezime + "/" + jmbg);
-            string nalogNastavak = (datum1 + "/" + mail + "/" + brojTel + "/" + adresa);
+                string ime = S1;
+                string prezime = S2;
+                string jmbg = S3;
+                string mail = S4;
+                string brojTel = S5;
+                string adresa = S6;
 
-            npk.Kreiraj(nalog, pol, nalogNastavak);
-            */
+                string pol = c.SelectedValue.ToString();
+                string datum = d.ToString();
+                String[] termin = datum.Split(' ');
+                String[] termin1 = termin[0].Split('-');
+                string datum1 = termin1[0] + "." + termin1[1] + "." + termin1[2] + ".";
 
-            page.NavigationService.Navigate(new PageSekretar());
+                string nalog = (ime + "/" + prezime + "/" + jmbg);
+                string nalogNastavak = (datum1 + "/" + mail + "/" + brojTel + "/" + adresa);
+
+                npk.Kreiraj(nalog, pol, nalogNastavak);
+
+
+                page.NavigationService.Navigate(new PageSekretar());
+            }
+
         }
 
         public void Executed_Odustani(object obj)
@@ -158,6 +171,59 @@ namespace ProjekatSIMS.Sekretar.ViewModel
         public bool CanExecute_NavigateCommand(object obj)
         {
             return true;
+        }
+
+        protected override void ValidateSelf()
+        {
+            if (string.IsNullOrWhiteSpace(S1))
+            {
+                this.ValidationErrors["ime"] = "Obavezno je uneti ime";
+            }
+            else if (!Regex.IsMatch(S1, @"^[a-zA-Z]+$"))
+            {
+                this.ValidationErrors["ime"] = "Ime mora da sadrži samo slova";
+            }
+
+            if (string.IsNullOrWhiteSpace(S2))
+            {
+                this.ValidationErrors["prezime"] = "Obavezno je uneti prezime";
+            }
+            else if (!Regex.IsMatch(S2, @"^[a-zA-Z]+$"))
+            {
+                this.ValidationErrors["prezime"] = "Prezime mora da sadrži samo slova";
+            }
+
+            if (string.IsNullOrWhiteSpace(S3))
+            {
+                this.ValidationErrors["jmbg"] = "Obavezno je uneti JMBG";
+            }
+            else if (S3.Length != 13)
+            {
+                this.ValidationErrors["jmbg"] = "JMBG mora da sadrži 13 cifara";
+            }
+
+            if (string.IsNullOrWhiteSpace(S4))
+            {
+                this.ValidationErrors["email"] = "Obavezno je uneti email";
+            }
+            else if (!Regex.IsMatch(S4, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"))
+            {
+                this.ValidationErrors["email"] = "Pogrešno unet email";
+            }
+
+            if (string.IsNullOrWhiteSpace(S5))
+            {
+                this.ValidationErrors["brTel"] = "Obavezno je uneti broj telefona";
+            }
+            else if (!Regex.IsMatch(S5, @"[0-9]+"))
+            {
+                this.ValidationErrors["brTel"] = "Broj telefona mora da sadrži samo cifre";
+            }
+
+            if (string.IsNullOrWhiteSpace(S6))
+            {
+                this.ValidationErrors["adresa"] = "Obavezno je uneti adresu";
+            }
         }
     }
 }

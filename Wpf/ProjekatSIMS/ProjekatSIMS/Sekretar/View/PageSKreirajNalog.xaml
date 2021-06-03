@@ -10,29 +10,29 @@
       Title="PageSKreirajNalog" Width="1272" Height="649" HorizontalAlignment="Center" Background="LightBlue">
 
     <Grid>
-        <Label x:Name="label" Content="Ime" HorizontalAlignment="Left" Margin="462,166,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label1" Content="Prezime" HorizontalAlignment="Left" Margin="418,211,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label2" Content="JMBG" HorizontalAlignment="Left" Margin="442,256,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label3" Content="Pol" HorizontalAlignment="Left" Margin="470,302,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label4" Content="Datum rođenja" HorizontalAlignment="Left" Margin="337,347,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label5" Content="Email" HorizontalAlignment="Left" Margin="445,391,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label6" Content="Broj telefona" HorizontalAlignment="Left" Margin="367,435,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label7" Content="Adresa" HorizontalAlignment="Left" Margin="429,481,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="550,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}" Width="350"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="550,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}" Width="350"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="550,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}" Width="350"/>
-        <TextBox x:Name="textBox5" HorizontalAlignment="Left" Margin="550,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}" Width="350"/>
-        <TextBox x:Name="textBox6" HorizontalAlignment="Left" Margin="550,440,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}" Width="350"/>
-        <TextBox x:Name="textBox7" HorizontalAlignment="Left" Margin="550,485,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}" Width="350"/>
-        <Button x:Name="button" Content="Potvrdi" HorizontalAlignment="Left" Margin="462,565,0,0" VerticalAlignment="Top" Click="PotvrdiNalog_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
-        <Button x:Name="button1" Content="Nazad" HorizontalAlignment="Left" Margin="656,565,0,0" VerticalAlignment="Top" Click="Odustani_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="550,305,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=ComboBoxStyle}" Width="350">
+        <Label x:Name="label" Content="Ime" HorizontalAlignment="Left" Margin="395,166,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label1" Content="Prezime" HorizontalAlignment="Left" Margin="351,211,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label2" Content="JMBG" HorizontalAlignment="Left" Margin="375,256,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label3" Content="Pol" HorizontalAlignment="Left" Margin="403,303,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label4" Content="Datum rođenja" HorizontalAlignment="Left" Margin="276,348,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label5" Content="Email" HorizontalAlignment="Left" Margin="378,391,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label6" Content="Broj telefona" HorizontalAlignment="Left" Margin="300,436,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label7" Content="Adresa" HorizontalAlignment="Left" Margin="362,481,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <TextBox Text="{Binding S1}" x:Name="textBox" HorizontalAlignment="Left" Margin="462,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}" Width="350"/>
+        <TextBox Text="{Binding S2}" x:Name="textBox1" HorizontalAlignment="Left" Margin="462,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}" Width="350"/>
+        <TextBox Text="{Binding S3}" x:Name="textBox2" HorizontalAlignment="Left" Margin="462,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}" Width="350"/>
+        <TextBox Text="{Binding S4}" x:Name="textBox5" HorizontalAlignment="Left" Margin="462,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}" Width="350"/>
+        <TextBox Text="{Binding S5}" x:Name="textBox6" HorizontalAlignment="Left" Margin="462,440,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}" Width="350"/>
+        <TextBox Text="{Binding S6}" x:Name="textBox7" HorizontalAlignment="Left" Margin="462,485,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}" Width="350"/>
+        <Button x:Name="button" Content="Potvrdi" HorizontalAlignment="Left" Margin="462,565,0,0" VerticalAlignment="Top" Command="{Binding Potvrdi}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button1" Content="Nazad" HorizontalAlignment="Left" Margin="672,565,0,0" VerticalAlignment="Top" Command="{Binding Odustani}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="462,305,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=ComboBoxStyle}" Width="350">
             <ComboBoxItem>Muski</ComboBoxItem>
             <ComboBoxItem>Zenski</ComboBoxItem>
         </ComboBox>
         <Label x:Name="label8" Content="Kreiranje naloga pacijenta" HorizontalAlignment="Center" Margin="418,56,388,530" VerticalAlignment="Center" Style="{StaticResource ResourceKey=TitleStyle}"/>
         <DatePicker SelectedDate="{Binding myVideModelProperty}"
-                    Height="40" HorizontalAlignment="Left" Margin="550,350,0,0" Name="myDatePicker" VerticalAlignment="Top" Width="350" FontSize="24">
+                    Height="40" HorizontalAlignment="Left" Margin="462,350,0,0" Name="myDatePicker" VerticalAlignment="Top" Width="350" FontSize="24">
             <DatePicker.Resources>
                 <Style TargetType="{x:Type DatePickerTextBox}">
                     <Setter Property="Control.Template">
@@ -46,5 +46,13 @@
                 </Style>
             </DatePicker.Resources>
         </DatePicker>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="823,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding ValidationErrors[ime]}" Foreground="Red" FontSize="24" Width="427" Height="38"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="823,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding ValidationErrors[prezime]}" Foreground="Red" FontSize="24" Width="427" Height="38"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="823,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding ValidationErrors[jmbg]}" Foreground="Red" FontSize="24" Width="427" Height="38"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="823,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding ValidationErrors[email]}" Foreground="Red" FontSize="24" Width="427" Height="38"/>
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="823,443,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding ValidationErrors[brTel]}" Foreground="Red" FontSize="24" Width="427" Height="38"/>
+        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Margin="823,488,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding ValidationErrors[adresa]}" Foreground="Red" FontSize="24" Width="427" Height="38"/>
+
+
     </Grid>
 </Page>

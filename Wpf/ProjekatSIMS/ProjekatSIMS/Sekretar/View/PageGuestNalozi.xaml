@@ -15,7 +15,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Ime" Binding="{Binding Path = ime}" Width="200"/>
                 <DataGridTextColumn Header="Prezime" Binding="{Binding Path = prezime}" Width="200"/>
-                <DataGridTextColumn Header="JMBG" Binding="{Binding Path = jmbg}" Width="*"/>
+                <DataGridTextColumn Header="JMBG" Binding="{Binding Path = jMBG}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="button" Content="Kreiraj" HorizontalAlignment="Left" Margin="331,524,0,0" VerticalAlignment="Top" Command="{Binding Kreiraj}" Style="{StaticResource ResourceKey=ButtonStyle}">

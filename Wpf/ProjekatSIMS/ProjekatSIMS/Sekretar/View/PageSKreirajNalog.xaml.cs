@@ -10,21 +10,23 @@ namespace ProjekatSIMS.Sekretar.View
 {
     public partial class PageSKreirajNalog : Page
     {
-        /*
-        public ObservableCollection<Pacijent> Korisnici
-        {
-            get;
-            set;
-        }*/
         private PageSKreirajNalogVM viewModel;
 
         public PageSKreirajNalog()
         {
             InitializeComponent();
-            //this.viewModel = new PageSKreirajNalogVM(this);
-            //this.DataContext = this.viewModel;
+            /*
+            string pol = comboBox.SelectedValue.ToString();
+            string datum = myDatePicker.ToString();
+            String[] termin = datum.Split(' ');
+            String[] termin1 = termin[0].Split('-');
+            string datum1 = termin1[0] + "." + termin1[1] + "." + termin1[2] + ".";
+            */
+            this.viewModel = new PageSKreirajNalogVM(this, comboBox, myDatePicker);
+            this.DataContext = this.viewModel;
         }
 
+        /*
         private void PotvrdiNalog_Click(object sender, RoutedEventArgs e)
         {
             NaloziPacijenataKontroler npk = new NaloziPacijenataKontroler();
@@ -51,6 +53,6 @@ namespace ProjekatSIMS.Sekretar.View
         private void Odustani_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new PageSekretar());
-        }
+        }*/
     }
 }

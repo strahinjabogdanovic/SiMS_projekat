@@ -67,7 +67,7 @@ namespace ProjekatSIMS.Sekretar.ViewModel
                 var guest = new GuestNalog();
                 guest.ime = termin[0].ToString();
                 guest.prezime = termin[1].ToString();
-                guest.jmbg = long.Parse(termin[2].ToString());
+                guest.jMBG = termin[2].ToString();
 
                 Guest.Add(guest);
             }
