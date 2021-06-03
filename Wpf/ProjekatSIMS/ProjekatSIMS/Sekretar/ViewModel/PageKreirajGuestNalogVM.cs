@@ -123,7 +123,7 @@ namespace ProjekatSIMS.Sekretar.ViewModel
             }
             else if (!Regex.IsMatch(S1, @"^[a-zA-Z]+$"))
             {
-                this.ValidationErrors["ime"] = "Ime može da sadrži samo slova";
+                this.ValidationErrors["ime"] = "Ime mora da sadrži samo slova";
             }
 
             if (string.IsNullOrWhiteSpace(S2))
@@ -132,7 +132,7 @@ namespace ProjekatSIMS.Sekretar.ViewModel
             }
             else if (!Regex.IsMatch(S2, @"^[a-zA-Z]+$"))
             {
-                this.ValidationErrors["prezime"] = "Prezime može da sadrži samo slova";
+                this.ValidationErrors["prezime"] = "Prezime mora da sadrži samo slova";
             }
 
             if (string.IsNullOrWhiteSpace(S3))

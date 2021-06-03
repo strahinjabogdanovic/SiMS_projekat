@@ -11,17 +11,17 @@
 
     <Grid>
         <Label x:Name="label" Content="Kreiranje obaveštenja" HorizontalAlignment="Left" Margin="422,48,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
-        <Label x:Name="label1" Content="Naziv obaveštenja" HorizontalAlignment="Left" Margin="108,272,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label2" Content="Sadržaj obaveštenja" HorizontalAlignment="Left" Margin="90,388,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="670,562,0,0" VerticalAlignment="Top" Click="Odustani_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
-        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="445,562,0,0" VerticalAlignment="Top" Click="Potvrdi_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="77" Margin="334,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="774" FontSize="24"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="127" Margin="334,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="774" FontSize="24"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="334,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}" Width="350"/>
-        <Label x:Name="label3" Content="Datum" HorizontalAlignment="Left" Margin="229,150,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <Label x:Name="label4" Content="Obaveštenja vide" HorizontalAlignment="Left" Margin="118,210,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
-        <DatePicker SelectedDate="{Binding myVideModelProperty}"
-                    Height="40" HorizontalAlignment="Left" Margin="334,154,0,0" Name="myDatePicker" VerticalAlignment="Top" Width="350" FontSize="24">
+        <Label x:Name="label1" Content="Naziv obaveštenja" HorizontalAlignment="Left" Margin="108,307,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label2" Content="Sadržaj obaveštenja" HorizontalAlignment="Left" Margin="90,427,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="670,582,0,0" VerticalAlignment="Top" Command="{Binding Odustani}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="446,582,0,0" VerticalAlignment="Top" Command="{Binding Potvrdi}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <TextBox Text="{Binding S1}" x:Name="textBox" HorizontalAlignment="Left" Height="77" Margin="334,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="774" FontSize="24"/>
+        <TextBox Text="{Binding S2}" x:Name="textBox1" HorizontalAlignment="Left" Height="127" Margin="334,431,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="774" FontSize="24"/>
+        <TextBox Text="{Binding S3}" x:Name="textBox3" HorizontalAlignment="Left" Margin="334,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TextBoxStyle}" Width="350"/>
+        <Label x:Name="label3" Content="Datum" HorizontalAlignment="Left" Margin="229,138,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label4" Content="Obaveštenja vide" HorizontalAlignment="Left" Margin="118,219,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <DatePicker SelectedDate="{Binding Path=Date, Mode=TwoWay}"
+                    Height="40" HorizontalAlignment="Left" Margin="334,140,0,0" Name="myDatePicker" VerticalAlignment="Top" Width="350" FontSize="24">
             <DatePicker.Resources>
                 <Style TargetType="{x:Type DatePickerTextBox}">
                     <Setter Property="Control.Template">
@@ -35,6 +35,9 @@
                 </Style>
             </DatePicker.Resources>
         </DatePicker>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="334,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding ValidationErrors[vidljivost]}" Foreground="Red" FontSize="24" Width="411" Height="38"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="334,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding ValidationErrors[naziv]}" Foreground="Red" FontSize="24" Width="411" Height="38"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="334,393,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding ValidationErrors[sadrzaj]}" Foreground="Red" FontSize="24" Width="411" Height="38"/>
 
     </Grid>
 </Page>

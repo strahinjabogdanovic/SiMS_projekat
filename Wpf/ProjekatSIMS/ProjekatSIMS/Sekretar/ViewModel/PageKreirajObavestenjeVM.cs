@@ -5,10 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace ProjekatSIMS.Sekretar.ViewModel
 {
-    public class PageKreirajObavestenjeVM : ViewModels
+    public class PageKreirajObavestenjeVM : ValidationBase
     {
         private PageKreirajObavestenje page;
 
@@ -75,30 +76,70 @@ namespace ProjekatSIMS.Sekretar.ViewModel
             }
         }
 
+        private DateTime date { get; set; }
+        public DateTime Date
+        {
+            get { return date; }
+            set
+            {
+                date = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private DatePicker d = new DatePicker();
+
         public PageKreirajObavestenjeVM(PageKreirajObavestenje page)
         {
             this.page = page;
+            //d = myDatePicker;
+            DateTime p = DateTime.Now;
+            Date = p;
+            
 
-            this.Potvrdi = new RelayCommand(Executed_Potvrdi, CanExecute_NavigateCommand);
+            this.Potvrdi = new RelayCommand(Executed_Potvrdi);
             this.Odustani = new RelayCommand(Executed_Odustani, CanExecute_NavigateCommand);
         }
 
         public void Executed_Potvrdi(object obj)
         {
-            ObavestenjaKontroler ok = new ObavestenjaKontroler();
+            this.Validate();
+            if (this.IsValid)
+            {
+                ObavestenjaKontroler ok = new ObavestenjaKontroler();
 
-            string naziv = S1;
-            string sadrzaj = S2;
-            string uloga = S3;
-            //string datum = myDatePicker.ToString();
-            //String[] termin = datum.Split(' ');
-            //String[] termin1 = termin[0].Split('-');
-            //string datum1 = termin1[0] + "." + termin1[1] + "." + termin1[2] + ".";
-            //string obavestenje = (naziv + "/" + sadrzaj + "/" + datum1 + "/" + uloga);
+                string naziv = S1;
+                string sadrzaj = S2;
+                string uloga = S3;
+                string datum = Date.ToString();
+                String[] termin = datum.Split(' ');
+                String[] termin1 = termin[0].Split('/');
+                string dan = "";
+                string mesec = "";
+                if (int.Parse(termin1[1]) < 10)
+                {
+                    dan = "0" + termin1[1];
+                }
+                else
+                {
+                    dan = termin1[1];
+                }
+                if (int.Parse(termin1[0]) < 10)
+                {
+                    mesec = "0" + termin1[0];
+                }
+                else
+                {
+                    mesec = termin1[0];
+                }
+                string datum1 = dan + "." + mesec + "." + termin1[2] + ".";
+                string obavestenje = (naziv + "/" + sadrzaj + "/" + datum1 + "/" + uloga);
 
-            //ok.Kreiraj(obavestenje);
+                ok.Kreiraj(obavestenje);
 
-            page.NavigationService.Navigate(new PageObavestenjaSekretar());
+                page.NavigationService.Navigate(new PageObavestenjaSekretar());
+            }
+
         }
 
         public void Executed_Odustani(object obj)
@@ -109,6 +150,22 @@ namespace ProjekatSIMS.Sekretar.ViewModel
         public bool CanExecute_NavigateCommand(object obj)
         {
             return true;
+        }
+
+        protected override void ValidateSelf()
+        {
+            if (string.IsNullOrWhiteSpace(S1))
+            {
+                this.ValidationErrors["naziv"] = "Obavezno je uneti naziv obaveštenja";
+            }
+            if (string.IsNullOrWhiteSpace(S2))
+            {
+                this.ValidationErrors["sadrzaj"] = "Obavezno je uneti sadržaj obaveštenja";
+            }
+            if (string.IsNullOrWhiteSpace(S3))
+            {
+                this.ValidationErrors["vidljivost"] = "Obavezno je uneti ko vidi obaveštenje";
+            }
         }
     }
 }
