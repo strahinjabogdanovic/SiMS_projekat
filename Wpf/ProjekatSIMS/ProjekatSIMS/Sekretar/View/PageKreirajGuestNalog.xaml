@@ -18,6 +18,9 @@
         <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="638,453,0,0" VerticalAlignment="Top" Command="{Binding Odustani}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
         <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="438,453,0,0" VerticalAlignment="Top" Command="{Binding Potvrdi}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
         <Label x:Name="label3" Content="Kreiranje guest naloga" HorizontalAlignment="Left" Margin="426,77,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="838,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding ValidationErrors[ime]}" Foreground="Red" FontSize="24" Width="411" Height="38"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="838,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding ValidationErrors[prezime]}" Foreground="Red" FontSize="24" Width="411" Height="38"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="838,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding ValidationErrors[jmbg]}" Foreground="Red" FontSize="24" Width="411" Height="38"/>
 
     </Grid>
 </Page>

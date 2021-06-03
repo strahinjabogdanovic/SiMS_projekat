@@ -335,6 +335,8 @@
     <Compile Include="Lekar\View\ZahteviZaValidaciju.xaml.cs">
       <DependentUpon>ZahteviZaValidaciju.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ValidationBase.cs" />
+    <Compile Include="ValidationErrors.cs" />
     <Page Include="Lekar\View\UputZaBolnicu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

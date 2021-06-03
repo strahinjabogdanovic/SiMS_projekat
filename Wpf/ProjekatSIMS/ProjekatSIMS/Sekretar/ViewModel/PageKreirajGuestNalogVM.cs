@@ -6,11 +6,12 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ProjekatSIMS.Sekretar.ViewModel
 {
-    public class PageKreirajGuestNalogVM : ViewModels
+    public class PageKreirajGuestNalogVM : ValidationBase
     {
         public ObservableCollection<GuestNalog> Guest { get; set; }
 
@@ -83,20 +84,25 @@ namespace ProjekatSIMS.Sekretar.ViewModel
         {
             this.page = page;
 
-            this.Potvrdi = new RelayCommand(Executed_Potvrdi, CanExecute_NavigateCommand);
+            this.Potvrdi = new RelayCommand(Executed_Potvrdi);
             this.Odustani = new RelayCommand(Executed_Odustani, CanExecute_NavigateCommand);
         }
 
         public void Executed_Potvrdi(object obj)
         {
-            GuestKontroler gk = new GuestKontroler();
-            string ime = S1;
-            string prezime = S2;
-            string jmbg = S3;
-            string guestNalog = (ime + "/" + prezime + "/" + jmbg);
-            gk.Kreiraj(guestNalog);
+            this.Validate();
+            if (this.IsValid)
+            {
+                GuestKontroler gk = new GuestKontroler();
+                string ime = S1;
+                string prezime = S2;
+                string jmbg = S3;
+                string guestNalog = (ime + "/" + prezime + "/" + jmbg);
+                gk.Kreiraj(guestNalog);
 
-            page.NavigationService.Navigate(new PageGuestNalozi());
+                page.NavigationService.Navigate(new PageGuestNalozi());
+            }
+
         }
 
         public void Executed_Odustani(object obj)
@@ -107,6 +113,36 @@ namespace ProjekatSIMS.Sekretar.ViewModel
         public bool CanExecute_NavigateCommand(object obj)
         {
             return true;
+        }
+
+        protected override void ValidateSelf()
+        {
+            if (string.IsNullOrWhiteSpace(S1))
+            {
+                this.ValidationErrors["ime"] = "Obavezno je uneti ime";
+            }
+            else if (!Regex.IsMatch(S1, @"^[a-zA-Z]+$"))
+            {
+                this.ValidationErrors["ime"] = "Ime može da sadrži samo slova";
+            }
+
+            if (string.IsNullOrWhiteSpace(S2))
+            {
+                this.ValidationErrors["prezime"] = "Obavezno je uneti prezime";
+            }
+            else if (!Regex.IsMatch(S2, @"^[a-zA-Z]+$"))
+            {
+                this.ValidationErrors["prezime"] = "Prezime može da sadrži samo slova";
+            }
+
+            if (string.IsNullOrWhiteSpace(S3))
+            {
+                this.ValidationErrors["jmbg"] = "Obavezno je uneti JMBG";
+            }
+            else if (S3.Length != 13)
+            {
+                this.ValidationErrors["jmbg"] = "JMBG mora da sadrži 13 cifara";
+            }
         }
     }
 }
