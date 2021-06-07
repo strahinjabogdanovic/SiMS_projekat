@@ -10,10 +10,11 @@ using ProjekatSIMS.Upravnik.View;
 using System.Windows;
 using System.ComponentModel;
 using System.ComponentModel.Design;
+using System.Text.RegularExpressions;
 
 namespace ProjekatSIMS.Upravnik.ViewModel
 {
-    public class KreirajProstorijuVM : BindableBase
+    public class KreirajProstorijuVM : ValidationBase
     {
         private DodavanjeProstorijePage page;
         public ObservableCollection<Prostorije> Prostorije { get; set; }
@@ -31,10 +32,42 @@ namespace ProjekatSIMS.Upravnik.ViewModel
         }
         private void PotvrdiKlik()
         {
-            ProstorijeKontroler pk = new ProstorijeKontroler();
-            pk.Kreiraj(S1, S2, S3, S4, S5);
-            page.NavigationService.Navigate(new UpravnikPage());
+            this.Validate();
+            if (this.IsValid)
+            {
+                ProstorijeKontroler pk = new ProstorijeKontroler();
+                pk.Kreiraj(S1, S2, S3, S4, S5);
+                page.NavigationService.Navigate(new UpravnikPage());
+            }
         }
+
+        protected override void ValidateSelf()
+        {
+            if (string.IsNullOrWhiteSpace(S1))
+            {
+                this.ValidationErrors["ime"] = "Obavezno je uneti ime prostorije";
+            }
+            else if (!Regex.IsMatch(S1, @"^[A-Z][a-z]+[0-9]*"))
+            {
+                this.ValidationErrors["ime"] = "Ime more biti oblika: Sala nn (n - broj)";
+            }
+
+            if (string.IsNullOrWhiteSpace(S2))
+            {
+                this.ValidationErrors["oznaka"] = "Obavezno je uneti oznaku prostorije";
+            }
+            else if (!Regex.IsMatch(S2, @"^[A-Z][0-9]"))
+            {
+                this.ValidationErrors["oznaka"] = "Oznaka mora biti oblika: Xn (X - slovo, n - broj)";
+            }
+
+            if (string.IsNullOrWhiteSpace(S3))
+            {
+                this.ValidationErrors["namena"] = "Obavezno je uneti namenu prostorije";
+            }
+
+        }
+
         public string S1
         {
             get { return s1; }

@@ -14,5 +14,7 @@
         <TextBox Text="{Binding S1}" x:Name="tb2" HorizontalAlignment="Left" Height="23" Margin="280,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox Text="{Binding S2}" x:Name="tb3" HorizontalAlignment="Left" Height="23" Margin="280,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="180,300,0,0" VerticalAlignment="Top" Width="75" Command="{Binding Potvrdi}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="280,81,0,0" TextWrapping="Wrap" Text="{Binding ValidationErrors[oprema]}" Foreground="Red" VerticalAlignment="Top" Height="47" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="280,161,0,0" TextWrapping="Wrap" Text="{Binding ValidationErrors[kolicina]}" Foreground="Red" VerticalAlignment="Top" Height="47" Width="120"/>
     </Grid>
 </Page>

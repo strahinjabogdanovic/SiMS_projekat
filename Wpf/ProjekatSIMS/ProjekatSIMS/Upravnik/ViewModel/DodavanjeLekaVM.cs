@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,7 +12,7 @@ using ProjekatSIMS.Upravnik.View;
 
 namespace ProjekatSIMS.Upravnik.ViewModel
 {
-    public class DodavanjeLekaVM : ViewModels
+    public class DodavanjeLekaVM : ValidationBase
     {
         private DodavanjeLekaPage page;
         private DataGrid tabela = new DataGrid();
@@ -28,11 +29,52 @@ namespace ProjekatSIMS.Upravnik.ViewModel
 
         private void PotvrdiKlik()
         {
-            LekoviKontroler lk = new LekoviKontroler();
-            MessageBox.Show("Lek poslat na validaciju kod lekara");
-            lk.Kreiraj(S1, S2, S3, S4);
-            page.NavigationService.Navigate(new LekoviPage());
+            this.Validate();
+            if (this.IsValid)
+            {
+                LekoviKontroler lk = new LekoviKontroler();
+                MessageBox.Show("Lek poslat na validaciju kod lekara");
+                lk.Kreiraj(S1, S2, S3, S4);
+                page.NavigationService.Navigate(new LekoviPage());
+            }
         }
+
+        protected override void ValidateSelf()
+        {
+            if (string.IsNullOrWhiteSpace(S1))
+            {
+                this.ValidationErrors["sifra"] = "Obavezno je uneti šifru leka";
+            }
+            else if (!Regex.IsMatch(S1, @"^[A-Z][0-9]{3}"))
+            {
+                this.ValidationErrors["sifra"] = "Šifra mora biti oblika: Xnnn (n - broj)";
+            }
+
+            if (string.IsNullOrWhiteSpace(S2))
+            {
+                this.ValidationErrors["naziv"] = "Obavezno je uneti naziv leka";
+            }
+            else if (!Regex.IsMatch(S2, @"^[A-Z][a-z]+"))
+            {
+                this.ValidationErrors["naziv"] = "Naziv mora da sadrži samo slova";
+            }
+
+            if (string.IsNullOrWhiteSpace(S3))
+            {
+                this.ValidationErrors["sastojci"] = "Obavezno je uneti sastojke leka";
+            }
+
+            if (string.IsNullOrWhiteSpace(S4))
+            {
+                this.ValidationErrors["zamena"] = "Obavezno je uneti zamenu za lek";
+            }
+            else if (!Regex.IsMatch(S4, @"^[A-Z][a-z]+"))
+            {
+                this.ValidationErrors["zamena"] = "Zamena mora da sadrži samo slova";
+            }
+        }
+
+
         public string S1
         {
             get { return s1; }

@@ -9,7 +9,7 @@
       Title="DodavanjeLekaPage" Height="675.2" Width="424">
 
     <Grid>
-        <Button Content="Potvrdi" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="174,350,0,0" Command="{Binding Potvrdi}"/>
+        <Button Content="Potvrdi" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="174,380,0,0" Command="{Binding Potvrdi}"/>
         <Label Content="Sifra leka:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,40,0,0"/>
         <Label Content="Naziv leka:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,120,0,0"/>
         <Label Content="Sastojci:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,200,0,0"/>
@@ -18,5 +18,9 @@
         <TextBox Text="{Binding S2}" x:Name="tb2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="250,120,0,0"/>
         <TextBox Text="{Binding S3}" x:Name="tb3" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="250,200,0,0"/>
         <TextBox Text="{Binding S4}" x:Name="tb4" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="250,280,0,0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="250,68,0,0" TextWrapping="Wrap" Text="{Binding ValidationErrors[sifra]}" Foreground="Red" VerticalAlignment="Top" Height="47" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="250,148,0,0" TextWrapping="Wrap" Text="{Binding ValidationErrors[naziv]}" Foreground="Red" VerticalAlignment="Top" Height="47" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="250,228,0,0" TextWrapping="Wrap" Text="{Binding ValidationErrors[sastojci]}" Foreground="Red" VerticalAlignment="Top" Height="47" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="250,308,0,0" TextWrapping="Wrap" Text="{Binding ValidationErrors[zamena]}" Foreground="Red" VerticalAlignment="Top" Height="47" Width="120"/>
     </Grid>
 </Page>

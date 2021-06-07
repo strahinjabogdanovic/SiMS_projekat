@@ -16,9 +16,14 @@
                 <DataGridTextColumn Header="Ime" Binding="{Binding Path = ime}"/>
                 <DataGridTextColumn Header="Oznaka" Binding="{Binding Path = oznaka}" />
                 <DataGridTextColumn Header="Namena" Binding="{Binding Path = namena}" />
-                <DataGridTextColumn Header="Oprema" Binding="{Binding Path = oprema}" />
-                <DataGridTextColumn Header="Pocetak" Binding="{Binding Path = vremePocetkaKoriscenja}" Width="55"/>
-                <DataGridTextColumn Header="Kraj" Binding="{Binding Path = vremeKrajaKoriscenja}" Width="55"/>
+                <DataGridTextColumn Header="Oprema" Binding="{Binding Path = oprema}">
+                <DataGridTextColumn.ElementStyle>
+                    <Style>
+                        <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                        <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                    </Style>
+                </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
                 <DataGridTextColumn Header="Renoviranje" Binding="{Binding Path = renoviranje}" Width="70"/>
             </DataGrid.Columns>
         </DataGrid>
