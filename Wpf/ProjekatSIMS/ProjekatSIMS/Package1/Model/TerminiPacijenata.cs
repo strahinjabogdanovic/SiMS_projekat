@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 
 namespace ProjekatSIMS.Package1.Model
 {
@@ -25,6 +26,8 @@ namespace ProjekatSIMS.Package1.Model
         private Termin VrstaTermina;
         private string Pacijent;
         private string Jmbg;
+        public DateTime PraviDatum { get; set; }
+
 
 
         public string jmbg

@@ -1,0 +1,33 @@
+﻿<Page x:Class="ProjekatSIMS.Lekar.View.Izveštaji"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS.Lekar.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="Izveštaji">
+
+    <Grid Background="LightCyan">
+        <DataGrid x:Name="Izvestaji" ItemsSource="{Binding Path = Izvopr, UpdateSourceTrigger=PropertyChanged}"
+                  SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
+                  MaxHeight="350" Margin="128,128,0,0" VerticalAlignment="Top" MaxWidth="800" FontSize="16">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Vrsta izveštaja" Binding="{Binding Path = vrsta}"/>
+                <DataGridTextColumn Header="Datum izveštaja" Binding="{Binding Path = datum}" />
+                <DataGridTextColumn Header="Odeljenje na prijemu" Binding="{Binding Path = odeljenje}" />
+                <DataGridTextColumn Header="Nalaz i mišljenje" Binding="{Binding Path = nalaz}" />
+                <DataGridTextColumn Header="Kontrola" Binding="{Binding Path = kontrola}" />
+                <DataGridTextColumn Header="Terapija" Binding="{Binding Path = terapija}"  />
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Izmeni" HorizontalAlignment="Left" Height="30" Margin="128,508,0,0" VerticalAlignment="Top" Width="190"   Command="{Binding Izmeni}" Background="LightYellow" BorderBrush="Yellow" FontSize="16"/>
+        <Button Content="&#129044;" HorizontalAlignment="Left" Margin="33,33,0,0"  VerticalAlignment="Top" Height="40" Width="64" FontSize="30" RenderTransformOrigin="0.516,0.533" Command="{Binding Nazad}" Background="LightCyan" BorderBrush="LightCyan" Foreground="DarkBlue" />
+        <TextBlock Text="{Binding TJmbg}" x:Name="tjmbg" HorizontalAlignment="Left" Margin="89,508,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="20" Width="131" Visibility="Hidden"/>
+        <Label Content="Izveštaji pacijenta" HorizontalAlignment="Left" Margin="128,64,0,0" VerticalAlignment="Top" Height="50" Width="218" FontSize="22"/>
+        <Button Content="PDF" HorizontalAlignment="Left" Height="30" Margin="650,508,0,0" VerticalAlignment="Top" Width="190"   Command="{Binding PDF}" Background="LightYellow" BorderBrush="Yellow" FontSize="16"/>
+
+
+    </Grid>
+</Page>

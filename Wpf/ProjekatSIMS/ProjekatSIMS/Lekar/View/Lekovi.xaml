@@ -1,0 +1,30 @@
+﻿<Page x:Class="ProjekatSIMS.Lekar.View.Lekovi"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS.Lekar.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="Lekovi">
+
+    <Grid Background="LightCyan">
+
+        <DataGrid x:Name="dataGridLekovi" ItemsSource="{Binding Path = SviLekovi, UpdateSourceTrigger=PropertyChanged}"
+                  SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
+                  MaxHeight="240" Margin="128,120,0,0" VerticalAlignment="Top" Width="757" FontSize="16">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Šifra leka" Binding="{Binding Path = sifraleka}"/>
+                <DataGridTextColumn Header="Naziv Leka" Binding="{Binding Path = nazivleka}" />
+                <DataGridTextColumn Header="Sastojci" Binding="{Binding Path = sastojci}" />
+                <DataGridTextColumn Header="Zamena" Binding="{Binding Path = zamena}" />
+                <DataGridTextColumn Header="Validiran" Binding="{Binding Path = validiran}" Width="*" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Izmeni" HorizontalAlignment="Left" Margin="128,418,0,0" VerticalAlignment="Top" Width="190" Height="30" Command="{Binding Path=Izmeni}" Background="LightYellow" BorderBrush="Yellow" FontSize="16"/>
+        <Button Content="Postoji greška-upravniku" HorizontalAlignment="Left" Margin="695,418,0,0" VerticalAlignment="Top" Width="190" Height="30" Command="{Binding Upravniku}" FontSize="16" Background="LightYellow" BorderBrush="Yellow"/>
+        <Button Content="🠔" HorizontalAlignment="Left" Margin="33,33,0,0"  VerticalAlignment="Top" Height="40" Width="64" FontSize="30" RenderTransformOrigin="0.516,0.533" Command="{Binding Nazad}" Background="LightCyan" BorderBrush="LightCyan" Foreground="DarkBlue" />
+        <Label Content="Lekovi" HorizontalAlignment="Left" Margin="128,64,0,0" VerticalAlignment="Top" FontSize="22"/>
+    </Grid>
+</Page>

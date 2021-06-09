@@ -35,5 +35,11 @@ namespace ProjekatSIMS.Package1.Kontroler
             return mi;
 
         }
+        public ObservableCollection<TerminiPacijenata> NadjiTermine()
+        {
+            ObservableCollection<TerminiPacijenata> tp = new ObservableCollection<TerminiPacijenata>();
+            tp = ls.NadjiTermine();
+            return tp;
+        }
     }
 }

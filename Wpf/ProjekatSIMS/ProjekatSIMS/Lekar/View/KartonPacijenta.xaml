@@ -1,0 +1,38 @@
+﻿<Page x:Class="ProjekatSIMS.Lekar.View.KartonPacijenta"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS.Lekar.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="KartonPacijenta">
+
+    <Grid Background="LightCyan">
+        <Label Content="Ime" HorizontalAlignment="Left" Margin="128,140,0,0" VerticalAlignment="Top" Width="70" Height="35" FontSize="16"/>
+        <Label Content="Prezime" HorizontalAlignment="Left" Margin="128,185,0,0" VerticalAlignment="Top" Width="70" Height="35" FontSize="16"/>
+        <Label Content="JMBG" HorizontalAlignment="Left" Margin="128,230,0,0" VerticalAlignment="Top" Width="70" Height="35" FontSize="16"/>
+        <Button Content="Recepti" HorizontalAlignment="Left" Margin="378,361,0,0" VerticalAlignment="Top" Width="190" Height="35" Command="{Binding Recepti}" Background="LightYellow" BorderBrush="Yellow" FontSize="16" />
+        <TextBlock Text="{Binding TIme,Mode=TwoWay}" x:Name="t" HorizontalAlignment="Left" Margin="220,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="184" FontSize="16" FontStyle="Italic"/>
+        <TextBlock Text="{Binding TPrezime,Mode=OneWay}" x:Name="t1" HorizontalAlignment="Left" Margin="220,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="184" FontSize="16" FontStyle="Italic"/>
+        <Label Content="Pol" HorizontalAlignment="Left" Margin="128,275,0,0" VerticalAlignment="Top" Width="70" Height="35" FontSize="16"/>
+        <Label Content="Datum rođenja" HorizontalAlignment="Left" Margin="495,140,0,0" VerticalAlignment="Top" Height="35" Width="121" FontSize="16"/>
+        <Label Content="email" HorizontalAlignment="Left" Margin="495,185,0,0" VerticalAlignment="Top" Height="35" Width="93" FontSize="16"/>
+        <Label Content="Broj telefona" HorizontalAlignment="Left" Margin="495,230,0,0" VerticalAlignment="Top" Height="35"  Width="121" FontSize="16"/>
+        <Label Content="Adresa" HorizontalAlignment="Left" Margin="495,275,0,0" VerticalAlignment="Top" Height="30" Width="93" FontSize="16"/>
+        <TextBlock Text="{Binding TJmbg}" x:Name="t2" HorizontalAlignment="Left" Margin="220,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="184" FontSize="16" FontStyle="Italic"/>
+        <TextBlock Text="{Binding TPol}" x:Name="t3" HorizontalAlignment="Left" Margin="220,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="184" FontSize="16" FontStyle="Italic"/>
+        <TextBlock Text="{Binding TDatum}" x:Name="t4" HorizontalAlignment="Left" Margin="634,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="184" FontSize="16" FontStyle="Italic"/>
+        <TextBlock Text="{Binding TEmail}" x:Name="t5" HorizontalAlignment="Left" Margin="634,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="184" FontSize="16" FontStyle="Italic"/>
+        <TextBlock Text="{Binding TBroj}" x:Name="t6" HorizontalAlignment="Left" Margin="634,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="184" FontSize="16" FontStyle="Italic"/>
+        <TextBlock Text="{Binding TAdresa}" x:Name="t7" HorizontalAlignment="Left" Margin="634,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="184" FontSize="16" FontStyle="Italic"/>
+        <Button Content="Napiši izveštaj" HorizontalAlignment="Left" Height="30" Margin="128,361,0,0" VerticalAlignment="Top" Width="190                " Command="{Binding NapisiIzvestaj}" Background="Gold" BorderBrush="Yellow" FontSize="16" />
+        <Button Content="Izveštaj o pregledu stanja" HorizontalAlignment="Left" Height="30" Margin="628,361,0,0" VerticalAlignment="Top" Width="190" Command="{Binding Izvestaji}" Background="LightYellow" BorderBrush="Yellow" FontSize="16" />
+        <Button Content="Uput za specijalistu" HorizontalAlignment="Left" Margin="128,488,0,0" VerticalAlignment="Top" Width="190" Height="30" Command="{Binding Uput}" Background="LightYellow" BorderBrush="Yellow" FontSize="16" />
+        <Button Content="&#129044;" HorizontalAlignment="Left" Margin="33,33,0,0"  VerticalAlignment="Top" Height="40" Width="64" FontSize="30" RenderTransformOrigin="0.516,0.533" Command="{Binding Nazad}" Background="LightCyan" BorderBrush="LightCyan" Foreground="DarkBlue" />
+        <Button Content="Uput za bolničko lečenje" HorizontalAlignment="Left" Margin="128,537,0,0" VerticalAlignment="Top" Height="30" Width="190" Command="{Binding UputiZaBolnicu}" Background="LightYellow" BorderBrush="Yellow" FontSize="16"/>
+        <Label Content="Uputi" HorizontalAlignment="Left" Margin="128,423,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Medicinski karton" HorizontalAlignment="Left" Margin="128,64,0,0" VerticalAlignment="Top" Width="244" Height="47" FontSize="22"/>
+
+    </Grid>
+</Page>

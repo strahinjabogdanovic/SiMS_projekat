@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProjekatSIMS.Lekar;
 using ProjekatSIMS.Lekar.View;
 using ProjekatSIMS.Upravnik;
 using ProjekatSIMS.Upravnik.View;
@@ -58,7 +59,7 @@ namespace ProjekatSIMS
                 Array.IndexOf(rola.ToArray(), string4))
                 {
                     this.Hide();
-                    LekarPocetnaStranica ps4 = new LekarPocetnaStranica();
+                    LekarOsnova ps4 = new LekarOsnova();
                     ps4.ShowDialog();
                     this.Show();
 

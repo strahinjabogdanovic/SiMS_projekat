@@ -186,5 +186,52 @@ namespace ProjekatSIMS.Package1.Repozitorijum
             }
             return lekovi;
         }
+        public ObservableCollection<Lek> CitajSveLekove()
+        {
+            ObservableCollection<Lek> lekovi = new ObservableCollection<Lek>();
+            List<string> lines = procitaniLekovi();
+            foreach (string linee in lines)
+            {
+                string[] termin = linee.Split('/');
+                var lekicLek = new Lek();
+                lekicLek.sifraleka = termin[0];
+                lekicLek.nazivleka = termin[1];
+                lekicLek.sastojci = termin[2];
+                lekicLek.zamena = termin[3];
+                lekicLek.validiran = termin[4];
+                lekovi.Add(lekicLek);
+            }
+            return lekovi;
+        }
+
+        public void Validiraj(Lek lekic)
+        {
+            string tempFile = System.IO.Path.GetTempFileName();
+
+            using (var sr = new StreamReader("lekovi.txt"))
+            using (var sw = new StreamWriter(tempFile))
+            {
+
+                string line;
+                int id = 0;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    String[] jedanLek = line.Split('/');
+                    if (jedanLek[0].Equals(lekic.sifraleka))
+                    {
+                        lekic.sastojci = jedanLek[2];
+                        lekic.zamena = jedanLek[3];
+                        sw.WriteLine(lekic.sifraleka + "/" + lekic.nazivleka + "/" + lekic.sastojci + "/" + lekic.zamena + "/" + lekic.validiran);
+                    }
+                    else
+                    {
+                        sw.WriteLine(line);
+                    }
+                    id++;
+                }
+            }
+            File.Delete("lekovi.txt");
+            File.Move(tempFile, "lekovi.txt");
+        }
     }
 }

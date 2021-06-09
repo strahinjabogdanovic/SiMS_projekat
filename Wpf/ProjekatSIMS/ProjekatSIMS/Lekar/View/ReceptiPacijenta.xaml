@@ -1,0 +1,29 @@
+﻿<Page x:Class="ProjekatSIMS.Lekar.View.ReceptiPacijenta"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS.Lekar.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="ReceptiPacijenta">
+
+    <Grid Background="LightCyan">
+        <DataGrid x:Name="dataGridRecepti" ItemsSource="{Binding Path = ReceptiSpisak, UpdateSourceTrigger=PropertyChanged}"
+                  SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
+                  MaxHeight="217" Margin="128,207,0,0" VerticalAlignment="Top" MaxWidth="500" FontSize="16" BorderBrush="PaleTurquoise">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Sifra Leka" Binding="{Binding Path = sifraLeka}"/>
+                <DataGridTextColumn Header="Naziv Leka" Binding="{Binding Path = nazivLeka}" />
+                <DataGridTextColumn Header="Način uzimanja" Binding="{Binding Path = nacinUzimanja}" />
+                <DataGridTextColumn Header="Na koliko sati se lek uzima" Binding="{Binding Path = naKolikoSati}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Dodaj novi recept" HorizontalAlignment="Left" Margin="128,470,0,0" VerticalAlignment="Top" Width="190" Command="{Binding NoviRecept}" Height="30" FontSize="16" Background="LightYellow" BorderBrush="Yellow"/>
+        <Label Content="JMBG pacijenta" HorizontalAlignment="Left" Margin="128,142,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock Text="{Binding TJmbg}" x:Name="t" HorizontalAlignment="Left" Margin="280,141,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="32" Width="212" FontSize="16" FontStyle="Italic"/>
+        <Button Content="&#129044;" HorizontalAlignment="Left" Margin="33,33,0,0"  VerticalAlignment="Top" Height="40" Width="64" FontSize="30" RenderTransformOrigin="0.516,0.533" Command="{Binding Path=Nazad}" Background="LightCyan" BorderBrush="LightCyan" Foreground="DarkBlue" />
+        <Label Content="Izdati recepti" HorizontalAlignment="Left" Margin="128,64,0,0" VerticalAlignment="Top" FontSize="22"/>
+
+    </Grid>
+</Page>

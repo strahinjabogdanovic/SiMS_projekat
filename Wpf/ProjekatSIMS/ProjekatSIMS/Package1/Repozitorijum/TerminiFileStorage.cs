@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using ProjekatSIMS.Lekar.View;
@@ -47,8 +48,6 @@ namespace ProjekatSIMS.Package1.Repozitorijum
             File.Delete("lekar.txt");
             File.Move(tempFile, "lekar.txt");
 
-            LekarPocetnaStranica s = new LekarPocetnaStranica();
-            s.ShowDialog();
         }
       
       public void Obrisi(TerminiPacijenata k)
@@ -577,6 +576,22 @@ namespace ProjekatSIMS.Package1.Repozitorijum
             }
             catch (Exception e)
             { }
+        }
+        public List<string> ProcitajTermine()
+        {
+            List<String> lines = new List<string>();
+            lines = File.ReadAllLines("termini.txt").ToList();
+            return lines;
+        }
+        public void Zakazi(DateTime d, string vreme, string lekar, string soba, string imeIprez, string hitno, string vrsta)
+        {
+            var text = File.ReadAllText(@"termini.txt");
+            var lastLine = File.ReadLines("termini.txt").Last();
+            string[] l = lastLine.Split('/');
+            int id = int.Parse(l[4]);
+            id++;
+            File.WriteAllText(@"termini.txt", text + d.ToString("dd.MM.yyyy") + "/" + vreme + "/" + lekar + "/" + soba + "/" + id.ToString() + "/" + imeIprez + "/" + hitno + "/" + vrsta + "/" + Environment.NewLine);
+
         }
     }
 }

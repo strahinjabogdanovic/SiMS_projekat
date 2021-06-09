@@ -84,5 +84,11 @@ namespace ProjekatSIMS.Package1.Repozitorijum
 
             sr.Close();
         }
+        public void Kreiraj(String s1, String s2, String s3, String s4, String s5, String s6, String s7, DateTime d)
+        {
+            var text = File.ReadAllText(@"izvestaji.txt");
+            File.WriteAllText(@"izvestaji.txt", text + s1 + "/" + s2 + "/" + s3 + "/" + s4 + "/" + s5 + "/" + s6 + "/" + d.ToString("D") + "/" + s7 + Environment.NewLine);
+
+        }
     }
 }

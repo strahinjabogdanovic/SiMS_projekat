@@ -62,5 +62,11 @@ namespace ProjekatSIMS.Package1.Repozitorijum
             lines = File.ReadAllLines("recepti.txt").ToList();
             return lines;
         }
+        public void Kreiraj(string s1, string s2, string s3, string s4, string s5)
+        {
+            var text = File.ReadAllText(@"recepti.txt");
+            File.WriteAllText(@"recepti.txt", text + s1 + "/" + s2 + "/" + s3 + "/" + s4 + "/" + s5 + "/" + Environment.NewLine);
+
+        }
     }
 }

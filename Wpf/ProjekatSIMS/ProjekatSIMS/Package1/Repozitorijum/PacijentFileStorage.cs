@@ -141,6 +141,67 @@ namespace ProjekatSIMS.Package1.Repozitorijum
             File.Move(tempFile, "termini.txt");
 
         }
+        public void Kreiraj(string lekar, string tb, string tb1, string jmbgP, string vrsta)
+        {
+            TerminiP = new ObservableCollection<TerminiPacijenata>();
+            string slj = "";
+
+            string imeiPrPacijenta = pronadjiPacijenta(jmbgP);
+            if (lekar != null)
+            {
+
+                if (lekar.Contains("Jova Jovic"))
+                {
+                    slj = "Jova Jovic";
+
+                }
+                else if (lekar.Contains("Jovan Jovanovic"))
+                {
+                    slj = "Jovan Jovanovic";
+                }
+            }
+
+
+            string tempFile = System.IO.Path.GetTempFileName();
+
+            using (var sr = new StreamReader("termini.txt"))
+            using (var sw = new StreamWriter(tempFile))
+            {
+                string line;
+                int id = 0;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    String[] termin = line.Split('/');
+                    var pacijent = new TerminiPacijenata();
+                    id = int.Parse(termin[4]);
+                    id++;
+
+                    sw.WriteLine(line);
+
+                }
+                string doktor = "";
+                using (var sars = new StreamReader("doktori.txt"))
+                {
+                    string lines;
+                    while ((line = sars.ReadLine()) != null)
+                    {
+                        String[] termin = line.Split('/');
+                        lines = termin[0];
+                        if (lines == slj)
+                        {
+                            doktor = termin[1];
+                        }
+
+                    }
+                }
+                sw.WriteLine(tb + "/" + tb1 + "/" + slj + "/" + doktor + "/" + id + "/" + imeiPrPacijenta + "/" + " /" + vrsta);
+
+
+            }
+            File.Delete("termini.txt");
+            File.Move(tempFile, "termini.txt");
+
+        }
 
         public void Obrisi(TerminiPacijenata k)
         {

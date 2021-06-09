@@ -1,0 +1,29 @@
+﻿<Page x:Class="ProjekatSIMS.Lekar.View.NapišiRecept"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS.Lekar.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="NapišiRecept">
+
+    <Grid Background="LightCyan">
+        <Label Content="Naziv leka" HorizontalAlignment="Left" Margin="128,288,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Način uzimanja" HorizontalAlignment="Left" Margin="128,348,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button Content="&#129044;" HorizontalAlignment="Left" Margin="33,33,0,0"  VerticalAlignment="Top" Height="40" Width="64" FontSize="30" RenderTransformOrigin="0.516,0.533" Command="{Binding Nazad}" Background="LightCyan" BorderBrush="LightCyan" Foreground="DarkBlue" />
+        <TextBox Text="{Binding Naziv}" x:Name="t2" HorizontalAlignment="Left" Height="31" Margin="313,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" FontSize="16" FontStyle="Italic"/>
+        <TextBox Text="{Binding Nacin}" x:Name="t3" HorizontalAlignment="Left" Height="31" Margin="313,348,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="244" FontSize="16" FontStyle="Italic"/>
+        <Label Content="Na koliko sati se uzima" HorizontalAlignment="Left" Margin="128,408,0,0" VerticalAlignment="Top" Height="29" Width="180" RenderTransformOrigin="0.493,0.529" FontSize="16"/>
+        <TextBox Text="{Binding NaKolikoSati}" x:Name="t4" HorizontalAlignment="Left" Height="31" Margin="313,408,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="244" FontSize="16" FontStyle="Italic"/>
+        <Label Content="Šifra leka" HorizontalAlignment="Left" Margin="128,228,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox Text="{Binding Sifra}"  x:Name="t" HorizontalAlignment="Left" Height="31" Margin="313,228,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="244" FontSize="16" FontStyle="Italic"/>
+        <Button Content="Izdaj recept" HorizontalAlignment="Left" Margin="367,491,0,0" VerticalAlignment="Top" Width="190"  Command="{Binding Izdaj}" Foreground="Navy" Background="Gold" BorderBrush="Yellow" FontSize="16" Height="30"/>
+        <Label Content="JMBG" HorizontalAlignment="Left" Height="31
+               " Margin="128,168,0,0" VerticalAlignment="Top" Width="91" FontSize="16"/>
+        <TextBlock Text="{Binding TextJmbg}" x:Name="textBlock" HorizontalAlignment="Left"  Margin="310,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="244" FontStyle="Italic" FontSize="16"/>
+        <Button Content="Pronađi" HorizontalAlignment="Left" ToolTip="Ukucaj naziv da bi pribavio šifru leka"  Margin="684,288,0,0" VerticalAlignment="Top" Width="190" Command="{Binding Path=pronadji}" Background="LightYellow" BorderBrush="Yellow" FontSize="16"/>
+        <Label Content="Izdavanje recepta" HorizontalAlignment="Left" Margin="128,64,0,0" VerticalAlignment="Top" Height="51" Width="207" FontSize="22"/>
+
+    </Grid>
+</Page>
