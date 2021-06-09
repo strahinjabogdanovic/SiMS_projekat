@@ -130,6 +130,13 @@ namespace ProjekatSIMS.Package1.Repozitorijum
             string[] c = s.Split(' ');
             return c[1];
         }
+
+        public void KreirajFeedback(String s1, String s2, String s3)
+        {
+            var text = File.ReadAllText(@"feedback.txt");
+            File.WriteAllText(@"feedback.txt",text + s1 +"/" + s2 + "/" + s3 + Environment.NewLine);
+        }
+
     }
 
 

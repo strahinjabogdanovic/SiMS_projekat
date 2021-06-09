@@ -27,6 +27,7 @@ namespace ProjekatSIMS.Upravnik.ViewModel
         public MyICommand Pretrazi { get; set; }
         public MyICommand Renoviranje { get; set; }
         public MyICommand Izvestaj { get; set; }
+        public MyICommand Feedback { get; set; }
         private string pretraga;
 
         public UpravnikPageVM(UpravnikPage page, DataGrid dgp)
@@ -58,6 +59,7 @@ namespace ProjekatSIMS.Upravnik.ViewModel
             Pretrazi = new MyICommand(PretraziOpremu);
             Renoviranje = new MyICommand(RenoviranjeProstorije);
             Izvestaj = new MyICommand(IzvestajPrikaz);
+            Feedback = new MyICommand(ProvideFeedback);
         }
 
         private void DodajProstoriju()
@@ -135,6 +137,11 @@ namespace ProjekatSIMS.Upravnik.ViewModel
         private void IzvestajPrikaz()
         {
             page.NavigationService.Navigate(new IzvestajPage());
+        }
+
+        private void ProvideFeedback()
+        {
+            page.NavigationService.Navigate(new FeedbackPage());
         }
 
 

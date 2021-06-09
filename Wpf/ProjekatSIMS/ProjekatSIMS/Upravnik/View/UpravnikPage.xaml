@@ -35,6 +35,6 @@
         <Button Content="Renoviranje" HorizontalAlignment="Left" Margin="215,550,0,0" VerticalAlignment="Top" Width="90" Height="20" Command="{Binding Renoviranje}"/>
         <Label Content="Prostorije" HorizontalAlignment="Left" Margin="5,22,0,0" VerticalAlignment="Top" Height="24"/>
         <Button Content="Izveštaj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="243,0,0,0" Command="{Binding Izvestaj}"/>
-        <Button Content="Demo" HorizontalAlignment="Left" Margin="335,0,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Feedback" HorizontalAlignment="Left" Margin="335,0,0,0" VerticalAlignment="Top" Width="75" Command="{Binding Feedback}"/>
     </Grid>
 </Page>
