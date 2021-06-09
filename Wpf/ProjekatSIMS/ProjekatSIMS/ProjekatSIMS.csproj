@@ -195,6 +195,12 @@
     <Compile Include="Pacijent\View\LekarZakaz.xaml.cs">
       <DependentUpon>LekarZakaz.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Upravnik\View\IzvestajGenerisan.xaml.cs">
+      <DependentUpon>IzvestajGenerisan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Upravnik\View\IzvestajPage.xaml.cs">
+      <DependentUpon>IzvestajPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Upravnik\View\LekoviPage.xaml.cs">
       <DependentUpon>LekoviPage.xaml</DependentUpon>
     </Compile>
@@ -452,6 +458,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pacijent\View\LekarZakaz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Upravnik\View\IzvestajGenerisan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Upravnik\View\IzvestajPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
