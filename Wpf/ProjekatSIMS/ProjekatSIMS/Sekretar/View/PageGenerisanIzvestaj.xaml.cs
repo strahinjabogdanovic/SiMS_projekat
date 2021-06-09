@@ -23,9 +23,28 @@ namespace ProjekatSIMS.Sekretar.View
         public PageGenerisanIzvestaj(string s1, string s2)
         {
             InitializeComponent();
+            textBox.Text = s1;
+            textBox1.Text = s2;
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void Stampaj_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.IsEnabled = false;
+                PrintDialog printDialog = new PrintDialog();
+                if (printDialog.ShowDialog() == true)
+                {
+                    printDialog.PrintVisual(print, "PageGenerisanIzvestaj");
+                }
+            }
+            finally
+            {
+                this.IsEnabled = true;
+            }
+        }
+
+        private void Nazad_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new PageIzvestaj());
         }

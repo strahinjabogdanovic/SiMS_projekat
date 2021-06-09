@@ -39,5 +39,11 @@ namespace ProjekatSIMS
             this.viewM = new PageProfilVM(this.PocetnaS.NavigationService, this);
             this.DataContext = this.viewM;
         }
+
+        private void Pocetna_Click(object sender, RoutedEventArgs e)
+        {
+            this.viewModel = new SekretarPocetnaStranaVM(this.PocetnaS.NavigationService, this);
+            this.DataContext = this.viewModel;
+        }
     }
 }

@@ -4,12 +4,144 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ProjekatSIMS.Sekretar.View"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       Title="PageGenerisanIzvestaj" Height="649" Width="1272" Background="LightBlue">
 
     <Grid>
-        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="568,558,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=ButtonStyle}" Click="button_Click"/>
+        <Button Content="Štampaj" HorizontalAlignment="Right" Margin="0,38,21,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=ButtonStyle}" Click="Stampaj_Click"/>
+        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="20,38,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=ButtonStyle}" Click="Nazad_Click" Height="44"/>
+        <Grid x:Name="print" Margin="0,0,0,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="467"/>
+                <RowDefinition Height="133"/>
+            </Grid.RowDefinitions>
 
+
+            <TextBlock Text="Izveštaj" VerticalAlignment="Center" FontSize="40" Margin="559,37,578,29"/>
+
+            <StackPanel Grid.Row="1" HorizontalAlignment="Stretch" Margin="20" Background="White">
+                <Grid HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Margin="10">
+                        <TextBlock Text="Zauzetost prostorija za određeni vremenski period" FontSize="24" Margin="5" FontWeight="Bold"/>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Od:" FontSize="20" Margin="5"/>
+                            <TextBlock x:Name="textBox" FontSize="20" Margin="5" FontWeight="DemiBold"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Do:" FontSize="20" Margin="5"/>
+                            <TextBlock x:Name="textBox1" FontSize="20" Margin="5" FontWeight="DemiBold"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Margin="10 30 10 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="295*"/>
+                        <ColumnDefinition Width="125*"/>
+                        <ColumnDefinition Width="81*"/>
+                        <ColumnDefinition Width="105*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Prostorija" Grid.Column="0" FontSize="20"/>
+                    <TextBlock Text="Od:" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" Margin="94,0,122,0" Width="34"/>
+                    <TextBlock Text="Do:" Grid.Column="2" FontSize="20" HorizontalAlignment="Center" Margin="46,0,62,0" Width="54"/>
+                    <TextBlock Text="Svaki dan" Grid.Column="3" FontSize="20" HorizontalAlignment="Center" Margin="70,0,56,0" Width="84"/>
+                </Grid>
+                <Rectangle Fill="Black" Height="1" Margin="5 2" Opacity="0.5"/>
+                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListViewItem>
+                        <Grid HorizontalAlignment="Stretch" Margin="2" Width="1200">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="193*"/>
+                                <ColumnDefinition Width="81*"/>
+                                <ColumnDefinition Width="50*"/>
+                                <ColumnDefinition Width="76*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Sala 10" Grid.Column="0" FontSize="20"/>
+                            <TextBlock Text="8:00h" Grid.Column="1" HorizontalAlignment="Center" Margin="97,0,98,0" Width="48" FontSize="20"/>
+                            <TextBlock Text="20:00h" Grid.Column="2" HorizontalAlignment="Center" Margin="50,0,34,0" Width="66" FontSize="20"/>
+                            <TextBlock Text="Da" Grid.Column="3" HorizontalAlignment="Center" Margin="118,0,66,0" Width="44" FontSize="20"/>
+                        </Grid>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <Grid HorizontalAlignment="Stretch" Margin="2" Width="1200">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Sala 11" Grid.Column="0" FontSize="20"/>
+                            <TextBlock Text="8:00h" Grid.Column="1" HorizontalAlignment="Center" FontSize="20"/>
+                            <TextBlock Text="20:00h" Grid.Column="2" HorizontalAlignment="Center" FontSize="20"/>
+                            <TextBlock Text="Da" Grid.Column="3" HorizontalAlignment="Center" FontSize="20" Margin="90,0,70,0" Width="40"/>
+                        </Grid>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <Grid HorizontalAlignment="Stretch" Margin="2" Width="1200">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Sala 14" Grid.Column="0" FontSize="20"/>
+                            <TextBlock Text="8:00h" Grid.Column="1" HorizontalAlignment="Center" FontSize="20"/>
+                            <TextBlock Text="12:00h" Grid.Column="2" HorizontalAlignment="Center" FontSize="20"/>
+                            <TextBlock Text="Da" Grid.Column="3" HorizontalAlignment="Center" FontSize="20" Margin="90,0,75,0" Width="35"/>
+                        </Grid>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <Grid HorizontalAlignment="Stretch" Margin="2" Width="1200">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Sala 15" Grid.Column="0" FontSize="20"/>
+                            <TextBlock Text="7:00h" Grid.Column="1" HorizontalAlignment="Center" FontSize="20"/>
+                            <TextBlock Text="22:00h" Grid.Column="2" HorizontalAlignment="Center" FontSize="20"/>
+                            <TextBlock Text="ponedeljak-petak" Grid.Column="3" HorizontalAlignment="Center" FontSize="20" Margin="34,0,0,0" Width="166"/>
+                        </Grid>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <Grid HorizontalAlignment="Stretch" Margin="2" Width="1200">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Sala 16" Grid.Column="0" FontSize="20"/>
+                            <TextBlock Text="7:00h" Grid.Column="1" HorizontalAlignment="Center" FontSize="20"/>
+                            <TextBlock Text="15:00h" Grid.Column="2" HorizontalAlignment="Center" FontSize="20"/>
+                            <TextBlock Text="Da" Grid.Column="3" HorizontalAlignment="Center" FontSize="20" Margin="90,0,76,0" Width="34"/>
+                        </Grid>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <Grid HorizontalAlignment="Stretch" Margin="2" Width="1200">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Sala 18" Grid.Column="0" FontSize="20"/>
+                            <TextBlock Text="8:00h" Grid.Column="1" HorizontalAlignment="Center" FontSize="20"/>
+                            <TextBlock Text="20:00h" Grid.Column="2" HorizontalAlignment="Center" FontSize="20"/>
+                            <TextBlock Text="ponedeljak-petak" Grid.Column="3" HorizontalAlignment="Center" FontSize="20" Margin="34,0,0,0" Width="166"/>
+                        </Grid>
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
+            
+        </Grid>
     </Grid>
 </Page>

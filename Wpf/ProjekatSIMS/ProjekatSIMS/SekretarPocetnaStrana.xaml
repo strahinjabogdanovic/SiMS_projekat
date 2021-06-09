@@ -8,7 +8,26 @@
         Title="SekretarPocetnaStrana" Height="720" Width="1280" WindowStartupLocation="CenterScreen">
     <Grid>
         <Frame x:Name="PocetnaS" Margin="0,40,0,0" NavigationUIVisibility="Hidden" />
-        <Button x:Name="button" Content="Odjava" HorizontalAlignment="Left" Margin="1150,7,0,0" VerticalAlignment="Top" Width="100" FontSize="18" Click="Odjava_Click"/>
-        <Button x:Name="button1" Content="Profil" HorizontalAlignment="Left" Margin="17,7,0,0" VerticalAlignment="Top" Width="100" FontSize="18" Click="Profil_Click"/>
+        <Button x:Name="button" Content="Odjava" HorizontalAlignment="Left" Margin="1150,7,0,0" VerticalAlignment="Top" Width="100" FontSize="18" Click="Odjava_Click">
+            <Button.ToolTip>
+                <ToolTip>
+                    Odjava
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <Button x:Name="button1" Content="Profil" HorizontalAlignment="Left" Margin="1030,7,0,0" VerticalAlignment="Top" Width="100" FontSize="18" Click="Profil_Click">
+            <Button.ToolTip>
+                <ToolTip>
+                    Profil
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <Button x:Name="button2" Content="Početna" HorizontalAlignment="Left" Margin="16,7,0,0" VerticalAlignment="Top" Width="100" FontSize="18" Click="Pocetna_Click">
+            <Button.ToolTip>
+                <ToolTip>
+                    Početna strana
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
     </Grid>
 </Window>
