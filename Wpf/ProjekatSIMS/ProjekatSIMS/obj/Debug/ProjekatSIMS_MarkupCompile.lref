@@ -21,12 +21,15 @@ FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Le
 FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Lekar\View\Izvestaj.xaml;;
 FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Lekar\View\Izvestaji_o_pregledu_stanja.xaml;;
 FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Lekar\View\KartonLekar.xaml;;
+FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Upravnik\View\FeedbackPage.xaml;;
 FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Upravnik\View\FiltriranaPage.xaml;;
 FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Lekar\View\KreirajTerminLekar.xaml;;
 FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Pacijent\View\KreirajTerminPacijenta.xaml;;
 FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Pacijent\View\LekarAnketa.xaml;;
 FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Lekar\View\LekarPocetnaStranica.xaml;;
 FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Pacijent\View\LekarZakaz.xaml;;
+FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Upravnik\View\IzvestajGenerisan.xaml;;
+FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Upravnik\View\IzvestajPage.xaml;;
 FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Upravnik\View\LekoviPage.xaml;;
 FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\MainWindow.xaml;;
 FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Pacijent\View\PacijentPocetnaStranica.xaml;;
@@ -66,6 +69,4 @@ FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Up
 FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Lekar\View\UputSpecijalisti.xaml;;
 FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Lekar\View\ValidacijaLeka.xaml;;
 FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Lekar\View\ZahteviZaValidaciju.xaml;;
-FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Upravnik\View\IzvestajPage.xaml;;
-FC:\Users\Strahx\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\Upravnik\View\IzvestajGenerisan.xaml;;
 

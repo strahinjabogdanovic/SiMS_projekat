@@ -177,6 +177,9 @@
       <DependentUpon>KartonLekar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Upravnik\ViewModel\KreirajProstorijuVM.cs" />
+    <Compile Include="Upravnik\View\FeedbackPage.xaml.cs">
+      <DependentUpon>FeedbackPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Upravnik\View\FiltriranaPage.xaml.cs">
       <DependentUpon>FiltriranaPage.xaml</DependentUpon>
     </Compile>
@@ -434,6 +437,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Lekar\View\KartonLekar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Upravnik\View\FeedbackPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
