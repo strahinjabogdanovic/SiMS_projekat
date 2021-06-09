@@ -58,5 +58,6 @@
         <Button x:Name="button9" Content="Lekari" Margin="938,360,0,0" Width="250" Command="{Binding Lekari}" Style="{StaticResource ResourceKey=ButtonStyle}" Height="46" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFDDDDDD"/>
         <Button x:Name="button10" Content="Anti-trol" Margin="938,490,0,0" Width="250" Command="{Binding Antitrol}" Style="{StaticResource ResourceKey=ButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFDDDDDD"/>
         <Button x:Name="button11" Content="Izveštaj" Margin="938,555,0,0" Width="250" Command="{Binding Izvestaj}" Style="{StaticResource ResourceKey=ButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFDDDDDD"/>
+        <Button x:Name="button12" Content="Feedback" HorizontalAlignment="Left" Margin="938,36,0,0" VerticalAlignment="Top" Width="250" Command="{Binding Feedback}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
     </Grid>
 </Page>

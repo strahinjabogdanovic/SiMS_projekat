@@ -126,6 +126,9 @@
     <Compile Include="Sekretar\View\PageAntiTrol.xaml.cs">
       <DependentUpon>PageAntiTrol.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Sekretar\View\PageFeedbackS.xaml.cs">
+      <DependentUpon>PageFeedbackS.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sekretar\View\PageGenerisanIzvestaj.xaml.cs">
       <DependentUpon>PageGenerisanIzvestaj.xaml</DependentUpon>
     </Compile>
@@ -381,6 +384,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Sekretar\View\PageAntiTrol.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sekretar\View\PageFeedbackS.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
