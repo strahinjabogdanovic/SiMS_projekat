@@ -66,6 +66,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BindableBase.cs" />
+    <Compile Include="ILogin.cs" />
     <Compile Include="Lekar\LekariComboBoxItems.cs" />
     <Compile Include="Lekar\LekarOsnova.xaml.cs">
       <DependentUpon>LekarOsnova.xaml</DependentUpon>
@@ -127,6 +128,7 @@
     <Compile Include="Lekar\View\ZakazivanjeKodSpecijaliste.xaml.cs">
       <DependentUpon>ZakazivanjeKodSpecijaliste.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LoginServis.cs" />
     <Compile Include="Pacijent\View\Ankete.xaml.cs">
       <DependentUpon>Ankete.xaml</DependentUpon>
     </Compile>

@@ -30,68 +30,11 @@ namespace ProjekatSIMS
             InitializeComponent();
         }
 
-        List<string> users = new List<string>();
-        List<string> pass = new List<string>();
-        List<string> rola = new List<string>();
-        string string1 = "pacijent";
-        string string2 = "sekretar";
-        string string3 = "upravnik";
-        string string4 = "lekar";
-
+        private ILogin loginInterface;
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            StreamReader sr = new StreamReader("LoginPodaci.txt");
-            string line = "";
-
-            while ((line = sr.ReadLine()) != null)
-            {
-                string[] components = line.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                users.Add(components[0]);
-                pass.Add(components[1]);
-                rola.Add(components[2]);
-            }
-            sr.Close();
-
-            if (users.Contains(textBox.Text) && pass.Contains(textBox1.Text) && Array.IndexOf(users.ToArray(), textBox.Text) ==
-                Array.IndexOf(pass.ToArray(), textBox1.Text))
-            {
-                if (rola.Contains(string4) && Array.IndexOf(users.ToArray(), textBox.Text) ==
-                Array.IndexOf(rola.ToArray(), string4))
-                {
-                    this.Hide();
-                    LekarOsnova ps4 = new LekarOsnova();
-                    ps4.ShowDialog();
-                    this.Show();
-
-                }
-                else if (rola.Contains(string3) && Array.IndexOf(users.ToArray(), textBox.Text) ==
-                Array.IndexOf(rola.ToArray(), string3))
-                {
-                    this.Hide();
-                    UpravnikPocetnaStranica ps3 = new UpravnikPocetnaStranica();
-                    ps3.ShowDialog();
-                    this.Show();
-                }
-                else if (rola.Contains(string2) && Array.IndexOf(users.ToArray(), textBox.Text) ==
-                Array.IndexOf(rola.ToArray(), string2))
-                {
-                    this.Hide();
-                    SekretarPocetnaStrana ps2 = new SekretarPocetnaStrana();
-                    ps2.ShowDialog();
-                    this.Show();
-                }
-                else
-                {
-                    this.Hide();
-                    PocetnaPacijent ps = new PocetnaPacijent();
-                    ps.ShowDialog();
-                    this.Show();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Korisnicko ime ili lozinka je netacno");
-            }
+            LoginServis lg = new LoginServis(loginInterface);
+            lg.log(textBox.Text, textBox1.Text);
         }
     }
 }
