@@ -1,0 +1,28 @@
+﻿<Page x:Class="ProjekatSIMS.Lekar.View.Feedback"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS.Lekar.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="Feedback">
+
+    <Grid Background="LightCyan">
+        <Label Content="Feedback aplikacije" HorizontalAlignment="Left" Margin="128,64,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <Button Content="&#129044;" HorizontalAlignment="Left" Margin="33,33,0,0"  VerticalAlignment="Top" Height="40" Width="64" FontSize="30" RenderTransformOrigin="0.516,0.533"  Background="LightCyan" BorderBrush="LightCyan" Foreground="DarkBlue" Click="Button_Click_1" />
+        <Button Content="Pošalji" HorizontalAlignment="Left" Margin="714,574,0,0" VerticalAlignment="Top" Width="190" Height="30"  Click="Button_Click" FontSize="16" Background="LightYellow" BorderBrush="Yellow"/>
+        <TextBox Name="s2" FontSize="16" HorizontalAlignment="Left" Height="37" Margin="348,446,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="556"/>
+        <TextBox Name="s1" FontSize="16" HorizontalAlignment="Left" Height="178" Margin="348,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="556"/>
+        <Label Content="Unesite Vaš e-mail (opciono):" FontSize="16" HorizontalAlignment="Left" Margin="128,446,0,0" VerticalAlignment="Top"/>
+        <Label Content="Vaš feedback:" FontSize="16"  HorizontalAlignment="Left" Margin="128,209,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cb1" HorizontalAlignment="Left" FontSize="16" Margin="348,153,0,0" VerticalAlignment="Top" Width="213" Height="37">
+            <ComboBoxItem>Dobar</ComboBoxItem>
+            <ComboBoxItem>Neutralan</ComboBoxItem>
+            <ComboBoxItem>Los</ComboBoxItem>
+        </ComboBox>
+        <Label Content="Opšti utisak:" FontSize="16" HorizontalAlignment="Left" Margin="128,159,0,0" VerticalAlignment="Top"/>
+
+
+    </Grid>
+</Page>

@@ -26,6 +26,8 @@ namespace ProjekatSIMS.Lekar.ViewModel
         public RelayCommand Obrisi { get; set; }
         public RelayCommand Karton { get; set; }
         public RelayCommand Validacija { get; set; }
+        public RelayCommand Feedback { get; set; }
+
         public string tJmbg;
         public DataGrid tabela = new DataGrid();
         private LekarPocetna page;
@@ -42,6 +44,8 @@ namespace ProjekatSIMS.Lekar.ViewModel
             Karton = new RelayCommand(Executed_Karton, CanExecute_NavigateCommand);
             Obrisi = new RelayCommand(Executed_Obrisi, CanExecute_NavigateCommand);
             Validacija = new RelayCommand(Executed_Validacija, CanExecute_NavigateCommand);
+            Feedback = new RelayCommand(Executed_Feedback, CanExecute_NavigateCommand);
+
 
         }
         public void Executed_Kreiraj(object obj)
@@ -114,6 +118,10 @@ namespace ProjekatSIMS.Lekar.ViewModel
         public void Executed_Validacija(object obj)
         {
             page.NavigationService.Navigate(new ValidacijaLekova());
+        }
+        public void Executed_Feedback(object obj)
+        {
+            page.NavigationService.Navigate(new Feedback());
         }
         public bool CanExecute_NavigateCommand(object obj)
         {

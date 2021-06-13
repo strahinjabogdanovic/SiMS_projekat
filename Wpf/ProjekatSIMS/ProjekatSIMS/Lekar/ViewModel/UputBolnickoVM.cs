@@ -42,7 +42,7 @@ namespace ProjekatSIMS.Lekar.ViewModel
 
         private void Soba_Click(object obj)
         {
-
+            page.NavigationService.Navigate(new Sale(TPacijent.Split(' ')[0], TPacijent.Split(' ')[1], TJmbg));
         }
 
         private void Nazad_Click(object obj)

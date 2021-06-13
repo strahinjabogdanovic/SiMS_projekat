@@ -37,6 +37,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialDesignColors, Version=2.0.1.2556, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.2.0.1\lib\net452\MaterialDesignColors.dll</HintPath>
       <Private>True</Private>
@@ -80,12 +86,16 @@
     <Compile Include="Lekar\ViewModel\NapišiReceptVM.cs" />
     <Compile Include="Lekar\ViewModel\NoviTerminVM.cs" />
     <Compile Include="Lekar\ViewModel\ReceptiVM.cs" />
+    <Compile Include="Lekar\ViewModel\SaleVM.cs" />
     <Compile Include="Lekar\ViewModel\UputBolnickoVM.cs" />
     <Compile Include="Lekar\ViewModel\UputZaSpecijalistuVM.cs" />
     <Compile Include="Lekar\ViewModel\ValidacijaLekovaVM.cs" />
     <Compile Include="Lekar\ViewModel\ValidirajLekVM.cs" />
     <Compile Include="Lekar\ViewModel\ViewModels.cs" />
     <Compile Include="Lekar\ViewModel\ZakazivanjeKodSpecijaliste.cs" />
+    <Compile Include="Lekar\View\Feedback.xaml.cs">
+      <DependentUpon>Feedback.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Lekar\View\Izveštaji.xaml.cs">
       <DependentUpon>Izveštaji.xaml</DependentUpon>
     </Compile>
@@ -109,6 +119,9 @@
     </Compile>
     <Compile Include="Lekar\View\ReceptiPacijenta.xaml.cs">
       <DependentUpon>ReceptiPacijenta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lekar\View\Sale.xaml.cs">
+      <DependentUpon>Sale.xaml</DependentUpon>
     </Compile>
     <Compile Include="Lekar\View\UputBolnicko.xaml.cs">
       <DependentUpon>UputBolnicko.xaml</DependentUpon>
@@ -381,6 +394,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Lekar\View\Feedback.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Lekar\View\Izveštaji.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -410,6 +427,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Lekar\View\ReceptiPacijenta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lekar\View\Sale.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,0 +1,35 @@
+﻿<Page x:Class="ProjekatSIMS.Lekar.View.Sale"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS.Lekar.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="Sale">
+
+
+    <Grid Background="LightCyan">
+        <DataGrid x:Name="dataGridProstorije" ItemsSource="{Binding Path = Prostorije}"
+                  SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
+                  MaxHeight="300" Margin="128,141,0,0" VerticalAlignment="Top" Width="750">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Ime" Binding="{Binding Path = ime}" Width="150"/>
+                <DataGridTextColumn Header="Oznaka" Binding="{Binding Path = oznaka}" Width="150" />
+                <DataGridTextColumn Header="Namena" Binding="{Binding Path = namena}" Width="150" />
+                <DataGridTextColumn Header="Oprema" Binding="{Binding Path = oprema}" Width="150">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Renoviranje" Binding="{Binding Path = renoviranje}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Sale" HorizontalAlignment="Left" Margin="128,64,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <Button Content="&#129044;" HorizontalAlignment="Left" Margin="33,33,0,0"  VerticalAlignment="Top" Height="40" Width="64" FontSize="30" RenderTransformOrigin="0.516,0.533" Command="{Binding Nazad}" Background="LightCyan" BorderBrush="LightCyan" Foreground="DarkBlue" />
+
+    </Grid>
+</Page>
