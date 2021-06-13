@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProjekatSIMS.Package1.Kontroler;
+using ProjekatSIMS.Package1.Servis;
 
 namespace ProjekatSIMS.Upravnik.View
 {
@@ -37,32 +38,10 @@ namespace ProjekatSIMS.Upravnik.View
 
             this.DataContext = this;
         }
-
-        private int danasnjiDatum()
-        {
-            DateTime danas = DateTime.Now;
-            string[] datumd = danas.ToString().Split(' ');
-            string[] dand = datumd[0].Split('-');
-            string dan = dand[0];
-            int datum_danas = int.Parse(dan);
-
-            return datum_danas;
-        }
-
-        private int izabraniDatum()
-        {
-            string datep = myDatePicker.ToString();
-            string[] datump = datep.Split(' ');
-            string[] datumpr = datump[0].Split('-');
-            string danp = datumpr[0];
-            int datum_premestanja = int.Parse(danp);
-
-            return datum_premestanja;
-        }
-
         private int vreme_ren()
         {
-            return izabraniDatum() - danasnjiDatum();
+            DatumiServis ds = new DatumiServis();
+            return ds.izabraniDatum(myDatePicker) - ds.danasnjiDatum();
         }
 
         public void stoperica()

@@ -8,30 +8,27 @@ using ProjekatSIMS.Upravnik.View;
 
 namespace ProjekatSIMS.Package1.Repozitorijum
 {
-    public class LekoviFileStorage
+    public class LekoviFileStorage : CRUDTemplate
     {
         public ObservableCollection<Lek> Lekovi
         {
             get;
             set;
         }
-        public void Kreiraj(String s1, String s2, String s3, String s4)
+        public override void Kreiraj(String s1, String s2, String s3, String s4)
         {
             var text = File.ReadAllText(@"lekovi.txt");
             File.WriteAllText(@"lekovi.txt", text + s1 + "/" + s2 + "/" + s3 + "/" + s4 + "/" + "-" + Environment.NewLine);
-
-            //Lekovi_U s = new Lekovi_U();
-            //s.ShowDialog();
         }
 
-        public void Obrisi(int currentRowIndex)
+        public override void Obrisi(int currentRowIndex)
         {
             int idp = 0;
 
             try
             {
                 LekoviFileStorage l = new LekoviFileStorage();
-                List<string> sveLekovi = l.procitaniLekovi();
+                List<string> sveLekovi = l.Read();
                 foreach (string sviL in sveLekovi)
                 {
                     if (idp == currentRowIndex)
@@ -42,17 +39,17 @@ namespace ProjekatSIMS.Package1.Repozitorijum
                     idp++;
                 }
             }
-            catch (Exception e){ }
+            catch (Exception e) { }
         }
 
-        public void Izmeni(string update, int currentRowIndex)
+        public override void Izmeni(string update, int currentRowIndex)
         {
             int idp = 0;
 
             try
             {
                 LekoviFileStorage p = new LekoviFileStorage();
-                List<string> sveLekovi = p.procitaniLekovi();
+                List<string> sveLekovi = p.Read();
                 foreach (string sviL in sveLekovi)
                 {
                     string lekovi = sviL;
@@ -66,8 +63,24 @@ namespace ProjekatSIMS.Package1.Repozitorijum
                     idp++;
                 }
             }
-            catch (Exception e){ }
+            catch (Exception e) { }
         }
+
+        public override List<string> Read()
+        {
+            List<string> lekovi = new List<string>();
+
+            using (var sr = new StreamReader("lekovi.txt"))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    lekovi.Add(line);
+                }
+            }
+            return lekovi;
+        }
+
         public Lek vratiUpravniku(DataGrid datagridLekovi)
         {
             Lek lekic = new Lek();
@@ -99,7 +112,7 @@ namespace ProjekatSIMS.Package1.Repozitorijum
                         TextBlock t3 = datagridLekovi.Columns[2].GetCellContent(row) as TextBlock;
                         TextBlock t4 = datagridLekovi.Columns[3].GetCellContent(row) as TextBlock;
 
-                        sw.WriteLine(t1.Text + "/" + t2.Text + "/" + t3.Text + "/" + t4.Text + "/" + lekic.validiran) ;
+                        sw.WriteLine(t1.Text + "/" + t2.Text + "/" + t3.Text + "/" + t4.Text + "/" + lekic.validiran);
                     }
                     else
                     {
@@ -166,30 +179,11 @@ namespace ProjekatSIMS.Package1.Repozitorijum
 
             }
         }
-        public List<string> procitaniLekovi()
-        {
-            List<string> lekovi = new List<string>();
 
-            using (var sr = new StreamReader("lekovi.txt"))
-            {
-                string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    string[] termin = line.Split('/');
-                    string sifra = termin[0];
-                    string naziv = termin[1];
-                    string sastojci = termin[2];
-                    string zamena = termin[3];
-                    string dodatno = termin[4];
-                    lekovi.Add(sifra + "/" + naziv + "/" + sastojci + "/" + zamena + "/" + dodatno);
-                }
-            }
-            return lekovi;
-        }
         public ObservableCollection<Lek> CitajSveLekove()
         {
             ObservableCollection<Lek> lekovi = new ObservableCollection<Lek>();
-            List<string> lines = procitaniLekovi();
+            List<string> lines = Read();
             foreach (string linee in lines)
             {
                 string[] termin = linee.Split('/');
@@ -233,5 +227,7 @@ namespace ProjekatSIMS.Package1.Repozitorijum
             File.Delete("lekovi.txt");
             File.Move(tempFile, "lekovi.txt");
         }
+
+
     }
 }

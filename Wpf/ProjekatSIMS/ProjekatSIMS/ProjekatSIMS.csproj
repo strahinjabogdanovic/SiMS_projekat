@@ -146,8 +146,10 @@
       <DependentUpon>PocetnaPacijent.xaml</DependentUpon>
     </Compile>
     <Compile Include="Package1\Kontroler\LekarKontroler.cs" />
+    <Compile Include="Package1\Repozitorijum\CRUDTemplate.cs" />
     <Compile Include="Package1\Repozitorijum\IzvestajiFileStorage.cs" />
     <Compile Include="Package1\Repozitorijum\ReceptiFileStorage.cs" />
+    <Compile Include="Package1\Servis\DatumiServis.cs" />
     <Compile Include="Package1\Servis\LekarServis.cs" />
     <Compile Include="RelayCommand.cs" />
     <Compile Include="SekretarPocetnaStranaVM.cs" />
