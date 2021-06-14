@@ -1,0 +1,15 @@
+﻿<Window x:Class="ProjekatSIMS.DatumZakaz"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS"
+        mc:Ignorable="d"
+        Title="DatumZakaz" Height="300" Width="450" Background="LightBlue" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Izaberite termin:" HorizontalAlignment="Left" Margin="146,55,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="51,111,0,0" VerticalAlignment="Top" Width="342" FontSize="20"/>
+        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="156,201,0,0" VerticalAlignment="Top" Width="129" Click="Potvrdi_Click" FontSize="20" Height="43"/>
+
+    </Grid>
+</Window>

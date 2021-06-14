@@ -1,0 +1,17 @@
+﻿<Window x:Class="ProjekatSIMS.PrioritetDatum"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:local="clr-namespace:ProjekatSIMS"
+        mc:Ignorable="d"
+        Title="PrioritetDatum" Height="350" Width="400" Background="LightBlue" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Izaberite datum:" HorizontalAlignment="Left" Margin="126,70,0,0" VerticalAlignment="Top" FontSize="20" Height="51" Width="156"/>
+        <Button Content="Zakazi" HorizontalAlignment="Left" Margin="126,237,0,0" VerticalAlignment="Top" Width="151" FontSize="20" Height="42" Click="DatumZakaz_Click"/>
+        <DatePicker x:Name="tb1"  HorizontalAlignment="Left" Margin="130,127,0,0" VerticalAlignment="Top" FontSize="20"/>
+
+    </Grid>
+</Window>
+

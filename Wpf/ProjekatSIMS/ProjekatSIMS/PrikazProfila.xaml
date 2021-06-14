@@ -1,0 +1,49 @@
+﻿<Page x:Class="ProjekatSIMS.PrikazProfila"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS"
+      mc:Ignorable="d" 
+      d:DesignHeight="616" d:DesignWidth="888"
+      Title="PrikazProfila" Background="LightBlue">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="38"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="294"/>
+            <ColumnDefinition Width="294"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Pregled profila" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2" FontSize="30" FontStyle="Italic"/>
+        <Label Content="Ime" Grid.Row="2" Grid.Column="1" FontSize="25"/>
+        <Label Content="{Binding Path=Ime}" Grid.Row="2" Grid.Column="2" FontSize="25"/>
+        <Label Content="Prezime"  Grid.Row="3" Grid.Column="1" FontSize="25"/>
+        <Label Content="{Binding Path=Prezime}"  Grid.Row="3" Grid.Column="2" FontSize="25"/>
+        <Label Content="JMBG"  Grid.Row="4" Grid.Column="1" FontSize="25"/>
+        <Label Content="{Binding Path=Jmbg}"  Grid.Row="4" Grid.Column="2" FontSize="25"/>
+        <Label Content="Datum rodjenja"  Grid.Row="5" Grid.Column="1" FontSize="25"/>
+        <Label Content="{Binding Path=DatumRodjenja}"  Grid.Row="5" Grid.Column="2" FontSize="25"/>
+        <Label Content="Pol"  Grid.Row="6" Grid.Column="1" FontSize="25"/>
+        <Label Content="{Binding Path=Pol}"  Grid.Row="6" Grid.Column="2" FontSize="25"/>
+        <Label Content="Adresa"  Grid.Row="7" Grid.Column="1" FontSize="25"/>
+        <Label Content="{Binding Path=Adresa}"  Grid.Row="7" Grid.Column="2" FontSize="25"/>
+        <Label Content="E-mail"  Grid.Row="8" Grid.Column="1" FontSize="25"/>
+        <Label Content="{Binding Path=Email}"  Grid.Row="8" Grid.Column="2" FontSize="25"/>
+        <Label Content="Telefon"  Grid.Row="9" Grid.Column="1" FontSize="25"/>
+        <Label Content="{Binding Path=Telefon}"  Grid.Row="9" Grid.Column="2" FontSize="25"/>
+    </Grid>
+</Page>

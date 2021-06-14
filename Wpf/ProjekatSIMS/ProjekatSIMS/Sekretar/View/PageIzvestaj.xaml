@@ -1,0 +1,52 @@
+﻿<Page x:Class="ProjekatSIMS.Sekretar.View.PageIzvestaj"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS.Sekretar.View"
+      mc:Ignorable="d" 
+      xml:lang="en-IN"
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="PageIzvestaj" Height="649" Width="1272" Background="LightBlue">
+
+    <Grid>
+        <Label x:Name="label" Content="Izveštaj o zauzetosti prostorija za određeni vremenski period" HorizontalAlignment="Left" Margin="100,62,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
+        <Label x:Name="label1" Content="Vremenski period" HorizontalAlignment="Left" Margin="296,215,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label2" Content="Od:" HorizontalAlignment="Left" Margin="444,293,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Label x:Name="label3" Content="Do:" HorizontalAlignment="Left" Margin="445,366,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Button x:Name="button" Content="Generiši izveštaj" HorizontalAlignment="Left" Margin="397,516,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=ButtonStyle}" Width="250" Click="generisi_click"/>
+        <Button x:Name="button1" Content="Nazad" HorizontalAlignment="Left" Margin="742,516,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=ButtonStyle}" Click="nazad_click"/>
+
+        <DatePicker SelectedDate="{Binding myVideModelProperty}"
+                    Height="40" HorizontalAlignment="Left" Margin="532,295,0,0" Name="myDatePicker" VerticalAlignment="Top" Width="350" FontSize="24">
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type DatePickerTextBox}">
+                    <Setter Property="Control.Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <TextBox x:Name="PART_TextBox" 
+                                         Text="{Binding Path=SelectedDate, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}, StringFormat={}{0:dd.MM.yyyy.}}" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
+
+        <DatePicker SelectedDate="{Binding myVideModelProperty}"
+                    Height="40" HorizontalAlignment="Left" Margin="532,366,0,0" Name="myDatePicker1" VerticalAlignment="Top" Width="350" FontSize="24">
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type DatePickerTextBox}">
+                    <Setter Property="Control.Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <TextBox x:Name="PART_TextBox" 
+                                         Text="{Binding Path=SelectedDate, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}, StringFormat={}{0:dd.MM.yyyy.}}" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
+    </Grid>
+</Page>

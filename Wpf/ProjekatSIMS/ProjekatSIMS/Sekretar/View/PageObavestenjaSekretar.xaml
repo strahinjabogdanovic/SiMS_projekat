@@ -1,0 +1,70 @@
+﻿<Page x:Class="ProjekatSIMS.Sekretar.View.PageObavestenjaSekretar"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="PageObavestenjaSekretar" Width="1272" Height="649" Background="LightBlue">
+
+
+    <Grid>
+        <Label x:Name="label" Content="Obaveštenja" HorizontalAlignment="Left" Margin="504,44,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
+
+        <DataGrid x:Name="dataGridObavestenja" ItemsSource="{Binding Path = Obavesti, UpdateSourceTrigger=PropertyChanged}"
+                  SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
+                  Height="329" Margin="55,173,0,0" VerticalAlignment="Top" Width="1155" FontSize="20">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Obaveštenje vide" Binding="{Binding Path = uloga}" Width="170">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Naziv" Binding="{Binding Path = naziv}" Width="250">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Sadržaj" Binding="{Binding Path = sadrzaj}" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Datum" Binding="{Binding Path = datum}" Width="160"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button" Content="Kreiraj" HorizontalAlignment="Left" Margin="238,549,0,0" VerticalAlignment="Top" Command="{Binding Kreiraj}" Style="{StaticResource ResourceKey=ButtonStyle}">
+            <Button.ToolTip>
+                <ToolTip>
+                    Kreiranje obaveštenja
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <Button x:Name="button1" Content="Obriši" HorizontalAlignment="Left" Margin="454,549,0,0" VerticalAlignment="Top" Command="{Binding Obrisi}" Style="{StaticResource ResourceKey=ButtonStyle}">
+            <Button.ToolTip>
+                <ToolTip>
+                    Prvo izaberite obaveštenje iz tabele
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <Button x:Name="button2" Content="Izmeni" HorizontalAlignment="Left" Margin="660,549,0,0" VerticalAlignment="Top" Command="{Binding Izmeni}" Style="{StaticResource ResourceKey=ButtonStyle}">
+            <Button.ToolTip>
+                <ToolTip>
+                    Prvo izmenite podatak u tabeli
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <Button x:Name="button3" Content="Nazad" HorizontalAlignment="Left" Margin="870,549,0,0" VerticalAlignment="Top" Command="{Binding Nazad}" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+
+    </Grid>
+</Page>

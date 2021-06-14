@@ -1,0 +1,34 @@
+﻿<Page x:Class="ProjekatSIMS.Sekretar.View.PageDatum"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS"
+      xml:lang="en-IN"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="PageDatum" Width="1272" Height="649" Background="LightBlue">
+
+    <Grid>
+        <Label x:Name="label" Content="Izaberite datum zakazivanja" HorizontalAlignment="Left" Margin="393,89,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=TitleStyle}"/>
+        <Button x:Name="button" Content="Nazad" HorizontalAlignment="Left" Margin="685,466,0,0" VerticalAlignment="Top" Click="Nazad_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <Label x:Name="label1" Content="Datum" HorizontalAlignment="Left" Margin="418,278,0,0" VerticalAlignment="Top" Style="{StaticResource ResourceKey=LabelStyle}"/>
+        <Button x:Name="button1" Content="Potvrdi" HorizontalAlignment="Left" Margin="463,466,0,0" VerticalAlignment="Top" Click="Potvrdi_Click" Style="{StaticResource ResourceKey=ButtonStyle}"/>
+        <DatePicker SelectedDate="{Binding myVideModelProperty}"
+                    Height="40" HorizontalAlignment="Left" Margin="521,280,0,0" Name="myDatePicker" VerticalAlignment="Top" Width="350" FontSize="24">
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type DatePickerTextBox}">
+                    <Setter Property="Control.Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <TextBox x:Name="PART_TextBox" 
+                                    Text="{Binding Path=SelectedDate, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}, StringFormat={}{0:dd.MM.yyyy.}}" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
+
+    </Grid>
+</Page>

@@ -1,0 +1,7 @@
+C123/Brufen/ibuprofen,celuloza,kroskarmeloza-natrijum,laktoza/zamena1/
+D234/Febricet/paracetamol,zelatin,makrogol,talk/zamena2/da
+E867/Panadol/paracetamol,skrob,povidon K,talk/zamena3/ne
+F034/Bensedin/diazepam,laktoza,skrob,povidon/zamena4/
+H452/Amoksicilin/amoksicilin,celuloza,zelatin,azorubin/zamena5/podaciNETACNI
+A853/Hemomicin/Laktoza,paracetamol,skrob,zelatin/nema/da
+B734/Herbicid/laktoza,amiksicilin,celuloza/zamena7/

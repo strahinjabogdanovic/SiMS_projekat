@@ -1,0 +1,45 @@
+﻿<Window x:Class="ProjekatSIMS.LekarAnketa" WindowStartupLocation="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS"
+        mc:Ignorable="d"
+        Title="LekarAnketa" Height="500" Width="650" Background="LightBlue">
+    <Grid>
+        <Label Content="Ocenjivanje lekara" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="30" Height="113" Width="647" FontStyle="Italic"/>
+        <Label Content="Odaberite lekara:" HorizontalAlignment="Left" Margin="26,75,0,0" VerticalAlignment="Top" FontSize="25"/>
+        <Label Content="Ljubaznost:" HorizontalAlignment="Left" Margin="26,145,0,0" VerticalAlignment="Top" FontSize="25"/>
+        <Label Content="Strucnost:" HorizontalAlignment="Left" Margin="26,215,0,0" VerticalAlignment="Top" FontSize="25"/>
+        <Label Content="Vas komentar:" HorizontalAlignment="Left" Margin="26,275,0,0" VerticalAlignment="Top" FontSize="25"/>
+        <ComboBox SelectedItem="{Binding Path=Lekar}" x:Name="cb" HorizontalAlignment="Left" Margin="282,75,0,0" VerticalAlignment="Top" Width="303" FontSize="25">
+            <ComboBoxItem>Jova Jovic</ComboBoxItem>
+            <ComboBoxItem>Jovan Jovanovic</ComboBoxItem>
+        </ComboBox>
+        <Grid>
+            <TextBlock Text="{Binding ValidationErrors[Lekar]}" Foreground="Red" FontSize="16" HorizontalAlignment="Center" Margin="282,114,57,320"/>
+        </Grid>
+        <ComboBox SelectedItem="{Binding Path=Ljubaznost}" x:Name="cbLjub" HorizontalAlignment="Left" Margin="282,145,0,0" VerticalAlignment="Top" Width="303" FontSize="25">
+            <ComboBoxItem>Nezadovoljan/a</ComboBoxItem>
+            <ComboBoxItem>Delimicno zadovoljan/a</ComboBoxItem>
+            <ComboBoxItem>Zadovoljan/a</ComboBoxItem>
+        </ComboBox>
+        <ComboBox SelectedItem="{Binding Path=Strucnost}"  x:Name="cbStr" HorizontalAlignment="Left" Margin="282,215,0,0" VerticalAlignment="Top" Width="303" FontSize="25">
+            <ComboBoxItem>Nezadovoljan/a</ComboBoxItem>
+            <ComboBoxItem>Delimicno zadovoljan/a</ComboBoxItem>
+            <ComboBoxItem>Zadovoljan/a</ComboBoxItem>
+        </ComboBox>
+        <TextBox Text="{Binding Path=Komentar}" x:Name="comm" HorizontalAlignment="Left" Height="82" Margin="225,283,0,0" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" MinLines="1" MaxLines="4" VerticalAlignment="Top" Width="360" FontSize="25"/>
+        <Button Content="Odustani" HorizontalAlignment="Left" Margin="130,395,0,0" VerticalAlignment="Top" Width="160" FontSize="25" Height="44" RenderTransformOrigin="0.506,0.864" Command="{Binding OdustaniOdAnkete}"/>
+        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="354,395,0,0" VerticalAlignment="Top" Width="160" FontSize="25" Height="44" Command="{Binding PotvrdiAnketu}"/>
+        <Grid>
+            <TextBlock Text="{Binding ValidationErrors[Ljubaznost]}" Foreground="Red" FontSize="16" HorizontalAlignment="Center" Margin="282,184,57,250"/>
+        </Grid>
+        <Grid>
+            <TextBlock Text="{Binding ValidationErrors[Strucnost]}" Foreground="Red" FontSize="16" HorizontalAlignment="Center" Margin="282,254,57,178"/>
+        </Grid>
+        <Grid>
+            <TextBlock Text="{Binding ValidationErrors[Komentar]}" Foreground="Red" FontSize="16" HorizontalAlignment="Center" Margin="225,364,57,80"/>
+        </Grid>
+    </Grid>
+</Window>

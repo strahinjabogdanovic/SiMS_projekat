@@ -1,0 +1,16 @@
+﻿<Window x:Class="ProjekatSIMS.pomeranjeTermina"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS"
+        mc:Ignorable="d"
+        Title="pomeranjeTermina" Height="300" Width="400" Background="LightBlue" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Datum na koji zelite da pomerite termin:" HorizontalAlignment="Left" Margin="16,41,-18,0" VerticalAlignment="Top" Width="394" FontSize="20"/>
+        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="62,97,0,0" VerticalAlignment="Top" Width="279" Height="46" FontSize="20"/>
+        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="208,201,0,0" VerticalAlignment="Top" Width="135" Height="41" Click="Button_Click" FontSize="20"/>
+        <Button Content="Otkazi" HorizontalAlignment="Left" Margin="46,201,0,0" VerticalAlignment="Top" Width="135" Height="41" FontSize="20" Click="Otkazi_Click"/>
+
+    </Grid>
+</Window>
