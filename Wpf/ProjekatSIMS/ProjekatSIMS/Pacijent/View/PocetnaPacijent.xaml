@@ -15,14 +15,15 @@
                     <RowDefinition Height="0*"/>
                 </Grid.RowDefinitions>
                 <Button Content="Prikaz profila" HorizontalAlignment="Left" Margin="965,42,0,0" VerticalAlignment="Top" Width="282" Height="65" Click="Profil_Click" FontSize="24"/>
-                <Button Content="Izmeni profil" HorizontalAlignment="Left" Margin="965,142,0,0" VerticalAlignment="Top" Width="282" RenderTransformOrigin="0.718,0.676" Height="65" FontSize="24" Click="Izmena_Click"/>
-                <Button Content="Uvid u termine" HorizontalAlignment="Left" Margin="965,242,0,0" VerticalAlignment="Top" Width="282" RenderTransformOrigin="4.842,0.22" FontSize="24" Height="65" Click="Termini_Click_1"/>
-                <Button Content="Uvid u recepte" HorizontalAlignment="Left" Margin="965,342,0,0" VerticalAlignment="Top" Width="282" Height="65" FontSize="24" Click="Recepti_Click"/>
-                <Button Content="Aktivne ankete" HorizontalAlignment="Left" Margin="965,442,0,0" VerticalAlignment="Top" Width="282" Height="65" FontSize="24" Click="Anketa_Click"/>
-                <Button Content="Anamneze" HorizontalAlignment="Left" Margin="965,542,0,60" Width="282" RenderTransformOrigin="3.16,1.991" FontSize="24" Click="Anamneza_Click"/>
+                <Button Content="Izmeni profil" HorizontalAlignment="Left" Margin="965,134,0,0" VerticalAlignment="Top" Width="282" RenderTransformOrigin="0.718,0.676" Height="65" FontSize="24" Click="Izmena_Click"/>
+                <Button Content="Uvid u termine" HorizontalAlignment="Left" Margin="965,230,0,0" VerticalAlignment="Top" Width="282" RenderTransformOrigin="4.842,0.22" FontSize="24" Height="65" Click="Termini_Click_1"/>
+                <Button Content="Uvid u recepte" HorizontalAlignment="Left" Margin="965,322,0,0" VerticalAlignment="Top" Width="282" Height="65" FontSize="24" Click="Recepti_Click"/>
+                <Button Content="Aktivne ankete" HorizontalAlignment="Left" Margin="965,418,0,0" VerticalAlignment="Top" Width="282" Height="65" FontSize="24" Click="Anketa_Click"/>
+                <Button Content="Anamneze" HorizontalAlignment="Left" Margin="965,500,0,102" Width="282" RenderTransformOrigin="3.16,1.991" FontSize="24" Click="Anamneza_Click"/>
 
             </Grid>
         </DockPanel>
         <Frame NavigationUIVisibility="Hidden" x:Name="frejm" Margin="42, 42, 370, 42" />
+        <Button Content="Feedback" HorizontalAlignment="Left" Margin="965,585,0,0" VerticalAlignment="Top" Width="282" Height="65" FontSize="24" Click="Feedback_Click"/>
     </Grid>
 </Window>

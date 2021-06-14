@@ -202,6 +202,9 @@
     <Compile Include="Package1\Servis\PrioritetZakazivanjaDatum.cs" />
     <Compile Include="Package1\Servis\PrioritetZakazivanjaLekar.cs" />
     <Compile Include="Package1\Servis\TerminiContextcs.cs" />
+    <Compile Include="Pfeedback.xaml.cs">
+      <DependentUpon>Pfeedback.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Podsetnik.xaml.cs">
       <DependentUpon>Podsetnik.xaml</DependentUpon>
     </Compile>
@@ -550,6 +553,10 @@
     <Page Include="Pacijent\View\PocetnaPacijent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pfeedback.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Podsetnik.xaml">
       <SubType>Designer</SubType>

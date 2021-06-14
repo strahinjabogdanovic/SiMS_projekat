@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjekatSIMS.Properties;
 
 namespace ProjekatSIMS
 {
@@ -57,6 +58,12 @@ namespace ProjekatSIMS
         {
             Anamneza a = new Anamneza("7643456432456");
             a.ShowDialog();
+        }
+
+        private void Feedback_Click(object sender, RoutedEventArgs e)
+        {
+            Pfeedback fdback = new Pfeedback();
+            fdback.ShowDialog();
         }
     }
 }

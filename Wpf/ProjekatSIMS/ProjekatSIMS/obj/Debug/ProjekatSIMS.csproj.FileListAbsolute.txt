@@ -4851,3 +4851,5 @@ C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\
 C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\PrikazProfila.baml
 C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\StareBeleske.baml
 C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\KartonLekar.baml
+C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Pfeedback.g.cs
+C:\Users\xxxib\Documents\GitHub\SiMS_projekat\Wpf\ProjekatSIMS\ProjekatSIMS\obj\Debug\Pfeedback.baml

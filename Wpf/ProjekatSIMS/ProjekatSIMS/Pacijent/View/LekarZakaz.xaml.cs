@@ -37,6 +37,7 @@ namespace ProjekatSIMS
                 item1.Content = date;
                 cb1.Items.Add(item1);
             }
+            doktor = lekar;
 
         }
 

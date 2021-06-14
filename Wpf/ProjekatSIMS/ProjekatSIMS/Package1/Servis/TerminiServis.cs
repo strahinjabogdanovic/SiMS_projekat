@@ -11,6 +11,7 @@ namespace ProjekatSIMS.Package1.Servis
     class TerminiServis
     {
         TerminiFileStorage tfs = new TerminiFileStorage();
+        PacijentFileStorage p = new PacijentFileStorage();
 
         public void OtkazivanjeSekretar(int currentRowIndex)
         {
@@ -35,6 +36,21 @@ namespace ProjekatSIMS.Package1.Servis
         public void AntiTrolSekretar(TerminiPacijenata termin)
         {
             tfs.AntiTrolSekretar(termin);
+        }
+
+        public string SlobodanDoktor(string date) {
+
+            List<TerminiPacijenata> termini = p.GetAll();
+            string retVal = "";
+            foreach(TerminiPacijenata t in termini) {
+                if (t.lekar == "Jova Jovic")
+                {
+                    retVal  = "Jovan Jovanovic";
+                }
+                else retVal = "Jova Jovic";
+            }
+
+            return retVal;
         }
     }
 }

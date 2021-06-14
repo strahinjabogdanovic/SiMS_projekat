@@ -103,6 +103,7 @@ namespace ProjekatSIMS.Lekar.View
             PacijentFileStorage pfs = new PacijentFileStorage();
             pfs.Kreiraj(combo.SelectedItem.ToString(), datumTermina[0], datumTermina[1], Jmbg, vrsta.SelectedItem.ToString());
         }
+
         private string[] FormatirajDatum(string datumf)
         {
             String[] cc = datumf.Split(' ');

@@ -68,6 +68,8 @@ namespace ProjekatSIMS
                     vreme = vrvr[0] + ":" + vrvr[1];
                 }
 
+                TerminiServis ts = new TerminiServis();
+                doktor = ts.SlobodanDoktor(datum);
                 PacijentFileStorage pfs = new PacijentFileStorage();
                 pfs.Kreiraj(doktor, datum, vreme);
                 MessageBox.Show("Uspesno ste zakazali termin.");

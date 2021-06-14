@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Windows.Controls;
@@ -333,6 +334,41 @@ namespace ProjekatSIMS.Package1.Repozitorijum
                 }
             }
             return imeIprz;
+
+        }
+        public List<TerminiPacijenata> GetAll()
+        {
+            List<TerminiPacijenata> termini = new List<TerminiPacijenata>();
+
+            using (var sars = new StreamReader("termini.txt"))
+            {
+                string lines;
+                while ((lines = sars.ReadLine()) != null)
+                {
+                    var termin = new TerminiPacijenata();
+                    String[] deo = lines.Split('/');
+                    termin.datum = deo[0];
+                    termin.vreme = deo[1];
+                    termin.lekar = deo[2];
+                    termin.soba = deo[3];
+                    termin.id = int.Parse(deo[4]);
+                    termin.pacijenti = deo[5];
+                    termini.Add(termin);
+                }
+            }
+            return termini;
+        }
+
+        public void saveAll(List<TerminiPacijenata> items)
+        {
+
+            using (var sw = new StreamWriter("termini"))
+            {
+                foreach (TerminiPacijenata a in items)
+                {
+                    sw.WriteLine(a.datum + "/" + a.vreme + "/" + a.lekar + "/" + a.soba + "/" + a.id + "/" + a.pacijenti + "/ ");
+                }
+            }
 
         }
     }
