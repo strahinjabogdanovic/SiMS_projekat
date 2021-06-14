@@ -5,32 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="BolnicaAnketa" Height="683" Width="1000" Background="LightBlue">
+       Title="BolnicaAnketa" Height="500" Width="650" Background="LightBlue" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Content="Ocenjivanje bolnice" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="75" Height="113" Width="647"/>
-        <Label Content="Usluga bolnice:" HorizontalAlignment="Left" Margin="131,128,0,0" VerticalAlignment="Top" FontSize="35"/>
-        <Label Content="Ocena zaposlenih:" HorizontalAlignment="Left" Margin="86,224,0,0" VerticalAlignment="Top" FontSize="35"/>
-        <Label Content="Ocena prostorija:" HorizontalAlignment="Left" Margin="103,314,0,0" VerticalAlignment="Top" FontSize="35"/>
-        <Label Content="Vas komentar:" HorizontalAlignment="Left" Margin="58,428,0,0" VerticalAlignment="Top" FontSize="35"/>
-        <ComboBox x:Name="cb" HorizontalAlignment="Left" Margin="448,132,0,0" VerticalAlignment="Top" Width="395" FontSize="35">
+        <Label Content="Ocenjivanje bolnice" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="30" Height="113" Width="647" FontStyle="Italic"/>
+        <Label Content="Usluga bolnice:" HorizontalAlignment="Left" Margin="26,75,0,0" VerticalAlignment="Top" FontSize="25"/>
+        <Label Content="Ocena zaposlenih:" HorizontalAlignment="Left" Margin="26,145,0,0" VerticalAlignment="Top" FontSize="25"/>
+        <Label Content="Ocena prostorija:" HorizontalAlignment="Left" Margin="26,215,0,0" VerticalAlignment="Top" FontSize="25"/>
+        <Label Content="Vas komentar:" HorizontalAlignment="Left" Margin="26,275,0,0" VerticalAlignment="Top" FontSize="25"/>
+        <ComboBox SelectedItem="{Binding Path=Usluga}" x:Name="cb" HorizontalAlignment="Left" Margin="282,75,0,0" VerticalAlignment="Top" Width="303" FontSize="25">
             <ComboBoxItem>Nezadovoljan/a</ComboBoxItem>
             <ComboBoxItem>Delimicno zadovoljan/a</ComboBoxItem>
             <ComboBoxItem>Zadovoljan/a</ComboBoxItem>
         </ComboBox>
-        <ComboBox x:Name="cbLjub" HorizontalAlignment="Left" Margin="448,228,0,0" VerticalAlignment="Top" Width="395" FontSize="35">
+        <Grid>
+            <TextBlock Text="{Binding ValidationErrors[Usluga]}" Foreground="Red" FontSize="16" HorizontalAlignment="Center" Margin="282,114,57,320"/>
+        </Grid>
+        <ComboBox SelectedItem="{Binding Path=Zaposleni}" x:Name="cbLjub" HorizontalAlignment="Left" Margin="282,145,0,0" VerticalAlignment="Top" Width="303" FontSize="25">
             <ComboBoxItem>Nezadovoljan/a</ComboBoxItem>
             <ComboBoxItem>Delimicno zadovoljan/a</ComboBoxItem>
             <ComboBoxItem>Zadovoljan/a</ComboBoxItem>
         </ComboBox>
-        <ComboBox x:Name="cbStr" HorizontalAlignment="Left" Margin="448,318,0,0" VerticalAlignment="Top" Width="395" FontSize="35">
+        <ComboBox SelectedItem="{Binding Path=Prostorija}"  x:Name="cbStr" HorizontalAlignment="Left" Margin="282,215,0,0" VerticalAlignment="Top" Width="303" FontSize="25">
             <ComboBoxItem>Nezadovoljan/a</ComboBoxItem>
             <ComboBoxItem>Delimicno zadovoljan/a</ComboBoxItem>
             <ComboBoxItem>Zadovoljan/a</ComboBoxItem>
         </ComboBox>
-        <TextBox x:Name="comm" HorizontalAlignment="Left" Height="115" Margin="334,428,0,0" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" MinLines="1" MaxLines="4" VerticalAlignment="Top" Width="545" FontSize="30"/>
-        <Button Content="Odustani" HorizontalAlignment="Left" Margin="194,579,0,0" VerticalAlignment="Top" Width="162" Click="Odustani_Click" FontSize="35"/>
-        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="604,579,0,0" VerticalAlignment="Top" Width="162" FontSize="35" Click="Potvrdi_Click"/>
-
+        <TextBox Text="{Binding Path=Komentar}" x:Name="comm" HorizontalAlignment="Left" Height="82" Margin="225,283,0,0" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" MinLines="1" MaxLines="4" VerticalAlignment="Top" Width="360" FontSize="25"/>
+        <Button Content="Odustani" HorizontalAlignment="Left" Margin="130,395,0,0" VerticalAlignment="Top" Width="160" FontSize="25" Height="44" RenderTransformOrigin="0.506,0.864" Command="{Binding OdustaniOdAnkete}"/>
+        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="354,395,0,0" VerticalAlignment="Top" Width="160" FontSize="25" Height="44" Command="{Binding PotvrdiAnketu}"/>
+        <Grid>
+            <TextBlock Text="{Binding ValidationErrors[Zaposleni]}" Foreground="Red" FontSize="16" HorizontalAlignment="Center" Margin="282,184,57,250"/>
+        </Grid>
+        <Grid>
+            <TextBlock Text="{Binding ValidationErrors[Prostorija]}" Foreground="Red" FontSize="16" HorizontalAlignment="Center" Margin="282,254,57,178"/>
+        </Grid>
+        <Grid>
+            <TextBlock Text="{Binding ValidationErrors[Komentar]}" Foreground="Red" FontSize="16" HorizontalAlignment="Center" Margin="225,364,57,80"/>
+        </Grid>
     </Grid>
 </Window>
 

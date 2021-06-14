@@ -44,7 +44,7 @@ namespace ProjekatSIMS
         {
             Close();
             PacijentFileStorage p = new PacijentFileStorage();
-           
+
             string lekar = comboBox.SelectedValue.ToString();
             string tb = textBox.Text;
             string tb1 = textBox1.Text;

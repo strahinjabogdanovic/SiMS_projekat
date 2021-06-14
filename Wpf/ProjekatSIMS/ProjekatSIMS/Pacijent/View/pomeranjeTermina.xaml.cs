@@ -387,7 +387,8 @@ namespace ProjekatSIMS
             pp.ShowDialog();
         }
 
-        private void Otkazi_Click(object sender, RoutedEventArgs e) {
+        private void Otkazi_Click(object sender, RoutedEventArgs e)
+        {
             Close();
         }
 

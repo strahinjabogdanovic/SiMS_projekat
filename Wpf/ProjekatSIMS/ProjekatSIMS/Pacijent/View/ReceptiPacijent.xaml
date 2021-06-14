@@ -9,15 +9,17 @@
     <Grid>
         <DataGrid x:Name="dataGridLekar" ItemsSource="{Binding Path = ReceptiSpisak, UpdateSourceTrigger=PropertyChanged}"
                   SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" 
-                  Height="288" Margin="109,37,0,0" VerticalAlignment="Top" Width="577">
+                  Height="288" Margin="109,37,0,0" VerticalAlignment="Top" Width="577" IsReadOnly="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Sifra Leka" Binding="{Binding Path = sifraLeka}" MinWidth="135"/>
-                <DataGridTextColumn Header="Naziv Leka" Binding="{Binding Path = nazivLeka}" MinWidth="135"/>
-                <DataGridTextColumn Header="Način uzimanja" Binding="{Binding Path = nacinUzimanja}" MinWidth="135"/>
-                <DataGridTextColumn Header="Na koliko sati se lek uzima" Binding="{Binding Path = naKolikoSati}" MinWidth="135"/>
+
+                <DataGridTextColumn Header="Sifra Leka" Binding="{Binding Path = sifraLeka}" Width="*"/>
+                <DataGridTextColumn Header="Naziv Leka" Binding="{Binding Path = nazivLeka}" Width="*"/>
+                <DataGridTextColumn Header="Način uzimanja" Binding="{Binding Path = nacinUzimanja}" Width="*"/>
+                <DataGridTextColumn Header="Na koliko sati se lek uzima" Binding="{Binding Path = naKolikoSati}" Width="*"/>
+
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Podsetnik" HorizontalAlignment="Left" Margin="324,360,0,0" VerticalAlignment="Top" Width="138" Click="Podsetnik_Click" FontSize="25"/>
+        <Button Content="Podsetnik" HorizontalAlignment="Left" Margin="324,360,0,0" VerticalAlignment="Top" Width="138" Click="Podsetnik_Click" FontSize="20"/>
 
     </Grid>
 </Window>

@@ -5,12 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="LekarZakaz" Height="450" Width="800" Background="LightBlue">
+        Title="LekarZakaz" Height="300" Width="550" Background="LightBlue" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Content="Izaberite jedan od slobodnih datuma za datog doktora:" HorizontalAlignment="Left" Margin="30,105,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="225,194,0,0" VerticalAlignment="Top" Width="325" FontSize="30"/>
-        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="512,321,0,0" VerticalAlignment="Top" Width="140" FontSize="28" Click="Zakazi_Click" Height="55"/>
-        <Button Content="Placanje" HorizontalAlignment="Left" Margin="139,321,0,0" VerticalAlignment="Top" Width="134" Height="55" FontSize="28"/>
+        <Label Content="Izaberite jedan od slobodnih datuma za datog doktora:" HorizontalAlignment="Left" Margin="22,52,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="114,107,0,0" VerticalAlignment="Top" Width="325" FontSize="20"/>
+        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="198,202,0,0" VerticalAlignment="Top" Width="143" FontSize="20" Click="Zakazi_Click" Height="35"/>
 
     </Grid>
 </Window>

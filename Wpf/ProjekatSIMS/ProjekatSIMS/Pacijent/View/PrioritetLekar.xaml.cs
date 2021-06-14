@@ -38,11 +38,19 @@ namespace ProjekatSIMS
 
         private void Potvrdi_Click(object sender, RoutedEventArgs e)
         {
-            String cb = cb1.SelectedValue.ToString();
-            String[] cbb = cb.Split(' ');
-            Console.WriteLine(cbb[1] + cbb[2]);
-            LekarZakaz lz = new LekarZakaz(cbb[1] + " " + cbb[2]);
-            lz.ShowDialog();
+            if (cb1.SelectedValue == null)
+            {
+                MessageBox.Show("Niste izabrali lekara!");
+            }
+            else
+            {
+                String cb = cb1.SelectedValue.ToString();
+                String[] cbb = cb.Split(' ');
+                Console.WriteLine(cbb[1] + cbb[2]);
+                LekarZakaz lz = new LekarZakaz(cbb[1] + " " + cbb[2]);
+                this.Close();
+                lz.ShowDialog();
+            }
         }
     }
 }

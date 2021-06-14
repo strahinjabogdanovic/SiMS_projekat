@@ -51,8 +51,14 @@
       <HintPath>..\packages\MaterialDesignThemes.4.1.0\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -71,8 +77,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Anamneza.xaml.cs">
+      <DependentUpon>Anamneza.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BindableBase.cs" />
+    <Compile Include="BiranjeAnkete.xaml.cs">
+      <DependentUpon>BiranjeAnkete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bolnica.xaml.cs">
+      <DependentUpon>Bolnica.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BolnicaAnketaViewModel.cs" />
     <Compile Include="ILogin.cs" />
+    <Compile Include="IzmenaProfila.xaml.cs">
+      <DependentUpon>IzmenaProfila.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IzmenaProfilaViewModel.cs" />
+    <Compile Include="IzvestajView.xaml.cs">
+      <DependentUpon>IzvestajView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IzvestajViewModel.cs" />
+    <Compile Include="KartonLekar.xaml.cs">
+      <DependentUpon>KartonLekar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LekarAnketaViewModel.cs" />
     <Compile Include="Lekar\LekariComboBoxItems.cs" />
     <Compile Include="Lekar\LekarOsnova.xaml.cs">
       <DependentUpon>LekarOsnova.xaml</DependentUpon>
@@ -159,11 +187,28 @@
       <DependentUpon>PocetnaPacijent.xaml</DependentUpon>
     </Compile>
     <Compile Include="Package1\Kontroler\LekarKontroler.cs" />
+    <Compile Include="Package1\Model\AnketaBolnica.cs" />
+    <Compile Include="Package1\Model\AnketaDoktora.cs" />
+    <Compile Include="Package1\Repozitorijum\AnketaBolnicaStorage.cs" />
     <Compile Include="Package1\Repozitorijum\CRUDTemplate.cs" />
+    <Compile Include="Package1\Repozitorijum\IRepozitorijum.cs" />
     <Compile Include="Package1\Repozitorijum\IzvestajiFileStorage.cs" />
     <Compile Include="Package1\Repozitorijum\ReceptiFileStorage.cs" />
+    <Compile Include="Package1\Repozitorijum\RepozImplementacija.cs" />
+    <Compile Include="Package1\Servis\AnketaServis.cs" />
     <Compile Include="Package1\Servis\DatumiServis.cs" />
     <Compile Include="Package1\Servis\LekarServis.cs" />
+    <Compile Include="Package1\Servis\NalazenjeTermina.cs" />
+    <Compile Include="Package1\Servis\PrioritetZakazivanjaDatum.cs" />
+    <Compile Include="Package1\Servis\PrioritetZakazivanjaLekar.cs" />
+    <Compile Include="Package1\Servis\TerminiContextcs.cs" />
+    <Compile Include="Podsetnik.xaml.cs">
+      <DependentUpon>Podsetnik.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PrikazProfila.xaml.cs">
+      <DependentUpon>PrikazProfila.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PrikazProfilaViewModel.cs" />
     <Compile Include="RelayCommand.cs" />
     <Compile Include="SekretarPocetnaStranaVM.cs" />
     <Compile Include="Sekretar\ViewModel\PageAntiTrolVM.cs" />
@@ -217,6 +262,10 @@
     <Compile Include="Sekretar\View\PageProstorije.xaml.cs">
       <DependentUpon>PageProstorije.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StareBeleske.xaml.cs">
+      <DependentUpon>StareBeleske.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TerminiViewModel.cs" />
     <Compile Include="Upravnik\ViewModel\DodajOpremuVM.cs" />
     <Compile Include="Upravnik\ViewModel\LekoviPageVM.cs" />
     <Compile Include="Upravnik\ViewModel\StvariVM.cs" />
@@ -390,6 +439,30 @@
     </Compile>
     <Compile Include="ValidationBase.cs" />
     <Compile Include="ValidationErrors.cs" />
+    <Page Include="Anamneza.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BiranjeAnkete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Bolnica.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IzmenaProfila.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IzvestajView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KartonLekar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Lekar\LekarOsnova.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -478,6 +551,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Podsetnik.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PrikazProfila.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Sekretar\View\PageAntiTrol.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -511,6 +592,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Sekretar\View\PageProstorije.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StareBeleske.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

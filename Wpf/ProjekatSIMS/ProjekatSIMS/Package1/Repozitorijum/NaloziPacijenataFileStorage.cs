@@ -29,6 +29,70 @@ namespace ProjekatSIMS.Package1.Repozitorijum
 
         }
 
+        public Korisnik GetPacijent()
+        {
+            Korisnik pacijent = new Korisnik();
+            List<String> nalozi = procitaniNalozi();
+            foreach (string s in nalozi)
+            {
+                String[] pac = s.Split('/');
+                if (pac[0].Equals("Ana") && pac[1].Equals("Markovic"))
+                {
+                    pacijent.ime = pac[0];
+                    pacijent.prezime = pac[1];
+                    pacijent.jmbg = long.Parse(pac[2]);
+                    pacijent.pol = Pol.Zenski;
+                    pacijent.datumRodjenja = pac[4];
+                    pacijent.email = pac[5];
+                    pacijent.brojTelefona = pac[6];
+                    pacijent.adresa = pac[7];
+                    pacijent.idKorisnika = int.Parse(pac[8]);
+                    return pacijent;
+                }
+            }
+            return pacijent;
+
+        }
+
+        public void IzmenaProfilaPacijent(string adresa, string email, string telefon)
+        {
+
+            string tempFile = System.IO.Path.GetTempFileName();
+
+            using (var sr = new StreamReader("podaci.txt"))
+            using (var sw = new StreamWriter(tempFile))
+            {
+                string line;
+
+                while ((line = sr.ReadLine()) != null)
+                {
+
+                    String[] pac = line.Split('/');
+
+                    String ime = pac[0];
+                    String prezime = pac[1];
+                    String jmbg = pac[2];
+                    String pol = "Zenski";
+                    String datumRodjenja = pac[4];
+                    String idKorisnika = pac[8];
+
+                    if (ime.Equals("Ana") && prezime.Equals("Markovic"))
+                    {
+                        sw.WriteLine(ime + "/" + prezime + "/" + jmbg + "/" + pol + "/" + datumRodjenja + "/" + email + "/" + telefon + "/" + adresa + "/" + idKorisnika);
+                    }
+                    else
+                    {
+                        sw.WriteLine(ime + "/" + prezime + "/" + jmbg + "/" + pol + "/" + datumRodjenja + "/" + pac[5] + "/" + pac[6] + "/" + pac[7] + "/" + idKorisnika);
+                    }
+
+                }
+            }
+
+            File.Delete("podaci.txt");
+            File.Move(tempFile, "podaci.txt");
+
+        }
+
         public string proveraPola(string polOsobe)
         {
             string pol = "";

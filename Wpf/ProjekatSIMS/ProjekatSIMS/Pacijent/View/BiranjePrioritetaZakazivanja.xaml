@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="BiranjePrioritetaZakazivanja" Height="450" Width="800" Background="LightBlue">
+        Title="BiranjePrioritetaZakazivanja" Height="300" Width="450" Background="LightBlue" WindowStartupLocation="CenterScreen">
     <Grid>
 
-        <RadioButton Content="Datum" HorizontalAlignment="Left" Margin="405,133,0,0" VerticalAlignment="Top" Height="43" Width="267" RenderTransformOrigin="20,10" Checked="Date_Checked" FontSize="30">
+        <RadioButton Content="Datum" HorizontalAlignment="Left" Margin="263,77,0,0" VerticalAlignment="Top" Height="43" Width="151" RenderTransformOrigin="20,10" Checked="Date_Checked" FontSize="20">
 
         </RadioButton>
 
 
-        <RadioButton Content="Lekar" HorizontalAlignment="Left" Margin="405,219,0,0" VerticalAlignment="Top" Height="49" Width="313" FontSize="30" RenderTransformOrigin="10,10" Checked="Doctor_Checked"/>
-        <Label Content="Vas prioritet:" HorizontalAlignment="Left" Margin="106,164,0,0" VerticalAlignment="Top" FontSize="30" Width="257"/>
+        <RadioButton Content="Lekar" HorizontalAlignment="Left" Margin="263,149,0,0" VerticalAlignment="Top" Height="49" Width="151" FontSize="20" RenderTransformOrigin="10,10" Checked="Doctor_Checked"/>
+        <Label Content="Izaberite prioritet:" HorizontalAlignment="Left" Margin="38,98,0,0" VerticalAlignment="Top" FontSize="20" Width="257"/>
 
     </Grid>
 </Window>

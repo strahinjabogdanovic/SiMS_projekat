@@ -26,6 +26,8 @@ namespace ProjekatSIMS
     {
         private readonly string filePath;
 
+        private TerminiViewModel viewModel;
+
         public ObservableCollection<TerminiPacijenata> TerminiP
         {
             get;
@@ -35,7 +37,7 @@ namespace ProjekatSIMS
 
         public PacijentPocetnaStranica()
         {
-            filePath = "termini.txt";
+            /*filePath = "termini.txt";
             TerminiP = new ObservableCollection<TerminiPacijenata>();
             List<String> lines = new List<string>();
             lines = File.ReadAllLines(filePath).ToList();
@@ -68,55 +70,14 @@ namespace ProjekatSIMS
                 string[] components = line.Split("/".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
             }
-            sr.Close();
+            sr.Close();*/
+
+            InitializeComponent();
+            viewModel = new TerminiViewModel();
+            this.DataContext = viewModel;
         }
 
-        private void KreirajTermin_Click(object sender, RoutedEventArgs e)
-        {
-            // KreirajTerminPacijenta k = new KreirajTerminPacijenta();
-            // k.ShowDialog();
-            antiTrol anti = new antiTrol();
-            if (anti.maksimalan_broj_termina())
-            {
-                BiranjePrioritetaZakazivanja bp = new BiranjePrioritetaZakazivanja();
-                bp.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Prekoracili ste broj termina koje mozete da zakazete.");
-            }
-        }
-
-        private void ObrisiTermin_Click(object sender, RoutedEventArgs e)
-        {
-            PacijentFileStorage p = new PacijentFileStorage();
-            int currentRowIndex = dataGridPacijenti.Items.IndexOf(dataGridPacijenti.SelectedItem);
-            TerminiPacijenata k = TerminiP.ElementAt(currentRowIndex);
-            if (TerminiP.Count > 0)
-            {
-                TerminiP.RemoveAt(currentRowIndex);
-            }
-            else
-            {
-                MessageBox.Show("Nije moguce brisati iz prazne tabele.", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-
-            p.Obrisi(k);
-           
-        }
-
-        private void Izmeni_Click(object sender, RoutedEventArgs e)
-        {
-
-            PacijentFileStorage p = new PacijentFileStorage();
-            p.Update(dataGridPacijenti);
-
-            pomeranjeTermina ps = new pomeranjeTermina();
-            ps.ShowDialog();
-
-          
-            
-        }
 
     }
+
 }

@@ -22,6 +22,7 @@ namespace ProjekatSIMS
         public PocetnaPacijent()
         {
             InitializeComponent();
+            frejm.Content = new Bolnica();
         }
 
         private void Termini_Click_1(object sender, RoutedEventArgs e)
@@ -32,8 +33,7 @@ namespace ProjekatSIMS
 
         private void Anketa_Click(object sender, RoutedEventArgs e)
         {
-            Ankete a = new Ankete();
-            a.ShowDialog();
+            frejm.Content = new BiranjeAnkete();
         }
 
         private void Recepti_Click(object sender, RoutedEventArgs e)
@@ -44,17 +44,19 @@ namespace ProjekatSIMS
 
         private void Profil_Click(object sender, RoutedEventArgs e)
         {
-
+            frejm.Content = new PrikazProfila();
         }
 
         private void Izmena_Click(object sender, RoutedEventArgs e)
         {
-
+            IzmenaProfila ip = new IzmenaProfila();
+            ip.ShowDialog();
         }
 
-        private void Tutorial_Click(object sender, RoutedEventArgs e)
+        private void Anamneza_Click(object sender, RoutedEventArgs e)
         {
-
+            Anamneza a = new Anamneza("7643456432456");
+            a.ShowDialog();
         }
     }
 }

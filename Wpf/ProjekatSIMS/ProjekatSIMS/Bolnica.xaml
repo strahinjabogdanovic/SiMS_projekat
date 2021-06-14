@@ -1,0 +1,15 @@
+﻿<Page x:Class="ProjekatSIMS.Bolnica"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS"
+      mc:Ignorable="d" 
+       d:DesignHeight="616" d:DesignWidth="888"
+      Title="Bolnica" Background="LightBlue">
+
+    <Grid>
+        <Label Content="DOM ZDRAVLJA NOVI SAD" HorizontalAlignment="Left" Margin="78,235,0,0" VerticalAlignment="Top" FontSize="60" FontStyle="Italic" Height="122"/>
+        <Label Content="Kontakt telefon: 123444555     Adresa: Bulevar oslobodjenja 34" HorizontalAlignment="Left" Margin="98,334,0,0" VerticalAlignment="Top" FontSize="25" FontStyle="Italic"/>
+    </Grid>
+</Page>

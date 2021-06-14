@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="PrioritetLekar" Height="450" Width="800" Background="LightBlue">
+        Title="PrioritetLekar" Height="300" Width="400" Background="LightBlue" WindowStartupLocation="CenterScreen">
     <Grid>
-        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="341,144,0,0" VerticalAlignment="Top" Width="363" Height="50" FontSize="30"/>
-        <Label Content="Izaberite lekara:" HorizontalAlignment="Left" Margin="83,144,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="321,314,0,0" VerticalAlignment="Top" Width="152" FontSize="28" Height="50" Click="Potvrdi_Click"/>
+        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="37,107,0,0" VerticalAlignment="Top" Width="315" Height="44" FontSize="20"/>
+        <Label Content="Izaberite lekara:" HorizontalAlignment="Left" Margin="119,47,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="115,207,0,0" VerticalAlignment="Top" Width="152" FontSize="20" Height="38" Click="Potvrdi_Click"/>
 
     </Grid>
 </Window>
+
+
 

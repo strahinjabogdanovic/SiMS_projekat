@@ -77,7 +77,8 @@ namespace ProjekatSIMS
             timer.Start();
         }
 
-        private static void OnTimedEvent(object source, ElapsedEventArgs e) {
+        private static void OnTimedEvent(object source, ElapsedEventArgs e)
+        {
             MessageBox.Show("Popijte lek!");
         }
     }

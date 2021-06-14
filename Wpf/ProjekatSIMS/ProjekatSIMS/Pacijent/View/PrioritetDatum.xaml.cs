@@ -19,19 +19,35 @@ namespace ProjekatSIMS
     /// </summary>
     public partial class PrioritetDatum : Window
     {
+
         public PrioritetDatum()
         {
             InitializeComponent();
 
-           
+
         }
 
 
         private void DatumZakaz_Click(object sender, RoutedEventArgs e)
         {
-            DatumZakaz dz = new DatumZakaz(tb1.Text);
-            dz.ShowDialog();
+
+            if (tb1.SelectedDate != null)
+            {
+
+                string s = tb1.SelectedDate.ToString();
+                string[] ss = s.Split(' ');
+                string m = ss[0];
+                string[] sss = m.Split('/');
+                string datum = sss[1] + "." + sss[0] + "." + sss[2] + ".";
+
+
+                DatumZakaz dz = new DatumZakaz(datum);
+                this.Close();
+                dz.ShowDialog();
+            }
+            else MessageBox.Show("Niste izabrali datum!");
         }
 
     }
 }
+

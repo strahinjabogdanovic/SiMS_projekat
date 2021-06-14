@@ -27,12 +27,15 @@ namespace ProjekatSIMS
         private void Date_Checked(object sender, RoutedEventArgs e)
         {
             PrioritetDatum pd = new PrioritetDatum();
+            this.Close();
             pd.ShowDialog();
+
         }
 
         private void Doctor_Checked(object sender, RoutedEventArgs e)
         {
             PrioritetLekar pl = new PrioritetLekar();
+            this.Close();
             pl.ShowDialog();
         }
     }
